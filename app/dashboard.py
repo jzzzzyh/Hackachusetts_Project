@@ -68,8 +68,9 @@ else:
 # ---- Header ----
 st.title("🛠️ Boston Civic Risk Predictor")
 st.caption(
-    f"Predicts where 311 reports and potholes will pile up in {period}. "
-    "Model: XGBoost trained on Boston 311 reports from 2015 to today."
+    f"Predicts where pothole reports will pile up in {period}, so crews can go there first. "
+    "Model: XGBoost trained on Boston 311 pothole reports from 2015 to today, "
+    "using each area's recent pothole history."
 )
 
 # ---- Prediction mode toggle: everything vs potholes only ----
