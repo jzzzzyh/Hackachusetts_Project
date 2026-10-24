@@ -147,8 +147,11 @@ def main():
     skipped = sorted(set(CONTEXT_COLS) - set(context))
     if skipped:
         print(f"NOTE: context columns not in features.csv, skipped: {skipped}")
-    feature_cols = (["nbhd_enc", "month", "season"] + LAG_COLS + context
-                    + (WEATHER_COLS if USE_WEATHER else []))
+    base_cols = (["nbhd_enc", "month", "season"] + LAG_COLS + context
+                 + (WEATHER_COLS if USE_WEATHER else []))
+    exposure = [c for c in EXPOSURE_COLS if c in df.columns]
+    if not exposure:
+        print("NOTE: no exposure columns in features.csv (run get_exposure.py + merge_weather.py)")
 
     # Predict the current month (today's date). It's in progress, so it is never trained on.
     today = date.today()
