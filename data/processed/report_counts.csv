@@ -1,6 +1,269 @@
-neighborhood,month,year,report_count
-Dorchester,1,2024,FAKE
-Roxbury,1,2024,FAKE
-South Boston,1,2024,FAKE
-Jamaica Plain,1,2024,FAKE
-East Boston,1,2024,FAKE
+neighborhood,year,month,report_count
+Allston,2024,1,55
+Allston,2024,2,37
+Allston,2024,3,50
+Allston,2024,4,69
+Allston,2024,5,94
+Allston,2024,6,60
+Allston,2024,7,51
+Allston,2024,8,120
+Allston,2024,9,95
+Allston,2024,10,52
+Allston,2024,11,58
+Allston,2024,12,61
+Allston / Brighton,2024,1,915
+Allston / Brighton,2024,2,707
+Allston / Brighton,2024,3,953
+Allston / Brighton,2024,4,943
+Allston / Brighton,2024,5,1132
+Allston / Brighton,2024,6,1197
+Allston / Brighton,2024,7,1135
+Allston / Brighton,2024,8,2318
+Allston / Brighton,2024,9,1578
+Allston / Brighton,2024,10,1037
+Allston / Brighton,2024,11,954
+Allston / Brighton,2024,12,951
+Back Bay,2024,1,570
+Back Bay,2024,2,588
+Back Bay,2024,3,704
+Back Bay,2024,4,830
+Back Bay,2024,5,818
+Back Bay,2024,6,822
+Back Bay,2024,7,841
+Back Bay,2024,8,1184
+Back Bay,2024,9,1153
+Back Bay,2024,10,878
+Back Bay,2024,11,709
+Back Bay,2024,12,552
+Beacon Hill,2024,1,583
+Beacon Hill,2024,2,515
+Beacon Hill,2024,3,490
+Beacon Hill,2024,4,462
+Beacon Hill,2024,5,725
+Beacon Hill,2024,6,667
+Beacon Hill,2024,7,691
+Beacon Hill,2024,8,805
+Beacon Hill,2024,9,810
+Beacon Hill,2024,10,650
+Beacon Hill,2024,11,592
+Beacon Hill,2024,12,409
+Boston,2024,1,449
+Boston,2024,2,488
+Boston,2024,3,734
+Boston,2024,4,673
+Boston,2024,5,713
+Boston,2024,6,733
+Boston,2024,7,856
+Boston,2024,8,943
+Boston,2024,9,889
+Boston,2024,10,750
+Boston,2024,11,709
+Boston,2024,12,628
+Brighton,2024,1,91
+Brighton,2024,2,75
+Brighton,2024,3,101
+Brighton,2024,4,86
+Brighton,2024,5,101
+Brighton,2024,6,127
+Brighton,2024,7,128
+Brighton,2024,8,172
+Brighton,2024,9,133
+Brighton,2024,10,96
+Brighton,2024,11,81
+Brighton,2024,12,78
+Charlestown,2024,1,437
+Charlestown,2024,2,333
+Charlestown,2024,3,464
+Charlestown,2024,4,458
+Charlestown,2024,5,505
+Charlestown,2024,6,508
+Charlestown,2024,7,346
+Charlestown,2024,8,514
+Charlestown,2024,9,453
+Charlestown,2024,10,396
+Charlestown,2024,11,313
+Charlestown,2024,12,358
+Chestnut Hill,2024,2,4
+Chestnut Hill,2024,5,1
+Chestnut Hill,2024,6,1
+Chestnut Hill,2024,8,1
+Dorchester,2024,1,1531
+Dorchester,2024,2,1380
+Dorchester,2024,3,1512
+Dorchester,2024,4,1534
+Dorchester,2024,5,1626
+Dorchester,2024,6,1685
+Dorchester,2024,7,1639
+Dorchester,2024,8,2445
+Dorchester,2024,9,2029
+Dorchester,2024,10,1499
+Dorchester,2024,11,1300
+Dorchester,2024,12,1307
+Downtown / Financial District,2024,1,644
+Downtown / Financial District,2024,2,638
+Downtown / Financial District,2024,3,677
+Downtown / Financial District,2024,4,799
+Downtown / Financial District,2024,5,961
+Downtown / Financial District,2024,6,1018
+Downtown / Financial District,2024,7,1028
+Downtown / Financial District,2024,8,1410
+Downtown / Financial District,2024,9,1131
+Downtown / Financial District,2024,10,868
+Downtown / Financial District,2024,11,652
+Downtown / Financial District,2024,12,570
+East Boston,2024,1,817
+East Boston,2024,2,712
+East Boston,2024,3,968
+East Boston,2024,4,918
+East Boston,2024,5,867
+East Boston,2024,6,910
+East Boston,2024,7,1137
+East Boston,2024,8,1345
+East Boston,2024,9,1094
+East Boston,2024,10,903
+East Boston,2024,11,834
+East Boston,2024,12,906
+Fenway / Kenmore / Audubon Circle / Longwood,2024,1,205
+Fenway / Kenmore / Audubon Circle / Longwood,2024,2,156
+Fenway / Kenmore / Audubon Circle / Longwood,2024,3,221
+Fenway / Kenmore / Audubon Circle / Longwood,2024,4,290
+Fenway / Kenmore / Audubon Circle / Longwood,2024,5,288
+Fenway / Kenmore / Audubon Circle / Longwood,2024,6,413
+Fenway / Kenmore / Audubon Circle / Longwood,2024,7,283
+Fenway / Kenmore / Audubon Circle / Longwood,2024,8,472
+Fenway / Kenmore / Audubon Circle / Longwood,2024,9,376
+Fenway / Kenmore / Audubon Circle / Longwood,2024,10,253
+Fenway / Kenmore / Audubon Circle / Longwood,2024,11,196
+Fenway / Kenmore / Audubon Circle / Longwood,2024,12,182
+Greater Mattapan,2024,1,304
+Greater Mattapan,2024,2,334
+Greater Mattapan,2024,3,508
+Greater Mattapan,2024,4,327
+Greater Mattapan,2024,5,289
+Greater Mattapan,2024,6,357
+Greater Mattapan,2024,7,402
+Greater Mattapan,2024,8,628
+Greater Mattapan,2024,9,390
+Greater Mattapan,2024,10,335
+Greater Mattapan,2024,11,282
+Greater Mattapan,2024,12,265
+Hyde Park,2024,1,321
+Hyde Park,2024,2,291
+Hyde Park,2024,3,340
+Hyde Park,2024,4,388
+Hyde Park,2024,5,407
+Hyde Park,2024,6,370
+Hyde Park,2024,7,452
+Hyde Park,2024,8,556
+Hyde Park,2024,9,384
+Hyde Park,2024,10,304
+Hyde Park,2024,11,317
+Hyde Park,2024,12,273
+Jamaica Plain,2024,1,661
+Jamaica Plain,2024,2,538
+Jamaica Plain,2024,3,733
+Jamaica Plain,2024,4,715
+Jamaica Plain,2024,5,848
+Jamaica Plain,2024,6,838
+Jamaica Plain,2024,7,942
+Jamaica Plain,2024,8,1266
+Jamaica Plain,2024,9,976
+Jamaica Plain,2024,10,729
+Jamaica Plain,2024,11,753
+Jamaica Plain,2024,12,644
+Mattapan,2024,1,37
+Mattapan,2024,2,25
+Mattapan,2024,3,59
+Mattapan,2024,4,65
+Mattapan,2024,5,28
+Mattapan,2024,6,58
+Mattapan,2024,7,34
+Mattapan,2024,8,34
+Mattapan,2024,9,28
+Mattapan,2024,10,35
+Mattapan,2024,11,23
+Mattapan,2024,12,22
+Mission Hill,2024,1,186
+Mission Hill,2024,2,221
+Mission Hill,2024,3,178
+Mission Hill,2024,4,220
+Mission Hill,2024,5,227
+Mission Hill,2024,6,241
+Mission Hill,2024,7,200
+Mission Hill,2024,8,659
+Mission Hill,2024,9,443
+Mission Hill,2024,10,251
+Mission Hill,2024,11,188
+Mission Hill,2024,12,212
+Roslindale,2024,1,348
+Roslindale,2024,2,302
+Roslindale,2024,3,378
+Roslindale,2024,4,365
+Roslindale,2024,5,380
+Roslindale,2024,6,413
+Roslindale,2024,7,509
+Roslindale,2024,8,557
+Roslindale,2024,9,412
+Roslindale,2024,10,342
+Roslindale,2024,11,351
+Roslindale,2024,12,346
+Roxbury,2024,1,928
+Roxbury,2024,2,787
+Roxbury,2024,3,864
+Roxbury,2024,4,906
+Roxbury,2024,5,1015
+Roxbury,2024,6,1136
+Roxbury,2024,7,1382
+Roxbury,2024,8,1617
+Roxbury,2024,9,1515
+Roxbury,2024,10,1163
+Roxbury,2024,11,870
+Roxbury,2024,12,931
+South Boston,2024,1,132
+South Boston,2024,2,136
+South Boston,2024,3,160
+South Boston,2024,4,146
+South Boston,2024,5,146
+South Boston,2024,6,175
+South Boston,2024,7,138
+South Boston,2024,8,227
+South Boston,2024,9,165
+South Boston,2024,10,178
+South Boston,2024,11,139
+South Boston,2024,12,162
+South Boston / South Boston Waterfront,2024,1,1237
+South Boston / South Boston Waterfront,2024,2,1101
+South Boston / South Boston Waterfront,2024,3,1300
+South Boston / South Boston Waterfront,2024,4,1128
+South Boston / South Boston Waterfront,2024,5,1371
+South Boston / South Boston Waterfront,2024,6,1407
+South Boston / South Boston Waterfront,2024,7,1248
+South Boston / South Boston Waterfront,2024,8,1800
+South Boston / South Boston Waterfront,2024,9,2274
+South Boston / South Boston Waterfront,2024,10,1642
+South Boston / South Boston Waterfront,2024,11,1247
+South Boston / South Boston Waterfront,2024,12,1385
+South End,2024,1,1035
+South End,2024,2,933
+South End,2024,3,1133
+South End,2024,4,1211
+South End,2024,5,1397
+South End,2024,6,1362
+South End,2024,7,1337
+South End,2024,8,1492
+South End,2024,9,1331
+South End,2024,10,1389
+South End,2024,11,1108
+South End,2024,12,1195
+West Roxbury,2024,1,343
+West Roxbury,2024,2,219
+West Roxbury,2024,3,268
+West Roxbury,2024,4,313
+West Roxbury,2024,5,369
+West Roxbury,2024,6,352
+West Roxbury,2024,7,452
+West Roxbury,2024,8,458
+West Roxbury,2024,9,342
+West Roxbury,2024,10,315
+West Roxbury,2024,11,267
+West Roxbury,2024,12,290
