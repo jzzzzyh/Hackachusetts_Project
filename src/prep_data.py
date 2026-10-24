@@ -58,6 +58,7 @@ NEW_SYSTEM_URL = _BASE + "254adca6-64ab-4c5c-9fc0-a6da622be185/download/tmp7o3lw
 
 RAW_DIR  = "data/raw"
 OUT_PATH = "data/processed/report_counts.csv"
+DAILY_PATH = "data/processed/pothole_daily.csv"   # potholes per area per day (for "so far this month")
 CHUNK    = 100_000      # rows per chunk when reading
 FRESH_HOURS = 24        # live files (current year, new system) are re-downloaded after this
 
