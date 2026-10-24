@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_9e9e9a36f0d032b1a83e407ab3bef484 {
+                #map_4b1fbeb8d1f66067887a1c74e6ef53c0 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -60,7 +60,7 @@
     background: white; padding: 14px 18px; border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.25); font-family: sans-serif;
     font-size: 13px; line-height: 1.8;">
-  <b>Predicted Issue Risk</b><br>
+  <b>Predicted Pothole Risk</b><br>
   <span style="color:#d7191c;">&#9632;</span> High<br>
   <span style="color:#fdae61;">&#9632;</span> Medium<br>
   <span style="color:#1a9641;">&#9632;</span> Low<br>
@@ -73,17 +73,17 @@
     z-index: 1000; background: white; padding: 10px 20px;
     border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.25);
     font-family: sans-serif; font-size: 15px; font-weight: bold;">
-  Boston Civic Issue Predictor — Next 30 Days
+  Boston Pothole Predictor — This Month
 </div>
     
-            <div class="folium-map" id="map_9e9e9a36f0d032b1a83e407ab3bef484" ></div>
+            <div class="folium-map" id="map_4b1fbeb8d1f66067887a1c74e6ef53c0" ></div>
         
 </body>
 <script>
     
     
-            var map_9e9e9a36f0d032b1a83e407ab3bef484 = L.map(
-                "map_9e9e9a36f0d032b1a83e407ab3bef484",
+            var map_4b1fbeb8d1f66067887a1c74e6ef53c0 = L.map(
+                "map_4b1fbeb8d1f66067887a1c74e6ef53c0",
                 {
                     center: [42.3601, -71.0589],
                     crs: L.CRS.EPSG3857,
@@ -100,15 +100,15 @@
 
         
     
-            var tile_layer_ed782280f854fd66b0bfcc9ec3a6983c = L.tileLayer(
-                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+            var tile_layer_a1238366da4cc7efb37b26b6707965e1 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
-  "maxZoom": 19,
-  "maxNativeZoom": 19,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
   "noWrap": false,
-  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
-  "subdomains": "abc",
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
   "detectRetina": false,
   "tms": false,
   "opacity": 1,
@@ -117,11 +117,11 @@
             );
         
     
-            tile_layer_ed782280f854fd66b0bfcc9ec3a6983c.addTo(map_9e9e9a36f0d032b1a83e407ab3bef484);
+            tile_layer_a1238366da4cc7efb37b26b6707965e1.addTo(map_4b1fbeb8d1f66067887a1c74e6ef53c0);
         
     
-            var heat_map_620a7e03fa1a9213f40ba7479ef105fd = L.heatLayer(
-                [[42.3601, -71.0589, 2990.0], [42.3601, -71.0589, 2472.0], [42.3601, -71.0589, 2364.0], [42.3601, -71.0589, 1967.0], [42.3601, -71.0589, 1896.0], [42.3601, -71.0589, 1819.0], [42.3601, -71.0589, 1461.0], [42.3601, -71.0589, 1411.0], [42.3601, -71.0589, 1301.0], [42.3601, -71.0589, 830.0], [42.3601, -71.0589, 792.0], [42.3601, -71.0589, 778.0], [42.3601, -71.0589, 702.0], [42.3601, -71.0589, 685.0], [42.3601, -71.0589, 655.0], [42.3601, -71.0589, 622.0], [42.3601, -71.0589, 411.0]],
+            var heat_map_16412f77dcbe00791952badc035e5cd7 = L.heatLayer(
+                [[42.3021, -71.0707, 52.0], [42.3142, -71.092, 47.0], [42.3398, -71.0786, 45.0], [42.356, -71.055, 42.0], [42.35, -71.143, 41.0], [42.31, -71.1148, 32.0], [42.3784, -71.0282, 30.0], [42.3782, -71.0602, 24.0], [42.3503, -71.081, 24.0], [42.3388, -71.0468, 23.0], [42.3467, -71.1003, 22.0], [42.3588, -71.0707, 18.0], [42.284, -71.1284, 17.0], [42.2793, -71.1607, 14.0], [42.2551, -71.1243, 13.0], [42.2736, -71.0921, 12.0], [42.3278, -71.1003, 10.0]],
                 {
   "minOpacity": 0.5,
   "maxZoom": 13,
@@ -136,33 +136,33 @@
             );
         
     
-            heat_map_620a7e03fa1a9213f40ba7479ef105fd.addTo(map_9e9e9a36f0d032b1a83e407ab3bef484);
+            heat_map_16412f77dcbe00791952badc035e5cd7.addTo(map_4b1fbeb8d1f66067887a1c74e6ef53c0);
         
     
-            var circle_marker_bbc6fc75bbfe27387e0ae32f20013ef7 = L.circleMarker(
-                [42.3601, -71.0589],
-                {"bubblingMouseEvents": true, "color": "#d7191c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d7191c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_9e9e9a36f0d032b1a83e407ab3bef484);
+            var circle_marker_cb9ef30d869ea64d3795741b30f62b3a = L.circleMarker(
+                [42.3021, -71.0707],
+                {"bubblingMouseEvents": true, "color": "#d7191c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d7191c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.0, "stroke": true, "weight": 3}
+            ).addTo(map_4b1fbeb8d1f66067887a1c74e6ef53c0);
         
     
-        var popup_46c88fc801464666f1d35973e51abbf9 = L.popup({
-  "maxWidth": 200,
+        var popup_4bb875d7e00b3a1e4184248018633474 = L.popup({
+  "maxWidth": 320,
 });
 
         
             
-                var html_cd9a43c4da5fcc586d56e0deea0139d5 = $(`<div id="html_cd9a43c4da5fcc586d56e0deea0139d5" style="width: 100.0%; height: 100.0%;"><b>Dorchester</b><br>Predicted reports: 2990<br>Risk: <b>HIGH</b></div>`)[0];
-                popup_46c88fc801464666f1d35973e51abbf9.setContent(html_cd9a43c4da5fcc586d56e0deea0139d5);
+                var html_388e4a44494469474089ac77479bdd09 = $(`<div id="html_388e4a44494469474089ac77479bdd09" style="width: 100.0%; height: 100.0%;"><b>Dorchester</b><br>Predicted potholes: 52<br>Risk: <b>HIGH</b><br><br><b>Why:</b> vs a typical 59:<br>▼ 38 already reported (days 1-22) (-7%)<br>▼ time of year (October) (-5%)<br>▼ 42 last month (-3%)</div>`)[0];
+                popup_4bb875d7e00b3a1e4184248018633474.setContent(html_388e4a44494469474089ac77479bdd09);
             
         
 
-        circle_marker_bbc6fc75bbfe27387e0ae32f20013ef7.bindPopup(popup_46c88fc801464666f1d35973e51abbf9)
+        circle_marker_cb9ef30d869ea64d3795741b30f62b3a.bindPopup(popup_4bb875d7e00b3a1e4184248018633474)
         ;
 
         
     
     
-            circle_marker_bbc6fc75bbfe27387e0ae32f20013ef7.bindTooltip(
+            circle_marker_cb9ef30d869ea64d3795741b30f62b3a.bindTooltip(
                 `<div>
                      Dorchester — HIGH
                  </div>`,
@@ -172,129 +172,30 @@
             );
         
     
-            var circle_marker_5ec535df9508f3b51c7ec1e00560bb97 = L.circleMarker(
-                [42.3601, -71.0589],
-                {"bubblingMouseEvents": true, "color": "#d7191c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d7191c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_9e9e9a36f0d032b1a83e407ab3bef484);
+            var circle_marker_bda6adc46a08833ba1b722e2c800d6c1 = L.circleMarker(
+                [42.3142, -71.092],
+                {"bubblingMouseEvents": true, "color": "#d7191c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d7191c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.653846153846153, "stroke": true, "weight": 3}
+            ).addTo(map_4b1fbeb8d1f66067887a1c74e6ef53c0);
         
     
-        var popup_31c256e6b5780e18aefe47cdbc761b82 = L.popup({
-  "maxWidth": 200,
+        var popup_0b5825eace8d1ccc1d3efcb0037d69db = L.popup({
+  "maxWidth": 320,
 });
 
         
             
-                var html_50f76d4d698f40000fd98df086638125 = $(`<div id="html_50f76d4d698f40000fd98df086638125" style="width: 100.0%; height: 100.0%;"><b>Downtown / Financial District</b><br>Predicted reports: 2472<br>Risk: <b>HIGH</b></div>`)[0];
-                popup_31c256e6b5780e18aefe47cdbc761b82.setContent(html_50f76d4d698f40000fd98df086638125);
+                var html_1b9b310749b2da1dd3a9a35550046c47 = $(`<div id="html_1b9b310749b2da1dd3a9a35550046c47" style="width: 100.0%; height: 100.0%;"><b>Roxbury</b><br>Predicted potholes: 47<br>Risk: <b>HIGH</b><br><br><b>Why:</b> vs a typical 59:<br>▼ on pace for 49 this month (-7%)<br>▼ 35 already reported (days 1-22) (-6%)<br>▼ time of year (October) (-5%)</div>`)[0];
+                popup_0b5825eace8d1ccc1d3efcb0037d69db.setContent(html_1b9b310749b2da1dd3a9a35550046c47);
             
         
 
-        circle_marker_5ec535df9508f3b51c7ec1e00560bb97.bindPopup(popup_31c256e6b5780e18aefe47cdbc761b82)
+        circle_marker_bda6adc46a08833ba1b722e2c800d6c1.bindPopup(popup_0b5825eace8d1ccc1d3efcb0037d69db)
         ;
 
         
     
     
-            circle_marker_5ec535df9508f3b51c7ec1e00560bb97.bindTooltip(
-                `<div>
-                     Downtown / Financial District — HIGH
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_d909b817e518ca02fc81f224c1510f1c = L.circleMarker(
-                [42.3601, -71.0589],
-                {"bubblingMouseEvents": true, "color": "#d7191c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d7191c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_9e9e9a36f0d032b1a83e407ab3bef484);
-        
-    
-        var popup_3fea3526ae47c256608dad8d27c9998c = L.popup({
-  "maxWidth": 200,
-});
-
-        
-            
-                var html_a5fd463508326ca4774162b2677b3ba0 = $(`<div id="html_a5fd463508326ca4774162b2677b3ba0" style="width: 100.0%; height: 100.0%;"><b>South Boston / South Boston Waterfront</b><br>Predicted reports: 2364<br>Risk: <b>HIGH</b></div>`)[0];
-                popup_3fea3526ae47c256608dad8d27c9998c.setContent(html_a5fd463508326ca4774162b2677b3ba0);
-            
-        
-
-        circle_marker_d909b817e518ca02fc81f224c1510f1c.bindPopup(popup_3fea3526ae47c256608dad8d27c9998c)
-        ;
-
-        
-    
-    
-            circle_marker_d909b817e518ca02fc81f224c1510f1c.bindTooltip(
-                `<div>
-                     South Boston / South Boston Waterfront — HIGH
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_f1fba7ba1795de29405526e5d6500572 = L.circleMarker(
-                [42.3601, -71.0589],
-                {"bubblingMouseEvents": true, "color": "#d7191c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d7191c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_9e9e9a36f0d032b1a83e407ab3bef484);
-        
-    
-        var popup_99c198dc501863b07d9030481ca84a6f = L.popup({
-  "maxWidth": 200,
-});
-
-        
-            
-                var html_1dfdce4e822c9e18152ef962ad8321e4 = $(`<div id="html_1dfdce4e822c9e18152ef962ad8321e4" style="width: 100.0%; height: 100.0%;"><b>Allston / Brighton</b><br>Predicted reports: 1967<br>Risk: <b>HIGH</b></div>`)[0];
-                popup_99c198dc501863b07d9030481ca84a6f.setContent(html_1dfdce4e822c9e18152ef962ad8321e4);
-            
-        
-
-        circle_marker_f1fba7ba1795de29405526e5d6500572.bindPopup(popup_99c198dc501863b07d9030481ca84a6f)
-        ;
-
-        
-    
-    
-            circle_marker_f1fba7ba1795de29405526e5d6500572.bindTooltip(
-                `<div>
-                     Allston / Brighton — HIGH
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_9324d6083f24197a905549325460dc40 = L.circleMarker(
-                [42.3601, -71.0589],
-                {"bubblingMouseEvents": true, "color": "#d7191c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d7191c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_9e9e9a36f0d032b1a83e407ab3bef484);
-        
-    
-        var popup_82265e6fb4b82db6bec32fbeef117e57 = L.popup({
-  "maxWidth": 200,
-});
-
-        
-            
-                var html_4978b0c909acfe26c394439fb7ce0f78 = $(`<div id="html_4978b0c909acfe26c394439fb7ce0f78" style="width: 100.0%; height: 100.0%;"><b>Roxbury</b><br>Predicted reports: 1896<br>Risk: <b>HIGH</b></div>`)[0];
-                popup_82265e6fb4b82db6bec32fbeef117e57.setContent(html_4978b0c909acfe26c394439fb7ce0f78);
-            
-        
-
-        circle_marker_9324d6083f24197a905549325460dc40.bindPopup(popup_82265e6fb4b82db6bec32fbeef117e57)
-        ;
-
-        
-    
-    
-            circle_marker_9324d6083f24197a905549325460dc40.bindTooltip(
+            circle_marker_bda6adc46a08833ba1b722e2c800d6c1.bindTooltip(
                 `<div>
                      Roxbury — HIGH
                  </div>`,
@@ -304,30 +205,30 @@
             );
         
     
-            var circle_marker_41aa2eaa8de12a95016e1e8cd32ead4f = L.circleMarker(
-                [42.3601, -71.0589],
-                {"bubblingMouseEvents": true, "color": "#d7191c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d7191c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_9e9e9a36f0d032b1a83e407ab3bef484);
+            var circle_marker_d5aed1e6924c93e58da197958ece9a7d = L.circleMarker(
+                [42.3398, -71.0786],
+                {"bubblingMouseEvents": true, "color": "#d7191c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d7191c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.115384615384613, "stroke": true, "weight": 3}
+            ).addTo(map_4b1fbeb8d1f66067887a1c74e6ef53c0);
         
     
-        var popup_7ac3db42148792d001f6f59ecdf8a4a3 = L.popup({
-  "maxWidth": 200,
+        var popup_c6dad496bfe58216d4b5fde43e71e106 = L.popup({
+  "maxWidth": 320,
 });
 
         
             
-                var html_9939ec735e96aac6a03769bbc513c8ce = $(`<div id="html_9939ec735e96aac6a03769bbc513c8ce" style="width: 100.0%; height: 100.0%;"><b>South End</b><br>Predicted reports: 1819<br>Risk: <b>HIGH</b></div>`)[0];
-                popup_7ac3db42148792d001f6f59ecdf8a4a3.setContent(html_9939ec735e96aac6a03769bbc513c8ce);
+                var html_4662a14ea453318bec1bea610cdf3a6c = $(`<div id="html_4662a14ea453318bec1bea610cdf3a6c" style="width: 100.0%; height: 100.0%;"><b>South End</b><br>Predicted potholes: 45<br>Risk: <b>HIGH</b><br><br><b>Why:</b> vs a typical 59:<br>▼ on pace for 46 this month (-8%)<br>▼ 33 already reported (days 1-22) (-6%)<br>▼ time of year (October) (-6%)</div>`)[0];
+                popup_c6dad496bfe58216d4b5fde43e71e106.setContent(html_4662a14ea453318bec1bea610cdf3a6c);
             
         
 
-        circle_marker_41aa2eaa8de12a95016e1e8cd32ead4f.bindPopup(popup_7ac3db42148792d001f6f59ecdf8a4a3)
+        circle_marker_d5aed1e6924c93e58da197958ece9a7d.bindPopup(popup_c6dad496bfe58216d4b5fde43e71e106)
         ;
 
         
     
     
-            circle_marker_41aa2eaa8de12a95016e1e8cd32ead4f.bindTooltip(
+            circle_marker_d5aed1e6924c93e58da197958ece9a7d.bindTooltip(
                 `<div>
                      South End — HIGH
                  </div>`,
@@ -337,30 +238,129 @@
             );
         
     
-            var circle_marker_9f4c456c4e54ee77078cad1c9fd29560 = L.circleMarker(
-                [42.3601, -71.0589],
-                {"bubblingMouseEvents": true, "color": "#fdae61", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fdae61", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_9e9e9a36f0d032b1a83e407ab3bef484);
+            var circle_marker_0840452b504e8ac82205a2afcc602d15 = L.circleMarker(
+                [42.356, -71.055],
+                {"bubblingMouseEvents": true, "color": "#d7191c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d7191c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.307692307692307, "stroke": true, "weight": 3}
+            ).addTo(map_4b1fbeb8d1f66067887a1c74e6ef53c0);
         
     
-        var popup_768c8e13f96061f2a678b1182f0292ca = L.popup({
-  "maxWidth": 200,
+        var popup_ed6dd5efca6fb1c6b1bf733496a3c96c = L.popup({
+  "maxWidth": 320,
 });
 
         
             
-                var html_8262c73059e25f512f0bd8132cfd894a = $(`<div id="html_8262c73059e25f512f0bd8132cfd894a" style="width: 100.0%; height: 100.0%;"><b>East Boston</b><br>Predicted reports: 1461<br>Risk: <b>MEDIUM</b></div>`)[0];
-                popup_768c8e13f96061f2a678b1182f0292ca.setContent(html_8262c73059e25f512f0bd8132cfd894a);
+                var html_f0f7fe17ef2e478c8dc8e3240a19f1af = $(`<div id="html_f0f7fe17ef2e478c8dc8e3240a19f1af" style="width: 100.0%; height: 100.0%;"><b>Downtown / Financial District</b><br>Predicted potholes: 42<br>Risk: <b>HIGH</b><br><br><b>Why:</b> vs a typical 59:<br>▼ on pace for 41 this month (-22%)<br>▼ 29 already reported (days 1-22) (-7%)<br>▼ time of year (October) (-5%)</div>`)[0];
+                popup_ed6dd5efca6fb1c6b1bf733496a3c96c.setContent(html_f0f7fe17ef2e478c8dc8e3240a19f1af);
             
         
 
-        circle_marker_9f4c456c4e54ee77078cad1c9fd29560.bindPopup(popup_768c8e13f96061f2a678b1182f0292ca)
+        circle_marker_0840452b504e8ac82205a2afcc602d15.bindPopup(popup_ed6dd5efca6fb1c6b1bf733496a3c96c)
         ;
 
         
     
     
-            circle_marker_9f4c456c4e54ee77078cad1c9fd29560.bindTooltip(
+            circle_marker_0840452b504e8ac82205a2afcc602d15.bindTooltip(
+                `<div>
+                     Downtown / Financial District — HIGH
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1ebb577cc5e84793c189fb40c46fce89 = L.circleMarker(
+                [42.35, -71.143],
+                {"bubblingMouseEvents": true, "color": "#d7191c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d7191c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.03846153846154, "stroke": true, "weight": 3}
+            ).addTo(map_4b1fbeb8d1f66067887a1c74e6ef53c0);
+        
+    
+        var popup_b26ed0dbfc279b32d8b14e8d60a592a5 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_38fb67c0d5178ceae5981cd8185135a4 = $(`<div id="html_38fb67c0d5178ceae5981cd8185135a4" style="width: 100.0%; height: 100.0%;"><b>Allston / Brighton</b><br>Predicted potholes: 41<br>Risk: <b>HIGH</b><br><br><b>Why:</b> vs a typical 59:<br>▼ on pace for 39 this month (-22%)<br>▼ 28 already reported (days 1-22) (-7%)<br>▼ time of year (October) (-5%)</div>`)[0];
+                popup_b26ed0dbfc279b32d8b14e8d60a592a5.setContent(html_38fb67c0d5178ceae5981cd8185135a4);
+            
+        
+
+        circle_marker_1ebb577cc5e84793c189fb40c46fce89.bindPopup(popup_b26ed0dbfc279b32d8b14e8d60a592a5)
+        ;
+
+        
+    
+    
+            circle_marker_1ebb577cc5e84793c189fb40c46fce89.bindTooltip(
+                `<div>
+                     Allston / Brighton — HIGH
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_87da17244499800876666cd130a51816 = L.circleMarker(
+                [42.31, -71.1148],
+                {"bubblingMouseEvents": true, "color": "#d7191c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d7191c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.615384615384615, "stroke": true, "weight": 3}
+            ).addTo(map_4b1fbeb8d1f66067887a1c74e6ef53c0);
+        
+    
+        var popup_4894a1edc56018ef53086ed66b370de4 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_35c7302e577c5034465cd45f1c3d40dd = $(`<div id="html_35c7302e577c5034465cd45f1c3d40dd" style="width: 100.0%; height: 100.0%;"><b>Jamaica Plain</b><br>Predicted potholes: 32<br>Risk: <b>HIGH</b><br><br><b>Why:</b> vs a typical 59:<br>▼ on pace for 31 this month (-38%)<br>▼ 22 already reported (days 1-22) (-8%)<br>▼ time of year (October) (-4%)</div>`)[0];
+                popup_4894a1edc56018ef53086ed66b370de4.setContent(html_35c7302e577c5034465cd45f1c3d40dd);
+            
+        
+
+        circle_marker_87da17244499800876666cd130a51816.bindPopup(popup_4894a1edc56018ef53086ed66b370de4)
+        ;
+
+        
+    
+    
+            circle_marker_87da17244499800876666cd130a51816.bindTooltip(
+                `<div>
+                     Jamaica Plain — HIGH
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f46ff96101b1c47e3c573ecd556a1ffb = L.circleMarker(
+                [42.3784, -71.0282],
+                {"bubblingMouseEvents": true, "color": "#fdae61", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fdae61", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.076923076923077, "stroke": true, "weight": 3}
+            ).addTo(map_4b1fbeb8d1f66067887a1c74e6ef53c0);
+        
+    
+        var popup_ee247f0778ce0a400c98049e8a7de0bb = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_7b6d9115485f0d220ef9212fa7b5957c = $(`<div id="html_7b6d9115485f0d220ef9212fa7b5957c" style="width: 100.0%; height: 100.0%;"><b>East Boston</b><br>Predicted potholes: 30<br>Risk: <b>MEDIUM</b><br><br><b>Why:</b> vs a typical 59:<br>▼ on pace for 31 this month (-39%)<br>▼ 22 already reported (days 1-22) (-8%)<br>▼ time of year (October) (-5%)</div>`)[0];
+                popup_ee247f0778ce0a400c98049e8a7de0bb.setContent(html_7b6d9115485f0d220ef9212fa7b5957c);
+            
+        
+
+        circle_marker_f46ff96101b1c47e3c573ecd556a1ffb.bindPopup(popup_ee247f0778ce0a400c98049e8a7de0bb)
+        ;
+
+        
+    
+    
+            circle_marker_f46ff96101b1c47e3c573ecd556a1ffb.bindTooltip(
                 `<div>
                      East Boston — MEDIUM
                  </div>`,
@@ -370,30 +370,63 @@
             );
         
     
-            var circle_marker_6fa569a02b431b36d3a7c89d8a401efe = L.circleMarker(
-                [42.3601, -71.0589],
-                {"bubblingMouseEvents": true, "color": "#fdae61", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fdae61", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_9e9e9a36f0d032b1a83e407ab3bef484);
+            var circle_marker_7ce61836dc0a9638a7da9752b3a09c4a = L.circleMarker(
+                [42.3782, -71.0602],
+                {"bubblingMouseEvents": true, "color": "#fdae61", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fdae61", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.461538461538462, "stroke": true, "weight": 3}
+            ).addTo(map_4b1fbeb8d1f66067887a1c74e6ef53c0);
         
     
-        var popup_b0df029b58ebe07b7c4f55cc62bf6e68 = L.popup({
-  "maxWidth": 200,
+        var popup_0a19d68ac01e55603663f97190c7074d = L.popup({
+  "maxWidth": 320,
 });
 
         
             
-                var html_68d7447852ab51a1559b6d8c4da1dabc = $(`<div id="html_68d7447852ab51a1559b6d8c4da1dabc" style="width: 100.0%; height: 100.0%;"><b>Back Bay</b><br>Predicted reports: 1411<br>Risk: <b>MEDIUM</b></div>`)[0];
-                popup_b0df029b58ebe07b7c4f55cc62bf6e68.setContent(html_68d7447852ab51a1559b6d8c4da1dabc);
+                var html_27736815714197b03d373d959cf0eb8e = $(`<div id="html_27736815714197b03d373d959cf0eb8e" style="width: 100.0%; height: 100.0%;"><b>Charlestown</b><br>Predicted potholes: 24<br>Risk: <b>MEDIUM</b><br><br><b>Why:</b> vs a typical 59:<br>▼ on pace for 25 this month (-49%)<br>▼ 18 already reported (days 1-22) (-11%)<br>▼ time of year (October) (-4%)</div>`)[0];
+                popup_0a19d68ac01e55603663f97190c7074d.setContent(html_27736815714197b03d373d959cf0eb8e);
             
         
 
-        circle_marker_6fa569a02b431b36d3a7c89d8a401efe.bindPopup(popup_b0df029b58ebe07b7c4f55cc62bf6e68)
+        circle_marker_7ce61836dc0a9638a7da9752b3a09c4a.bindPopup(popup_0a19d68ac01e55603663f97190c7074d)
         ;
 
         
     
     
-            circle_marker_6fa569a02b431b36d3a7c89d8a401efe.bindTooltip(
+            circle_marker_7ce61836dc0a9638a7da9752b3a09c4a.bindTooltip(
+                `<div>
+                     Charlestown — MEDIUM
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a0cafd089d98f27efac5407de1eded32 = L.circleMarker(
+                [42.3503, -71.081],
+                {"bubblingMouseEvents": true, "color": "#fdae61", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fdae61", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.461538461538462, "stroke": true, "weight": 3}
+            ).addTo(map_4b1fbeb8d1f66067887a1c74e6ef53c0);
+        
+    
+        var popup_1f3d1a07ed2be790a0aebc72ae6c7d80 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_cc0dd19c900b728e8c6159d6fe3a1cd0 = $(`<div id="html_cc0dd19c900b728e8c6159d6fe3a1cd0" style="width: 100.0%; height: 100.0%;"><b>Back Bay</b><br>Predicted potholes: 24<br>Risk: <b>MEDIUM</b><br><br><b>Why:</b> vs a typical 59:<br>▼ on pace for 23 this month (-51%)<br>▼ 16 already reported (days 1-22) (-10%)<br>▼ time of year (October) (-4%)</div>`)[0];
+                popup_1f3d1a07ed2be790a0aebc72ae6c7d80.setContent(html_cc0dd19c900b728e8c6159d6fe3a1cd0);
+            
+        
+
+        circle_marker_a0cafd089d98f27efac5407de1eded32.bindPopup(popup_1f3d1a07ed2be790a0aebc72ae6c7d80)
+        ;
+
+        
+    
+    
+            circle_marker_a0cafd089d98f27efac5407de1eded32.bindTooltip(
                 `<div>
                      Back Bay — MEDIUM
                  </div>`,
@@ -403,32 +436,32 @@
             );
         
     
-            var circle_marker_441b095b0ed04897f8ae180df476866b = L.circleMarker(
-                [42.3601, -71.0589],
-                {"bubblingMouseEvents": true, "color": "#fdae61", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fdae61", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_9e9e9a36f0d032b1a83e407ab3bef484);
+            var circle_marker_d76a7de949bf3b85952777447eb88786 = L.circleMarker(
+                [42.3388, -71.0468],
+                {"bubblingMouseEvents": true, "color": "#fdae61", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fdae61", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.192307692307693, "stroke": true, "weight": 3}
+            ).addTo(map_4b1fbeb8d1f66067887a1c74e6ef53c0);
         
     
-        var popup_5808e72ac3dc5c48c43a58314de9a4c9 = L.popup({
-  "maxWidth": 200,
+        var popup_c6cf7084b5173426cc4b2b4a6ba4dae4 = L.popup({
+  "maxWidth": 320,
 });
 
         
             
-                var html_a2cd3921602da79cc06df5d801509abb = $(`<div id="html_a2cd3921602da79cc06df5d801509abb" style="width: 100.0%; height: 100.0%;"><b>Jamaica Plain</b><br>Predicted reports: 1301<br>Risk: <b>MEDIUM</b></div>`)[0];
-                popup_5808e72ac3dc5c48c43a58314de9a4c9.setContent(html_a2cd3921602da79cc06df5d801509abb);
+                var html_d218465892733598eb4e629e5ca5b34b = $(`<div id="html_d218465892733598eb4e629e5ca5b34b" style="width: 100.0%; height: 100.0%;"><b>South Boston / South Boston Waterfront</b><br>Predicted potholes: 23<br>Risk: <b>MEDIUM</b><br><br><b>Why:</b> vs a typical 59:<br>▼ on pace for 23 this month (-52%)<br>▼ 16 already reported (days 1-22) (-10%)<br>▼ time of year (October) (-4%)</div>`)[0];
+                popup_c6cf7084b5173426cc4b2b4a6ba4dae4.setContent(html_d218465892733598eb4e629e5ca5b34b);
             
         
 
-        circle_marker_441b095b0ed04897f8ae180df476866b.bindPopup(popup_5808e72ac3dc5c48c43a58314de9a4c9)
+        circle_marker_d76a7de949bf3b85952777447eb88786.bindPopup(popup_c6cf7084b5173426cc4b2b4a6ba4dae4)
         ;
 
         
     
     
-            circle_marker_441b095b0ed04897f8ae180df476866b.bindTooltip(
+            circle_marker_d76a7de949bf3b85952777447eb88786.bindTooltip(
                 `<div>
-                     Jamaica Plain — MEDIUM
+                     South Boston / South Boston Waterfront — MEDIUM
                  </div>`,
                 {
   "sticky": true,
@@ -436,96 +469,30 @@
             );
         
     
-            var circle_marker_27c43e9f4f254eb5f8e5c86bd05e2a02 = L.circleMarker(
-                [42.3601, -71.0589],
-                {"bubblingMouseEvents": true, "color": "#fdae61", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fdae61", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_9e9e9a36f0d032b1a83e407ab3bef484);
+            var circle_marker_9cbf19acc7b5e8e83877dbd55f9f5eaf = L.circleMarker(
+                [42.3467, -71.1003],
+                {"bubblingMouseEvents": true, "color": "#fdae61", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fdae61", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.923076923076923, "stroke": true, "weight": 3}
+            ).addTo(map_4b1fbeb8d1f66067887a1c74e6ef53c0);
         
     
-        var popup_61a033a9ff8be0fb52a3d18f920b6274 = L.popup({
-  "maxWidth": 200,
+        var popup_f62719626e812c941614e338e52abeb7 = L.popup({
+  "maxWidth": 320,
 });
 
         
             
-                var html_7e039c96d8e207f53e1cb9afdb365d65 = $(`<div id="html_7e039c96d8e207f53e1cb9afdb365d65" style="width: 100.0%; height: 100.0%;"><b>Beacon Hill</b><br>Predicted reports: 830<br>Risk: <b>MEDIUM</b></div>`)[0];
-                popup_61a033a9ff8be0fb52a3d18f920b6274.setContent(html_7e039c96d8e207f53e1cb9afdb365d65);
+                var html_04d62f30ad442fbf87e257501c1debda = $(`<div id="html_04d62f30ad442fbf87e257501c1debda" style="width: 100.0%; height: 100.0%;"><b>Fenway / Kenmore / Audubon Circle / Longwood</b><br>Predicted potholes: 22<br>Risk: <b>MEDIUM</b><br><br><b>Why:</b> vs a typical 59:<br>▼ on pace for 23 this month (-52%)<br>▼ 16 already reported (days 1-22) (-10%)<br>▼ 16 last month (-5%)</div>`)[0];
+                popup_f62719626e812c941614e338e52abeb7.setContent(html_04d62f30ad442fbf87e257501c1debda);
             
         
 
-        circle_marker_27c43e9f4f254eb5f8e5c86bd05e2a02.bindPopup(popup_61a033a9ff8be0fb52a3d18f920b6274)
+        circle_marker_9cbf19acc7b5e8e83877dbd55f9f5eaf.bindPopup(popup_f62719626e812c941614e338e52abeb7)
         ;
 
         
     
     
-            circle_marker_27c43e9f4f254eb5f8e5c86bd05e2a02.bindTooltip(
-                `<div>
-                     Beacon Hill — MEDIUM
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_b95f3531002479cb1774a5a1eb90fb8a = L.circleMarker(
-                [42.3601, -71.0589],
-                {"bubblingMouseEvents": true, "color": "#fdae61", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fdae61", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_9e9e9a36f0d032b1a83e407ab3bef484);
-        
-    
-        var popup_29e860893a0a6b6a20ae1713056a994f = L.popup({
-  "maxWidth": 200,
-});
-
-        
-            
-                var html_10bd616cfb73aa405a24323464cee54d = $(`<div id="html_10bd616cfb73aa405a24323464cee54d" style="width: 100.0%; height: 100.0%;"><b>Roslindale</b><br>Predicted reports: 792<br>Risk: <b>MEDIUM</b></div>`)[0];
-                popup_29e860893a0a6b6a20ae1713056a994f.setContent(html_10bd616cfb73aa405a24323464cee54d);
-            
-        
-
-        circle_marker_b95f3531002479cb1774a5a1eb90fb8a.bindPopup(popup_29e860893a0a6b6a20ae1713056a994f)
-        ;
-
-        
-    
-    
-            circle_marker_b95f3531002479cb1774a5a1eb90fb8a.bindTooltip(
-                `<div>
-                     Roslindale — MEDIUM
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_68f13563e1f25ec5f046d9932c3485aa = L.circleMarker(
-                [42.3601, -71.0589],
-                {"bubblingMouseEvents": true, "color": "#fdae61", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fdae61", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_9e9e9a36f0d032b1a83e407ab3bef484);
-        
-    
-        var popup_6e09dc18bbd50f85d1336b05ccc16309 = L.popup({
-  "maxWidth": 200,
-});
-
-        
-            
-                var html_d8153122ea40ff4f22253fd0957a4546 = $(`<div id="html_d8153122ea40ff4f22253fd0957a4546" style="width: 100.0%; height: 100.0%;"><b>Fenway / Kenmore / Audubon Circle / Longwood</b><br>Predicted reports: 778<br>Risk: <b>MEDIUM</b></div>`)[0];
-                popup_6e09dc18bbd50f85d1336b05ccc16309.setContent(html_d8153122ea40ff4f22253fd0957a4546);
-            
-        
-
-        circle_marker_68f13563e1f25ec5f046d9932c3485aa.bindPopup(popup_6e09dc18bbd50f85d1336b05ccc16309)
-        ;
-
-        
-    
-    
-            circle_marker_68f13563e1f25ec5f046d9932c3485aa.bindTooltip(
+            circle_marker_9cbf19acc7b5e8e83877dbd55f9f5eaf.bindTooltip(
                 `<div>
                      Fenway / Kenmore / Audubon Circle / Longwood — MEDIUM
                  </div>`,
@@ -535,32 +502,32 @@
             );
         
     
-            var circle_marker_a92a74b63655f8c35daddce56eba89d2 = L.circleMarker(
-                [42.3601, -71.0589],
-                {"bubblingMouseEvents": true, "color": "#1a9641", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9641", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_9e9e9a36f0d032b1a83e407ab3bef484);
+            var circle_marker_31f75f297cd5e9c5500bd715ffbfc952 = L.circleMarker(
+                [42.3588, -71.0707],
+                {"bubblingMouseEvents": true, "color": "#fdae61", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fdae61", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.846153846153847, "stroke": true, "weight": 3}
+            ).addTo(map_4b1fbeb8d1f66067887a1c74e6ef53c0);
         
     
-        var popup_669448b22c27283ea289351b9fd2642f = L.popup({
-  "maxWidth": 200,
+        var popup_b6f3431c4e6901b1367eb0de9db02bd7 = L.popup({
+  "maxWidth": 320,
 });
 
         
             
-                var html_55fcb8f2d092e96a9b6a9f4abdc31f60 = $(`<div id="html_55fcb8f2d092e96a9b6a9f4abdc31f60" style="width: 100.0%; height: 100.0%;"><b>Greater Mattapan</b><br>Predicted reports: 702<br>Risk: <b>LOW</b></div>`)[0];
-                popup_669448b22c27283ea289351b9fd2642f.setContent(html_55fcb8f2d092e96a9b6a9f4abdc31f60);
+                var html_346a8316419af5eb925457fc4091f7f4 = $(`<div id="html_346a8316419af5eb925457fc4091f7f4" style="width: 100.0%; height: 100.0%;"><b>Beacon Hill</b><br>Predicted potholes: 18<br>Risk: <b>MEDIUM</b><br><br><b>Why:</b> vs a typical 59:<br>▼ on pace for 18 this month (-59%)<br>▼ 13 already reported (days 1-22) (-10%)<br>▼ 13 last month (-6%)</div>`)[0];
+                popup_b6f3431c4e6901b1367eb0de9db02bd7.setContent(html_346a8316419af5eb925457fc4091f7f4);
             
         
 
-        circle_marker_a92a74b63655f8c35daddce56eba89d2.bindPopup(popup_669448b22c27283ea289351b9fd2642f)
+        circle_marker_31f75f297cd5e9c5500bd715ffbfc952.bindPopup(popup_b6f3431c4e6901b1367eb0de9db02bd7)
         ;
 
         
     
     
-            circle_marker_a92a74b63655f8c35daddce56eba89d2.bindTooltip(
+            circle_marker_31f75f297cd5e9c5500bd715ffbfc952.bindTooltip(
                 `<div>
-                     Greater Mattapan — LOW
+                     Beacon Hill — MEDIUM
                  </div>`,
                 {
   "sticky": true,
@@ -568,30 +535,63 @@
             );
         
     
-            var circle_marker_d6d5dea169e66ffc725fba18a3f049b1 = L.circleMarker(
-                [42.3601, -71.0589],
-                {"bubblingMouseEvents": true, "color": "#1a9641", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9641", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_9e9e9a36f0d032b1a83e407ab3bef484);
+            var circle_marker_378e193cd47607747aa630f8e84f9446 = L.circleMarker(
+                [42.284, -71.1284],
+                {"bubblingMouseEvents": true, "color": "#1a9641", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9641", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.576923076923077, "stroke": true, "weight": 3}
+            ).addTo(map_4b1fbeb8d1f66067887a1c74e6ef53c0);
         
     
-        var popup_0a01ec88ed5a780a6d85283797afb795 = L.popup({
-  "maxWidth": 200,
+        var popup_913083e67270703e7eee47f57060b251 = L.popup({
+  "maxWidth": 320,
 });
 
         
             
-                var html_91dfd27a9a0a3fa869bdd668d9e42888 = $(`<div id="html_91dfd27a9a0a3fa869bdd668d9e42888" style="width: 100.0%; height: 100.0%;"><b>West Roxbury</b><br>Predicted reports: 685<br>Risk: <b>LOW</b></div>`)[0];
-                popup_0a01ec88ed5a780a6d85283797afb795.setContent(html_91dfd27a9a0a3fa869bdd668d9e42888);
+                var html_315e08617e020d24dfaec0fa1182d61a = $(`<div id="html_315e08617e020d24dfaec0fa1182d61a" style="width: 100.0%; height: 100.0%;"><b>Roslindale</b><br>Predicted potholes: 17<br>Risk: <b>LOW</b><br><br><b>Why:</b> vs a typical 59:<br>▼ on pace for 17 this month (-61%)<br>▼ 12 already reported (days 1-22) (-9%)<br>▼ 18 last month (-8%)</div>`)[0];
+                popup_913083e67270703e7eee47f57060b251.setContent(html_315e08617e020d24dfaec0fa1182d61a);
             
         
 
-        circle_marker_d6d5dea169e66ffc725fba18a3f049b1.bindPopup(popup_0a01ec88ed5a780a6d85283797afb795)
+        circle_marker_378e193cd47607747aa630f8e84f9446.bindPopup(popup_913083e67270703e7eee47f57060b251)
         ;
 
         
     
     
-            circle_marker_d6d5dea169e66ffc725fba18a3f049b1.bindTooltip(
+            circle_marker_378e193cd47607747aa630f8e84f9446.bindTooltip(
+                `<div>
+                     Roslindale — LOW
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5ee2471d2d993b46b9c0cf3f03b10a5c = L.circleMarker(
+                [42.2793, -71.1607],
+                {"bubblingMouseEvents": true, "color": "#1a9641", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9641", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.76923076923077, "stroke": true, "weight": 3}
+            ).addTo(map_4b1fbeb8d1f66067887a1c74e6ef53c0);
+        
+    
+        var popup_8e2ef72902e52f4ee942e7f7a78a7369 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_1daa3e7546d79eaa3fa4ccbf8c177fea = $(`<div id="html_1daa3e7546d79eaa3fa4ccbf8c177fea" style="width: 100.0%; height: 100.0%;"><b>West Roxbury</b><br>Predicted potholes: 14<br>Risk: <b>LOW</b><br><br><b>Why:</b> vs a typical 59:<br>▼ on pace for 11 this month (-67%)<br>▼ 8 already reported (days 1-22) (-17%)<br>▼ time of year (October) (-4%)</div>`)[0];
+                popup_8e2ef72902e52f4ee942e7f7a78a7369.setContent(html_1daa3e7546d79eaa3fa4ccbf8c177fea);
+            
+        
+
+        circle_marker_5ee2471d2d993b46b9c0cf3f03b10a5c.bindPopup(popup_8e2ef72902e52f4ee942e7f7a78a7369)
+        ;
+
+        
+    
+    
+            circle_marker_5ee2471d2d993b46b9c0cf3f03b10a5c.bindTooltip(
                 `<div>
                      West Roxbury — LOW
                  </div>`,
@@ -601,63 +601,30 @@
             );
         
     
-            var circle_marker_60ba109868f6135ead2c864db99ff5ab = L.circleMarker(
-                [42.3601, -71.0589],
-                {"bubblingMouseEvents": true, "color": "#1a9641", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9641", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_9e9e9a36f0d032b1a83e407ab3bef484);
+            var circle_marker_79b083b849b02e0cdf4e7c5f5fdca75f = L.circleMarker(
+                [42.2551, -71.1243],
+                {"bubblingMouseEvents": true, "color": "#1a9641", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9641", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.5, "stroke": true, "weight": 3}
+            ).addTo(map_4b1fbeb8d1f66067887a1c74e6ef53c0);
         
     
-        var popup_dc9512426eb62bfd4bc4d6ad0b7c2488 = L.popup({
-  "maxWidth": 200,
+        var popup_53cc04341a5ab64bef03eab13c6adc5f = L.popup({
+  "maxWidth": 320,
 });
 
         
             
-                var html_b36b7f9f6f1c2325ce784e6f86ce53c4 = $(`<div id="html_b36b7f9f6f1c2325ce784e6f86ce53c4" style="width: 100.0%; height: 100.0%;"><b>Charlestown</b><br>Predicted reports: 655<br>Risk: <b>LOW</b></div>`)[0];
-                popup_dc9512426eb62bfd4bc4d6ad0b7c2488.setContent(html_b36b7f9f6f1c2325ce784e6f86ce53c4);
+                var html_44ffe5e56e5203533e189ef837d25a00 = $(`<div id="html_44ffe5e56e5203533e189ef837d25a00" style="width: 100.0%; height: 100.0%;"><b>Hyde Park</b><br>Predicted potholes: 13<br>Risk: <b>LOW</b><br><br><b>Why:</b> vs a typical 59:<br>▼ on pace for 11 this month (-69%)<br>▼ 8 already reported (days 1-22) (-17%)<br>▼ 14 last month (-7%)</div>`)[0];
+                popup_53cc04341a5ab64bef03eab13c6adc5f.setContent(html_44ffe5e56e5203533e189ef837d25a00);
             
         
 
-        circle_marker_60ba109868f6135ead2c864db99ff5ab.bindPopup(popup_dc9512426eb62bfd4bc4d6ad0b7c2488)
+        circle_marker_79b083b849b02e0cdf4e7c5f5fdca75f.bindPopup(popup_53cc04341a5ab64bef03eab13c6adc5f)
         ;
 
         
     
     
-            circle_marker_60ba109868f6135ead2c864db99ff5ab.bindTooltip(
-                `<div>
-                     Charlestown — LOW
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_4966e97ee11536be44a0b0b217e6f6e5 = L.circleMarker(
-                [42.3601, -71.0589],
-                {"bubblingMouseEvents": true, "color": "#1a9641", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9641", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_9e9e9a36f0d032b1a83e407ab3bef484);
-        
-    
-        var popup_667197be0f14db62bd6b3cc03939b815 = L.popup({
-  "maxWidth": 200,
-});
-
-        
-            
-                var html_a569fd86db5c55eaac97844e9bfb3cbb = $(`<div id="html_a569fd86db5c55eaac97844e9bfb3cbb" style="width: 100.0%; height: 100.0%;"><b>Hyde Park</b><br>Predicted reports: 622<br>Risk: <b>LOW</b></div>`)[0];
-                popup_667197be0f14db62bd6b3cc03939b815.setContent(html_a569fd86db5c55eaac97844e9bfb3cbb);
-            
-        
-
-        circle_marker_4966e97ee11536be44a0b0b217e6f6e5.bindPopup(popup_667197be0f14db62bd6b3cc03939b815)
-        ;
-
-        
-    
-    
-            circle_marker_4966e97ee11536be44a0b0b217e6f6e5.bindTooltip(
+            circle_marker_79b083b849b02e0cdf4e7c5f5fdca75f.bindTooltip(
                 `<div>
                      Hyde Park — LOW
                  </div>`,
@@ -667,30 +634,63 @@
             );
         
     
-            var circle_marker_325f2500ca70a6e534cbbfc716cfe019 = L.circleMarker(
-                [42.3601, -71.0589],
-                {"bubblingMouseEvents": true, "color": "#1a9641", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9641", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_9e9e9a36f0d032b1a83e407ab3bef484);
+            var circle_marker_bf4f18598487446623e5202554a22b6c = L.circleMarker(
+                [42.2736, -71.0921],
+                {"bubblingMouseEvents": true, "color": "#1a9641", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9641", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.23076923076923, "stroke": true, "weight": 3}
+            ).addTo(map_4b1fbeb8d1f66067887a1c74e6ef53c0);
         
     
-        var popup_eeac04c2533c44298d75f6fdee68b8b5 = L.popup({
-  "maxWidth": 200,
+        var popup_61142cd7a1e3f84674259e78317e1826 = L.popup({
+  "maxWidth": 320,
 });
 
         
             
-                var html_86298493733809a06065ab02de8da206 = $(`<div id="html_86298493733809a06065ab02de8da206" style="width: 100.0%; height: 100.0%;"><b>Mission Hill</b><br>Predicted reports: 411<br>Risk: <b>LOW</b></div>`)[0];
-                popup_eeac04c2533c44298d75f6fdee68b8b5.setContent(html_86298493733809a06065ab02de8da206);
+                var html_6e59f18447ab20c952ab5c06cbbb18a6 = $(`<div id="html_6e59f18447ab20c952ab5c06cbbb18a6" style="width: 100.0%; height: 100.0%;"><b>Greater Mattapan</b><br>Predicted potholes: 12<br>Risk: <b>LOW</b><br><br><b>Why:</b> vs a typical 59:<br>▼ on pace for 13 this month (-69%)<br>▼ 9 already reported (days 1-22) (-14%)<br>▼ 4 last month (-11%)</div>`)[0];
+                popup_61142cd7a1e3f84674259e78317e1826.setContent(html_6e59f18447ab20c952ab5c06cbbb18a6);
             
         
 
-        circle_marker_325f2500ca70a6e534cbbfc716cfe019.bindPopup(popup_eeac04c2533c44298d75f6fdee68b8b5)
+        circle_marker_bf4f18598487446623e5202554a22b6c.bindPopup(popup_61142cd7a1e3f84674259e78317e1826)
         ;
 
         
     
     
-            circle_marker_325f2500ca70a6e534cbbfc716cfe019.bindTooltip(
+            circle_marker_bf4f18598487446623e5202554a22b6c.bindTooltip(
+                `<div>
+                     Greater Mattapan — LOW
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_02d03759c421e63ba493971448058872 = L.circleMarker(
+                [42.3278, -71.1003],
+                {"bubblingMouseEvents": true, "color": "#1a9641", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9641", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.692307692307693, "stroke": true, "weight": 3}
+            ).addTo(map_4b1fbeb8d1f66067887a1c74e6ef53c0);
+        
+    
+        var popup_1a949fbf4267ddc6d7c1a424dec432d6 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_865eb25387776f4e7315162700496119 = $(`<div id="html_865eb25387776f4e7315162700496119" style="width: 100.0%; height: 100.0%;"><b>Mission Hill</b><br>Predicted potholes: 10<br>Risk: <b>LOW</b><br><br><b>Why:</b> vs a typical 59:<br>▼ on pace for 10 this month (-74%)<br>▼ 7 already reported (days 1-22) (-17%)<br>▼ 16 last month (-6%)</div>`)[0];
+                popup_1a949fbf4267ddc6d7c1a424dec432d6.setContent(html_865eb25387776f4e7315162700496119);
+            
+        
+
+        circle_marker_02d03759c421e63ba493971448058872.bindPopup(popup_1a949fbf4267ddc6d7c1a424dec432d6)
+        ;
+
+        
+    
+    
+            circle_marker_02d03759c421e63ba493971448058872.bindTooltip(
                 `<div>
                      Mission Hill — LOW
                  </div>`,

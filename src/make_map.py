@@ -52,7 +52,17 @@ print(f"{len(df)} neighborhoods loaded (mapping predicted {WHAT}).")
 
 # --- Build map ---
 boston_center = [42.3601, -71.0589]
-m = folium.Map(location=boston_center, zoom_start=12, tiles="OpenStreetMap")
+# CARTO Positron basemap via its public CDN. No API key, and CARTO's basemap
+# usage policy permits app/demo embedding -- unlike the OpenStreetMap volunteer
+# tile servers, which block app embedding ("not following the usage policy").
+m = folium.Map(location=boston_center, zoom_start=12, tiles=None)
+folium.TileLayer(
+    tiles="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+    attr='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    name="Light",
+    subdomains="abcd",
+    max_zoom=20,
+).add_to(m)
 
 # Heat map layer (weight = predicted report count)
 heat_data = df[["lat", "lon", VALUE_COL]].values.tolist()
