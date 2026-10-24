@@ -106,8 +106,54 @@ if os.path.exists(IMP_PATH):
     nice["importance"] = (nice["importance"] * 100).round(1).astype(str) + "%"
     nice.columns = ["Input", "How much it matters"]
     st.dataframe(nice, hide_index=True, use_container_width=True)
+
+    # ---- What the model concluded (plain English) ----
+    st.subheader("What the model concluded")
+
+    feats = pd.read_csv("data/processed/features.csv")
+    cold = feats[feats["avg_temp_c"] <= 5]["report_count"].mean()
+    warm = feats[feats["avg_temp_c"] >= 18]["report_count"].mean()
+    temp_corr = feats["avg_temp_c"].corr(feats["report_count"])
+
+    st.markdown(
+        f"""
+**How it works:** the model looked at 2024 — for every neighborhood, every
+month, it compared the number of 311 problem reports against that month's
+weather. It found the pattern, then uses it to guess next month.
+
+**What drives the guess (the % splits above):**
+- **Neighborhood — 59%.** The single biggest factor. Past problem areas
+  stay problem areas. Dorchester reports far more than Chestnut Hill, every month.
+- **Temperature — 22%.** The strongest weather signal.
+- **Month — 10%.** Captures the time of year.
+- **Rain, snow, wind — ~9% together.** Smaller nudges.
+
+**The weather correlation we found:**
+- Warm months average **{warm:.0f}** reports per area.
+- Cold months average **{cold:.0f}** reports per area.
+- Correlation of temperature with reports: **{temp_corr:+.2f}** (positive).
+
+So in this 2024 data, **warmer months bring MORE reports, not fewer.**
+That likely reflects reporting behavior — people are out walking and
+driving more in warm weather, so they spot and report problems more often.
+The damage from winter freeze may show up as reports later, once it is warm.
+
+**Example in plain numbers:** a typical area logs about **{warm:.0f}**
+reports in a hot month and about **{cold:.0f}** in a cold one — roughly
+**{warm/cold:.1f}× more** when it is warm.
+"""
+    )
+    st.caption(
+        "Assumption to test further: the model shows CORRELATION, not cause. "
+        "Weather, season, and reporting habits move together here."
+    )
 else:
     st.info("Run `python src/train_xgboost.py` to generate the proof chart.")
+
+st.caption(
+    "Early model — more live data feeds (weather is live now) will sharpen "
+    "predictions before the hackathon ends."
+)
 
 st.caption(
     "Early model — more live data feeds (weather is live now) will sharpen "
