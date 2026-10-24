@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Boston Civic Action — 311 Risk Map</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --card: #1a2029;
+      --ink: #e8edf2;
+      --muted: #9aa7b4;
+      --accent: #4ea8de;
+      --line: #2a333f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    header {
+      padding: 48px 24px 32px;
+      text-align: center;
+      border-bottom: 1px solid var(--line);
+    }
+    h1 { margin: 0 0 8px; font-size: 30px; }
+    .sub { color: var(--muted); font-size: 17px; max-width: 640px; margin: 0 auto; }
+    main { max-width: 960px; margin: 0 auto; padding: 32px 24px 64px; }
+    .cta {
+      display: inline-block;
+      margin: 24px auto 0;
+      padding: 14px 28px;
+      background: var(--accent);
+      color: #06131d;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 17px;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 16px;
+      margin: 40px 0;
+    }
+    .stat {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+    .stat .big { font-size: 26px; font-weight: 700; color: var(--accent); }
+    .stat .lbl { color: var(--muted); font-size: 13px; margin-top: 4px; }
+    h2 { font-size: 20px; border-bottom: 1px solid var(--line); padding-bottom: 8px; }
+    ul { color: var(--muted); }
+    li { margin: 6px 0; }
+    .mapwrap {
+      margin: 24px 0;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--card);
+    }
+    .mapwrap iframe { width: 100%; height: 560px; border: 0; display: block; }
+    footer { text-align: center; color: var(--muted); font-size: 13px; padding: 24px; border-top: 1px solid var(--line); }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Boston Civic Action — 311 Risk Map</h1>
+    <p class="sub">A model that predicts where Boston will need crews next — potholes, sidewalk damage, and more — using 10 years of 311 reports, live weather, and transit data.</p>
+    <a class="cta" href="risk_map.html">Open the full map →</a>
+  </header>
+
+  <main>
+    <div class="stats">
+      <div class="stat"><div class="big">85.6%</div><div class="lbl">Overall accuracy (all 311)</div></div>
+      <div class="stat"><div class="big">10 yrs</div><div class="lbl">Data: 2015–2024</div></div>
+      <div class="stat"><div class="big">306K</div><div class="lbl">311 reports in 2024</div></div>
+      <div class="stat"><div class="big">23</div><div class="lbl">Neighborhoods scored</div></div>
+    </div>
+
+    <h2>The map</h2>
+    <div class="mapwrap">
+      <iframe src="risk_map.html" title="Boston 311 risk map"></iframe>
+    </div>
+
+    <h2>What drives the prediction</h2>
+    <ul>
+      <li><strong>Recent history (lag1):</strong> 23% — last month's reports predict this month's</li>
+      <li><strong>Transit routes &amp; stops:</strong> ~28% — busy areas report more</li>
+      <li><strong>Season &amp; month:</strong> ~22% — potholes spike after winter freeze-thaw</li>
+      <li><strong>Trees &amp; weather:</strong> ~16% — the rest</li>
+    </ul>
+
+    <h2>How it works</h2>
+    <ul>
+      <li>Pulls live Boston 311, weather (Open-Meteo), and MBTA transit data.</li>
+      <li>An XGBoost model scores each neighborhood for the current month.</li>
+      <li>Two modes: all 311 requests, or potholes only.</li>
+    </ul>
+
+    <p>Full code, data sources, and the live dashboard: <a href="https://github.com/jzzzzyh/Hackachusetts_Project">github.com/jzzzzyh/Hackachusetts_Project</a></p>
+  </main>
+
+  <footer>
+    Built for Hackachusetts · Civic Action · Data from Boston Open Data, MBTA, Open-Meteo
+  </footer>
+</body>
+</html>
