@@ -1,306 +1,178 @@
-# Hackachusetts: Boston 311 Service Request Prediction with Equity Analysis
+# Boston Civic Action — 311 Risk Prediction
 
-Predictive model for Boston 311 service requests using XGBoost, with geographic equity analysis to identify service delivery disparities across neighborhoods.
+Predict where Boston will need repair crews next — potholes, sidewalk damage, and other civic problems — so the city can send crews **before** reports pile up. Built for Hackachusetts (topic: Civic Action).
 
----
+The model learns from 10+ years of Boston 311 reports, live weather, transit access, street trees, and neighborhood equity scores, then ranks every neighborhood by predicted risk for the current month.
 
-## 📖 Documentation (Start Here!)
-
-### Quick References
-- **[QUICK_START.md](docs/QUICK_START.md)** — Fast setup and common commands (5 min read)
-- **[docs/README.md](docs/README.md)** — Full documentation index and navigation (10 min read)
-
-### Project Docs
-- **[docs/project/PROJECT_OUTLINE.md](docs/project/PROJECT_OUTLINE.md)** — Goals, scope, architecture
-- **[docs/project/IMPLEMENTATION_ROADMAP.md](docs/project/IMPLEMENTATION_ROADMAP.md)** — Phases, timeline, milestones
-- **[docs/project/HANDOFF.md](docs/project/HANDOFF.md)** — Current status and blockers
-
-### Step-by-Step Workflows (Pick One)
-- **[docs/workflows/WORKFLOW_PERSON1_WEATHER.md](docs/workflows/WORKFLOW_PERSON1_WEATHER.md)** — Weather feature engineering (5 steps)
-- **[docs/workflows/WORKFLOW_PERSON2_MBTA.md](docs/workflows/WORKFLOW_PERSON2_MBTA.md)** — MBTA transit features (5 steps)
-- **[docs/workflows/WORKFLOW_PERSON4_NEIGHBORHOODS.md](docs/workflows/WORKFLOW_PERSON4_NEIGHBORHOODS.md)** — Geographic equity analysis (5 steps)
+**Live demo:** [public-nu-mauve.vercel.app](https://public-nu-mauve.vercel.app)
+**Code:** [github.com/jzzzzyh/Hackachusetts_Project](https://github.com/jzzzzyh/Hackachusetts_Project) (work on the `dev` branch)
 
 ---
 
-## 🗺️ Viewing the Map
+## What it does
 
-The finished map is `data/processed/risk_map.html`. Double-click it to open it in your browser.
+1. **Downloads** Boston 311 service requests (2015–2026, ~300K+ records).
+2. **Builds features** per neighborhood per month: recent report history, season, weather, transit stops/routes, street trees, equity score.
+3. **Trains** an XGBoost model to predict how many 311 reports a neighborhood will get next month.
+4. **Scores** every neighborhood and assigns a risk level (high / medium / low).
+5. **Shows** the result on an interactive map and a Streamlit dashboard.
 
-**If the browser says "Access Blocked" (or the map shows up empty):** some browsers block local HTML files from loading map tiles. To fix it, serve the file from Python instead — this works every time:
+Two prediction modes:
+- **Everything** — all 311 request types.
+- **Potholes only** — a focused model for pothole risk (freeze-thaw driven).
+
+---
+
+## Results
+
+| Mode | Test MAE | Accuracy | Avg reports/month |
+|------|---------:|---------:|------------------:|
+| Everything (all 311) | 214.7 | 85.6% | 1,491 |
+| Potholes only | 22.3 | 61.2% | 57 |
+
+*Accuracy = 1 − (MAE ÷ average monthly reports). The pothole model scores lower because the counts are small, which the metric punishes — not because it predicts worse. Test period: Oct 2025 – Sep 2026.*
+
+### What drives the prediction
+
+**Everything model** — top features by importance:
+
+| Feature | Importance | What it means |
+|---------|-----------:|---------------|
+| `lag1` | 23% | Last month's reports |
+| `route_count` | 15% | Bus/rail routes nearby |
+| `month` | 15% | Time of year |
+| `tree_count` | 10% | Street trees nearby |
+| `rail_stops_near` | 8% | Rail stops within reach |
+| *season, lag12, bus stops, rolling avg, equity, nbhd* | rest | — |
+
+**Potholes model** — top features: `freeze_thaw_days` (17%), `month` (16%), `season` (11%), `past_pothole_rate` (10%), `total_snow_cm` (9%). Winter freeze-thaw cycles crack pavement, so cold-weather features dominate.
+
+---
+
+## Quick start
 
 ```bash
-# From the project root
+# 1. Get the code (one time)
+git clone https://github.com/jzzzzyh/Hackachusetts_Project.git
+cd Hackachusetts_Project
+git checkout dev
+
+# 2. Install dependencies
+pip install -r requirements.txt
+```
+
+### Run the full pipeline
+
+Run these from the project root, in order:
+
+```bash
+python src/prep_data.py        # download + clean 311 data, build report counts
+python src/fetch_weather.py    # fetch Boston weather (Open-Meteo)
+python src/merge_weather.py    # join weather + transit + trees into features.csv
+python src/train_xgboost.py    # train both models, write predictions + importances
+python src/make_map.py         # build the interactive risk_map.html
+```
+
+Outputs land in `data/processed/` (predictions, feature importances, `risk_map.html`).
+
+### Run the dashboard
+
+```bash
+python -m streamlit run app/dashboard.py
+```
+
+Opens on `http://localhost:8501`. The sidebar toggles between the two model modes.
+
+> **Note:** on this project's Python, use `python -m streamlit run ...` (not `streamlit`), and `pip install -r requirements.txt` with the versions as pinned.
+
+---
+
+## Viewing the map
+
+The finished map is `data/processed/risk_map.html`. Double-click it to open in your browser.
+
+**If the browser says "Access Blocked" or the map is empty**, some browsers block local HTML files from loading map tiles. Serve it with Python instead:
+
+```bash
 python -m http.server 8000 --bind 127.0.0.1 --directory data/processed
 ```
 
-Then open this link in your browser:
-
-```
-http://127.0.0.1:8000/risk_map.html
-```
-
-Press `Ctrl+C` in the terminal to stop the server when you're done.
+Then open `http://127.0.0.1:8000/risk_map.html`. Press `Ctrl+C` to stop the server.
 
 ---
 
-## 🎯 Quick Overview
-
-### What This Project Does
-1. **Downloads** 311 service request data from Boston (306K records)
-2. **Engineers** features: weather, transit accessibility, neighborhood metadata
-3. **Trains** XGBoost model to predict monthly report counts per neighborhood
-4. **Analyzes** equity: identifies neighborhoods with disproportionate service requests
-5. **Visualizes** results on interactive dashboard with geographic context
-
-### Current Status
-✅ Weather feature integrated (31% importance)  
-✅ MBTA transit feature added (39% importance)  
-✅ 28 Boston neighborhoods mapped with equity metrics  
-✅ Model trained: MAE ~123 reports, geographic data included  
-⏳ Dashboard integration in progress  
-
-### Key Results
-| Metric | Value |
-|--------|-------|
-| Model Test MAE | 123.4 reports |
-| Top Feature | Bus stops near (39%) |
-| Top Request Area | Dorchester (13.5% of all reports) |
-| Lowest Service Area | Chestnut Hill (0.03% of reports) |
-| Geographic Coverage | 28 neighborhoods, 305K+ reports assigned |
-
----
-
-## 🚀 Getting Started
-
-### For New Team Members
-```bash
-# 1. Clone and setup (one time)
-cd ~/Documents/Kiro/Hackachusetts_Project
-git pull origin dev
-pip install -r requirements.txt
-
-# 2. Pick a workflow from docs/workflows/
-# 3. Follow the 5 steps in your workflow
-# 4. Push changes when done
-```
-
-### For Contributors
-1. Read [QUICK_START.md](docs/QUICK_START.md) (5 minutes)
-2. Choose your workflow from above
-3. Follow steps 1-5 (30-120 min)
-4. Commit and push
-
----
-
-## 📁 Project Structure
+## Project structure
 
 ```
 Hackachusetts_Project/
-├── README.md (you are here)
-├── docs/
-│   ├── README.md              ← Full documentation index
-│   ├── QUICK_START.md         ← Fast reference
-│   ├── project/
-│   │   ├── PROJECT_OUTLINE.md
-│   │   ├── IMPLEMENTATION_ROADMAP.md
-│   │   └── HANDOFF.md
-│   └── workflows/
-│       ├── WORKFLOW_PERSON1_WEATHER.md
-│       ├── WORKFLOW_PERSON2_MBTA.md
-│       └── WORKFLOW_PERSON4_NEIGHBORHOODS.md
-├── src/                        ← Python scripts
-│   ├── prep_data.py           # Download 311 data
-│   ├── fetch_weather.py       # Get weather data
-│   ├── get_neighborhoods.py   # Create geodata
-│   ├── equity_analysis.py     # Spatial join & metrics
-│   ├── merge_weather.py       # Combine features
-│   └── train_xgboost.py       # Train model
+├── README.md                  ← you are here
+├── requirements.txt
+├── src/                       ← pipeline scripts
+│   ├── prep_data.py           # download + clean 311, build report counts
+│   ├── fetch_weather.py       # Open-Meteo weather
+│   ├── get_mbta.py            # MBTA transit stops/routes
+│   ├── get_trees_live.py      # street trees (live ArcGIS)
+│   ├── get_neighborhoods.py   # neighborhood geometry
+│   ├── equity_analysis.py     # equity scores per neighborhood
+│   ├── merge_weather.py       # join all features → features.csv
+│   ├── train_xgboost.py       # train both models
+│   └── make_map.py            # build risk_map.html
 ├── app/
-│   └── dashboard.py           # Streamlit visualization
+│   └── dashboard.py           # Streamlit dashboard (both modes)
+├── public/                    ← static site deployed to Vercel
+│   ├── index.html             # landing page
+│   └── risk_map.html          # map copy for the web
 ├── data/
-│   ├── raw/                   # Downloaded data (gitignored)
-│   ├── processed/             # Features (gitignored)
-│   └── sources/               # Data source docs
-└── requirements.txt           # Python dependencies
+│   ├── raw/                   # downloaded data (gitignored)
+│   ├── processed/             # features, predictions, map (gitignored*)
+│   └── sources/               # documentation for all 15 data sources
+└── docs/                      # project docs + per-person workflows
 ```
 
----
-
-## 🔄 Workflow Overview
-
-Each workflow is independent and targets the `dev` branch:
-
-| Workflow | Owner | Focus | Time | Status |
-|----------|-------|-------|------|--------|
-| **PERSON 1** | Weather Team | Feature importance proof | 45 min | ✅ Complete |
-| **PERSON 2** | Transit Team | MBTA feature engineering | 90 min | ✅ Complete |
-| **PERSON 3** | Trees Team | Street tree feature | TBD | ⏳ Deferred |
-| **PERSON 4** | Equity Team | Geographic analysis | 120 min | ✅ Complete |
+\* `risk_map.html` is force-kept in git so judges can open the map without running the build.
 
 ---
 
-## 💡 Key Concepts
+## Data sources
 
-### The Model
-```
-Input: Neighborhood + Month + Weather + Transit + Area
-  ↓
-XGBoost Regressor (300 estimators, depth 4)
-  ↓
-Output: Predicted 311 reports + Risk level (high/med/low)
-  ↓
-Success: Low MAE + Interpretable features + Equity-aware
-```
+All data is public. See `data/sources/` for the full profile of each (15 sources documented).
 
-### Features Used
-- `neighborhood` — Encoded ID (categorical)
-- `month` — 1-12 (seasonal patterns)
-- `avg_temp_c` — Temperature (weather)
-- `total_precip_mm` — Precipitation
-- `total_snow_cm` — Snow
-- `max_wind_kmh` — Wind speed
-- `bus_stops_near` — Transit accessibility (0.5km radius)
-- `lat, lon` — Geographic coordinates
-- `area_sqm` — Neighborhood area
+| Source | Used for | Format |
+|--------|----------|--------|
+| Boston 311 Requests (2015–2026) | Target + history | CSV |
+| Open-Meteo | Weather, freeze-thaw | API / CSV |
+| MBTA (GTFS) | Transit stops & routes | ZIP |
+| Boston Neighborhoods | Geometry & equity | GeoJSON |
+| Boston Street Trees (ArcGIS) | Tree feature | Live API |
 
-### Equity Analysis
-Identifies service delivery disparities:
+---
+
+## How the model works
+
 ```
-High Disparity:  Top 3 neighborhoods → 35% of all reports
-Low Disparity:   Bottom 5 neighborhoods → 5% of all reports
-Gap:             450x difference between max and min
+Neighborhood + month + recent history + weather + transit + trees + equity
+        │
+        ▼
+  XGBoost regressor
+        │
+        ▼
+Predicted 311 reports  →  risk level (high / medium / low)
 ```
 
----
-
-## 🔧 Quick Commands
-
-```bash
-# Setup
-git pull origin dev && pip install -r requirements.txt
-
-# Run a workflow step (example: Person 2, Step 2)
-python src/get_mbta.py
-
-# Merge features
-python src/merge_weather.py
-
-# Train model
-python src/train_xgboost.py
-
-# Push changes
-git add src/file.py docs/WORKFLOW_X.md
-git commit -m "Description"
-git push origin dev
-```
+- **Features** come from `features.csv` (one row per neighborhood per month).
+- **Two models** are trained from the same features: one for all 311 types, one for potholes only.
+- Both write their predictions and feature importances to `data/processed/`.
 
 ---
 
-## 📊 Data Sources
+## Team & workflow
 
-All data is public and downloaded automatically:
+All work targets the `dev` branch, never `main`. Per-person task guides live in `docs/workflows/`. An auto-sync watcher (`watch-and-sync.ps1`) pulls with rebase and pushes to `dev` so teammates stay in sync.
 
-| Source | Description | Size | Format |
-|--------|-------------|------|--------|
-| **311 Requests** | Boston service requests 2024 | 180 MB | CSV |
-| **Weather** | Boston climate data 2024 | <1 MB | CSV |
-| **MBTA** | Transit stops & routes | <1 MB | ZIP (GTFS) |
-| **Neighborhoods** | Boston geographic boundaries | <1 MB | Shapefile/GeoJSON |
-
-See `data/sources/` for original URLs and documentation.
+Contributors: Weather, MBTA transit, neighborhood equity, and live-weather integration.
 
 ---
 
-## ✅ Verification Checklist
+## License & attribution
 
-After running each workflow:
-
-- [ ] All 5 steps completed
-- [ ] Output files created in `data/processed/`
-- [ ] No errors in model training
-- [ ] Feature importance makes sense
-- [ ] Commit message describes changes
-- [ ] Changes pushed to `dev` branch
-- [ ] Auto-sync detected and committed
-
----
-
-## 🚀 Next Steps
-
-### For New Contributors
-1. Read [QUICK_START.md](docs/QUICK_START.md)
-2. Choose a workflow from `docs/workflows/`
-3. Follow steps 1-5 in your workflow
-4. Push changes
-5. Done!
-
-### For Project Leads
-1. Review [IMPLEMENTATION_ROADMAP.md](docs/project/IMPLEMENTATION_ROADMAP.md)
-2. Check [HANDOFF.md](docs/project/HANDOFF.md) for blockers
-3. Coordinate with team members on shared workflows
-4. Monitor `dev` branch for auto-synced changes
-
----
-
-## 📞 Support
-
-| Question | Answer |
-|----------|--------|
-| How do I start? | Read [QUICK_START.md](docs/QUICK_START.md) |
-| What's my task? | Pick a workflow from `docs/workflows/` |
-| I'm stuck | Check [HANDOFF.md](docs/project/HANDOFF.md) or workflow FAQ |
-| How's the project going? | See [IMPLEMENTATION_ROADMAP.md](docs/project/IMPLEMENTATION_ROADMAP.md) |
-| Model questions? | See `src/train_xgboost.py` code comments |
-
----
-
-## 📈 Results Summary
-
-### Model Performance
-- **Test MAE:** 123.4 reports (prediction error)
-- **Feature Importance:** Top 3 are neighborhood (34%), bus stops (39%), temperature (12%)
-- **Predictions:** 23 neighborhoods with risk levels and predicted volumes
-
-### Equity Findings
-- **Disparity Ratio:** 450:1 (Dorchester to Chestnut Hill)
-- **Underserved:** West End (410 reports), Waterfront (3K reports)
-- **Overserved:** Dorchester (41K reports), South End (35K reports)
-
-### Geographic Coverage
-- **Neighborhoods:** 28 with complete metadata
-- **Reports Mapped:** 305,523 / 306,756 (99.6%)
-- **Coordinates:** All neighborhoods have lat/lon and area
-
----
-
-## 🤝 Team
-
-**Contributors:** Person 1 (Weather), Person 2 (MBTA), Person 4 (Neighborhoods)  
-**Auto-sync:** Enabled (commits pushed frequently during development)  
-**Workflow:** All work targets `dev` branch, never `main`  
-
----
-
-## 📝 License & Attribution
-
-This project uses public data from:
-- **Boston Open Data:** 311 Requests, Neighborhoods, Street Trees
-- **MBTA:** Transit data (GTFS)
-- **Open-Meteo:** Weather data
-
-See `data/sources/` for complete citations.
-
----
-
-## 🎓 Learning Resources
-
-- **XGBoost Model:** See `src/train_xgboost.py` for hyperparameters and tuning
-- **Equity Analysis:** See `src/equity_analysis.py` for methodology
-- **Geographic Data:** See `src/get_neighborhoods.py` for GIS operations
-- **Feature Engineering:** See all `src/get_*.py` files for examples
-
----
-
-**Last Updated:** 2026-10-24  
-**Project Phase:** Feature Engineering + Model Training  
-**Status:** 4 of 5 workflows complete, dashboard integration next
+Public data from **Boston Open Data** (311, neighborhoods, street trees), **MBTA** (GTFS), and **Open-Meteo** (weather). Full citations in `data/sources/`.
