@@ -16,9 +16,11 @@ import ssl
 # Handle SSL certificate verification issues
 ssl._create_default_https_context = ssl._create_unverified_context
 
-# Boston neighborhoods shapefile endpoint (from data.boston.gov/dataset/boston-neighborhoods)
-# This is the WGS84 shapefile from Analyze Boston
-SHAPEFILE_URL = "https://bostonopendata-boston.opendata.arcgis.com/datasets/3525b0ee6e6b427f9aab5d855a4e2e27_0.zip"
+# Boston neighborhoods shapefile endpoint options
+# Primary: Direct download from Analyze Boston
+SHAPEFILE_URL = "https://bostonopendata-boston.opendata.arcgis.com/datasets/3525b0ee6e6b427f9aab5d855a4e2e27_0/download"
+# Alternative: Direct GeoJSON endpoint
+GEOJSON_URL = "https://bostonopendata-boston.opendata.arcgis.com/datasets/3525b0ee6e6b427f9aab5d855a4e2e27_0.geojson"
 OUT_PATH = "data/processed/neighborhoods.csv"
 GEOJSON_PATH = "data/processed/neighborhoods.geojson"
 
