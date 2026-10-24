@@ -243,12 +243,12 @@ def main():
     s["rank"] = np.arange(1, len(s) + 1)
     s["risk"] = np.where(s["rank"] <= HIGH_N, "high", np.where(s["rank"] <= MEDIUM_N, "medium", "low"))
 
-    # worst block = segment with the most reports in the last 12 months
-    recent = points[(points["ym"] < ym) & (points["ym"] >= ym - 12)]
-    blk = (recent.groupby(["neighborhood", "street", "seg"]).size().rename("n").reset_index()
+    # worst spot = the address / corner reported most often on this street (last 12 months + this month)
+    recent = points[(points["ym"] <= ym) & (points["ym"] >= ym - 12)]
+    blk = (recent.groupby(["neighborhood", "street", "spot"]).size().rename("n").reset_index()
            .sort_values("n", ascending=False).drop_duplicates(["neighborhood", "street"])
-           .merge(streets[["seg", "block"]], on="seg"))
-    s = s.merge(blk[["neighborhood", "street", "block", "n"]], on=["neighborhood", "street"], how="left")
+           .rename(columns={"spot": "block"}))
+    s = s.merge(blk, on=["neighborhood", "street"], how="left")
 
     area_pred = s["neighborhood"].map(totals)
     s["why"] = [
