@@ -231,7 +231,10 @@ def main():
               f"test {scores['test_period']}, avg {scores['mean_actual']} per area-month")
         print(f"  model MAE {scores['mae']}  |  'same as last month' {scores['mae_last_month']}"
               f"  |  'same month last year' {scores['mae_last_year']}  |  success {scores['success_pct']:.0f}%")
-        accuracy.append({"mode": mode, "label": label, **scores})
+        if use_so_far:
+            print(f"  (with days 1-{cutoff} known) straight-line projection MAE {scores['mae_straight_line']}")
+        accuracy.append({"mode": mode, "label": label, **scores,
+                         "data_through_day": cutoff if use_so_far else 0})
 
         # Retrain on every complete month, then predict the current month
         model = make_model(objective=objective).fit(train[feature_cols], train[target])
