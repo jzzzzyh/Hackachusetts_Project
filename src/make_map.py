@@ -64,6 +64,35 @@ folium.TileLayer(
     max_zoom=20,
 ).add_to(m)
 
+# Street layer (from street_hotspots.py): predicted potholes per street
+STREET_GEO = "data/processed/street_predictions.geojson"
+if WHAT == "potholes" and os.path.exists(STREET_GEO):
+    import geopandas as gpd
+    streets = gpd.read_file(STREET_GEO)
+    smax = max(float(streets["predicted_potholes"].max()), 1.0)
+    street_layer = folium.FeatureGroup(name="Streets (predicted potholes)", show=True)
+    for _, r in streets.iterrows():
+        color = RISK_COLOR.get(r["risk"], "gray")
+        folium.GeoJson(
+            r["geometry"].__geo_interface__,
+            style_function=lambda _, c=color, w=3 + 7 * r["predicted_potholes"] / smax:
+                {"color": c, "weight": w, "opacity": 0.85},
+            tooltip=f"#{int(r['rank'])} {r['street']} ({r['neighborhood']})",
+            popup=folium.Popup(
+                f"<b>#{int(r['rank'])} {r['street']}</b><br>{r['neighborhood']}<br>"
+                f"Predicted potholes: <b>{r['predicted_potholes']:.1f}</b><br>"
+                f"Already reported: {int(r['potholes_so_far'])}<br>"
+                f"Risk: <b>{r['risk'].upper()}</b><br><br><b>Why:</b> "
+                + str(r["why"]).replace("; ", "<br>"),
+                max_width=340,
+            ),
+        ).add_to(street_layer)
+    street_layer.add_to(m)
+    print(f"Added {len(streets)} streets.")
+else:
+    print("No street_predictions.geojson (run src/street_hotspots.py) — neighborhoods only.")
+area_layer = folium.FeatureGroup(name="Neighborhoods", show=not (WHAT == "potholes" and os.path.exists(STREET_GEO)))
+
 # Heat map layer (weight = predicted report count)
 heat_data = df[["lat", "lon", VALUE_COL]].values.tolist()
 HeatMap(
