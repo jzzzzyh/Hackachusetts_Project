@@ -109,12 +109,36 @@ with right:
 import os
 st.subheader("Does weather actually drive the model?")
 
-IMP_PATH = "data/processed/feature_importance.csv"
+# show the importance for whichever model the toggle has selected
+if pothole_mode and os.path.exists("data/processed/feature_importance_pothole.csv"):
+    IMP_PATH = "data/processed/feature_importance_pothole.csv"
+    st.caption("Showing what drives the **Potholes only** model.")
+else:
+    IMP_PATH = "data/processed/feature_importance.csv"
+    if pothole_mode:
+        st.caption("Pothole importances not found — showing the Everything model.")
+
 if os.path.exists(IMP_PATH):
     imp = pd.read_csv(IMP_PATH)
 
-    weather_names = ["avg_temp_c", "total_precip_mm", "total_snow_cm", "max_wind_kmh"]
+    weather_names = ["avg_temp_c", "total_precip_mm", "total_snow_cm",
+                     "max_wind_kmh", "freeze_thaw_days", "pothole_season_ft"]
     weather_share = imp[imp["feature"].isin(weather_names)]["importance"].sum()
+
+    # pothole-season callout: freeze-thaw + month + season
+    if pothole_mode:
+        season_names = ["freeze_thaw_days", "pothole_season_ft", "avg_temp_c",
+                        "month", "season"]
+        season_share = imp[imp["feature"].isin(season_names)]["importance"].sum()
+        ft_only = imp[imp["feature"] == "freeze_thaw_days"]["importance"]
+        ft_val = float(ft_only.iloc[0]) if len(ft_only) else 0.0
+        st.success(
+            f"🧊 For potholes, **season + freeze-thaw drive {season_share:.0%}** "
+            f"of the guess — freeze-thaw days alone are **{ft_val:.0%}**, the "
+            "top signal. Potholes form when water in pavement cracks freezes, "
+            "expands, and thaws; the damage shows up in the 2 thaw months after "
+            "winter, which is baked into the `pothole_season_ft` feature."
+        )
 
     st.write(
         f"Weather inputs account for **{weather_share:.0%}** of what the "

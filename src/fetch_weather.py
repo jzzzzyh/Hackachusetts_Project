@@ -35,6 +35,8 @@ PARAMS = {
     "end_date": "2024-12-31",
     "daily": ",".join([
         "temperature_2m_mean",
+        "temperature_2m_min",
+        "temperature_2m_max",
         "precipitation_sum",
         "snowfall_sum",
         "wind_speed_10m_max",
@@ -52,6 +54,8 @@ def main():
     df = pd.DataFrame({
         "date":        pd.to_datetime(data["time"]),
         "temp_c":      data["temperature_2m_mean"],
+        "temp_min_c":  data["temperature_2m_min"],
+        "temp_max_c":  data["temperature_2m_max"],
         "precip_mm":   data["precipitation_sum"],
         "snow_cm":     data["snowfall_sum"],
         "wind_kmh":    data["wind_speed_10m_max"],
@@ -60,12 +64,18 @@ def main():
     df["year"]  = df["date"].dt.year
     df["month"] = df["date"].dt.month
 
+    # Freeze-thaw day = daily low at/below 0C AND daily high above 0C.
+    # Water in pavement cracks freezes overnight, expands, thaws by day, and
+    # widens the crack — the real mechanical cause of potholes.
+    df["freeze_thaw"] = ((df["temp_min_c"] <= 0) & (df["temp_max_c"] > 0)).astype(int)
+
     # Aggregate daily -> monthly
     monthly = df.groupby(["year", "month"]).agg(
         avg_temp_c      =("temp_c",   "mean"),
         total_precip_mm =("precip_mm", "sum"),
         total_snow_cm   =("snow_cm",   "sum"),
         max_wind_kmh    =("wind_kmh",  "max"),
+        freeze_thaw_days=("freeze_thaw", "sum"),
     ).reset_index()
 
     monthly = monthly.round(2)

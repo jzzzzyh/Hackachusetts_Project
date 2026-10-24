@@ -39,6 +39,29 @@ def main():
     # Left join: keep every 311 row, attach its month's weather
     merged = counts.merge(weather, on=["year", "month"], how="left")
 
+    # --- pothole-season freeze-thaw signal (lagged into the thaw months) ---
+    # Potholes form from winter freeze-thaw cycles, but the DAMAGE shows up a
+    # month or two LATER as the ground thaws and the cracks collapse. So the
+    # raw monthly freeze_thaw_days is not enough on its own — we build a
+    # "pothole season" signal that carries each month's freeze-thaw count
+    # forward into the following 2 months (the thaw window after winter),
+    # with a decay so the closest month counts most.
+    if "freeze_thaw_days" in weather.columns:
+        w = weather.sort_values(["year", "month"]).reset_index(drop=True)
+        ft = w["freeze_thaw_days"].fillna(0)
+        # this month's freeze-thaw + half of last month + a third of 2 months ago
+        w["pothole_season_ft"] = (
+            ft
+            + 0.5 * ft.shift(1).fillna(0)
+            + 0.33 * ft.shift(2).fillna(0)
+        ).round(1)
+        merged = merged.merge(
+            w[["year", "month", "pothole_season_ft"]],
+            on=["year", "month"], how="left",
+        )
+        merged["freeze_thaw_days"] = merged["freeze_thaw_days"].fillna(0)
+        merged["pothole_season_ft"] = merged["pothole_season_ft"].fillna(0)
+
     # --- past pothole history per neighborhood ---
     # "an area that had potholes tends to have them again" — each area's
     # long-run average monthly pothole count, used as a standing tendency.

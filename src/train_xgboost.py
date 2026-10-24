@@ -57,7 +57,8 @@ NEIGHBORHOOD_COORDS = {
     "North End":                                     (42.3647, -71.0542),
 }
 
-WEATHER_COLS = ["avg_temp_c", "total_precip_mm", "total_snow_cm", "max_wind_kmh"]
+WEATHER_COLS = ["avg_temp_c", "total_precip_mm", "total_snow_cm", "max_wind_kmh",
+                "freeze_thaw_days", "pothole_season_ft"]
 EXTRA_COLS = ["bus_stops_near", "rail_stops_near", "route_count", "tree_count", "equity_score", "past_pothole_rate"]
 
 
@@ -173,6 +174,17 @@ def main():
     ).sort_values("importance", ascending=False)
     imp_df.to_csv("data/processed/feature_importance.csv", index=False)
     print("Saved proof to data/processed/feature_importance.csv")
+
+    # --- Feature importance for the POTHOLE model (shows season/freeze-thaw) ---
+    imp_pot = dict(zip(feature_cols, model_pot.feature_importances_.round(3)))
+    imp_pot_df = pd.DataFrame(
+        {"feature": list(imp_pot.keys()), "importance": list(imp_pot.values())}
+    ).sort_values("importance", ascending=False)
+    imp_pot_df.to_csv("data/processed/feature_importance_pothole.csv", index=False)
+    print("Saved pothole proof to data/processed/feature_importance_pothole.csv")
+    ft_share = sum(imp_pot.get(c, 0) for c in
+                   ("freeze_thaw_days", "pothole_season_ft", "avg_temp_c", "month", "season"))
+    print(f"  Pothole model: season+freeze-thaw share = {ft_share:.0%}")
 
     # --- Predict for the CURRENT month, read live from today's date ---
     from datetime import date
