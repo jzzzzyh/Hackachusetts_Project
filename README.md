@@ -197,3 +197,7 @@ Contributors: Weather, MBTA transit, neighborhood equity, and live-weather integ
 ## License & attribution
 
 Public data from **Boston Open Data** (311, neighborhoods, street trees), **MBTA** (GTFS), and **Open-Meteo** (weather). Full citations in `data/sources/`.
+
+---
+
+*PotPilot: because the best pothole is the one that gets fixed before you find it.* 🛞
