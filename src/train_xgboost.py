@@ -257,9 +257,12 @@ def main():
     out["lat"] = out["lat"].fillna(DEFAULT_COORDS[0])
     out["lon"] = out["lon"].fillna(DEFAULT_COORDS[1])
     out["predict_year"], out["predict_month"] = pred_year, pred_month
-    out = out.sort_values("predicted_potholes", ascending=False)[
-        ["neighborhood", "predicted_reports", "predicted_potholes", "lat", "lon",
-         "risk_level", "risk_level_pothole", "predict_year", "predict_month"]]
+    out["data_through_day"] = cutoff
+    cols = ["neighborhood", "predicted_reports", "predicted_potholes", "lat", "lon",
+            "risk_level", "risk_level_pothole", "predict_year", "predict_month", "data_through_day"]
+    if "potholes_so_far" in out.columns:
+        cols.insert(3, "potholes_so_far")
+    out = out.sort_values("predicted_potholes", ascending=False)[cols]
 
     os.makedirs("data/processed", exist_ok=True)
     out.to_csv(OUT_PATH, index=False)
