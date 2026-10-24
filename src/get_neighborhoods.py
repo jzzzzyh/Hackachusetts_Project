@@ -16,11 +16,9 @@ import ssl
 # Handle SSL certificate verification issues
 ssl._create_default_https_context = ssl._create_unverified_context
 
-# Boston neighborhoods shapefile endpoint options
-# Primary: Direct download from Analyze Boston
-SHAPEFILE_URL = "https://bostonopendata-boston.opendata.arcgis.com/datasets/3525b0ee6e6b427f9aab5d855a4e2e27_0/download"
-# Alternative: Direct GeoJSON endpoint
-GEOJSON_URL = "https://bostonopendata-boston.opendata.arcgis.com/datasets/3525b0ee6e6b427f9aab5d855a4e2e27_0.geojson"
+# Boston neighborhoods via ArcGIS REST API (GeoJSON output)
+# Source: https://data.boston.gov/dataset/boston-neighborhoods
+GEOJSON_URL = "https://bostonopendata-boston.opendata.arcgis.com/rest/services/OpenData/boston_neighborhoods/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&f=geojson"
 OUT_PATH = "data/processed/neighborhoods.csv"
 GEOJSON_PATH = "data/processed/neighborhoods.geojson"
 
