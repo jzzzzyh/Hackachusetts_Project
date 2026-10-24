@@ -199,7 +199,7 @@ def explain(model, rows, feature_cols, objective, pred_month, cutoff, unit):
                               "baseline": round(baseline, 1)})
             if rank <= TOP_REASONS:
                 parts.append(f"{'▲' if c[j] > 0 else '▼'} {desc} ({eff_txt})")
-        texts.append(f"vs a typical {baseline:,.0f}: " + "; ".join(parts))
+        texts.append("; ".join(parts))
     return texts, pd.DataFrame(long_rows)
 
 

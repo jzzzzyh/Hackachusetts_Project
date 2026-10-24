@@ -40,11 +40,67 @@ else:
 
 
 def why_html(text):
-    """One reason per line for the popup."""
-    if not isinstance(text, str):
+    """One plain-language reason per line for the popup."""
+    if not isinstance(text, str) or not text.strip():
         return ""
-    head, _, rest = text.partition(": ")
-    return "<br><br><b>Why:</b> " + head + ":<br>" + "<br>".join(rest.split("; "))
+    return ("<br><br><b>Why:</b><br>"
+            + "<br>".join(r.strip() for r in text.split(";") if r.strip()))
+
+
+# --- Math breakdown: the per-input numbers behind each prediction ---
+# Written by train_xgboost.py (one row per neighborhood/feature). Optional:
+# the map still builds without it (older runs won't have the file).
+REASONS_PATH = "data/processed/prediction_reasons.csv"
+MODE = "pothole" if WHAT == "potholes" else "everything"
+reasons = None
+if os.path.exists(REASONS_PATH):
+    _r = pd.read_csv(REASONS_PATH)
+    if "mode" in _r.columns:
+        _r = _r[_r["mode"] == MODE]
+    reasons = _r
+    print(f"Loaded prediction_reasons.csv ({len(reasons)} rows for mode '{MODE}').")
+else:
+    print("No prediction_reasons.csv — popups show the plain-language 'Why' only.")
+
+
+def math_html(neighborhood):
+    """A scroll-down table showing the math: baseline + each input's effect."""
+    if reasons is None:
+        return ""
+    sub = reasons[reasons["neighborhood"] == neighborhood].sort_values("rank")
+    if sub.empty:
+        return ""
+    baseline = float(sub["baseline"].iloc[0])
+    unit = str(sub["effect_unit"].iloc[0])
+    is_pct = unit == "%"
+    op = "×" if is_pct else "+"
+    rows = [
+        f"<tr><td style='padding:2px 8px;'>Typical area-month</td>"
+        f"<td style='padding:2px 8px;text-align:right;'><b>{baseline:,.1f}</b></td></tr>"
+    ]
+    for _, r in sub.iterrows():
+        eff = float(r["effect"])
+        shown = (f"{op} {eff:+.0f}%" if is_pct else f"{op} {eff:+,.1f}")
+        arrow = "▲" if eff > 0 else "▼"
+        rows.append(
+            f"<tr><td style='padding:2px 8px;'>{arrow} {r['reason']}</td>"
+            f"<td style='padding:2px 8px;text-align:right;'>{shown}</td></tr>"
+        )
+    unit_note = ("percent changes multiply together" if is_pct
+                 else f"effects add, in {unit}")
+    return (
+        "<br><br><details><summary style='cursor:pointer;'><b>Show the math</b></summary>"
+        "<table style='border-collapse:collapse;font-size:12px;margin-top:6px;'>"
+        "<tr><th style='padding:2px 8px;text-align:left;'>Input</th>"
+        "<th style='padding:2px 8px;text-align:right;'>Effect</th></tr>"
+        + "".join(rows)
+        + "</table>"
+        f"<div style='font-size:11px;color:#667;margin-top:4px;'>"
+        f"Starts from the typical area-month, then each input above ({unit_note}) "
+        f"to reach the prediction.</div></details>"
+    )
+
+
 df[VALUE_COL] = pd.to_numeric(df[VALUE_COL], errors="coerce").fillna(0)
 df[RISK_COL] = df[RISK_COL].astype(str).str.lower()
 max_val = max(float(df[VALUE_COL].max()), 1.0)
@@ -123,8 +179,9 @@ for _, row in df.iterrows():
             f"<b>{row['neighborhood']}</b><br>"
             f"Predicted {WHAT}: {int(row[VALUE_COL])}<br>"
             f"Risk: <b>{row[RISK_COL].upper()}</b>"
-            + why_html(row.get(WHY_COL)),
-            max_width=320,
+            + why_html(row.get(WHY_COL))
+            + math_html(row["neighborhood"]),
+            max_width=360,
         ),
         tooltip=f"{row['neighborhood']} — {row[RISK_COL].upper()}",
     ).add_to(area_layer)
