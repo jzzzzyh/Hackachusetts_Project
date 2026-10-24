@@ -210,23 +210,29 @@ def _sum_parts(parts) -> pd.DataFrame:
 
 
 def main():
-    all_counts = []
+    all_counts, all_daily = [], []
     for year, url in sorted(YEAR_URLS.items()):
         path = download_year(year, url)
         print(f"Aggregating {year} ...")
-        yc = counts_for_legacy(path)
-        yc = yc[yc["year"] == year]       # guards stray dates
+        yc, yd = counts_for_legacy(path)
+        yc, yd = yc[yc["year"] == year], yd[yd["year"] == year]       # guards stray dates
         all_counts.append(yc)
+        all_daily.append(yd)
         print(f"  {year}: {len(yc)} area-months, {int(yc.pothole_count.sum())} potholes")
 
     path = download(NEW_SYSTEM_URL, os.path.join(RAW_DIR, "311_new_system.csv"), FRESH_HOURS)
     print("Aggregating new 311 system ...")
-    nc = counts_for_new_system(path)
-    nc = nc[nc["year"] >= min(YEAR_URLS)]
+    nc, nd = counts_for_new_system(path)
+    nc, nd = nc[nc["year"] >= min(YEAR_URLS)], nd[nd["year"] >= min(YEAR_URLS)]
     all_counts.append(nc)
+    all_daily.append(nd)
     print(f"  new system: {len(nc)} area-months, {int(nc.pothole_count.sum())} potholes")
 
     counts = _sum_parts(all_counts)
+    daily = _sum_daily(all_daily).sort_values(["year", "month", "day", "neighborhood"])
+    os.makedirs("data/processed", exist_ok=True)
+    daily.to_csv(DAILY_PATH, index=False)
+    print(f"Saved daily pothole counts ({len(daily)} rows) to {DAILY_PATH}")
 
     # Fill every area x month with 0 so "last month" always means last month.
     today = date.today()
