@@ -70,7 +70,7 @@ def main():
     le = LabelEncoder()
     df["nbhd_enc"] = le.fit_transform(df["neighborhood"].astype(str))
 
-    feature_cols = ["nbhd_enc", "month"] + WEATHER_COLS
+    feature_cols = ["nbhd_enc", "month"] + WEATHER_COLS + EXTRA_COLS
     X = df[feature_cols].values
     y = df["report_count"].values
 
