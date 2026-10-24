@@ -137,7 +137,7 @@ with right:
     st.subheader("Priority list — send crews here first")
     show = view[["neighborhood", value_col, risk_col]].copy()
     show.columns = ["Neighborhood", f"Predicted {what_word}", "Risk"]
-    st.dataframe(show, hide_index=True, use_container_width=True, height=520)
+    st.dataframe(show, hide_index=True, width="stretch", height=520)
 
 # ---- Accuracy: model vs simple guesses ----
 st.subheader(f"📊 How accurate is it? ({mode})")

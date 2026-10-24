@@ -5,5 +5,6 @@ numpy==2.2.6
 xgboost>=2.0.0
 geopandas>=1.0.0
 requests>=2.31.0
-
 shapely
+streamlit==1.57.0
+streamlit-folium==0.27.1
