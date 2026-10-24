@@ -103,7 +103,9 @@
       <li>Pulls live Boston 311, weather (Open-Meteo), and MBTA transit data.</li>
       <li>An XGBoost model scores each neighborhood for the current month.</li>
       <li>Two modes: all 311 requests, or potholes only.</li>
+      <li><strong>The weightings adapt by season:</strong> the same inputs count more or less depending on the month, so freeze-thaw and season drive pothole predictions in spring while recent history leads in warmer months.</li>
     </ul>
+    <p>The software uses an XGBoost model trained on more than 10 years of Boston 311 data, building many small decision trees that learn patterns in past reports and progressively correct earlier mistakes to predict how many reports each neighborhood will receive this month. The newest months were hidden during training and used to test predictions against actual report counts to measure accuracy, with performance compared against baseline guesses like predicting the previous month's count; the software also uses MBTA transit routes, approximately 201,845 street-tree locations from Boston ArcGIS, road and traffic data, and Boston neighborhood GeoJSON for map shapes and centers.</p>
 
     <p>Full code, data sources, and the live dashboard: <a href="https://github.com/jzzzzyh/Hackachusetts_Project">github.com/jzzzzyh/Hackachusetts_Project</a></p>
   </main>
