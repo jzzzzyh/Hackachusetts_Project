@@ -150,11 +150,7 @@ def load_streets() -> gpd.GeoDataFrame:
     s["street"] = s["STREETNAME"].fillna(s["STREET_NAM"]).astype(str).str.strip().str.title()
     s = s[~s["street"].isin(["", "None", "Nan"])].copy()
     s["seg"] = np.arange(len(s))
-    def end_name(col):
-        n = s[col].fillna("").astype(str).str.strip().str.title()
-        return n.where(~n.isin(["", "None", "Nan"]), "the end of the street")
-    s["block"] = "between " + end_name("FM_ST_NAME") + " and " + end_name("TO_ST_NAME")
-    return s[["seg", "street", "block", "LENGTH_MI", "geometry"]]
+    return s[["seg", "street", "LENGTH_MI", "geometry"]]
 
 
 # ---------------------------------------------------------------- the split
