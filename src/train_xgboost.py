@@ -200,11 +200,25 @@ def main():
         raise SystemExit(f"No rows for {today:%B %Y} — re-run prep_data.py to refresh the 311 data.")
     print(f"Predicting for {today:%B %Y} (season {season_from_month(pred_month)}).")
 
+    # How much of the current month we already have reports for
+    daily, frac, cutoff = None, 0.0, 0
+    if os.path.exists(DAILY_PATH):
+        daily = pd.read_csv(DAILY_PATH)
+        cutoff = so_far_cutoff(daily, pred_year, pred_month)
+        frac = cutoff / pd.Period(f"{pred_year}-{pred_month:02d}").days_in_month
+        print(f"Reports so far this month: days 1-{cutoff} ({frac:.0%} of the month).")
+    else:
+        print(f"NOTE: {DAILY_PATH} not found (re-run prep_data.py) — 'so far this month' skipped.")
+
     accuracy, predictions = [], None
     for mode, (target, pred_col, risk_col, label) in TARGETS.items():
         objective = OBJECTIVE[mode]
         feature_cols = base_cols + (exposure if USE_EXPOSURE[mode] else [])
         data = add_lag_features(df, target)
+        use_so_far = USE_SO_FAR[mode] and daily is not None and cutoff > 0
+        if use_so_far:
+            data = add_so_far_features(data, daily, frac)
+            feature_cols = feature_cols + SO_FAR_COLS
         train = data[(data["complete"] == 1)].dropna(subset=LAG_COLS + [target])
 
         scores = evaluate(train, feature_cols, target, objective)
