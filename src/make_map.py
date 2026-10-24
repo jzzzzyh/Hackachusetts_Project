@@ -133,28 +133,28 @@ def math_html(neighborhood):
     is_pct = unit == "%"
     op = "×" if is_pct else "+"
     rows = [
-        f"<tr><td style='padding:2px 8px;'>Typical area-month</td>"
-        f"<td style='padding:2px 8px;text-align:right;'><b>{baseline:,.1f}</b></td></tr>"
+        f"<tr><td style='padding:1px 6px;'>Typical area-month</td>"
+        f"<td style='padding:1px 6px;text-align:right;'><b>{baseline:,.1f}</b></td></tr>"
     ]
     for _, r in sub.iterrows():
         eff = float(r["effect"])
         shown = (f"{op} {eff:+.0f}%" if is_pct else f"{op} {eff:+,.1f}")
         arrow = "▲" if eff > 0 else "▼"
         rows.append(
-            f"<tr><td style='padding:2px 8px;'>{arrow} {r['reason']}</td>"
-            f"<td style='padding:2px 8px;text-align:right;'>{shown}</td></tr>"
+            f"<tr><td style='padding:1px 6px;'>{arrow} {r['reason']}</td>"
+            f"<td style='padding:1px 6px;text-align:right;'>{shown}</td></tr>"
         )
     unit_note = ("percent changes multiply together" if is_pct
                  else f"effects add, in {unit}")
     return (
-        "<br><br><details><summary style='cursor:pointer;'><b>Show the math</b></summary>"
-        "<table style='border-collapse:collapse;font-size:12px;margin-top:6px;'>"
-        "<tr><th style='padding:2px 8px;text-align:left;'>Input</th>"
-        "<th style='padding:2px 8px;text-align:right;'>Effect</th></tr>"
+        "<br><br><details open><summary style='cursor:pointer;'><b>The math</b></summary>"
+        "<table style='border-collapse:collapse;font-size:11px;margin-top:4px;width:100%;'>"
+        "<tr><th style='padding:1px 6px;text-align:left;'>Input</th>"
+        "<th style='padding:1px 6px;text-align:right;'>Effect</th></tr>"
         + "".join(rows)
         + "</table>"
-        f"<div style='font-size:11px;color:#667;margin-top:4px;'>"
-        f"Starts from the typical area-month, then each input above ({unit_note}) "
+        f"<div style='font-size:10px;color:#667;margin-top:3px;'>"
+        f"Start from the typical area-month, then each input above ({unit_note}) "
         f"to reach the prediction.</div></details>"
     )
 
@@ -234,12 +234,14 @@ for _, row in df.iterrows():
         weight=1,
         opacity=0.6,
         popup=folium.Popup(
+            "<div style='max-height:300px;overflow-y:auto;padding-right:4px;'>"
             f"<b>{row['neighborhood']}</b><br>"
             f"Predicted {WHAT}: {int(row[VALUE_COL])}<br>"
             f"Risk: <b>{row[RISK_COL].upper()}</b>"
             + why_html(row.get(WHY_COL))
-            + math_html(row["neighborhood"]),
-            max_width=360,
+            + math_html(row["neighborhood"])
+            + "</div>",
+            max_width=320,
         ),
         tooltip=f"{row['neighborhood']} — {row[RISK_COL].upper()}",
     ).add_to(area_layer)
