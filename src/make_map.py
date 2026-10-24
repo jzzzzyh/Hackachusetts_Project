@@ -141,7 +141,7 @@ legend_html = """
   <span style="color:#fdae61;">&#9632;</span> Medium<br>
   <span style="color:#1a9641;">&#9632;</span> Low<br>
   <hr style="margin:6px 0;">
-  <small>Click a circle for details</small>
+  <small>Click a street (or circle) for details<br>Thicker line = more predicted</small>
 </div>
 """
 m.get_root().html.add_child(folium.Element(legend_html))
