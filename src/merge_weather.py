@@ -1,189 +1,113 @@
 """
-STEP 6 — Merge Weather into 311 Counts
-======================================
-Joins weather_monthly.csv onto report_counts.csv by year + month,
-so every neighborhood-month row carries that month's weather.
+STEP 6 — Build features.csv
+===========================
+Joins monthly weather and per-area context (MBTA transit, street trees,
+tree-equity score, map coordinates) onto report_counts.csv.
 
 Run: python src/merge_weather.py
 
 Inputs:
-  data/processed/report_counts.csv   (neighborhood, year, month, report_count)
-  data/processed/weather_monthly.csv (year, month, avg_temp_c, ...)
+  data/processed/report_counts.csv   (from prep_data.py, canonical area names)
+  data/processed/weather_monthly.csv (from fetch_weather.py)
+  data/processed/mbta.csv            (from get_mbta.py)          optional
+  data/processed/trees.csv           (from get_trees_live.py)    optional
+  data/equity_scores.csv                                         optional
+  data/processed/neighborhoods.csv   (lat / lon / area)          optional
 
 Output:
-  data/processed/features.csv
-  columns: neighborhood, year, month, report_count,
-           avg_temp_c, total_precip_mm, total_snow_cm, max_wind_kmh
+  data/processed/features.csv  — one row per area x month.
 
-Step 7/8 trains the model on this file.
+Past-count features (last month, same month last year, ...) are NOT built
+here: train_xgboost.py builds them with one shared function so training and
+prediction always use exactly the same definition.
+
+Every context file uses its own neighborhood labels; they are all mapped to the
+canonical 311 areas with prep_data.canon_neighborhood and SUMMED (e.g. Allston +
+Brighton trees -> "Allston / Brighton"), so no area is double counted or dropped.
 """
 
-import pandas as pd
 import os
+
+import numpy as np
+import pandas as pd
+
+from prep_data import canon_neighborhood
 
 COUNTS_PATH  = "data/processed/report_counts.csv"
 WEATHER_PATH = "data/processed/weather_monthly.csv"
+MBTA_PATH    = "data/processed/mbta.csv"
+TREES_PATH   = "data/processed/trees.csv"
+EQUITY_PATH  = "data/equity_scores.csv"
+HOODS_PATH   = "data/processed/neighborhoods.csv"
 OUT_PATH     = "data/processed/features.csv"
+
+
+def per_area(path, value_cols, how="sum"):
+    """Load a per-neighborhood file, map labels to canonical areas, combine duplicates."""
+    if not os.path.exists(path):
+        print(f"NOTE: {path} not found, skipping {value_cols}")
+        return None
+    df = pd.read_csv(path)
+    df["neighborhood"] = df["neighborhood"].map(canon_neighborhood)
+    dropped = df["neighborhood"].isna().sum()
+    if dropped:
+        print(f"  {path}: {dropped} label(s) outside the 311 areas dropped (e.g. Harbor Islands)")
+    df = df.dropna(subset=["neighborhood"])
+    return df.groupby("neighborhood", as_index=False)[value_cols].agg(how)
 
 
 def main():
     print("Loading 311 counts and weather ...")
-    counts  = pd.read_csv(COUNTS_PATH)
-    weather = pd.read_csv(WEATHER_PATH)
+    counts = pd.read_csv(COUNTS_PATH)
+    merged = counts.merge(pd.read_csv(WEATHER_PATH), on=["year", "month"], how="left")
+    areas = merged["neighborhood"].unique()
 
-    # Normalize join keys to int so the merge lines up
-    for col in ("year", "month"):
-        counts[col]  = pd.to_numeric(counts[col],  errors="coerce").astype("Int64")
-        weather[col] = pd.to_numeric(weather[col], errors="coerce").astype("Int64")
+    # --- MBTA transit (bus stops, rail stops, routes): summed per area ---
+    mbta = per_area(MBTA_PATH, ["bus_stops_near", "rail_stops_near", "route_count"])
+    if mbta is not None:
+        merged = merged.merge(mbta, on="neighborhood", how="left")
+        merged[mbta.columns[1:]] = merged[mbta.columns[1:]].fillna(0)
 
-    # Left join: keep every 311 row, attach its month's weather
-    merged = counts.merge(weather, on=["year", "month"], how="left")
+    # --- Tree-equity score: averaged per area, city median for gaps ---
+    eq = per_area(EQUITY_PATH, ["equity_score"], how="mean")
+    if eq is not None:
+        merged = merged.merge(eq, on="neighborhood", how="left")
+        merged["equity_score"] = merged["equity_score"].fillna(eq["equity_score"].median())
 
-    # --- pothole-season freeze-thaw signal (lagged into the thaw months) ---
-    # Potholes form from winter freeze-thaw cycles, but the DAMAGE shows up a
-    # month or two LATER as the ground thaws and the cracks collapse. So the
-    # raw monthly freeze_thaw_days is not enough on its own — we build a
-    # "pothole season" signal that carries each month's freeze-thaw count
-    # forward into the following 2 months (the thaw window after winter),
-    # with a decay so the closest month counts most.
-    if "freeze_thaw_days" in weather.columns:
-        w = weather.sort_values(["year", "month"]).reset_index(drop=True)
-        ft = w["freeze_thaw_days"].fillna(0)
-        # this month's freeze-thaw + half of last month + a third of 2 months ago
-        w["pothole_season_ft"] = (
-            ft
-            + 0.5 * ft.shift(1).fillna(0)
-            + 0.33 * ft.shift(2).fillna(0)
-        ).round(1)
-        merged = merged.merge(
-            w[["year", "month", "pothole_season_ft"]],
-            on=["year", "month"], how="left",
-        )
-        merged["freeze_thaw_days"] = merged["freeze_thaw_days"].fillna(0)
-        merged["pothole_season_ft"] = merged["pothole_season_ft"].fillna(0)
-
-    # --- past pothole history per neighborhood ---
-    # "an area that had potholes tends to have them again" — each area's
-    # long-run average monthly pothole count, used as a standing tendency.
-    if "pothole_count" in merged.columns:
-        past = (merged.groupby("neighborhood")["pothole_count"].mean()
-                .round(1).rename("past_pothole_rate"))
-        merged = merged.merge(past, on="neighborhood", how="left")
-        merged["past_pothole_rate"] = merged["past_pothole_rate"].fillna(0)
-
-    # --- add LIVE MBTA transit features (bus stops, rail stops, route count) ---
-    # MBTA/ polygon names use the census labels; map them to the 311 labels.
-    MBTA_TO_311 = {
-        "Allston":                 "Allston / Brighton",
-        "Brighton":                "Allston / Brighton",
-        "Downtown":                "Downtown / Financial District",
-        "Fenway":                  "Fenway / Kenmore / Audubon Circle / Longwood",
-        "Longwood":                "Fenway / Kenmore / Audubon Circle / Longwood",
-        "South Boston":            "South Boston / South Boston Waterfront",
-        "South Boston Waterfront": "South Boston / South Boston Waterfront",
-        "Mattapan":                "Greater Mattapan",
-    }
-    mbta = pd.read_csv("data/processed/mbta.csv")
-    mbta["neighborhood"] = mbta["neighborhood"].replace(MBTA_TO_311)
-    # several polygons can map to one 311 area -> sum their transit counts
-    mbta = mbta.groupby("neighborhood", as_index=False).sum(numeric_only=True)
-    merged = merged.merge(mbta, on="neighborhood", how="left")
-    for col in ("bus_stops_near", "rail_stops_near", "route_count"):
-        if col in merged.columns:
-            merged[col] = merged[col].fillna(0)
-
-    # --- add neighborhood metadata for equity analysis (optional) ---
-    hoods_meta = "data/processed/neighborhoods.csv"
-    if os.path.exists(hoods_meta):
-        neighborhoods = pd.read_csv(hoods_meta)
-        neighborhoods_meta = neighborhoods[["neighborhood", "lat", "lon", "area_sqm"]]
-        merged = merged.merge(neighborhoods_meta, on="neighborhood", how="left")
-
-    # --- add street-tree count feature (from LIVE ArcGIS geo-match) ---
-    # Map each 311 neighborhood label to the live tree-data label it draws from.
-    TREE_SOURCE = {
-        "Dorchester":                                   "Dorchester",
-        "Roxbury":                                      "Roxbury",
-        "South End":                                    "South End",
-        "East Boston":                                  "East Boston",
-        "Jamaica Plain":                                "Jamaica Plain",
-        "Charlestown":                                  "Charlestown",
-        "Roslindale":                                   "Roslindale",
-        "West Roxbury":                                 "West Roxbury",
-        "Hyde Park":                                    "Hyde Park",
-        "Mission Hill":                                 "Mission Hill",
-        "South Boston":                                 "South Boston",
-        "Mattapan":                                     "Mattapan",
-        "Greater Mattapan":                             "Mattapan",
-        "South Boston / South Boston Waterfront":       "South Boston",
-        "Allston / Brighton":                           "Allston",
-        "Allston":                                      "Allston",
-        "Brighton":                                     "Brighton",
-        "Back Bay":                                     "Back Bay",
-        "Beacon Hill":                                  "Beacon Hill",
-        "Downtown / Financial District":                "Downtown",
-        "Boston":                                       "Downtown",
-        "Fenway / Kenmore / Audubon Circle / Longwood": "Fenway",
-        # "Chestnut Hill" has no live tree polygon -> equity fill below
-    }
-    
-    trees_file = "data/processed/trees.csv"
-    if os.path.exists(trees_file):
-        trees = pd.read_csv(trees_file)
-        tree_by_name = trees.set_index("neighborhood")["tree_count"].to_dict()
-
-        def tree_count_for(nbhd):
-            src = TREE_SOURCE.get(nbhd)
-            return tree_by_name.get(src, 0) if src else 0
-
-        merged["tree_count"] = merged["neighborhood"].map(tree_count_for).fillna(0)
-        no_trees = (merged["tree_count"] == 0).sum()
-        if no_trees:
-            print(f"NOTE: {no_trees} rows have 0 trees (no tree-data match).")
+    # --- Street trees (live ArcGIS count): summed per area ---
+    trees = per_area(TREES_PATH, ["tree_count"])
+    if trees is not None:
+        merged = merged.merge(trees, on="neighborhood", how="left")
+        merged["tree_count"] = merged["tree_count"].fillna(0)
+        # Estimate missing tree counts from equity (only if some area has none)
+        zero = merged["tree_count"] == 0
+        if zero.any() and "equity_score" in merged:
+            have = merged.loc[~zero, ["equity_score", "tree_count"]].drop_duplicates()
+            if len(have) >= 2:
+                a, b = np.polyfit(have["equity_score"], have["tree_count"], 1)
+                merged.loc[zero, "tree_count"] = (a * merged.loc[zero, "equity_score"] + b).clip(lower=0).round()
+                print(f"Filled {merged.loc[zero, 'neighborhood'].nunique()} area(s) with no tree data from equity.")
     else:
-        print(f"NOTE: {trees_file} not found, skipping tree_count feature")
+        print("      -> run `python src/get_trees_live.py` to add the tree feature")
 
-    # --- add Tree Equity Score, and use it to ESTIMATE trees where the count is 0 ---
-    # Equity (0-100, American Forests) is published per neighborhood, no API key needed.
-    # We fit a simple line tree_count ~ equity on the areas that HAVE a real count,
-    # then fill zero-tree areas with that line's estimate instead of leaving them 0.
-    equity_file = "data/equity_scores.csv"
-    if os.path.exists(equity_file):
-        equity = pd.read_csv(equity_file)
-        eq_by_name = equity.set_index("neighborhood")["equity_score"].to_dict()
-        merged["equity_score"] = merged["neighborhood"].map(eq_by_name)
-        # city median fills any area with no published score
-        merged["equity_score"] = merged["equity_score"].fillna(equity["equity_score"].median())
+    # --- Map coordinates + area size ---
+    if os.path.exists(HOODS_PATH):
+        hoods = pd.read_csv(HOODS_PATH)[["neighborhood", "lat", "lon", "area_sqm"]]
+        hoods = hoods[hoods["neighborhood"].isin(areas)]       # canonical rows only
+        merged = merged.merge(hoods, on="neighborhood", how="left")
 
-        # fit tree_count = a*equity + b on rows with a real (non-zero) tree count
-        import numpy as np
-        have = merged[merged["tree_count"] > 0][["equity_score", "tree_count"]].drop_duplicates()
-        if len(have) >= 2:
-            a, b = np.polyfit(have["equity_score"], have["tree_count"], 1)
-            est = (a * merged["equity_score"] + b).clip(lower=0).round()
-            merged["tree_est_from_equity"] = est
-            # fill only the zero-tree rows with the equity estimate
-            zero = merged["tree_count"] == 0
-            merged.loc[zero, "tree_count"] = est[zero]
-            print(f"Filled {int(zero.sum())} zero-tree rows from equity "
-                  f"(line: trees ≈ {a:.0f}*equity {b:+.0f}).")
-    else:
-        print(f"NOTE: {equity_file} not found, skipping equity feature")
+    # --- Sanity checks ---
+    done = merged[merged["complete"] == 1]
+    missing = done["avg_temp_c"].isna().sum()
+    print(f"WARNING: {missing} completed months have no weather — re-run fetch_weather.py"
+          if missing else "All completed months matched a weather month.")
 
-    # Report any rows that failed to get weather (missing month)
-    missing = merged["avg_temp_c"].isna().sum()
-    if missing:
-        print(f"WARNING: {missing} rows had no matching weather month.")
-    else:
-        print("All rows matched a weather month.")
-
+    merged = merged.sort_values(["neighborhood", "year", "month"])
     os.makedirs("data/processed", exist_ok=True)
     merged.to_csv(OUT_PATH, index=False)
 
-    print(f"\nDone! Saved {len(merged)} rows to {OUT_PATH}")
+    print(f"\nDone! Saved {len(merged)} rows ({len(areas)} areas) to {OUT_PATH}")
     print(f"Columns: {list(merged.columns)}")
-    print("\nSample:")
-    print(merged.head(6).to_string(index=False))
 
 
 if __name__ == "__main__":
