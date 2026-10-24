@@ -14,12 +14,24 @@ pip install -r requirements.txt
 
 ---
 
-## Step 1 — Get MBTA data
+## Step 1 — Prepare your environment
 
-Make `src/get_mbta.py`. It downloads the MBTA GTFS zip and turns it into
-one small file: how many bus stops sit near each neighborhood.
+Sync your local branch with the dev branch and ensure all dependencies are installed.
 
-Source (no login, no key): https://cdn.mbta.com/MBTA_GTFS.zip
+```bash
+git pull origin dev
+pip install -r requirements.txt
+```
+
+**What this does:** Pulls the latest code and installs required packages so you're working with the current state of the project.
+
+---
+
+## Step 2 — Download and process MBTA data
+
+Create `src/get_mbta.py`. This script downloads the MBTA GTFS zip file and counts how many bus stops sit near each neighborhood centroid.
+
+**Source:** https://cdn.mbta.com/MBTA_GTFS.zip (no login or key required)
 
 ```python
 # src/get_mbta.py
@@ -76,28 +88,27 @@ if __name__ == "__main__":
     main()
 ```
 
-Run it:
+Run the script:
 
 ```bash
 python src/get_mbta.py
 ```
 
-Makes `data/processed/mbta.csv` with columns: `neighborhood, bus_stops_near`.
+**Output:** Creates `data/processed/mbta.csv` with columns: `neighborhood, bus_stops_near`. Verify it looks correct by reviewing the printed output.
 
 ---
 
-## Step 2 — Add MBTA to the model's feature file
+## Step 3 — Integrate MBTA data into the feature pipeline
 
-The model trains on `data/processed/features.csv`. Add one line to
-`src/merge_weather.py` so it joins your MBTA file on `neighborhood`.
+Add the MBTA data to the model's feature file by modifying `src/merge_weather.py`.
 
-Find this line near the end of `src/merge_weather.py`:
+Find this line near the end of the file:
 
 ```python
     merged = counts.merge(weather, on=["year", "month"], how="left")
 ```
 
-Add right after it:
+Add these lines immediately after it:
 
 ```python
     # --- add MBTA bus-stop feature ---
@@ -106,69 +117,75 @@ Add right after it:
     merged["bus_stops_near"] = merged["bus_stops_near"].fillna(0)
 ```
 
-Then rebuild the feature file:
+Rebuild the feature file:
 
 ```bash
 python src/merge_weather.py
 ```
 
-`features.csv` now has a `bus_stops_near` column.
+**Output:** `data/processed/features.csv` now includes a `bus_stops_near` column. Verify the file was updated and contains this new column.
 
 ---
 
-## Step 3 — Make the model use the new column
+## Step 4 — Update the model to use the new feature
 
-Open `src/train_xgboost.py`. Find:
+Modify `src/train_xgboost.py` to include the MBTA bus-stop count in training.
+
+**Part A:** Find the feature column definitions:
 
 ```python
 WEATHER_COLS = ["avg_temp_c", "total_precip_mm", "total_snow_cm", "max_wind_kmh"]
 ```
 
-Add MBTA to the feature list used for training:
+Add MBTA to the list:
 
 ```python
 WEATHER_COLS = ["avg_temp_c", "total_precip_mm", "total_snow_cm", "max_wind_kmh"]
 EXTRA_COLS   = ["bus_stops_near"]
 ```
 
-Then find:
+**Part B:** Find the line that builds the feature column list:
 
 ```python
     feature_cols = ["nbhd_enc", "month"] + WEATHER_COLS
 ```
 
-Change to:
+Update it to include the new column:
 
 ```python
     feature_cols = ["nbhd_enc", "month"] + WEATHER_COLS + EXTRA_COLS
 ```
 
-And in the "predict next month" loop, add the MBTA value per neighborhood
-when building `feat` (look up `bus_stops_near` for that neighborhood).
+**Part C:** In the "predict next month" loop, add the MBTA value per neighborhood when building the `feat` dictionary. Look up `bus_stops_near` for each neighborhood.
+
+**Verification:** The code should compile without errors. Check that all feature columns are correctly referenced.
 
 ---
 
-## Step 4 — Train and check
+## Step 5 — Train the model and verify improvements
+
+Train the model with the new MBTA feature:
 
 ```bash
 python src/train_xgboost.py
 ```
 
-It prints two things. Check both:
+**Review the output:** Check both metrics below to confirm the model learned from MBTA data:
 
-| Print | What it means | What you want |
-|---|---|---|
-| `Test MAE` | how far off the guess is | lower than before |
-| `Feature importance` | which inputs mattered | `bus_stops_near` > 0 |
+| Metric | Meaning | Success Condition |
+|--------|---------|------------------|
+| `Test MAE` | How far off the predictions are, on average | Lower than before (smaller error) |
+| `Feature importance` | Which inputs contributed most to predictions | `bus_stops_near` appears with a value > 0 |
 
-If `bus_stops_near` shows up in importance with a value above 0, the model
-learned from MBTA. Done.
+If `bus_stops_near` shows up in the feature importance list with a non-zero value, the model successfully learned from the MBTA data.
 
-Makes `data/processed/predictions.csv`.
+**Output:** Creates/updates `data/processed/predictions.csv` with new predictions.
 
 ---
 
-## When you finish
+## Commit and push your changes
+
+Once training completes and you've verified the metrics:
 
 ```bash
 git add src/get_mbta.py src/merge_weather.py src/train_xgboost.py data/processed/mbta.csv data/processed/features.csv data/processed/predictions.csv
@@ -176,5 +193,4 @@ git commit -m "Add MBTA bus-stop feature and retrain model"
 git push origin dev
 ```
 
-**Risk:** only one person trains the model at a time. Two trainers at once
-may run the machine out of memory.
+**Risk:** Only one person should train the model at a time. Two concurrent trainers may exhaust available memory.
