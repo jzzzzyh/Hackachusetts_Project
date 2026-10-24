@@ -61,6 +61,17 @@ WEATHER_COLS = ["avg_temp_c", "total_precip_mm", "total_snow_cm", "max_wind_kmh"
 EXTRA_COLS = ["bus_stops_near", "rail_stops_near", "route_count", "tree_count", "equity_score"]
 
 
+def season_from_month(m):
+    """Month (1-12) -> season code: 0 winter, 1 spring, 2 summer, 3 fall."""
+    if m in (12, 1, 2):
+        return 0
+    if m in (3, 4, 5):
+        return 1
+    if m in (6, 7, 8):
+        return 2
+    return 3
+
+
 def main():
     print("Loading features.csv ...")
     df = pd.read_csv(IN_PATH)
@@ -70,7 +81,10 @@ def main():
     le = LabelEncoder()
     df["nbhd_enc"] = le.fit_transform(df["neighborhood"].astype(str))
 
-    feature_cols = ["nbhd_enc", "month"] + WEATHER_COLS + EXTRA_COLS
+    # --- Season, derived from month (the model learns season effects) ---
+    df["season"] = df["month"].apply(season_from_month)
+
+    feature_cols = ["nbhd_enc", "month", "season"] + WEATHER_COLS + EXTRA_COLS
     X = df[feature_cols].values
     y = df["report_count"].values
 
@@ -101,9 +115,17 @@ def main():
     imp_df.to_csv("data/processed/feature_importance.csv", index=False)
     print("Saved proof to data/processed/feature_importance.csv")
 
-    # --- Predict next month (November) using Nov weather from the data ---
-    next_month = 11
-    nov_weather = df[df["month"] == next_month][WEATHER_COLS].iloc[0].to_dict()
+    # --- Predict for the CURRENT month, read live from today's date ---
+    from datetime import date
+    today = date.today()
+    next_month = today.month
+    season = season_from_month(next_month)
+    season_name = {0: "winter", 1: "spring", 2: "summer", 3: "fall"}[season]
+    print(f"Predicting for {today:%B %Y} (month {next_month}, {season_name}).")
+
+    # weather for this month: use the historical average for that month
+    month_rows = df[df["month"] == next_month]
+    cur_weather = month_rows[WEATHER_COLS].mean().to_dict()
 
     neighborhoods = df["neighborhood"].unique()
     # per-neighborhood lookups for each extra feature
@@ -115,8 +137,8 @@ def main():
     for nbhd in neighborhoods:
         enc = le.transform([nbhd])[0]
         feat = (
-            [enc, next_month]
-            + [nov_weather[c] for c in WEATHER_COLS]
+            [enc, next_month, season]
+            + [cur_weather[c] for c in WEATHER_COLS]
             + [extra_lookup[col].get(nbhd, 0) for col in EXTRA_COLS]
         )
         pred = model.predict(np.array([feat]))[0]

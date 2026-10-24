@@ -132,7 +132,8 @@ if os.path.exists(IMP_PATH):
 neighborhood, every month, it compared the number of 311 problem reports
 against that area's weather, its **live** street-tree count, its tree-equity
 score, and its nearby MBTA bus/train stops. It found the pattern, then uses
-it to guess next month.
+it to guess **this month** — it reads today's date, so the map always shows
+the current month and season (e.g. fall now), not a fixed month.
 
 **What drives the guess (the % splits above):**
 - **Street trees — {share('tree_count'):.0%}.** The biggest signal, now
