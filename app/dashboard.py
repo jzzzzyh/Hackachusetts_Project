@@ -27,7 +27,9 @@ st.set_page_config(page_title="Boston Civic Risk", page_icon="🛠️", layout="
 def load_data():
     df = pd.read_csv(PRED_PATH)
     df["risk_level"] = df["risk_level"].str.lower()
-    return df.sort_values("predicted_reports", ascending=False)
+    if "risk_level_pothole" in df.columns:
+        df["risk_level_pothole"] = df["risk_level_pothole"].str.lower()
+    return df
 
 
 df = load_data()
@@ -39,19 +41,41 @@ st.caption(
     "month. Model: XGBoost trained on 306k real 311 calls + Boston weather."
 )
 
+# ---- Prediction mode toggle: everything vs potholes only ----
+has_pothole = "predicted_potholes" in df.columns
+st.sidebar.header("What to predict")
+mode = st.sidebar.radio(
+    "Prediction mode",
+    options=["Everything (all 311)", "Potholes only"],
+    index=0,
+    help="Everything = every kind of 311 problem report. "
+         "Potholes only = just pothole reports.",
+    disabled=not has_pothole,
+)
+pothole_mode = has_pothole and mode == "Potholes only"
+
+# pick the right columns for the chosen mode
+value_col = "predicted_potholes" if pothole_mode else "predicted_reports"
+risk_col  = "risk_level_pothole" if (pothole_mode and "risk_level_pothole" in df.columns) else "risk_level"
+what_word = "potholes" if pothole_mode else "reports"
+
+df = df.sort_values(value_col, ascending=False)
+
 # ---- Sidebar filter ----
 st.sidebar.header("Filter")
 levels = st.sidebar.multiselect(
     "Risk level", options=["high", "medium", "low"],
     default=["high", "medium", "low"],
 )
-view = df[df["risk_level"].isin(levels)]
+view = df[df[risk_col].isin(levels)]
 
 # ---- Top stats ----
 c1, c2, c3 = st.columns(3)
 c1.metric("Neighborhoods", len(df))
-c2.metric("High-risk areas", int((df["risk_level"] == "high").sum()))
+c2.metric("High-risk areas", int((df[risk_col] == "high").sum()))
 c3.metric("Top hotspot", df.iloc[0]["neighborhood"])
+
+st.info(f"Showing **{mode}** — predicting next month's {what_word} per neighborhood.")
 
 # ---- Map + table side by side ----
 left, right = st.columns([3, 2])
@@ -62,14 +86,14 @@ with left:
     for _, row in view.iterrows():
         folium.CircleMarker(
             location=[row["lat"], row["lon"]],
-            radius=6 + row["predicted_reports"] / 150,
-            color=RISK_COLORS.get(row["risk_level"], "#888"),
+            radius=6 + row[value_col] / 150,
+            color=RISK_COLORS.get(row[risk_col], "#888"),
             fill=True,
             fill_opacity=0.7,
             popup=folium.Popup(
                 f"<b>{row['neighborhood']}</b><br>"
-                f"Predicted reports: {row['predicted_reports']}<br>"
-                f"Risk: {row['risk_level'].title()}",
+                f"Predicted {what_word}: {int(row[value_col])}<br>"
+                f"Risk: {str(row[risk_col]).title()}",
                 max_width=250,
             ),
         ).add_to(m)
@@ -77,8 +101,8 @@ with left:
 
 with right:
     st.subheader("Priority list — send crews here first")
-    show = view[["neighborhood", "predicted_reports", "risk_level"]].copy()
-    show.columns = ["Neighborhood", "Predicted reports", "Risk"]
+    show = view[["neighborhood", value_col, risk_col]].copy()
+    show.columns = ["Neighborhood", f"Predicted {what_word}", "Risk"]
     st.dataframe(show, hide_index=True, use_container_width=True, height=520)
 
 # ---- Proof: weather is training the model ----
@@ -179,3 +203,41 @@ st.caption(
     "Early model — live feeds now wired in (weather archive + live street "
     "trees). Live weather forecast is the next upgrade."
 )
+
+# ---- Success rate: everything vs potholes only ----
+st.subheader("📊 Success rate — Everything vs Potholes only")
+
+ACC_PATH = "data/processed/model_accuracy.csv"
+if os.path.exists(ACC_PATH):
+    acc = pd.read_csv(ACC_PATH).set_index("mode")
+    acc_all = float(acc.loc["everything", "success_pct"]) if "everything" in acc.index else 0.0
+    acc_pot = float(acc.loc["pothole", "success_pct"]) if "pothole" in acc.index else 0.0
+    diff = acc_pot - acc_all
+
+    a1, a2, a3 = st.columns(3)
+    a1.metric("Everything (all 311)", f"{acc_all:.0f}%")
+    a2.metric("Potholes only", f"{acc_pot:.0f}%")
+    a3.metric(
+        "Potholes vs Everything",
+        f"{diff:+.0f} pts",
+        delta=f"{diff:+.0f} pts",
+    )
+
+    better = "Potholes only" if diff > 0 else "Everything"
+    st.write(
+        f"**Success %** = how close the guess lands on average "
+        f"(100% = perfect). Right now **{better}** scores higher. "
+        f"Switching from Everything to Potholes only changes the "
+        f"success rate by **{diff:+.0f} points**."
+    )
+
+    chart = acc.reset_index().set_index("label")["success_pct"]
+    st.bar_chart(chart)
+
+    st.caption(
+        "Why they differ: pothole counts are smaller and more weather-driven, "
+        "so they are easier or harder to hit than the full mix of every 311 "
+        "problem. The toggle in the sidebar switches the map and list to match."
+    )
+else:
+    st.info("Run `python src/train_xgboost.py` to generate the success-rate comparison.")
