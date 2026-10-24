@@ -163,6 +163,9 @@ def evaluate(train_df, feature_cols, target, objective="reg:squarederror"):
         "success_pct": round(success, 1),
         "mae_last_month": round(mean_absolute_error(te[target], te["lag1"]), 1),
         "mae_last_year": round(mean_absolute_error(te[target], te["lag12"]), 1),
+        # fair simple guess when part of the month is known: straight-line projection
+        "mae_straight_line": (round(mean_absolute_error(te[target], te["pace"]), 1)
+                              if "pace" in feature_cols else np.nan),
         "test_period": f"{first // 12}-{first % 12 + 1:02d} to {last // 12}-{last % 12 + 1:02d}",
         "test_rows": len(te),
         "mean_actual": round(mean_true, 1),

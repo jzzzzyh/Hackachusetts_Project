@@ -1,18 +1,18 @@
-neighborhood,predicted_reports,predicted_potholes,lat,lon,risk_level,risk_level_pothole,predict_year,predict_month
-Downtown / Financial District,2438,61,42.356,-71.055,high,high,2026,10
-Allston / Brighton,1985,49,42.35,-71.143,high,high,2026,10
-Dorchester,3035,44,42.3021,-71.0707,high,high,2026,10
-Jamaica Plain,1285,38,42.31,-71.1148,medium,high,2026,10
-Roxbury,1882,36,42.3142,-71.092,high,high,2026,10
-Back Bay,1411,29,42.3503,-71.081,medium,high,2026,10
-South End,1805,27,42.3398,-71.0786,high,medium,2026,10
-South Boston / South Boston Waterfront,2320,27,42.3388,-71.0468,high,medium,2026,10
-Charlestown,645,24,42.3782,-71.0602,low,medium,2026,10
-West Roxbury,699,22,42.2793,-71.1607,low,medium,2026,10
-Fenway / Kenmore / Audubon Circle / Longwood,778,20,42.3467,-71.1003,medium,medium,2026,10
-East Boston,1453,20,42.3784,-71.0282,medium,medium,2026,10
-Hyde Park,636,18,42.2551,-71.1243,low,low,2026,10
-Roslindale,783,18,42.284,-71.1284,medium,low,2026,10
-Beacon Hill,825,15,42.3588,-71.0707,medium,low,2026,10
-Mission Hill,406,13,42.3278,-71.1003,low,low,2026,10
-Greater Mattapan,683,7,42.2736,-71.0921,low,low,2026,10
+neighborhood,predicted_reports,predicted_potholes,potholes_so_far,lat,lon,risk_level,risk_level_pothole,predict_year,predict_month,data_through_day
+Dorchester,3035,52,38,42.3021,-71.0707,high,high,2026,10,22
+Roxbury,1882,47,35,42.3142,-71.092,high,high,2026,10,22
+South End,1805,45,33,42.3398,-71.0786,high,high,2026,10,22
+Downtown / Financial District,2438,42,29,42.356,-71.055,high,high,2026,10,22
+Allston / Brighton,1985,41,28,42.35,-71.143,high,high,2026,10,22
+Jamaica Plain,1285,32,22,42.31,-71.1148,medium,high,2026,10,22
+East Boston,1453,30,22,42.3784,-71.0282,medium,medium,2026,10,22
+Charlestown,645,24,18,42.3782,-71.0602,low,medium,2026,10,22
+Back Bay,1411,24,16,42.3503,-71.081,medium,medium,2026,10,22
+South Boston / South Boston Waterfront,2320,23,16,42.3388,-71.0468,high,medium,2026,10,22
+Fenway / Kenmore / Audubon Circle / Longwood,778,22,16,42.3467,-71.1003,medium,medium,2026,10,22
+Beacon Hill,825,18,13,42.3588,-71.0707,medium,medium,2026,10,22
+Roslindale,783,17,12,42.284,-71.1284,medium,low,2026,10,22
+West Roxbury,699,14,8,42.2793,-71.1607,low,low,2026,10,22
+Hyde Park,636,13,8,42.2551,-71.1243,low,low,2026,10,22
+Greater Mattapan,683,12,9,42.2736,-71.0921,low,low,2026,10,22
+Mission Hill,406,10,7,42.3278,-71.1003,low,low,2026,10,22
