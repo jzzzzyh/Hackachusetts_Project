@@ -58,6 +58,7 @@ NEIGHBORHOOD_COORDS = {
 }
 
 WEATHER_COLS = ["avg_temp_c", "total_precip_mm", "total_snow_cm", "max_wind_kmh"]
+EXTRA_COLS   = ["bus_stops_near"]
 
 
 def main():
