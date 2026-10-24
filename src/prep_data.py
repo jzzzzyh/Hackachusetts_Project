@@ -9,7 +9,7 @@ Output: data/processed/report_counts.csv
 """
 
 import pandas as pd
-import urllib.request
+import requests
 import os
 
 RAW_PATH = "data/raw/311_2024.csv"
@@ -18,8 +18,15 @@ OUT_PATH = "data/processed/report_counts.csv"
 # --- Step 1: Download 311 data if not already present ---
 if not os.path.exists(RAW_PATH):
     print("Downloading 311 data...")
-    url = "https://raw.githubusercontent.com/CityOfBoston/OpenContext/main/311/311_Service_Requests_2024.csv"
-    urllib.request.urlretrieve(url, RAW_PATH)
+    url = "https://data.boston.gov/dataset/8048697b-ad64-4bfc-b090-ee00169f2323/resource/dff4d804-5031-443a-8409-8344efd0e5c8/download/lagan_311_open_data_2024_rvsd3.csv"
+    print("Downloading 311 data (this may take 1-2 min, file is ~60MB)...")
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+    os.makedirs("data/raw", exist_ok=True)
+    with requests.get(url, headers=headers, stream=True, timeout=120) as r:
+        r.raise_for_status()
+        with open(RAW_PATH, "wb") as f:
+            for chunk in r.iter_content(chunk_size=1024 * 1024):
+                f.write(chunk)
     print(f"Saved to {RAW_PATH}")
 else:
     print(f"Using cached file: {RAW_PATH}")
