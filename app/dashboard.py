@@ -98,6 +98,7 @@ value_col = "predicted_potholes" if pothole_mode else "predicted_reports"
 risk_col  = "risk_level_pothole" if (pothole_mode and "risk_level_pothole" in df.columns) else "risk_level"
 what_word = "potholes" if pothole_mode else "reports"
 target_col = "pothole_count" if pothole_mode else "report_count"
+why_col = "why_potholes" if pothole_mode else "why_reports"
 
 df = df.sort_values(value_col, ascending=False)
 
