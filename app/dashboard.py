@@ -204,9 +204,9 @@ with right:
     if street_view:
         st.subheader("Priority list — streets to check first")
         t = sv[["rank", "street", "neighborhood", "predicted_potholes", "potholes_so_far",
-                "past_12_months", "risk", "worst_block", "why"]].copy()
+                "past_12_months", "risk", "worst_spot", "why"]].copy()
         t.columns = ["#", "Street", "Neighborhood", "Predicted this month", "Reported so far",
-                     "Last 12 months", "Risk", "Worst block", "Why"]
+                     "Last 12 months", "Risk", "Most-reported spot", "Why"]
         st.dataframe(t, hide_index=True, width="stretch", height=520)
     else:
         st.subheader("Priority list — send crews here first")
