@@ -266,7 +266,7 @@ def main():
     out = s[["rank", "neighborhood", "street", "predicted", "so_far", "past_12_months",
              "share", "risk", "block", "why"]].rename(columns={"predicted": "predicted_potholes",
                                                               "so_far": "potholes_so_far",
-                                                              "block": "worst_block"})
+                                                              "block": "worst_spot"})
     out["share"] = out["share"].round(4)
     out.to_csv(OUT_CSV, index=False)
 
