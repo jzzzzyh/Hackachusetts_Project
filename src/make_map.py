@@ -52,15 +52,15 @@ print(f"{len(df)} neighborhoods loaded (mapping predicted {WHAT}).")
 
 # --- Build map ---
 boston_center = [42.3601, -71.0589]
-# CARTO Positron basemap via its public CDN. No API key, and CARTO's basemap
-# usage policy permits app/demo embedding -- unlike the OpenStreetMap volunteer
-# tile servers, which block app embedding ("not following the usage policy").
+# CARTO Voyager basemap. Uses a CARTO API key (set CARTO_KEY env var; falls back
+# to the project key). The key is embedded in the generated public HTML, so it is
+# visible to anyone who views the map -- rotate it in the CARTO dashboard if leaked.
+CARTO_KEY = os.environ.get("CARTO_KEY", "cb1_4tul_1_b72914a49091b720352c5251")
 m = folium.Map(location=boston_center, zoom_start=12, tiles=None)
 folium.TileLayer(
-    tiles="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+    tiles=f"https://basemaps.cartocdn.com/rastertiles/voyager/{{z}}/{{x}}/{{y}}.png?key={CARTO_KEY}",
     attr='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-    name="Light",
-    subdomains="abcd",
+    name="Voyager",
     max_zoom=20,
 ).add_to(m)
 
