@@ -125,7 +125,9 @@ for _, row in df.iterrows():
             max_width=320,
         ),
         tooltip=f"{row['neighborhood']} — {row[RISK_COL].upper()}",
-    ).add_to(m)
+    ).add_to(area_layer)
+area_layer.add_to(m)
+folium.LayerControl(position="bottomright", collapsed=False).add_to(m)
 
 # Legend (top-right)
 legend_html = """
