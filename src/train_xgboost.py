@@ -109,7 +109,9 @@ def main():
     rows = []
     for nbhd in neighborhoods:
         enc = le.transform([nbhd])[0]
-        feat = [enc, next_month] + [nov_weather[c] for c in WEATHER_COLS]
+        # Get bus stops for this neighborhood
+        bus_stops = df[df["neighborhood"] == nbhd]["bus_stops_near"].iloc[0]
+        feat = [enc, next_month] + [nov_weather[c] for c in WEATHER_COLS] + [bus_stops]
         pred = model.predict(np.array([feat]))[0]
         lat, lon = NEIGHBORHOOD_COORDS.get(nbhd, (42.36, -71.06))
         rows.append({
