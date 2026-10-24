@@ -60,11 +60,12 @@ def load_pothole_points() -> pd.DataFrame:
         path = f"data/raw/311_{year}.csv"
         if not os.path.exists(path):
             raise SystemExit(f"{path} missing — run `python src/prep_data.py` first.")
-        d = pd.read_csv(path, usecols=["open_dt", "type", "neighborhood", "latitude", "longitude"],
-                        low_memory=False)
+        d = pd.read_csv(path, usecols=["open_dt", "type", "neighborhood", "latitude", "longitude",
+                                       "location_street_name"], low_memory=False)
         d = d[d["type"].astype(str).str.lower().str.contains("pothole")]
         parts.append(pd.DataFrame({"dt": pd.to_datetime(d["open_dt"], errors="coerce", format="mixed"),
-                                   "nbhd": d["neighborhood"], "lat": d["latitude"], "lon": d["longitude"]}))
+                                   "nbhd": d["neighborhood"], "lat": d["latitude"], "lon": d["longitude"],
+                                   "report_street": d["location_street_name"]}))
     new = "data/raw/311_new_system.csv"
     if os.path.exists(new):
         n = pd.read_csv(new, usecols=["open_date", "service_name", "neighborhood", "latitude", "longitude"],
