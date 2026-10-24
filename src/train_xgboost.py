@@ -138,6 +138,67 @@ def so_far_cutoff(daily, year, month):
     return max(int(cur["day"].max()) - 1, 0) if len(cur) else 0
 
 
+REASONS_PATH = "data/processed/prediction_reasons.csv"
+TOP_REASONS = 3          # reasons written into predictions.csv (the long file keeps 6)
+
+
+def describe_input(feature, value, pred_month, cutoff):
+    """Plain-English description of one input's value for one area."""
+    mname = calendar.month_name[pred_month]
+    v = float(value)
+    return {
+        "lag1": f"{v:.0f} last month",
+        "lag12": f"{v:.0f} in {mname} last year",
+        "roll3": f"avg {v:.0f}/month over the last 3 months",
+        "month": f"time of year ({mname})",
+        "season": "the season",
+        "nbhd_enc": "this neighborhood's own pattern",
+        "route_count": f"{v:.0f} MBTA routes",
+        "rail_stops_near": f"{v:.0f} MBTA rail stops",
+        "bus_stops_near": f"{v:.0f} MBTA bus stops",
+        "tree_count": f"{v:,.0f} street trees",
+        "equity_score": f"tree-equity score {v:.0f}",
+        "road_miles": f"{v:.0f} miles of road",
+        "lane_miles": f"{v:.0f} lane-miles of road",
+        "daily_vehicle_miles": f"{v:,.0f} vehicle-miles of traffic a day",
+        "population": f"{v:,.0f} residents",
+        "so_far": f"{v:.0f} already reported (days 1-{cutoff})",
+        "pace": f"on pace for {v:.0f} this month",
+    }.get(feature, f"{feature} = {v:g}")
+
+
+def explain(model, rows, feature_cols, objective, pred_month, cutoff, unit):
+    """Why each prediction is what it is: per-input contributions (SHAP, built into XGBoost).
+
+    Contributions are measured against the model's typical area-month (the baseline).
+    Poisson model: contributions are on a log scale, so each one is shown as a % change
+    (they multiply). Squared-error model: each one is shown in report counts (they add).
+    Returns (one reasons string per row, long table of the top inputs per row).
+    """
+    dm = xgb.DMatrix(rows[feature_cols])
+    contrib = model.get_booster().predict(dm, pred_contribs=True)
+    poisson = objective.startswith("count:")
+    texts, long_rows = [], []
+    for i, (_, row) in enumerate(rows.iterrows()):
+        c, bias = contrib[i, :-1], contrib[i, -1]
+        baseline = float(np.exp(bias)) if poisson else float(bias)
+        order = np.argsort(-np.abs(c))
+        parts = []
+        for rank, j in enumerate(order[:6], start=1):
+            f = feature_cols[j]
+            effect = (np.exp(c[j]) - 1) * 100 if poisson else c[j]
+            eff_txt = f"{effect:+.0f}%" if poisson else f"{effect:+,.0f} {unit}"
+            desc = describe_input(f, row[f], pred_month, cutoff)
+            long_rows.append({"neighborhood": row["neighborhood"], "rank": rank, "feature": f,
+                              "reason": desc, "effect": round(float(effect), 1),
+                              "effect_unit": "%" if poisson else unit,
+                              "baseline": round(baseline, 1)})
+            if rank <= TOP_REASONS:
+                parts.append(f"{'▲' if c[j] > 0 else '▼'} {desc} ({eff_txt})")
+        texts.append(f"vs a typical {baseline:,.0f}: " + "; ".join(parts))
+    return texts, pd.DataFrame(long_rows)
+
+
 def make_model(seed=42, objective="reg:squarederror"):
     return XGBRegressor(n_estimators=300, max_depth=4, learning_rate=0.05,
                         subsample=0.9, random_state=seed, objective=objective)
