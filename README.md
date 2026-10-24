@@ -22,6 +22,27 @@ Predictive model for Boston 311 service requests using XGBoost, with geographic 
 
 ---
 
+## 🗺️ Viewing the Map
+
+The finished map is `data/processed/risk_map.html`. Double-click it to open it in your browser.
+
+**If the browser says "Access Blocked" (or the map shows up empty):** some browsers block local HTML files from loading map tiles. To fix it, serve the file from Python instead — this works every time:
+
+```bash
+# From the project root
+python -m http.server 8000 --bind 127.0.0.1 --directory data/processed
+```
+
+Then open this link in your browser:
+
+```
+http://127.0.0.1:8000/risk_map.html
+```
+
+Press `Ctrl+C` in the terminal to stop the server when you're done.
+
+---
+
 ## 🎯 Quick Overview
 
 ### What This Project Does
