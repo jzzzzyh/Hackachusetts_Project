@@ -344,7 +344,8 @@ def main():
     out["predict_year"], out["predict_month"] = pred_year, pred_month
     out["data_through_day"] = cutoff
     cols = ["neighborhood", "predicted_reports", "predicted_potholes", "lat", "lon",
-            "risk_level", "risk_level_pothole", "predict_year", "predict_month", "data_through_day"]
+            "risk_level", "risk_level_pothole", "predict_year", "predict_month", "data_through_day",
+            "why_potholes", "why_reports"]
     if "potholes_so_far" in out.columns:
         cols.insert(3, "potholes_so_far")
     out = out.sort_values("predicted_potholes", ascending=False)[cols]
@@ -352,7 +353,10 @@ def main():
     os.makedirs("data/processed", exist_ok=True)
     out.to_csv(OUT_PATH, index=False)
     print(f"\nDone! Saved {len(out)} rows to {OUT_PATH}")
-    print(out.to_string(index=False))
+    print(out.drop(columns=["why_potholes", "why_reports"]).to_string(index=False))
+    print("\nWhy (potholes):")
+    for _, r in out.iterrows():
+        print(f"  {r['neighborhood']}: {r['predicted_potholes']} — {r['why_potholes']}")
 
 
 if __name__ == "__main__":
