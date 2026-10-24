@@ -91,7 +91,10 @@ if WHAT == "potholes" and os.path.exists(STREET_GEO):
     print(f"Added {len(streets)} streets.")
 else:
     print("No street_predictions.geojson (run src/street_hotspots.py) — neighborhoods only.")
-area_layer = folium.FeatureGroup(name="Neighborhoods", show=not (WHAT == "potholes" and os.path.exists(STREET_GEO)))
+HAS_STREETS = WHAT == "potholes" and os.path.exists(STREET_GEO)
+# neighborhoods stay available as layers you can switch on (top-right control)
+area_layer = folium.FeatureGroup(name="Neighborhoods", show=not HAS_STREETS)
+heat_layer = folium.FeatureGroup(name="Neighborhood heat", show=not HAS_STREETS)
 
 # Heat map layer (weight = predicted report count)
 heat_data = df[["lat", "lon", VALUE_COL]].values.tolist()
@@ -101,7 +104,8 @@ HeatMap(
     blur=20,
     max_zoom=13,
     gradient={"0.3": "#1a9641", "0.6": "#fdae61", "1.0": "#d7191c"},
-).add_to(m)
+).add_to(heat_layer)
+heat_layer.add_to(m)
 
 # Markers with popups
 for _, row in df.iterrows():
