@@ -127,7 +127,7 @@ def snap_to_streets(points: pd.DataFrame, streets: gpd.GeoDataFrame) -> pd.DataF
                      streets[["seg", "street", "geometry"]], predicate="intersects")
     seg_geom = streets.set_index("seg").geometry
     pt_geom = pts.set_index("pid").geometry
-    cand["dist"] = seg_geom.loc[cand["seg"]].distance(pt_geom.loc[cand["pid"]].values, align=False).values
+    cand["dist"] = shapely.distance(seg_geom.loc[cand["seg"]].values, pt_geom.loc[cand["pid"]].values)
     names = pts.set_index("pid")["report_street"].map(report_streets)
     cand["match"] = [norm_street(st) in names.loc[p] for p, st in zip(cand["pid"], cand["street"])]
     best = (cand.sort_values(["pid", "match", "dist"], ascending=[True, False, True])
