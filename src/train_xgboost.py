@@ -12,6 +12,8 @@ Input:  data/processed/features.csv
 Output: data/processed/predictions.csv
           neighborhood, predicted_reports, predicted_potholes, lat, lon,
           risk_level, risk_level_pothole, predict_year, predict_month
+          + why_potholes / why_reports: top 3 reasons behind each prediction
+        data/processed/prediction_reasons.csv    (top 6 inputs per area, with effect size)
         data/processed/model_accuracy.csv        (test error vs simple guesses)
         data/processed/feature_importance.csv    (pothole model)
         data/processed/feature_importance_everything.csv
