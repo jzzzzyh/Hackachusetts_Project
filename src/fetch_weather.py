@@ -31,7 +31,7 @@ URL = "https://archive-api.open-meteo.com/v1/archive"
 PARAMS = {
     "latitude": LAT,
     "longitude": LON,
-    "start_date": "2022-01-01",
+    "start_date": "2015-01-01",
     "end_date": "2024-12-31",
     "daily": ",".join([
         "temperature_2m_mean",

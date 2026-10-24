@@ -1,24 +1,24 @@
 neighborhood,predicted_reports,lat,lon,risk_level
-Dorchester,1404,42.3021,-71.0707,high
-Roxbury,893,42.3142,-71.092,high
-South End,827,42.3398,-71.0786,high
-East Boston,787,42.3784,-71.0282,high
-Allston / Brighton,772,42.35,-71.143,high
-South Boston / South Boston Waterfront,642,42.3388,-71.0468,high
-Back Bay,620,42.3503,-71.081,high
-Jamaica Plain,616,42.31,-71.1148,medium
-Downtown / Financial District,536,42.356,-71.055,medium
-Greater Mattapan,407,42.2736,-71.0921,medium
-Beacon Hill,402,42.3588,-71.0707,medium
-Hyde Park,401,42.2551,-71.1243,medium
-Roslindale,399,42.284,-71.1284,medium
-Boston,396,42.3601,-71.0589,medium
-Charlestown,358,42.3782,-71.0602,medium
-West Roxbury,335,42.2793,-71.1607,medium
-Fenway / Kenmore / Audubon Circle / Longwood,188,42.3467,-71.1003,medium
-Mission Hill,173,42.3278,-71.1003,low
-South Boston,90,42.3388,-71.0468,low
-Allston,61,42.3534,-71.1312,low
-Brighton,52,42.3467,-71.1564,low
-Chestnut Hill,20,42.3258,-71.1662,low
-Mattapan,20,42.2736,-71.0921,low
+Dorchester,795,42.3021,-71.0707,high
+Roxbury,658,42.3142,-71.092,high
+Allston / Brighton,503,42.35,-71.143,high
+South Boston / South Boston Waterfront,462,42.3388,-71.0468,high
+Jamaica Plain,407,42.31,-71.1148,high
+East Boston,399,42.3784,-71.0282,high
+Downtown / Financial District,387,42.356,-71.055,high
+South End,369,42.3398,-71.0786,medium
+Back Bay,333,42.3503,-71.081,medium
+Greater Mattapan,273,42.2736,-71.0921,medium
+Hyde Park,271,42.2551,-71.1243,medium
+Roslindale,214,42.284,-71.1284,medium
+West Roxbury,212,42.2793,-71.1607,medium
+Boston,210,42.3601,-71.0589,medium
+Charlestown,183,42.3782,-71.0602,medium
+Beacon Hill,166,42.3588,-71.0707,medium
+Fenway / Kenmore / Audubon Circle / Longwood,71,42.3467,-71.1003,medium
+Mission Hill,14,42.3278,-71.1003,low
+Allston,0,42.3534,-71.1312,low
+Brighton,0,42.3467,-71.1564,low
+Chestnut Hill,0,42.3258,-71.1662,low
+Mattapan,0,42.2736,-71.0921,low
+South Boston,0,42.3388,-71.0468,low
