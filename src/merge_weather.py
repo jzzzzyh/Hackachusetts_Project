@@ -11,6 +11,7 @@ Inputs:
   data/processed/weather_monthly.csv (from fetch_weather.py)
   data/processed/mbta.csv            (from get_mbta.py)          optional
   data/processed/trees.csv           (from get_trees_live.py)    optional
+  data/processed/exposure.csv        (from get_exposure.py)      optional
   data/equity_scores.csv                                         optional
   data/processed/neighborhoods.csv   (lat / lon / area)          optional
 
