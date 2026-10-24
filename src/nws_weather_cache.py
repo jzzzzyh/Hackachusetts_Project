@@ -17,6 +17,7 @@ Output:
 """
 
 import os
+import sys
 import json
 import time
 import subprocess
@@ -90,7 +91,8 @@ def fetch_if_needed(force_refresh=False):
     print("Fetching fresh forecast from NWS API...")
     try:
         result = subprocess.run(
-            ["/Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13", "src/fetch_nws_weather.py"],
+            # same interpreter that is running this file (works in any venv / machine)
+            [sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "fetch_nws_weather.py")],
             capture_output=True,
             text=True,
             timeout=30
