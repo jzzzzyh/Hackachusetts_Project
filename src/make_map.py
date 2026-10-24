@@ -112,11 +112,13 @@ for _, row in df.iterrows():
     color = RISK_COLOR.get(row[RISK_COL], "gray")
     folium.CircleMarker(
         location=[row["lat"], row["lon"]],
-        radius=6 + 14 * row[VALUE_COL] / max_val,     # scale to the busiest area
+        radius=4 + 9 * row[VALUE_COL] / max_val,      # slightly smaller orbs
         color=color,
         fill=True,
         fill_color=color,
-        fill_opacity=0.75,
+        fill_opacity=0.55,
+        weight=1,
+        opacity=0.6,
         popup=folium.Popup(
             f"<b>{row['neighborhood']}</b><br>"
             f"Predicted {WHAT}: {int(row[VALUE_COL])}<br>"
