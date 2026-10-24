@@ -165,6 +165,39 @@ with right:
     show.columns = names
     st.dataframe(show, hide_index=True, width="stretch", height=520)
 
+# ---- Why: per-area explanation ----
+REASONS_PATH = "data/processed/prediction_reasons.csv"
+st.subheader("🔍 Why this prediction?")
+if os.path.exists(REASONS_PATH):
+    reasons = pd.read_csv(REASONS_PATH)
+    reasons = reasons[reasons["mode"] == mode_key]
+    pick = st.selectbox("Neighborhood", df["neighborhood"].tolist())
+    r = reasons[reasons["neighborhood"] == pick].sort_values("rank")
+    if len(r):
+        row = df[df["neighborhood"] == pick].iloc[0]
+        unit = r["effect_unit"].iloc[0]
+        st.write(
+            f"The model starts from a typical neighborhood-month (**{r['baseline'].iloc[0]:,.0f}** "
+            f"{what_word}) and each input pushes it up or down. For **{pick}** it lands on "
+            f"**{int(row[value_col])}**. The biggest pushes:"
+        )
+        for _, x in r.iterrows():
+            arrow = "🔺" if x["effect"] > 0 else "🔻"
+            eff = f"{x['effect']:+.0f}%" if unit == "%" else f"{x['effect']:+,.0f} {unit}"
+            st.markdown(f"- {arrow} **{x['reason']}** — {eff}")
+        chart = r.assign(Input=r["reason"]).set_index("Input")["effect"]
+        st.bar_chart(chart, horizontal=True)
+        st.caption(
+            ("Effects are % changes and multiply together (pothole model uses a count-based loss). "
+             if unit == "%" else "Effects are in reports and add together. ")
+            + "Computed with SHAP contributions built into XGBoost; they add up exactly to the "
+            "model's prediction. They explain the model, not proven causes."
+            + (" If the model's number was below the reports already filed, it is raised to that count."
+               if pothole_mode else "")
+        )
+else:
+    st.info("Run `python src/train_xgboost.py` to generate the explanations.")
+
 # ---- Accuracy: model vs simple guesses ----
 st.subheader(f"📊 How accurate is it? ({mode})")
 if os.path.exists(ACC_PATH):
