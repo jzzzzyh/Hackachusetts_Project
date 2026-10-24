@@ -136,6 +136,10 @@ def snap_to_streets(points: pd.DataFrame, streets: gpd.GeoDataFrame) -> pd.DataF
     out = pts.drop(columns="geometry").merge(best, on="pid")
     print(f"Reports snapped to a street within {SNAP_METERS} m: {len(out) / len(pts):.1%} of {len(pts):,} "
           f"({out['match'].mean():.0%} matched the street name on the report)")
+    # readable spot for the "worst spot" label: '20 Quincy St' / 'Quincy Pl & Quincy St'
+    out["spot"] = (out["report_street"].astype(str).str.replace("&amp;", "&", regex=False)
+                   .str.replace(r"(?i)^intersection( of)?\s+", "", regex=True)
+                   .str.split(",").str[0].str.strip())
     return pd.DataFrame(out.drop(columns=["pid", "match", "report_street"]))
 
 
