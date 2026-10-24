@@ -17,8 +17,9 @@ Output: data/processed/report_counts.csv
 Two sources:
   * Legacy yearly files (2015-2026). Boston moved potholes to a NEW 311 system
     on 2026-06-23, and other case types have been moving since mid-2025.
-  * The NEW SYSTEM file. Its cases do NOT overlap the legacy file (monthly
-    totals of the two add up to the usual volume), so we add them together.
+  * The NEW SYSTEM file (Aug 2025 ->). Its cases do not overlap the legacy
+    file (different case IDs; legacy potholes end 2026-06-24, new-system
+    potholes start 2026-06-23), so the two are added together.
     The new system has no "employee vs resident" source, so the resident /
     employee split is blank (NaN) for its rows -> the model uses pothole_count.
 
