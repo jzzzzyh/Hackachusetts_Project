@@ -1,12 +1,4 @@
-pandas
-numpy
-xgboost
-scikit-learn
-folium
-geopandas
-requests
-matplotlib
-seaborn
-jupyter
-tqdm
-shapely
+pandas==2.2.2
+scikit-learn==1.5.1
+folium==0.17.0
+numpy==1.26.4
