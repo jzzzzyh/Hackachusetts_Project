@@ -1,0 +1,81 @@
+"""
+STEP 5 — Weather Data Fetch
+===========================
+Pulls 2024 daily weather for Boston from the Open-Meteo Archive API
+(free, no API key) and aggregates it to monthly values.
+
+Run: python src/fetch_weather.py
+
+Output: data/processed/weather_monthly.csv
+  columns: year, month, avg_temp_c, total_precip_mm, total_snow_cm, max_wind_kmh
+
+Why weather? Rain/snow/freeze cause potholes and sidewalk damage, which
+drive 311 reports. Weather is the live, adaptive feed the model needs.
+
+Step 6 merges this with report_counts.csv by year + month.
+"""
+
+import requests
+import pandas as pd
+import os
+
+# Boston city-center coordinates (one weather point for the whole city —
+# neighborhoods are too close together for weather to differ meaningfully).
+LAT, LON = 42.3601, -71.0589
+
+OUT_PATH = "data/processed/weather_monthly.csv"
+
+# Open-Meteo historical archive endpoint (free, no key, no rate limit for this size)
+URL = "https://archive-api.open-meteo.com/v1/archive"
+
+PARAMS = {
+    "latitude": LAT,
+    "longitude": LON,
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31",
+    "daily": ",".join([
+        "temperature_2m_mean",
+        "precipitation_sum",
+        "snowfall_sum",
+        "wind_speed_10m_max",
+    ]),
+    "timezone": "America/New_York",
+}
+
+
+def main():
+    print("Fetching 2024 Boston weather from Open-Meteo ...")
+    resp = requests.get(URL, params=PARAMS, timeout=60)
+    resp.raise_for_status()
+    data = resp.json()["daily"]
+
+    df = pd.DataFrame({
+        "date":        pd.to_datetime(data["time"]),
+        "temp_c":      data["temperature_2m_mean"],
+        "precip_mm":   data["precipitation_sum"],
+        "snow_cm":     data["snowfall_sum"],
+        "wind_kmh":    data["wind_speed_10m_max"],
+    })
+
+    df["year"]  = df["date"].dt.year
+    df["month"] = df["date"].dt.month
+
+    # Aggregate daily -> monthly
+    monthly = df.groupby(["year", "month"]).agg(
+        avg_temp_c      =("temp_c",   "mean"),
+        total_precip_mm =("precip_mm", "sum"),
+        total_snow_cm   =("snow_cm",   "sum"),
+        max_wind_kmh    =("wind_kmh",  "max"),
+    ).reset_index()
+
+    monthly = monthly.round(2)
+
+    os.makedirs("data/processed", exist_ok=True)
+    monthly.to_csv(OUT_PATH, index=False)
+
+    print(f"\nDone! Saved {len(monthly)} months to {OUT_PATH}")
+    print(monthly.to_string(index=False))
+
+
+if __name__ == "__main__":
+    main()
