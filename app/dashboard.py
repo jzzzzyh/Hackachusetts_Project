@@ -148,6 +148,9 @@ with right:
         day = int(view["data_through_day"].iloc[0]) if "data_through_day" in view.columns else 0
         cols.insert(2, "potholes_so_far")
         names.insert(2, f"Reported so far (days 1-{day})")
+    if why_col in view.columns:
+        cols.append(why_col)
+        names.append("Why")
     show = view[cols].copy()
     show.columns = names
     st.dataframe(show, hide_index=True, width="stretch", height=520)
