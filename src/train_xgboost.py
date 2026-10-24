@@ -96,12 +96,12 @@ def add_lag_features(df, target):
     return df
 
 
-def make_model(seed=42):
+def make_model(seed=42, objective="reg:squarederror"):
     return XGBRegressor(n_estimators=300, max_depth=4, learning_rate=0.05,
-                        subsample=0.9, random_state=seed)
+                        subsample=0.9, random_state=seed, objective=objective)
 
 
-def evaluate(train_df, feature_cols, target):
+def evaluate(train_df, feature_cols, target, objective="reg:squarederror"):
     """Time-based test: the last TEST_MONTHS complete months are held out."""
     done = train_df.copy()
     done["ym"] = done["year"] * 12 + done["month"]
