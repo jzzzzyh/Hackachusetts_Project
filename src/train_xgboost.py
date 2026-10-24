@@ -162,11 +162,14 @@ def main():
 
     accuracy, predictions = [], None
     for mode, (target, pred_col, risk_col, label) in TARGETS.items():
+        objective = OBJECTIVE[mode]
+        feature_cols = base_cols + (exposure if USE_EXPOSURE[mode] else [])
         data = add_lag_features(df, target)
         train = data[(data["complete"] == 1)].dropna(subset=LAG_COLS + [target])
 
-        scores = evaluate(train, feature_cols, target)
-        print(f"\n{label}: test {scores['test_period']}, avg {scores['mean_actual']} per area-month")
+        scores = evaluate(train, feature_cols, target, objective)
+        print(f"\n{label} [{objective}, {len(feature_cols)} features]: "
+              f"test {scores['test_period']}, avg {scores['mean_actual']} per area-month")
         print(f"  model MAE {scores['mae']}  |  'same as last month' {scores['mae_last_month']}"
               f"  |  'same month last year' {scores['mae_last_year']}  |  success {scores['success_pct']:.0f}%")
         accuracy.append({"mode": mode, "label": label, **scores})
