@@ -32,6 +32,64 @@ RISK_COLOR = {
 print("Loading predictions.csv ...")
 df = pd.read_csv(IN_PATH)
 
+
+def resolve_coords(frame):
+    """Give each neighborhood its real centroid from the neighborhoods geojson.
+
+    predictions.csv sometimes carries only the Boston-center fallback (every row
+    the same point), which stacks all bubbles into one. We recompute centroids
+    from data/raw/neighborhoods.geojson and match composite names like
+    'Allston / Brighton' by averaging the centroids of their parts.
+    """
+    geo_path = "data/raw/neighborhoods.geojson"
+    needs = ("lat" not in frame.columns or "lon" not in frame.columns
+             or frame[["lat", "lon"]].drop_duplicates().shape[0] <= 1)
+    if not (needs and os.path.exists(geo_path)):
+        return frame
+    try:
+        import geopandas as gpd
+    except ImportError:
+        print("geopandas not available — leaving coordinates as-is.")
+        return frame
+
+    g = gpd.read_file(geo_path).to_crs(4326)
+    name_col = "blockgr2020_ctr_neighb_name"
+    cents = {str(r[name_col]).strip().lower(): (r.geometry.centroid.y, r.geometry.centroid.x)
+             for _, r in g.iterrows() if r.geometry is not None}
+    aliases = {"financial district": "downtown", "kenmore": "fenway",
+               "audubon circle": "fenway", "greater mattapan": "mattapan"}
+
+    def centroid_for(name):
+        pts = []
+        for part in str(name).split("/"):
+            key = part.strip().lower()
+            key = aliases.get(key, key)
+            if key in cents:
+                pts.append(cents[key])
+        if not pts:
+            return (None, None)
+        return (sum(p[0] for p in pts) / len(pts), sum(p[1] for p in pts) / len(pts))
+
+    lats, lons, missed = [], [], []
+    for n in frame["neighborhood"]:
+        la, lo = centroid_for(n)
+        if la is None:
+            missed.append(n)
+        lats.append(la)
+        lons.append(lo)
+    frame = frame.copy()
+    frame["lat"] = [la if la is not None else frame.get("lat", pd.Series([None])).iloc[0] for la in lats]
+    frame["lon"] = [lo if lo is not None else frame.get("lon", pd.Series([None])).iloc[0] for lo in lons]
+    matched = len(frame) - len(missed)
+    print(f"Resolved centroids for {matched}/{len(frame)} neighborhoods from the geojson.")
+    if missed:
+        print(f"  Unmatched (left at fallback): {missed}")
+    return frame
+
+
+df = resolve_coords(df)
+
+
 # Potholes are the main prediction; fall back to all-311 for old prediction files.
 if "predicted_potholes" in df.columns:
     VALUE_COL, RISK_COL, WHAT, WHY_COL = "predicted_potholes", "risk_level_pothole", "potholes", "why_potholes"
