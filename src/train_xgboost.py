@@ -332,7 +332,8 @@ def main():
         predictions = keep if predictions is None else predictions.merge(keep, on="neighborhood")
 
     pd.DataFrame(accuracy).to_csv("data/processed/model_accuracy.csv", index=False)
-    print("\nSaved model_accuracy.csv and feature_importance*.csv")
+    pd.concat(all_reasons).to_csv(REASONS_PATH, index=False)
+    print(f"\nSaved model_accuracy.csv, feature_importance*.csv and {REASONS_PATH}")
 
     coords = df.groupby("neighborhood")[["lat", "lon"]].first() if "lat" in df.columns else None
     out = predictions.copy()
