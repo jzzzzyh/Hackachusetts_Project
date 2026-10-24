@@ -21,6 +21,8 @@ Features:
   - PAST COUNTS of the same target, built by add_lag_features():
       lag1  = last month, lag12 = same month last year, roll3 = 3-month average
   - per-area context: MBTA transit, street trees, tree-equity score (if present)
+  - pothole model only: exposure (road miles, lane miles, traffic, population)
+    and a Poisson (count) loss — see OBJECTIVE / USE_EXPOSURE below
   - weather is OFF (USE_WEATHER). Back-tested on 6 held-out years
     (2019, 2021-2025): weather made the all-311 model worse every year
     (+10% to +36% error) and helped potholes in only 3 of 6 years. The month
