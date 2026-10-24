@@ -34,13 +34,13 @@ Full dataset profiles with fetch code and schemas are in [`data/sources/`](data/
 
 ### 🟡 Medium — worth adding if time allows
 
-| Dataset | What it adds | Source |
-|---------|-------------|--------|
-| Boston neighborhood age | Older infrastructure fails more | MassGIS building footprints (year built) |
-| Water/sewer main age | BWSC potholes from pipe breaks | Boston Water & Sewer Commission |
-| Traffic volume counts | High-traffic streets degrade faster | MassDOT traffic count database |
-| Census block density | More people = more reports filed | US Census ACS |
-| Road pavement condition index | Current rating per segment | MassDOT Pavement Management System |
+| Dataset | What it adds | Source | Profile |
+|---------|-------------|--------|---------|
+| Neighborhood age (Property Assessment `YR_BUILT`) | Older infrastructure fails more | [data.boston.gov](https://data.boston.gov/dataset/property-assessment) | [11](data/sources/11_neighborhood_age.md) |
+| Water & sewer main age (BWSC) | Pipe failures = BWSC Potholes | [MassGIS / BWSC](https://gis.data.mass.gov) | [12](data/sources/12_water_sewer_mains.md) |
+| Traffic volume counts / AADT (MassDOT) | High-traffic streets degrade faster | [MassDOT Open Data](https://geodot.mass.gov) | [13](data/sources/13_traffic_volume.md) |
+| Census population density | Controls for reporting-rate bias | [data.boston.gov](https://data.boston.gov/dataset/2025-boston-population-estimates-neighborhood-level) | [14](data/sources/14_census_population.md) |
+| Pavement Condition Index / PSI (MassDOT) | Direct road quality score per segment | [MassDOT Open Data](https://geodot.mass.gov) | [15](data/sources/15_pavement_condition.md) |
 
 ### 🔵 Stretch — mention in demo slides
 
