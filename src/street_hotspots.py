@@ -82,16 +82,56 @@ def load_pothole_points() -> pd.DataFrame:
     return p.drop(columns=["nbhd", "dt"])
 
 
+SUFFIX = {"st": "street", "ave": "avenue", "av": "avenue", "rd": "road", "blvd": "boulevard",
+          "pl": "place", "sq": "square", "pkwy": "parkway", "ter": "terrace", "ct": "court",
+          "dr": "drive", "ln": "lane", "hwy": "highway", "cir": "circle", "wy": "way",
+          "pk": "park", "psge": "passage", "aly": "alley", "row": "row"}
+PREFIX = {"e": "east", "w": "west", "n": "north", "s": "south", "mt": "mount"}
+
+
+def norm_street(name: str) -> str:
+    """'E Eagle St' / 'EAST EAGLE STREET' -> 'east eagle street'."""
+    words = re.sub(r"[^a-z0-9 ]", " ", str(name).lower()).split()
+    if not words:
+        return ""
+    words[-1] = SUFFIX.get(words[-1], words[-1])
+    words[0] = PREFIX.get(words[0], words[0]) if len(words) > 2 else words[0]
+    return " ".join(words)
+
+
+def report_streets(raw: str) -> list:
+    """Street names written on a report: '12 Quincy St' or 'INTERSECTION Quincy Pl & Quincy St'."""
+    s = str(raw).replace("&amp;", "&")
+    s = re.sub(r"(?i)^intersection( of)?\s+", "", s)
+    s = s.split(",")[0]
+    parts = [re.sub(r"^[0-9][0-9a-zA-Z-]*\s+", "", p.strip()) for p in s.split("&")]
+    return [n for n in (norm_street(p) for p in parts) if n]
+
+
 def snap_to_streets(points: pd.DataFrame, streets: gpd.GeoDataFrame) -> pd.DataFrame:
-    """Attach the nearest street segment (within SNAP_METERS) to every report."""
-    pts = gpd.GeoDataFrame(points, geometry=gpd.points_from_xy(points["lon"], points["lat"]),
+    """Attach a street segment (within SNAP_METERS) to every report.
+
+    Prefer the closest segment whose name matches a street written on the report
+    (reports at a corner otherwise land on whichever street happens to be nearest);
+    fall back to the nearest segment.
+    """
+    pts = gpd.GeoDataFrame(points.reset_index(drop=True),
+                           geometry=gpd.points_from_xy(points["lon"], points["lat"]),
                            crs="EPSG:4326").to_crs(METRIC_CRS)
-    joined = gpd.sjoin_nearest(pts, streets[["seg", "street", "geometry"]], how="left",
-                               max_distance=SNAP_METERS, distance_col="dist_m")
-    joined = joined[~joined.index.duplicated()]          # ties: keep one segment
-    print(f"Reports snapped to a street within {SNAP_METERS} m: "
-          f"{joined['seg'].notna().mean():.1%} of {len(joined):,}")
-    return pd.DataFrame(joined.dropna(subset=["seg"]).drop(columns=["geometry", "index_right"]))
+    pts["pid"] = np.arange(len(pts))
+    cand = gpd.sjoin(gpd.GeoDataFrame(pts[["pid"]], geometry=pts.buffer(SNAP_METERS), crs=METRIC_CRS),
+                     streets[["seg", "street", "geometry"]], predicate="intersects")
+    seg_geom = streets.set_index("seg").geometry
+    pt_geom = pts.set_index("pid").geometry
+    cand["dist"] = seg_geom.loc[cand["seg"]].distance(pt_geom.loc[cand["pid"]].values, align=False).values
+    names = pts.set_index("pid")["report_street"].map(report_streets)
+    cand["match"] = [norm_street(st) in names.loc[p] for p, st in zip(cand["pid"], cand["street"])]
+    best = (cand.sort_values(["pid", "match", "dist"], ascending=[True, False, True])
+            .drop_duplicates("pid")[["pid", "seg", "street", "match"]])
+    out = pts.drop(columns="geometry").merge(best, on="pid")
+    print(f"Reports snapped to a street within {SNAP_METERS} m: {len(out) / len(pts):.1%} of {len(pts):,} "
+          f"({out['match'].mean():.0%} matched the street name on the report)")
+    return pd.DataFrame(out.drop(columns=["pid", "match", "report_street"]))
 
 
 def load_streets() -> gpd.GeoDataFrame:
