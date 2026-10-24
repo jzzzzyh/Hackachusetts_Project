@@ -182,7 +182,7 @@ def main():
     out["lat"] = out["lat"].fillna(DEFAULT_COORDS[0])
     out["lon"] = out["lon"].fillna(DEFAULT_COORDS[1])
     out["predict_year"], out["predict_month"] = pred_year, pred_month
-    out = out.sort_values("predicted_reports", ascending=False)[
+    out = out.sort_values("predicted_potholes", ascending=False)[
         ["neighborhood", "predicted_reports", "predicted_potholes", "lat", "lon",
          "risk_level", "risk_level_pothole", "predict_year", "predict_month"]]
 
