@@ -138,8 +138,9 @@ it to guess next month.
 - **Street trees — {share('tree_count'):.0%}.** The biggest signal, now
   pulled **live** from the city's tree map (201k+ trees, counted per area).
   Tree roots push up and crack sidewalks, so leafy areas report more damage.
-- **MBTA stops nearby — {share('bus_stops_near'):.0%}.** Heavy bus/train
-  traffic wears roads faster.
+- **MBTA transit — {share('bus_stops_near'):.0%}.** Now three live signals:
+  bus stops, rail stops, and how many routes serve the area. Heavy transit
+  means heavy road use, which wears pavement faster.
 - **Neighborhood — {share('nbhd_enc'):.0%}.** Past problem areas stay
   problem areas.
 - **Temperature — {share('avg_temp_c'):.0%}.** The strongest weather signal.

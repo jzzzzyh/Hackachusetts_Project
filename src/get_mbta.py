@@ -1,91 +1,94 @@
 #!/usr/bin/env python3
 """
-Download MBTA GTFS, count bus stops near each neighborhood centroid.
-Source: https://cdn.mbta.com/MBTA_GTFS.zip (no login or key required)
+LIVE MBTA transit features per neighborhood.
+Source: https://cdn.mbta.com/MBTA_GTFS.zip  (live GTFS feed, no key)
+
+Instead of one bus-stop count near a centroid, this pulls the full live
+feed and, using the real neighborhood polygons, computes THREE signals per
+neighborhood so the model has more to learn from:
+
+  bus_stops_near   - number of bus stops inside the neighborhood
+  rail_stops_near  - number of subway/light-rail/commuter-rail stops
+  route_count      - number of DISTINCT routes serving those stops
+
+Run: python src/get_mbta.py
+Output: data/processed/mbta.csv
+  columns: neighborhood, bus_stops_near, rail_stops_near, route_count
 """
 
-import urllib.request
-import ssl
-import zipfile
-import io
-import os
+import urllib.request, ssl, zipfile, io, os
 import pandas as pd
-from math import radians, cos, sin, asin, sqrt
+import geopandas as gpd
 
-# Handle SSL certificate verification issues
 ssl._create_default_https_context = ssl._create_unverified_context
 
+GTFS_URL   = "https://cdn.mbta.com/MBTA_GTFS.zip"
+HOODS_LOCAL = "data/raw/neighborhoods.geojson"
+OUT_PATH   = "data/processed/mbta.csv"
 
-# Neighborhood centroids (from src/train_xgboost.py)
-NEIGHBORHOOD_COORDS = {
-    "Dorchester": (42.3021, -71.0707),
-    "South Boston": (42.3388, -71.0468),
-    "South End": (42.3398, -71.0786),
-    "Roxbury": (42.3142, -71.0920),
-    "East Boston": (42.3784, -71.0282),
-    "Back Bay": (42.3503, -71.0810),
-    "Jamaica Plain": (42.3100, -71.1148),
-    "Charlestown": (42.3782, -71.0602),
-    "Brighton": (42.3519, -71.1437),
-    "Allston": (42.3526, -71.1338),
-    "Fenway": (42.3442, -71.0978),
-    "Beacon Hill": (42.3601, -71.0650),
-    "Downtown": (42.3585, -71.0636),
-    "North End": (42.3655, -71.0552),
-    "West End": (42.3676, -71.0764),
-    "Waterfront": (42.3628, -71.0480),
-}
+# GTFS route_type: 0 tram/light-rail, 1 subway, 2 rail, 3 bus, 4 ferry
+RAIL_TYPES = {0, 1, 2}
+BUS_TYPES  = {3}
 
 
-def haversine_km(lat1, lon1, lat2, lon2):
-    """Calculate great circle distance between two points on earth (in km)."""
-    lat1, lon1, lat2, lon2 = map(radians, [lat1, lon1, lat2, lon2])
-    d = sin((lat2 - lat1) / 2) ** 2 + cos(lat1) * cos(lat2) * sin((lon2 - lon1) / 2) ** 2
-    return 2 * asin(sqrt(d)) * 6371
+def load_gtfs():
+    print("Downloading LIVE MBTA GTFS feed ...")
+    req = urllib.request.Request(GTFS_URL, headers={"User-Agent": "Mozilla/5.0"})
+    r = urllib.request.urlopen(req, timeout=120)
+    z = zipfile.ZipFile(io.BytesIO(r.read()))
+    stops      = pd.read_csv(z.open("stops.txt"))
+    routes     = pd.read_csv(z.open("routes.txt"))
+    trips      = pd.read_csv(z.open("trips.txt"))
+    stop_times = pd.read_csv(z.open("stop_times.txt"), usecols=["trip_id", "stop_id"])
+    return stops, routes, trips, stop_times
 
 
 def main():
-    """Download MBTA GTFS and count bus stops near each neighborhood."""
-    print("Downloading MBTA GTFS data...")
-    url = "https://cdn.mbta.com/MBTA_GTFS.zip"
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    
-    try:
-        r = urllib.request.urlopen(req, timeout=60)
-        z = zipfile.ZipFile(io.BytesIO(r.read()))
-    except Exception as e:
-        print(f"Error downloading MBTA data: {e}")
-        return
+    stops, routes, trips, stop_times = load_gtfs()
+    stops = stops.dropna(subset=["stop_lat", "stop_lon"]).copy()
+    print(f"Live feed: {len(stops)} stops, {len(routes)} routes")
 
-    print("Extracting stops and routes...")
-    try:
-        stops = pd.read_csv(z.open("stops.txt"))
-        routes = pd.read_csv(z.open("routes.txt"))
-    except Exception as e:
-        print(f"Error reading GTFS files: {e}")
-        return
+    # Map each stop -> the route_types and route_ids that serve it
+    rt_type = routes.set_index("route_id")["route_type"].to_dict()
+    trip_route = trips.set_index("trip_id")["route_id"].to_dict()
+    st = stop_times.copy()
+    st["route_id"] = st["trip_id"].map(trip_route)
+    st = st.dropna(subset=["route_id"])
+    st["route_type"] = st["route_id"].map(rt_type)
 
-    # Filter to keep only stops with valid coordinates
-    stops = stops.dropna(subset=["stop_lat", "stop_lon"])
-    print(f"Found {len(stops)} stops with coordinates")
+    # per stop: set of routes, and whether it is served by bus / rail
+    by_stop = st.groupby("stop_id").agg(
+        routes=("route_id", lambda s: set(s)),
+        types=("route_type", lambda s: set(s)),
+    )
+    stops = stops.merge(by_stop, left_on="stop_id", right_index=True, how="left")
+    stops["routes"] = stops["routes"].apply(lambda v: v if isinstance(v, set) else set())
+    stops["types"]  = stops["types"].apply(lambda v: v if isinstance(v, set) else set())
 
-    # Count bus stops near each neighborhood (within 0.5 km)
+    # Point-in-polygon against the real neighborhood shapes
+    hoods = gpd.read_file(HOODS_LOCAL).to_crs("EPSG:4326")
+    hoods = hoods.rename(columns={"blockgr2020_ctr_neighb_name": "neighborhood"})[["neighborhood", "geometry"]]
+    gstops = gpd.GeoDataFrame(
+        stops, geometry=gpd.points_from_xy(stops["stop_lon"], stops["stop_lat"]), crs="EPSG:4326"
+    )
+    joined = gpd.sjoin(gstops, hoods, how="inner", predicate="within")
+
     rows = []
-    for nbhd, (lat, lon) in NEIGHBORHOOD_COORDS.items():
-        near = stops.apply(
-            lambda s: haversine_km(lat, lon, s.stop_lat, s.stop_lon) <= 0.5,
-            axis=1,
-        ).sum()
-        rows.append({"neighborhood": nbhd, "bus_stops_near": int(near)})
-        print(f"  {nbhd}: {int(near)} stops within 0.5 km")
+    for nbhd, grp in joined.groupby("neighborhood"):
+        is_bus  = grp["types"].apply(lambda s: bool(s & BUS_TYPES))
+        is_rail = grp["types"].apply(lambda s: bool(s & RAIL_TYPES))
+        all_routes = set().union(*grp["routes"]) if len(grp) else set()
+        rows.append({
+            "neighborhood":   nbhd,
+            "bus_stops_near":  int(is_bus.sum()),
+            "rail_stops_near": int(is_rail.sum()),
+            "route_count":     len(all_routes),
+        })
 
-    # Save to CSV
+    out = pd.DataFrame(rows).sort_values("bus_stops_near", ascending=False)
     os.makedirs("data/processed", exist_ok=True)
-    out = pd.DataFrame(rows)
-    out.to_csv("data/processed/mbta.csv", index=False)
-    
-    print("\nMBTA data saved to data/processed/mbta.csv")
-    print("\nSummary:")
+    out.to_csv(OUT_PATH, index=False)
+    print(f"\nSaved {len(out)} neighborhoods to {OUT_PATH}")
     print(out.to_string(index=False))
 
 

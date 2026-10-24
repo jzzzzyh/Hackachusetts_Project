@@ -39,10 +39,26 @@ def main():
     # Left join: keep every 311 row, attach its month's weather
     merged = counts.merge(weather, on=["year", "month"], how="left")
 
-    # --- add MBTA bus-stop feature ---
+    # --- add LIVE MBTA transit features (bus stops, rail stops, route count) ---
+    # MBTA/ polygon names use the census labels; map them to the 311 labels.
+    MBTA_TO_311 = {
+        "Allston":                 "Allston / Brighton",
+        "Brighton":                "Allston / Brighton",
+        "Downtown":                "Downtown / Financial District",
+        "Fenway":                  "Fenway / Kenmore / Audubon Circle / Longwood",
+        "Longwood":                "Fenway / Kenmore / Audubon Circle / Longwood",
+        "South Boston":            "South Boston / South Boston Waterfront",
+        "South Boston Waterfront": "South Boston / South Boston Waterfront",
+        "Mattapan":                "Greater Mattapan",
+    }
     mbta = pd.read_csv("data/processed/mbta.csv")
+    mbta["neighborhood"] = mbta["neighborhood"].replace(MBTA_TO_311)
+    # several polygons can map to one 311 area -> sum their transit counts
+    mbta = mbta.groupby("neighborhood", as_index=False).sum(numeric_only=True)
     merged = merged.merge(mbta, on="neighborhood", how="left")
-    merged["bus_stops_near"] = merged["bus_stops_near"].fillna(0)
+    for col in ("bus_stops_near", "rail_stops_near", "route_count"):
+        if col in merged.columns:
+            merged[col] = merged[col].fillna(0)
 
     # --- add neighborhood metadata for equity analysis (optional) ---
     hoods_meta = "data/processed/neighborhoods.csv"
