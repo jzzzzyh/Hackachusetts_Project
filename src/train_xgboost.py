@@ -58,8 +58,7 @@ NEIGHBORHOOD_COORDS = {
 }
 
 WEATHER_COLS = ["avg_temp_c", "total_precip_mm", "total_snow_cm", "max_wind_kmh"]
-EXTRA_COLS   = ["bus_stops_near"]
-EXTRA_COLS = ["bus_stops_near", "tree_count"]
+EXTRA_COLS = ["bus_stops_near", "tree_count", "equity_score"]
 
 
 def main():
@@ -107,19 +106,18 @@ def main():
     nov_weather = df[df["month"] == next_month][WEATHER_COLS].iloc[0].to_dict()
 
     neighborhoods = df["neighborhood"].unique()
-    tree_lookup = df.groupby("neighborhood")["tree_count"].first().to_dict()
+    # per-neighborhood lookups for each extra feature
+    extra_lookup = {
+        col: df.groupby("neighborhood")[col].first().to_dict()
+        for col in EXTRA_COLS
+    }
     rows = []
     for nbhd in neighborhoods:
         enc = le.transform([nbhd])[0]
-        # Get bus stops for this neighborhood
-        bus_stops = df[df["neighborhood"] == nbhd]["bus_stops_near"].iloc[0]
-        feat = [enc, next_month] + [nov_weather[c] for c in WEATHER_COLS] + [bus_stops]
-        # Extra per-neighborhood features, in EXTRA_COLS order
-        bus_stops = df[df["neighborhood"] == nbhd]["bus_stops_near"].iloc[0]
         feat = (
             [enc, next_month]
             + [nov_weather[c] for c in WEATHER_COLS]
-            + [bus_stops, tree_lookup.get(nbhd, 0)]
+            + [extra_lookup[col].get(nbhd, 0) for col in EXTRA_COLS]
         )
         pred = model.predict(np.array([feat]))[0]
         lat, lon = NEIGHBORHOOD_COORDS.get(nbhd, (42.36, -71.06))

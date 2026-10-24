@@ -128,19 +128,23 @@ if os.path.exists(IMP_PATH):
 
     st.markdown(
         f"""
-**How it works:** the model looked at 2024 — for every neighborhood, every
-month, it compared the number of 311 problem reports against that area's
-weather, its number of street trees, and its nearby MBTA bus/train stops.
-It found the pattern, then uses it to guess next month.
+**How it works:** the model looked at **10 years (2015-2024)** — for every
+neighborhood, every month, it compared the number of 311 problem reports
+against that area's weather, its **live** street-tree count, its tree-equity
+score, and its nearby MBTA bus/train stops. It found the pattern, then uses
+it to guess next month.
 
 **What drives the guess (the % splits above):**
-- **Street trees — {share('tree_count'):.0%}.** The biggest signal. Tree
-  roots push up and crack sidewalks, so leafy areas report more damage.
+- **Street trees — {share('tree_count'):.0%}.** The biggest signal, now
+  pulled **live** from the city's tree map (201k+ trees, counted per area).
+  Tree roots push up and crack sidewalks, so leafy areas report more damage.
 - **MBTA stops nearby — {share('bus_stops_near'):.0%}.** Heavy bus/train
   traffic wears roads faster.
 - **Neighborhood — {share('nbhd_enc'):.0%}.** Past problem areas stay
   problem areas.
 - **Temperature — {share('avg_temp_c'):.0%}.** The strongest weather signal.
+- **Tree-equity score — {share('equity_score'):.0%}.** Used to fill in areas
+  with no live tree polygon. A small nudge only.
 - **Month, rain, snow, wind — the rest.** Smaller nudges.
 
 **The tree correlation we found:**
@@ -158,14 +162,15 @@ It found the pattern, then uses it to guess next month.
     )
     st.caption(
         "Honest note: these are CORRELATIONS, not proven causes — trees, "
-        "weather, population and reporting habits all move together. Adding "
-        "the tree feature did not yet lower the error on our small 2024 "
-        "dataset; more rows (multi-year data) are needed to confirm it helps."
+        "weather, population and reporting habits all move together. The "
+        "tree count is a LIVE feed (Boston ArcGIS, updates daily). The "
+        "equity score is only used to estimate trees where no live polygon "
+        "matches, so treat it as a rough fill, not a strong signal."
     )
 else:
     st.info("Run `python src/train_xgboost.py` to generate the proof chart.")
 
 st.caption(
-    "Early model — more live data feeds (weather + trees are in now) will "
-    "sharpen predictions before the hackathon ends."
+    "Early model — live feeds now wired in (weather archive + live street "
+    "trees). Live weather forecast is the next upgrade."
 )

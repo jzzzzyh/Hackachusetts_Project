@@ -44,13 +44,15 @@ def main():
     merged = merged.merge(mbta, on="neighborhood", how="left")
     merged["bus_stops_near"] = merged["bus_stops_near"].fillna(0)
 
-    # --- add neighborhood metadata for equity analysis ---
-    neighborhoods = pd.read_csv("data/processed/neighborhoods.csv")
-    neighborhoods_meta = neighborhoods[["neighborhood", "lat", "lon", "area_sqm"]]
-    merged = merged.merge(neighborhoods_meta, on="neighborhood", how="left")
+    # --- add neighborhood metadata for equity analysis (optional) ---
+    hoods_meta = "data/processed/neighborhoods.csv"
+    if os.path.exists(hoods_meta):
+        neighborhoods = pd.read_csv(hoods_meta)
+        neighborhoods_meta = neighborhoods[["neighborhood", "lat", "lon", "area_sqm"]]
+        merged = merged.merge(neighborhoods_meta, on="neighborhood", how="left")
 
-    # --- add street-tree count feature (if available) ---
-    # Map each 311 neighborhood label to the tree-data label it draws from.
+    # --- add street-tree count feature (from LIVE ArcGIS geo-match) ---
+    # Map each 311 neighborhood label to the live tree-data label it draws from.
     TREE_SOURCE = {
         "Dorchester":                                   "Dorchester",
         "Roxbury":                                      "Roxbury",
@@ -66,15 +68,15 @@ def main():
         "Mattapan":                                     "Mattapan",
         "Greater Mattapan":                             "Mattapan",
         "South Boston / South Boston Waterfront":       "South Boston",
-        "Allston / Brighton":                           "Allston-Brighton",
-        "Allston":                                      "Allston-Brighton",
-        "Brighton":                                     "Allston-Brighton",
-        "Back Bay":                                     "Back Bay/Beacon Hill",
-        "Beacon Hill":                                  "Back Bay/Beacon Hill",
-        "Downtown / Financial District":                "Central Boston",
-        "Boston":                                       "Central Boston",
-        "Fenway / Kenmore / Audubon Circle / Longwood": "Fenway/Longwood",
-        # "Chestnut Hill" has no tree data -> stays 0
+        "Allston / Brighton":                           "Allston",
+        "Allston":                                      "Allston",
+        "Brighton":                                     "Brighton",
+        "Back Bay":                                     "Back Bay",
+        "Beacon Hill":                                  "Beacon Hill",
+        "Downtown / Financial District":                "Downtown",
+        "Boston":                                       "Downtown",
+        "Fenway / Kenmore / Audubon Circle / Longwood": "Fenway",
+        # "Chestnut Hill" has no live tree polygon -> equity fill below
     }
     
     trees_file = "data/processed/trees.csv"
@@ -92,6 +94,33 @@ def main():
             print(f"NOTE: {no_trees} rows have 0 trees (no tree-data match).")
     else:
         print(f"NOTE: {trees_file} not found, skipping tree_count feature")
+
+    # --- add Tree Equity Score, and use it to ESTIMATE trees where the count is 0 ---
+    # Equity (0-100, American Forests) is published per neighborhood, no API key needed.
+    # We fit a simple line tree_count ~ equity on the areas that HAVE a real count,
+    # then fill zero-tree areas with that line's estimate instead of leaving them 0.
+    equity_file = "data/equity_scores.csv"
+    if os.path.exists(equity_file):
+        equity = pd.read_csv(equity_file)
+        eq_by_name = equity.set_index("neighborhood")["equity_score"].to_dict()
+        merged["equity_score"] = merged["neighborhood"].map(eq_by_name)
+        # city median fills any area with no published score
+        merged["equity_score"] = merged["equity_score"].fillna(equity["equity_score"].median())
+
+        # fit tree_count = a*equity + b on rows with a real (non-zero) tree count
+        import numpy as np
+        have = merged[merged["tree_count"] > 0][["equity_score", "tree_count"]].drop_duplicates()
+        if len(have) >= 2:
+            a, b = np.polyfit(have["equity_score"], have["tree_count"], 1)
+            est = (a * merged["equity_score"] + b).clip(lower=0).round()
+            merged["tree_est_from_equity"] = est
+            # fill only the zero-tree rows with the equity estimate
+            zero = merged["tree_count"] == 0
+            merged.loc[zero, "tree_count"] = est[zero]
+            print(f"Filled {int(zero.sum())} zero-tree rows from equity "
+                  f"(line: trees ≈ {a:.0f}*equity {b:+.0f}).")
+    else:
+        print(f"NOTE: {equity_file} not found, skipping equity feature")
 
     # Report any rows that failed to get weather (missing month)
     missing = merged["avg_temp_c"].isna().sum()

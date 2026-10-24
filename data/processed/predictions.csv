@@ -1,22 +1,22 @@
 neighborhood,predicted_reports,lat,lon,risk_level
-Dorchester,795,42.3021,-71.0707,high
-Roxbury,658,42.3142,-71.092,high
-Allston / Brighton,503,42.35,-71.143,high
-South Boston / South Boston Waterfront,462,42.3388,-71.0468,high
-Jamaica Plain,407,42.31,-71.1148,high
-East Boston,399,42.3784,-71.0282,high
-Downtown / Financial District,387,42.356,-71.055,high
-South End,369,42.3398,-71.0786,medium
-Back Bay,333,42.3503,-71.081,medium
-Greater Mattapan,273,42.2736,-71.0921,medium
-Hyde Park,271,42.2551,-71.1243,medium
-Roslindale,214,42.284,-71.1284,medium
-West Roxbury,212,42.2793,-71.1607,medium
-Boston,210,42.3601,-71.0589,medium
-Charlestown,183,42.3782,-71.0602,medium
-Beacon Hill,166,42.3588,-71.0707,medium
-Fenway / Kenmore / Audubon Circle / Longwood,71,42.3467,-71.1003,medium
-Mission Hill,14,42.3278,-71.1003,low
+Dorchester,802,42.3021,-71.0707,high
+Roxbury,591,42.3142,-71.092,high
+Allston / Brighton,505,42.35,-71.143,high
+South Boston / South Boston Waterfront,491,42.3388,-71.0468,high
+Downtown / Financial District,425,42.356,-71.055,high
+East Boston,387,42.3784,-71.0282,high
+South End,384,42.3398,-71.0786,high
+Jamaica Plain,339,42.31,-71.1148,medium
+Back Bay,332,42.3503,-71.081,medium
+Greater Mattapan,297,42.2736,-71.0921,medium
+Hyde Park,276,42.2551,-71.1243,medium
+Boston,233,42.3601,-71.0589,medium
+Roslindale,218,42.284,-71.1284,medium
+West Roxbury,210,42.2793,-71.1607,medium
+Beacon Hill,180,42.3588,-71.0707,medium
+Charlestown,175,42.3782,-71.0602,medium
+Fenway / Kenmore / Audubon Circle / Longwood,97,42.3467,-71.1003,medium
+Mission Hill,17,42.3278,-71.1003,low
 Allston,0,42.3534,-71.1312,low
 Brighton,0,42.3467,-71.1564,low
 Chestnut Hill,0,42.3258,-71.1662,low

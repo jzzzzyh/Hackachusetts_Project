@@ -5,3 +5,5 @@ numpy==2.2.6
 xgboost>=2.0.0
 geopandas>=1.0.0
 requests>=2.31.0
+
+shapely
