@@ -173,6 +173,24 @@ Goal: something running and showable. No full model needed.
 
 ---
 
+## Adaptive / Live Data Feeds (Phase 3 — at least one required before hackathon end)
+
+The model is currently static — trained once on 2024 data. To make predictions **adaptive**, we need at least one live feed that updates inputs as conditions change.
+
+| Feed | What it adds | Effort |
+|------|-------------|--------|
+| **Open-Meteo weather API** | Real-time freeze/thaw, snowfall, rain — #1 pothole driver. Free, no key. | 🟢 Easy — 1–2 hrs |
+| **City Council / municipal meeting minutes** | Budget decisions, planned road work, neighborhood complaints before they hit 311 | 🟡 Medium — scrape cityofboston.gov, parse PDF agendas |
+| **Facebook neighborhood groups** | Early complaints before 311 is called ("anyone notice this pothole on X St?") | 🔴 Hard — needs Graph API approval or manual scraping |
+
+**Requirement:** at least one of these before the final demo. Weather API is the pick — 30 min, no auth, direct signal.
+
+**How it makes the model adaptive:**
+- Re-run `prep_data.py` + `train_model.py` on a schedule
+- New live data → updated features → updated predictions → map refreshes automatically
+
+---
+
 ## Key Question We Answer
 > "Where should Boston send repair crews next week to fix the most problems
 > before residents even have to report them?"
