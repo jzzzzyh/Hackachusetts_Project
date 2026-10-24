@@ -44,6 +44,11 @@ def main():
     merged = merged.merge(mbta, on="neighborhood", how="left")
     merged["bus_stops_near"] = merged["bus_stops_near"].fillna(0)
 
+    # --- add neighborhood metadata for equity analysis ---
+    neighborhoods = pd.read_csv("data/processed/neighborhoods.csv")
+    neighborhoods_meta = neighborhoods[["neighborhood", "lat", "lon", "area_sqm"]]
+    merged = merged.merge(neighborhoods_meta, on="neighborhood", how="left")
+
     # --- add street-tree count feature ---
     # Map each 311 neighborhood label to the tree-data label it draws from.
     # Keyed by the 311 name, so no rename can steal a name from another row.
