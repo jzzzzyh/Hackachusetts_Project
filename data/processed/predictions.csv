@@ -1,18 +1,18 @@
 neighborhood,predicted_reports,predicted_potholes,lat,lon,risk_level,risk_level_pothole,predict_year,predict_month
-Dorchester,3035,45,42.3021,-71.0707,high,high,2026,10
 Downtown / Financial District,2438,63,42.356,-71.055,high,high,2026,10
-South Boston / South Boston Waterfront,2320,27,42.3388,-71.0468,high,medium,2026,10
 Allston / Brighton,1985,48,42.35,-71.143,high,high,2026,10
-Roxbury,1882,36,42.3142,-71.092,high,high,2026,10
-South End,1805,26,42.3398,-71.0786,high,medium,2026,10
-East Boston,1453,20,42.3784,-71.0282,medium,medium,2026,10
-Back Bay,1411,29,42.3503,-71.081,medium,high,2026,10
+Dorchester,3035,45,42.3021,-71.0707,high,high,2026,10
 Jamaica Plain,1285,38,42.31,-71.1148,medium,high,2026,10
-Beacon Hill,825,13,42.3588,-71.0707,medium,low,2026,10
-Roslindale,783,17,42.284,-71.1284,medium,low,2026,10
-Fenway / Kenmore / Audubon Circle / Longwood,778,18,42.3467,-71.1003,medium,low,2026,10
-West Roxbury,699,22,42.2793,-71.1607,low,medium,2026,10
-Greater Mattapan,683,10,42.2736,-71.0921,low,low,2026,10
+Roxbury,1882,36,42.3142,-71.092,high,high,2026,10
+Back Bay,1411,29,42.3503,-71.081,medium,high,2026,10
+South Boston / South Boston Waterfront,2320,27,42.3388,-71.0468,high,medium,2026,10
+South End,1805,26,42.3398,-71.0786,high,medium,2026,10
 Charlestown,645,23,42.3782,-71.0602,low,medium,2026,10
+West Roxbury,699,22,42.2793,-71.1607,low,medium,2026,10
+East Boston,1453,20,42.3784,-71.0282,medium,medium,2026,10
 Hyde Park,636,19,42.2551,-71.1243,low,medium,2026,10
+Fenway / Kenmore / Audubon Circle / Longwood,778,18,42.3467,-71.1003,medium,low,2026,10
+Roslindale,783,17,42.284,-71.1284,medium,low,2026,10
+Beacon Hill,825,13,42.3588,-71.0707,medium,low,2026,10
 Mission Hill,406,12,42.3278,-71.1003,low,low,2026,10
+Greater Mattapan,683,10,42.2736,-71.0921,low,low,2026,10
