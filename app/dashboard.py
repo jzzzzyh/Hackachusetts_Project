@@ -8,17 +8,43 @@ crew-dispatch recommendation list.
 Run: python -m streamlit run app/dashboard.py
 
 Reads: data/processed/predictions.csv
-       (neighborhood, predicted_reports, risk_level, lat, lon)
+       data/processed/model_accuracy.csv
+       data/processed/feature_importance*.csv
+       data/processed/features.csv
 """
 
+import calendar
+import os
+
+import folium
 import pandas as pd
 import streamlit as st
-import folium
 from streamlit_folium import st_folium
 
 PRED_PATH = "data/processed/predictions.csv"
+ACC_PATH  = "data/processed/model_accuracy.csv"
+FEAT_PATH = "data/processed/features.csv"
+IMP_PATHS = {
+    "pothole":    "data/processed/feature_importance.csv",
+    "everything": "data/processed/feature_importance_everything.csv",
+}
 
 RISK_COLORS = {"high": "#e03131", "medium": "#f59f00", "low": "#2f9e44"}
+
+# plain-English names for the model inputs
+FEATURE_NAMES = {
+    "lag1": "Last month's count",
+    "lag12": "Same month last year",
+    "roll3": "3-month average",
+    "month": "Month of year",
+    "season": "Season",
+    "nbhd_enc": "Neighborhood",
+    "route_count": "MBTA routes",
+    "rail_stops_near": "MBTA rail stops",
+    "bus_stops_near": "MBTA bus stops",
+    "tree_count": "Street trees",
+    "equity_score": "Tree-equity score",
+}
 
 st.set_page_config(page_title="Boston Civic Risk", page_icon="🛠️", layout="wide")
 
@@ -34,11 +60,16 @@ def load_data():
 
 df = load_data()
 
+if {"predict_year", "predict_month"} <= set(df.columns):
+    period = f"{calendar.month_name[int(df['predict_month'].iloc[0])]} {int(df['predict_year'].iloc[0])}"
+else:
+    period = "this month"
+
 # ---- Header ----
 st.title("🛠️ Boston Civic Risk Predictor")
 st.caption(
-    "Predicts where potholes and sidewalk damage will drive 311 reports next "
-    "month. Model: XGBoost trained on 306k real 311 calls + Boston weather."
+    f"Predicts where 311 reports and potholes will pile up in {period}. "
+    "Model: XGBoost trained on Boston 311 reports from 2015 to today."
 )
 
 # ---- Prediction mode toggle: everything vs potholes only ----
@@ -53,11 +84,13 @@ mode = st.sidebar.radio(
     disabled=not has_pothole,
 )
 pothole_mode = has_pothole and mode == "Potholes only"
+mode_key = "pothole" if pothole_mode else "everything"
 
 # pick the right columns for the chosen mode
 value_col = "predicted_potholes" if pothole_mode else "predicted_reports"
 risk_col  = "risk_level_pothole" if (pothole_mode and "risk_level_pothole" in df.columns) else "risk_level"
 what_word = "potholes" if pothole_mode else "reports"
+target_col = "pothole_count" if pothole_mode else "report_count"
 
 df = df.sort_values(value_col, ascending=False)
 
@@ -75,10 +108,11 @@ c1.metric("Neighborhoods", len(df))
 c2.metric("High-risk areas", int((df[risk_col] == "high").sum()))
 c3.metric("Top hotspot", df.iloc[0]["neighborhood"])
 
-st.info(f"Showing **{mode}** — predicting next month's {what_word} per neighborhood.")
+st.info(f"Showing **{mode}** — predicted {what_word} per neighborhood for **{period}**.")
 
 # ---- Map + table side by side ----
 left, right = st.columns([3, 2])
+max_val = max(float(df[value_col].max()), 1.0)
 
 with left:
     st.subheader("Risk map")
@@ -86,7 +120,7 @@ with left:
     for _, row in view.iterrows():
         folium.CircleMarker(
             location=[row["lat"], row["lon"]],
-            radius=6 + row[value_col] / 150,
+            radius=6 + 20 * row[value_col] / max_val,   # same scale for both modes
             color=RISK_COLORS.get(row[risk_col], "#888"),
             fill=True,
             fill_opacity=0.7,
@@ -105,163 +139,73 @@ with right:
     show.columns = ["Neighborhood", f"Predicted {what_word}", "Risk"]
     st.dataframe(show, hide_index=True, use_container_width=True, height=520)
 
-# ---- Proof: weather is training the model ----
-import os
-st.subheader("Does weather actually drive the model?")
-
-# show the importance for whichever model the toggle has selected
-if pothole_mode and os.path.exists("data/processed/feature_importance_pothole.csv"):
-    IMP_PATH = "data/processed/feature_importance_pothole.csv"
-    st.caption("Showing what drives the **Potholes only** model.")
-else:
-    IMP_PATH = "data/processed/feature_importance.csv"
-    if pothole_mode:
-        st.caption("Pothole importances not found — showing the Everything model.")
-
-if os.path.exists(IMP_PATH):
-    imp = pd.read_csv(IMP_PATH)
-
-    weather_names = ["avg_temp_c", "total_precip_mm", "total_snow_cm",
-                     "max_wind_kmh", "freeze_thaw_days", "pothole_season_ft"]
-    weather_share = imp[imp["feature"].isin(weather_names)]["importance"].sum()
-
-    # pothole-season callout: freeze-thaw + month + season
-    if pothole_mode:
-        season_names = ["freeze_thaw_days", "pothole_season_ft", "avg_temp_c",
-                        "month", "season"]
-        season_share = imp[imp["feature"].isin(season_names)]["importance"].sum()
-        ft_only = imp[imp["feature"] == "freeze_thaw_days"]["importance"]
-        ft_val = float(ft_only.iloc[0]) if len(ft_only) else 0.0
-        st.success(
-            f"🧊 For potholes, **season + freeze-thaw drive {season_share:.0%}** "
-            f"of the guess — freeze-thaw days alone are **{ft_val:.0%}**, the "
-            "top signal. Potholes form when water in pavement cracks freezes, "
-            "expands, and thaws; the damage shows up in the 2 thaw months after "
-            "winter, which is baked into the `pothole_season_ft` feature."
-        )
-
-    st.write(
-        f"Weather inputs account for **{weather_share:.0%}** of what the "
-        "model uses to predict. Bigger bars = more influence on the forecast."
-    )
-
-    # bar chart of every input's importance
-    chart = imp.set_index("feature")["importance"]
-    st.bar_chart(chart)
-
-    # plain table too
-    nice = imp.copy()
-    nice["importance"] = (nice["importance"] * 100).round(1).astype(str) + "%"
-    nice.columns = ["Input", "How much it matters"]
-    st.dataframe(nice, hide_index=True, use_container_width=True)
-
-    # ---- What the model concluded (plain English) ----
-    st.subheader("What the model concluded")
-
-    feats = pd.read_csv("data/processed/features.csv")
-    cold = feats[feats["avg_temp_c"] <= 5]["report_count"].mean()
-    warm = feats[feats["avg_temp_c"] >= 18]["report_count"].mean()
-    temp_corr = feats["avg_temp_c"].corr(feats["report_count"])
-
-    tf = feats[feats["tree_count"] > 0]
-    tree_corr = tf["tree_count"].corr(tf["report_count"])
-    med = tf["tree_count"].median()
-    many = tf[tf["tree_count"] >= med]["report_count"].mean()
-    few = tf[tf["tree_count"] < med]["report_count"].mean()
-
-    # pull live importances so the text never goes stale
-    def share(name):
-        row = imp[imp["feature"] == name]
-        return float(row["importance"].iloc[0]) if len(row) else 0.0
-
-    st.markdown(
-        f"""
-**How it works:** the model looked at **10 years (2015-2024)** — for every
-neighborhood, every month, it compared the number of 311 problem reports
-against that area's weather, its **live** street-tree count, its tree-equity
-score, and its nearby MBTA bus/train stops. It found the pattern, then uses
-it to guess **this month** — it reads today's date, so the map always shows
-the current month and season (e.g. fall now), not a fixed month.
-
-**What drives the guess (the % splits above):**
-- **Past pothole history — {share('past_pothole_rate'):.0%}.** An area that
-  logged many potholes before tends to log them again. One of the strongest
-  signals.
-- **Street trees — {share('tree_count'):.0%}.** The biggest signal, now
-  pulled **live** from the city's tree map (201k+ trees, counted per area).
-  Tree roots push up and crack sidewalks, so leafy areas report more damage.
-- **MBTA transit — {share('bus_stops_near'):.0%}.** Now three live signals:
-  bus stops, rail stops, and how many routes serve the area. Heavy transit
-  means heavy road use, which wears pavement faster.
-- **Neighborhood — {share('nbhd_enc'):.0%}.** Past problem areas stay
-  problem areas.
-- **Temperature — {share('avg_temp_c'):.0%}.** The strongest weather signal.
-- **Tree-equity score — {share('equity_score'):.0%}.** Used to fill in areas
-  with no live tree polygon. A small nudge only.
-- **Month, rain, snow, wind — the rest.** Smaller nudges.
-
-**The tree correlation we found:**
-- Areas with MORE trees average **{many:.0f}** reports.
-- Areas with FEWER trees average **{few:.0f}** reports.
-- Correlation of trees with reports: **{tree_corr:+.2f}** (positive).
-- So leafier areas log about **{many/few:.1f}× more** reports.
-
-**The weather correlation we found:**
-- Warm months average **{warm:.0f}** reports; cold months **{cold:.0f}**.
-- Correlation of temperature with reports: **{temp_corr:+.2f}** (positive).
-- Warmer months bring MORE reports — likely because people are out more and
-  spot problems more.
-"""
-    )
-    st.caption(
-        "Honest note: these are CORRELATIONS, not proven causes — trees, "
-        "weather, population and reporting habits all move together. The "
-        "tree count is a LIVE feed (Boston ArcGIS, updates daily). The "
-        "equity score is only used to estimate trees where no live polygon "
-        "matches, so treat it as a rough fill, not a strong signal."
-    )
-else:
-    st.info("Run `python src/train_xgboost.py` to generate the proof chart.")
-
-st.caption(
-    "Early model — live feeds now wired in (weather archive + live street "
-    "trees). Live weather forecast is the next upgrade."
-)
-
-# ---- Success rate: everything vs potholes only ----
-st.subheader("📊 Success rate — Everything vs Potholes only")
-
-ACC_PATH = "data/processed/model_accuracy.csv"
+# ---- Accuracy: model vs simple guesses ----
+st.subheader(f"📊 How accurate is it? ({mode})")
 if os.path.exists(ACC_PATH):
     acc = pd.read_csv(ACC_PATH).set_index("mode")
-    acc_all = float(acc.loc["everything", "success_pct"]) if "everything" in acc.index else 0.0
-    acc_pot = float(acc.loc["pothole", "success_pct"]) if "pothole" in acc.index else 0.0
-    diff = acc_pot - acc_all
-
-    a1, a2, a3 = st.columns(3)
-    a1.metric("Everything (all 311)", f"{acc_all:.0f}%")
-    a2.metric("Potholes only", f"{acc_pot:.0f}%")
-    a3.metric(
-        "Potholes vs Everything",
-        f"{diff:+.0f} pts",
-        delta=f"{diff:+.0f} pts",
-    )
-
-    better = "Potholes only" if diff > 0 else "Everything"
-    st.write(
-        f"**Success %** = how close the guess lands on average "
-        f"(100% = perfect). Right now **{better}** scores higher. "
-        f"Switching from Everything to Potholes only changes the "
-        f"success rate by **{diff:+.0f} points**."
-    )
-
-    chart = acc.reset_index().set_index("label")["success_pct"]
-    st.bar_chart(chart)
-
-    st.caption(
-        "Why they differ: pothole counts are smaller and more weather-driven, "
-        "so they are easier or harder to hit than the full mix of every 311 "
-        "problem. The toggle in the sidebar switches the map and list to match."
-    )
+    if mode_key in acc.index:
+        a = acc.loc[mode_key]
+        a1, a2, a3 = st.columns(3)
+        a1.metric("Model — avg error", f"{a['mae']:.0f} {what_word}",
+                  help="Average miss per neighborhood per month (lower is better).")
+        if "mae_last_month" in a:
+            a2.metric("Guess 'same as last month'", f"{a['mae_last_month']:.0f}",
+                      delta=f"{a['mae_last_month'] - a['mae']:+.0f} better", delta_color="normal")
+            a3.metric("Guess 'same month last year'", f"{a['mae_last_year']:.0f}",
+                      delta=f"{a['mae_last_year'] - a['mae']:+.0f} better", delta_color="normal")
+        st.write(
+            f"Tested on **{a.get('test_period', 'the last 12 months')}**, months the model never saw "
+            f"while training. A neighborhood averages **{a.get('mean_actual', float('nan')):.0f}** "
+            f"{what_word} a month; the model is off by **{a['mae']:.0f}** on average "
+            f"(**{a['success_pct']:.0f}%** success). The green numbers show how much better it is "
+            "than the simple guesses."
+        )
+    st.bar_chart(acc.set_index("label")["success_pct"])
+    st.caption("Success % = 1 − average error ÷ average true value (100% = perfect).")
 else:
-    st.info("Run `python src/train_xgboost.py` to generate the success-rate comparison.")
+    st.info("Run `python src/train_xgboost.py` to generate the accuracy check.")
+
+# ---- What drives the prediction ----
+st.subheader("What drives the prediction?")
+imp_path = IMP_PATHS[mode_key]
+if os.path.exists(imp_path):
+    imp = pd.read_csv(imp_path)
+    imp["Input"] = imp["feature"].map(FEATURE_NAMES).fillna(imp["feature"])
+    past_share = imp[imp["feature"].isin(["lag1", "lag12", "roll3"])]["importance"].sum()
+    st.write(
+        f"Recent history carries **{past_share:.0%}** of the model's attention: an area that had "
+        f"many {what_word} recently tends to keep having them. Bigger bars = more influence."
+    )
+    st.bar_chart(imp.set_index("Input")["importance"])
+else:
+    st.info("Run `python src/train_xgboost.py` to generate the feature chart.")
+
+# ---- What the data shows (plain English) ----
+st.subheader("What the data shows")
+if os.path.exists(FEAT_PATH):
+    feats = pd.read_csv(FEAT_PATH)
+    feats = feats[feats["complete"] == 1] if "complete" in feats.columns else feats
+    by_month = feats.groupby("month")[target_col].mean()
+    peak, low = int(by_month.idxmax()), int(by_month.idxmin())
+    lines = [
+        f"- **Seasons:** {what_word} peak in **{calendar.month_name[peak]}** "
+        f"(avg {by_month.max():.0f} per area) and bottom out in **{calendar.month_name[low]}** "
+        f"(avg {by_month.min():.0f}).",
+    ]
+    if "tree_count" in feats.columns:
+        per_area = feats.groupby("neighborhood").agg(trees=("tree_count", "first"), val=(target_col, "mean"))
+        corr = per_area["trees"].corr(per_area["val"])
+        lines.append(f"- **Street trees:** areas with more trees log {'more' if corr > 0 else 'fewer'} "
+                     f"{what_word} (correlation **{corr:+.2f}** across {len(per_area)} areas). "
+                     "Bigger areas have both more trees and more streets, so this is partly size.")
+    st.markdown("\n".join(lines) + """
+- **Weather is not a model input.** We tested it on 6 held-out years: it made the
+  all-311 model worse every year and helped potholes in only half of them. Pothole
+  reports do peak about two months after snowfall, but the month and last year's
+  count already capture that. The big jumps after snowy winters come mostly from
+  city crews logging their own repairs, not from residents.
+""")
+    st.caption(
+        "These are correlations, not proven causes. Street trees are a live feed "
+        "(Boston ArcGIS); the tree-equity score only fills gaps."
+    )
