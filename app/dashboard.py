@@ -66,6 +66,14 @@ def load_data():
 
 df = load_data()
 
+
+def why_html(text):
+    """'vs a typical 59: ▲ a (+5%); ▼ b (-3%)' -> one reason per line for map popups."""
+    if not isinstance(text, str):
+        return ""
+    head, _, rest = text.partition(": ")
+    return head + ":<br>" + "<br>".join(rest.split("; "))
+
 if {"predict_year", "predict_month"} <= set(df.columns):
     period = f"{calendar.month_name[int(df['predict_month'].iloc[0])]} {int(df['predict_year'].iloc[0])}"
 else:
