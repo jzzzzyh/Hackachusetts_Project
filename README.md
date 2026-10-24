@@ -1,11 +1,32 @@
-# Boston Civic Action — 311 Risk Prediction
+# 🕳️✈️ PotPilot
 
-Predict where Boston will need repair crews next — potholes, sidewalk damage, and other civic problems — so the city can send crews **before** reports pile up. Built for Hackachusetts (topic: Civic Action).
+**Predicting Boston's potholes before they predict your suspension repair bill.**
+
+> Every winter, Boston plays a game with its drivers. The city freezes, thaws, freezes again, and by March the streets look like a golf course designed by a vengeful snowplow. Residents dodge craters on Mass Ave, cyclists pray at every intersection, and somewhere a 311 operator sighs at report #4,000 that just says "BIG HOLE. VERY BIG."
+>
+> We thought: what if the city could see the potholes coming?
+>
+> **PotPilot** is your city's co-pilot for street repairs. It reads 10+ years of Boston's complaints, checks the weather, counts the trees, studies the bus routes, and then calmly announces: *"Turbulence ahead in Dorchester. Please send a crew."*
+>
+> No crystal ball. Just XGBoost and a deep personal grudge against potholes.
+
+PotPilot predicts where Boston will need repair crews next (potholes, sidewalk damage, and other civic problems) so the city can send crews **before** reports pile up. Built for **Hackachusetts** (topic: Civic Action).
 
 The model learns from 10+ years of Boston 311 reports, live weather, transit access, street trees, and neighborhood equity scores, then ranks every neighborhood by predicted risk for the current month.
 
-**Live demo:** [public-nu-mauve.vercel.app](https://public-nu-mauve.vercel.app)
-**Code:** [github.com/jzzzzyh/Hackachusetts_Project](https://github.com/jzzzzyh/Hackachusetts_Project) (work on the `dev` branch)
+| | |
+|---|---|
+| 🌐 **Live demo** | [public-nu-mauve.vercel.app](https://public-nu-mauve.vercel.app) |
+| 💻 **Code** | [github.com/jzzzzyh/Hackachusetts_Project](https://github.com/jzzzzyh/Hackachusetts_Project) (work on the `dev` branch) |
+| 🗺️ **Map, no setup** | [`data/processed/risk_map.html`](data/processed/risk_map.html) |
+
+---
+
+## Why it matters
+
+- **Reactive repair is expensive.** Crews usually go where complaints already piled up, after cars and bikes took the damage.
+- **Not every neighborhood reports equally.** Areas that file fewer 311 reports can still have bad streets. PotPilot factors in equity scores so quieter neighborhoods don't get left behind.
+- **Weather is predictable; potholes follow it.** Freeze-thaw cycles are the #1 driver of pothole risk, and we can see them coming days ahead.
 
 ---
 
