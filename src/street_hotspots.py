@@ -68,12 +68,13 @@ def load_pothole_points() -> pd.DataFrame:
                                    "report_street": d["location_street_name"]}))
     new = "data/raw/311_new_system.csv"
     if os.path.exists(new):
-        n = pd.read_csv(new, usecols=["open_date", "service_name", "neighborhood", "latitude", "longitude"],
-                        low_memory=False)
+        n = pd.read_csv(new, usecols=["open_date", "service_name", "neighborhood", "latitude", "longitude",
+                                      "full_address"], low_memory=False)
         n = n[n["service_name"].astype(str).str.lower().str.contains("pothole")]
         dt = pd.to_datetime(n["open_date"], errors="coerce", utc=True, format="mixed")
         parts.append(pd.DataFrame({"dt": dt.dt.tz_convert("America/New_York").dt.tz_localize(None),
-                                   "nbhd": n["neighborhood"], "lat": n["latitude"], "lon": n["longitude"]}))
+                                   "nbhd": n["neighborhood"], "lat": n["latitude"], "lon": n["longitude"],
+                                   "report_street": n["full_address"]}))
     p = pd.concat(parts, ignore_index=True)
     p["neighborhood"] = p["nbhd"].map(canon_neighborhood)
     p = p.dropna(subset=["dt", "neighborhood", "lat", "lon"])
