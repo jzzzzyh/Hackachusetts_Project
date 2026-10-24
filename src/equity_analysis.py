@@ -118,24 +118,41 @@ def main():
     # Spatial join: which neighborhood is each report in?
     print("Performing spatial join (this may take a minute)...")
     try:
+        # Prepare neighborhoods for join (rename to avoid column conflicts)
+        nbhd_join = neighborhoods_gdf[["geometry", "neighborhood"]].copy()
+        nbhd_join = nbhd_join.rename(columns={"neighborhood": "neighborhood_name"})
+        
         reports_with_nbhd = gpd.sjoin(
             reports_gdf,
-            neighborhoods_gdf[["geometry", "neighborhood"]],
+            nbhd_join,
             how="left",
             predicate="within"
         )
+        
+        # Rename back for clarity
+        if "neighborhood_name" in reports_with_nbhd.columns:
+            reports_with_nbhd["neighborhood"] = reports_with_nbhd["neighborhood_name"]
+            reports_with_nbhd = reports_with_nbhd.drop(columns=["neighborhood_name"], errors="ignore")
+    
     except Exception as e:
         print(f"Error in spatial join: {e}")
         # Fallback: use nearest neighbor
         print("Falling back to nearest neighbor join...")
+        nbhd_join = neighborhoods_gdf[["geometry", "neighborhood"]].copy()
+        nbhd_join = nbhd_join.rename(columns={"neighborhood": "neighborhood_name"})
+        
         reports_with_nbhd = gpd.sjoin_nearest(
             reports_gdf,
-            neighborhoods_gdf[["geometry", "neighborhood"]],
+            nbhd_join,
             how="left"
         )
+        
+        if "neighborhood_name" in reports_with_nbhd.columns:
+            reports_with_nbhd["neighborhood"] = reports_with_nbhd["neighborhood_name"]
+            reports_with_nbhd = reports_with_nbhd.drop(columns=["neighborhood_name"], errors="ignore")
     
     # Handle reports outside all neighborhoods (shouldn't be many)
-    missing = reports_with_nbhd[reports_with_nbhd["neighborhood"].isna()]
+    missing = reports_with_nbhd[reports_with_nbhd.get("neighborhood", pd.Series(dtype="object")).isna()]
     if len(missing) > 0:
         print(f"\n⚠ {len(missing)} reports outside all neighborhoods")
         print("Assigning to nearest neighborhood...")
