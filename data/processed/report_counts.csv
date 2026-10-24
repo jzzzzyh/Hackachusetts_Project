@@ -1,2686 +1,2415 @@
-neighborhood,year,month,report_count,pothole_count
-Allston,2015,1,41,5
-Allston / Brighton,2015,1,1004,109
-Back Bay,2015,1,721,28
-Beacon Hill,2015,1,434,8
-Boston,2015,1,333,13
-Brighton,2015,1,70,9
-Charlestown,2015,1,687,22
-Chestnut Hill,2015,1,1,0
-Dorchester,2015,1,2930,89
-Downtown / Financial District,2015,1,696,32
-East Boston,2015,1,1016,56
-Fenway / Kenmore / Audubon Circle / Longwood,2015,1,308,20
-Greater Mattapan,2015,1,827,26
-Hyde Park,2015,1,902,8
-Jamaica Plain,2015,1,1067,54
-Mattapan,2015,1,35,2
-Mission Hill,2015,1,276,8
-Roslindale,2015,1,736,111
-Roxbury,2015,1,1663,42
-South Boston,2015,1,110,5
-South Boston / South Boston Waterfront,2015,1,894,34
-South End,2015,1,829,18
-West Roxbury,2015,1,871,56
-Allston,2015,2,44,3
-Allston / Brighton,2015,2,2283,94
-Back Bay,2015,2,1264,81
-Beacon Hill,2015,2,435,12
-Boston,2015,2,622,43
-Brighton,2015,2,169,12
-Charlestown,2015,2,1201,57
-Dorchester,2015,2,5992,111
-Downtown / Financial District,2015,2,1162,81
-East Boston,2015,2,1580,101
-Fenway / Kenmore / Audubon Circle / Longwood,2015,2,627,33
-Greater Mattapan,2015,2,2461,110
-Hyde Park,2015,2,2416,114
-Jamaica Plain,2015,2,2856,119
-Mattapan,2015,2,87,5
-Mission Hill,2015,2,596,22
-Roslindale,2015,2,1436,95
-Roxbury,2015,2,4251,127
-South Boston,2015,2,213,3
-South Boston / South Boston Waterfront,2015,2,2147,72
-South End,2015,2,1589,79
-West Roxbury,2015,2,1657,55
-Allston,2015,3,37,6
-Allston / Brighton,2015,3,1163,231
-Back Bay,2015,3,621,108
-Beacon Hill,2015,3,418,38
-Boston,2015,3,397,72
-Brighton,2015,3,85,15
-Charlestown,2015,3,446,53
-Dorchester,2015,3,2234,282
-Downtown / Financial District,2015,3,849,170
-East Boston,2015,3,1108,296
-Fenway / Kenmore / Audubon Circle / Longwood,2015,3,349,76
-Greater Mattapan,2015,3,787,105
-Hyde Park,2015,3,850,277
-Jamaica Plain,2015,3,1322,428
-Mattapan,2015,3,28,10
-Mission Hill,2015,3,282,56
-Roslindale,2015,3,811,318
-Roxbury,2015,3,1459,224
-South Boston,2015,3,118,9
-South Boston / South Boston Waterfront,2015,3,1025,225
-South End,2015,3,683,50
-West Roxbury,2015,3,1331,832
-Allston,2015,4,40,0
-Allston / Brighton,2015,4,958,91
-Back Bay,2015,4,571,72
-Beacon Hill,2015,4,377,26
-Boston,2015,4,487,46
-Brighton,2015,4,82,6
-Charlestown,2015,4,396,50
-Chestnut Hill,2015,4,1,0
-Dorchester,2015,4,1921,90
-Downtown / Financial District,2015,4,775,132
-East Boston,2015,4,807,126
-Fenway / Kenmore / Audubon Circle / Longwood,2015,4,321,52
-Greater Mattapan,2015,4,639,62
-Hyde Park,2015,4,804,203
-Jamaica Plain,2015,4,932,156
-Mattapan,2015,4,35,4
-Mission Hill,2015,4,232,13
-Roslindale,2015,4,663,112
-Roxbury,2015,4,1071,74
-South Boston,2015,4,117,12
-South Boston / South Boston Waterfront,2015,4,757,92
-South End,2015,4,696,45
-West Roxbury,2015,4,891,271
-Allston,2015,5,7,0
-Allston / Brighton,2015,5,268,2
-Back Bay,2015,5,174,8
-Beacon Hill,2015,5,192,4
-Boston,2015,5,114,7
-Brighton,2015,5,13,0
-Charlestown,2015,5,162,36
-Dorchester,2015,5,614,37
-Downtown / Financial District,2015,5,292,8
-East Boston,2015,5,302,44
-Fenway / Kenmore / Audubon Circle / Longwood,2015,5,131,18
-Greater Mattapan,2015,5,175,10
-Hyde Park,2015,5,272,54
-Jamaica Plain,2015,5,431,184
-Mattapan,2015,5,8,2
-Mission Hill,2015,5,76,11
-Roslindale,2015,5,290,105
-Roxbury,2015,5,309,29
-South Boston,2015,5,21,0
-South Boston / South Boston Waterfront,2015,5,217,15
-South End,2015,5,250,9
-West Roxbury,2015,5,345,111
-Allston,2015,6,3,0
-Allston / Brighton,2015,6,303,19
-Back Bay,2015,6,139,10
-Beacon Hill,2015,6,239,10
-Boston,2015,6,101,8
-Brighton,2015,6,17,3
-Charlestown,2015,6,126,31
-Chestnut Hill,2015,6,1,0
-Dorchester,2015,6,587,80
-Downtown / Financial District,2015,6,286,24
-East Boston,2015,6,273,76
-Fenway / Kenmore / Audubon Circle / Longwood,2015,6,82,4
-Greater Mattapan,2015,6,129,11
-Hyde Park,2015,6,261,51
-Jamaica Plain,2015,6,274,21
-Mattapan,2015,6,5,0
-Mission Hill,2015,6,59,15
-Roslindale,2015,6,182,26
-Roxbury,2015,6,290,44
-South Boston,2015,6,22,5
-South Boston / South Boston Waterfront,2015,6,178,26
-South End,2015,6,220,10
-West Roxbury,2015,6,256,58
-Allston,2015,7,10,0
-Allston / Brighton,2015,7,296,29
-Back Bay,2015,7,138,9
-Beacon Hill,2015,7,221,8
-Boston,2015,7,113,13
-Brighton,2015,7,14,1
-Charlestown,2015,7,102,4
-Dorchester,2015,7,565,94
-Downtown / Financial District,2015,7,377,29
-East Boston,2015,7,234,37
-Fenway / Kenmore / Audubon Circle / Longwood,2015,7,115,9
-Greater Mattapan,2015,7,140,18
-Hyde Park,2015,7,247,67
-Jamaica Plain,2015,7,336,70
-Mattapan,2015,7,3,1
-Mission Hill,2015,7,60,8
-Roslindale,2015,7,174,18
-Roxbury,2015,7,275,41
-South Boston,2015,7,18,0
-South Boston / South Boston Waterfront,2015,7,196,23
-South End,2015,7,243,9
-West Roxbury,2015,7,251,67
-Allston,2015,8,12,2
-Allston / Brighton,2015,8,622,54
-Back Bay,2015,8,310,12
-Beacon Hill,2015,8,296,38
-Boston,2015,8,191,11
-Brighton,2015,8,40,11
-Charlestown,2015,8,176,18
-Chestnut Hill,2015,8,1,0
-Dorchester,2015,8,837,94
-Downtown / Financial District,2015,8,520,50
-East Boston,2015,8,374,105
-Fenway / Kenmore / Audubon Circle / Longwood,2015,8,147,17
-Greater Mattapan,2015,8,247,24
-Hyde Park,2015,8,296,139
-Jamaica Plain,2015,8,463,91
-Mattapan,2015,8,7,0
-Mission Hill,2015,8,163,12
-Roslindale,2015,8,243,76
-Roxbury,2015,8,461,42
-South Boston,2015,8,34,1
-South Boston / South Boston Waterfront,2015,8,410,36
-South End,2015,8,331,22
-West Roxbury,2015,8,326,93
-Allston,2015,9,22,2
-Allston / Brighton,2015,9,726,14
-Back Bay,2015,9,322,5
-Beacon Hill,2015,9,461,2
-Boston,2015,9,183,4
-Brighton,2015,9,34,0
-Charlestown,2015,9,154,9
-Dorchester,2015,9,691,11
-Downtown / Financial District,2015,9,609,21
-East Boston,2015,9,345,20
-Fenway / Kenmore / Audubon Circle / Longwood,2015,9,195,1
-Greater Mattapan,2015,9,163,11
-Hyde Park,2015,9,230,56
-Jamaica Plain,2015,9,409,4
-Mattapan,2015,9,13,0
-Mission Hill,2015,9,146,1
-Roslindale,2015,9,248,43
-Roxbury,2015,9,392,11
-South Boston,2015,9,53,0
-South Boston / South Boston Waterfront,2015,9,568,5
-South End,2015,9,392,23
-West Roxbury,2015,9,290,118
-Allston,2015,10,20,0
-Allston / Brighton,2015,10,418,8
-Back Bay,2015,10,292,9
-Beacon Hill,2015,10,286,3
-Boston,2015,10,140,28
-Brighton,2015,10,28,0
-Charlestown,2015,10,166,7
-Dorchester,2015,10,668,55
-Downtown / Financial District,2015,10,472,65
-East Boston,2015,10,267,24
-Fenway / Kenmore / Audubon Circle / Longwood,2015,10,89,1
-Greater Mattapan,2015,10,179,24
-Hyde Park,2015,10,236,35
-Jamaica Plain,2015,10,401,117
-Mattapan,2015,10,9,3
-Mission Hill,2015,10,88,2
-Roslindale,2015,10,187,15
-Roxbury,2015,10,392,44
-South Boston,2015,10,46,0
-South Boston / South Boston Waterfront,2015,10,536,8
-South End,2015,10,355,12
-West Roxbury,2015,10,219,33
-Allston,2015,11,5,0
-Allston / Brighton,2015,11,405,10
-Back Bay,2015,11,326,10
-Beacon Hill,2015,11,250,0
-Boston,2015,11,174,7
-Brighton,2015,11,41,2
-Charlestown,2015,11,153,3
-Chestnut Hill,2015,11,6,6
-Dorchester,2015,11,665,44
-Downtown / Financial District,2015,11,363,11
-East Boston,2015,11,349,106
-Fenway / Kenmore / Audubon Circle / Longwood,2015,11,100,7
-Greater Mattapan,2015,11,174,15
-Hyde Park,2015,11,173,40
-Jamaica Plain,2015,11,260,3
-Mattapan,2015,11,6,4
-Mission Hill,2015,11,70,5
-Roslindale,2015,11,144,8
-Roxbury,2015,11,321,18
-South Boston,2015,11,49,1
-South Boston / South Boston Waterfront,2015,11,490,1
-South End,2015,11,291,23
-West Roxbury,2015,11,186,44
-Allston,2015,12,10,0
-Allston / Brighton,2015,12,402,51
-Back Bay,2015,12,285,6
-Beacon Hill,2015,12,248,1
-Boston,2015,12,158,4
-Brighton,2015,12,29,7
-Charlestown,2015,12,161,6
-Dorchester,2015,12,602,33
-Downtown / Financial District,2015,12,501,33
-East Boston,2015,12,358,81
-Fenway / Kenmore / Audubon Circle / Longwood,2015,12,79,3
-Greater Mattapan,2015,12,161,11
-Hyde Park,2015,12,180,32
-Jamaica Plain,2015,12,221,14
-Mattapan,2015,12,10,1
-Mission Hill,2015,12,64,1
-Roslindale,2015,12,185,5
-Roxbury,2015,12,337,6
-South Boston,2015,12,24,0
-South Boston / South Boston Waterfront,2015,12,474,6
-South End,2015,12,291,7
-West Roxbury,2015,12,203,24
-Allston,2016,1,39,2
-Allston / Brighton,2016,1,554,8
-Back Bay,2016,1,338,10
-Beacon Hill,2016,1,259,1
-Boston,2016,1,305,3
-Brighton,2016,1,36,0
-Charlestown,2016,1,257,12
-Dorchester,2016,1,1257,19
-Downtown / Financial District,2016,1,440,13
-East Boston,2016,1,443,6
-Fenway / Kenmore / Audubon Circle / Longwood,2016,1,174,15
-Greater Mattapan,2016,1,430,4
-Hyde Park,2016,1,375,5
-Jamaica Plain,2016,1,515,7
-Mattapan,2016,1,19,0
-Mission Hill,2016,1,174,6
-Roslindale,2016,1,317,5
-Roxbury,2016,1,868,14
-South Boston,2016,1,80,1
-South Boston / South Boston Waterfront,2016,1,552,4
-South End,2016,1,376,6
-West Roxbury,2016,1,355,5
-Allston,2016,2,21,1
-Allston / Brighton,2016,2,587,9
-Back Bay,2016,2,401,27
-Beacon Hill,2016,2,266,11
-Boston,2016,2,305,10
-Brighton,2016,2,45,2
-Charlestown,2016,2,305,18
-Dorchester,2016,2,1490,20
-Downtown / Financial District,2016,2,561,23
-East Boston,2016,2,505,11
-Fenway / Kenmore / Audubon Circle / Longwood,2016,2,222,30
-Greater Mattapan,2016,2,496,13
-Hyde Park,2016,2,475,9
-Jamaica Plain,2016,2,622,10
-Mattapan,2016,2,28,2
-Mission Hill,2016,2,207,17
-Roslindale,2016,2,403,3
-Roxbury,2016,2,1048,24
-South Boston,2016,2,98,2
-South Boston / South Boston Waterfront,2016,2,624,11
-South End,2016,2,414,25
-West Roxbury,2016,2,445,11
-Allston,2016,3,15,0
-Allston / Brighton,2016,3,618,6
-Back Bay,2016,3,491,28
-Beacon Hill,2016,3,295,25
-Boston,2016,3,331,18
-Brighton,2016,3,49,2
-Charlestown,2016,3,311,17
-Dorchester,2016,3,1564,16
-Downtown / Financial District,2016,3,550,30
-East Boston,2016,3,443,9
-Fenway / Kenmore / Audubon Circle / Longwood,2016,3,173,9
-Greater Mattapan,2016,3,544,9
-Hyde Park,2016,3,469,8
-Jamaica Plain,2016,3,618,8
-Mattapan,2016,3,14,0
-Mission Hill,2016,3,174,12
-Roslindale,2016,3,344,7
-Roxbury,2016,3,940,20
-South Boston,2016,3,69,2
-South Boston / South Boston Waterfront,2016,3,645,15
-South End,2016,3,385,18
-West Roxbury,2016,3,420,3
-Allston,2016,4,24,0
-Allston / Brighton,2016,4,596,16
-Back Bay,2016,4,600,43
-Beacon Hill,2016,4,251,10
-Boston,2016,4,376,16
-Brighton,2016,4,48,0
-Charlestown,2016,4,315,19
-Chestnut Hill,2016,4,2,0
-Dorchester,2016,4,1594,20
-Downtown / Financial District,2016,4,506,24
-East Boston,2016,4,484,5
-Fenway / Kenmore / Audubon Circle / Longwood,2016,4,204,22
-Greater Mattapan,2016,4,585,3
-Hyde Park,2016,4,467,9
-Jamaica Plain,2016,4,637,12
-Mattapan,2016,4,26,0
-Mission Hill,2016,4,202,11
-Roslindale,2016,4,426,5
-Roxbury,2016,4,960,20
-South Boston,2016,4,70,2
-South Boston / South Boston Waterfront,2016,4,674,14
-South End,2016,4,470,38
-West Roxbury,2016,4,451,12
-Allston,2016,5,26,0
-Allston / Brighton,2016,5,656,11
-Back Bay,2016,5,535,18
-Beacon Hill,2016,5,282,4
-Boston,2016,5,336,15
-Brighton,2016,5,62,0
-Charlestown,2016,5,376,14
-Chestnut Hill,2016,5,4,0
-Dorchester,2016,5,2114,19
-Downtown / Financial District,2016,5,565,31
-East Boston,2016,5,673,12
-Fenway / Kenmore / Audubon Circle / Longwood,2016,5,238,8
-Greater Mattapan,2016,5,539,6
-Hyde Park,2016,5,444,7
-Jamaica Plain,2016,5,733,10
-Mattapan,2016,5,29,0
-Mission Hill,2016,5,205,8
-Roslindale,2016,5,400,4
-Roxbury,2016,5,1074,23
-South Boston,2016,5,83,0
-South Boston / South Boston Waterfront,2016,5,700,20
-South End,2016,5,453,18
-West Roxbury,2016,5,512,11
-Allston,2016,6,28,0
-Allston / Brighton,2016,6,663,4
-Back Bay,2016,6,582,17
-Beacon Hill,2016,6,288,7
-Boston,2016,6,412,16
-Brighton,2016,6,73,0
-Charlestown,2016,6,453,19
-Chestnut Hill,2016,6,1,0
-Dorchester,2016,6,2007,22
-Downtown / Financial District,2016,6,733,33
-East Boston,2016,6,649,9
-Fenway / Kenmore / Audubon Circle / Longwood,2016,6,256,6
-Greater Mattapan,2016,6,649,4
-Hyde Park,2016,6,594,6
-Jamaica Plain,2016,6,904,24
-Mattapan,2016,6,31,0
-Mission Hill,2016,6,192,5
-Roslindale,2016,6,508,14
-Roxbury,2016,6,1271,14
-South Boston,2016,6,80,2
-South Boston / South Boston Waterfront,2016,6,714,11
-South End,2016,6,534,18
-West Roxbury,2016,6,534,7
-Allston,2016,7,18,0
-Allston / Brighton,2016,7,651,9
-Back Bay,2016,7,529,31
-Beacon Hill,2016,7,252,13
-Boston,2016,7,358,8
-Brighton,2016,7,50,0
-Charlestown,2016,7,296,16
-Chestnut Hill,2016,7,1,0
-Dorchester,2016,7,1800,11
-Downtown / Financial District,2016,7,678,29
-East Boston,2016,7,578,15
-Fenway / Kenmore / Audubon Circle / Longwood,2016,7,219,5
-Greater Mattapan,2016,7,604,4
-Hyde Park,2016,7,486,12
-Jamaica Plain,2016,7,733,22
-Mattapan,2016,7,31,1
-Mission Hill,2016,7,184,6
-Roslindale,2016,7,491,8
-Roxbury,2016,7,1200,19
-South Boston,2016,7,69,0
-South Boston / South Boston Waterfront,2016,7,555,10
-South End,2016,7,472,20
-West Roxbury,2016,7,601,14
-Allston,2016,8,18,0
-Allston / Brighton,2016,8,778,11
-Back Bay,2016,8,526,22
-Beacon Hill,2016,8,317,2
-Boston,2016,8,433,11
-Brighton,2016,8,57,0
-Charlestown,2016,8,388,5
-Dorchester,2016,8,1924,15
-Downtown / Financial District,2016,8,780,25
-East Boston,2016,8,591,14
-Fenway / Kenmore / Audubon Circle / Longwood,2016,8,199,3
-Greater Mattapan,2016,8,666,3
-Hyde Park,2016,8,516,6
-Jamaica Plain,2016,8,849,21
-Mattapan,2016,8,38,0
-Mission Hill,2016,8,204,2
-Roslindale,2016,8,503,5
-Roxbury,2016,8,1237,16
-South Boston,2016,8,66,0
-South Boston / South Boston Waterfront,2016,8,708,5
-South End,2016,8,478,26
-West Roxbury,2016,8,490,9
-Allston,2016,9,17,0
-Allston / Brighton,2016,9,775,12
-Back Bay,2016,9,515,24
-Beacon Hill,2016,9,288,6
-Boston,2016,9,403,6
-Brighton,2016,9,44,0
-Charlestown,2016,9,364,4
-Dorchester,2016,9,1746,8
-Downtown / Financial District,2016,9,741,27
-East Boston,2016,9,481,10
-Fenway / Kenmore / Audubon Circle / Longwood,2016,9,284,9
-Greater Mattapan,2016,9,510,1
-Hyde Park,2016,9,457,8
-Jamaica Plain,2016,9,773,13
-Mattapan,2016,9,26,0
-Mission Hill,2016,9,239,8
-Roslindale,2016,9,430,4
-Roxbury,2016,9,1075,4
-South Boston,2016,9,66,1
-South Boston / South Boston Waterfront,2016,9,728,8
-South End,2016,9,466,9
-West Roxbury,2016,9,529,11
-Allston,2016,10,15,0
-Allston / Brighton,2016,10,509,2
-Back Bay,2016,10,532,20
-Beacon Hill,2016,10,319,3
-Boston,2016,10,346,6
-Brighton,2016,10,38,1
-Charlestown,2016,10,268,3
-Dorchester,2016,10,1441,15
-Downtown / Financial District,2016,10,689,28
-East Boston,2016,10,416,5
-Fenway / Kenmore / Audubon Circle / Longwood,2016,10,226,8
-Greater Mattapan,2016,10,522,7
-Hyde Park,2016,10,478,2
-Jamaica Plain,2016,10,690,15
-Mattapan,2016,10,17,0
-Mission Hill,2016,10,198,7
-Roslindale,2016,10,359,4
-Roxbury,2016,10,964,17
-South Boston,2016,10,93,0
-South Boston / South Boston Waterfront,2016,10,606,8
-South End,2016,10,425,24
-West Roxbury,2016,10,505,2
-Allston,2016,11,13,0
-Allston / Brighton,2016,11,441,7
-Back Bay,2016,11,429,10
-Beacon Hill,2016,11,213,5
-Boston,2016,11,307,6
-Brighton,2016,11,22,0
-Charlestown,2016,11,263,4
-Chestnut Hill,2016,11,1,0
-Dorchester,2016,11,1452,7
-Downtown / Financial District,2016,11,573,18
-East Boston,2016,11,378,3
-Fenway / Kenmore / Audubon Circle / Longwood,2016,11,266,5
-Greater Mattapan,2016,11,482,7
-Hyde Park,2016,11,406,2
-Jamaica Plain,2016,11,528,6
-Mattapan,2016,11,19,0
-Mission Hill,2016,11,188,7
-Roslindale,2016,11,367,7
-Roxbury,2016,11,921,8
-South Boston,2016,11,85,0
-South Boston / South Boston Waterfront,2016,11,525,6
-South End,2016,11,403,21
-West Roxbury,2016,11,377,5
-Allston,2016,12,12,2
-Allston / Brighton,2016,12,424,9
-Back Bay,2016,12,412,3
-Beacon Hill,2016,12,267,4
-Boston,2016,12,249,16
-Brighton,2016,12,21,2
-Charlestown,2016,12,213,2
-Dorchester,2016,12,951,43
-Downtown / Financial District,2016,12,585,17
-East Boston,2016,12,287,29
-Fenway / Kenmore / Audubon Circle / Longwood,2016,12,215,27
-Greater Mattapan,2016,12,270,8
-Hyde Park,2016,12,200,4
-Jamaica Plain,2016,12,412,7
-Mattapan,2016,12,15,1
-Mission Hill,2016,12,99,7
-Roslindale,2016,12,267,6
-Roxbury,2016,12,630,38
-South Boston,2016,12,59,0
-South Boston / South Boston Waterfront,2016,12,569,5
-South End,2016,12,379,9
-West Roxbury,2016,12,200,4
-Allston,2017,1,21,0
-Allston / Brighton,2017,1,492,16
-Back Bay,2017,1,553,23
-Beacon Hill,2017,1,169,11
-Boston,2017,1,295,20
-Brighton,2017,1,22,0
-Charlestown,2017,1,259,20
-Chestnut Hill,2017,1,1,0
-Dorchester,2017,1,1317,31
-Downtown / Financial District,2017,1,563,33
-East Boston,2017,1,496,11
-Fenway / Kenmore / Audubon Circle / Longwood,2017,1,260,28
-Greater Mattapan,2017,1,421,7
-Hyde Park,2017,1,367,4
-Jamaica Plain,2017,1,641,13
-Mattapan,2017,1,11,1
-Mission Hill,2017,1,197,16
-Roslindale,2017,1,385,12
-Roxbury,2017,1,923,22
-South Boston,2017,1,73,1
-South Boston / South Boston Waterfront,2017,1,542,25
-South End,2017,1,381,19
-West Roxbury,2017,1,380,17
-Allston,2017,2,32,0
-Allston / Brighton,2017,2,839,20
-Back Bay,2017,2,609,25
-Beacon Hill,2017,2,192,5
-Boston,2017,2,381,20
-Brighton,2017,2,51,0
-Charlestown,2017,2,354,22
-Dorchester,2017,2,1779,27
-Downtown / Financial District,2017,2,684,37
-East Boston,2017,2,663,35
-Fenway / Kenmore / Audubon Circle / Longwood,2017,2,369,56
-Greater Mattapan,2017,2,603,15
-Hyde Park,2017,2,589,16
-Jamaica Plain,2017,2,913,32
-Mattapan,2017,2,28,1
-Mission Hill,2017,2,221,21
-Roslindale,2017,2,513,21
-Roxbury,2017,2,1177,42
-South Boston,2017,2,80,1
-South Boston / South Boston Waterfront,2017,2,725,14
-South End,2017,2,451,15
-West Roxbury,2017,2,516,17
-Allston,2017,3,40,0
-Allston / Brighton,2017,3,797,11
-Back Bay,2017,3,564,50
-Beacon Hill,2017,3,266,11
-Boston,2017,3,350,18
-Brighton,2017,3,49,1
-Charlestown,2017,3,430,26
-Chestnut Hill,2017,3,1,0
-Dorchester,2017,3,1899,19
-Downtown / Financial District,2017,3,702,29
-East Boston,2017,3,661,7
-Fenway / Kenmore / Audubon Circle / Longwood,2017,3,319,36
-Greater Mattapan,2017,3,638,6
-Hyde Park,2017,3,557,14
-Jamaica Plain,2017,3,932,32
-Mattapan,2017,3,29,1
-Mission Hill,2017,3,224,10
-Roslindale,2017,3,525,10
-Roxbury,2017,3,1292,38
-South Boston,2017,3,116,0
-South Boston / South Boston Waterfront,2017,3,779,14
-South End,2017,3,493,28
-West Roxbury,2017,3,420,18
-Allston,2017,4,27,1
-Allston / Brighton,2017,4,636,21
-Back Bay,2017,4,571,75
-Beacon Hill,2017,4,215,34
-Boston,2017,4,327,32
-Brighton,2017,4,41,1
-Charlestown,2017,4,418,46
-Dorchester,2017,4,1719,42
-Downtown / Financial District,2017,4,624,85
-East Boston,2017,4,543,11
-Fenway / Kenmore / Audubon Circle / Longwood,2017,4,311,55
-Greater Mattapan,2017,4,548,11
-Hyde Park,2017,4,434,13
-Jamaica Plain,2017,4,873,93
-Mattapan,2017,4,21,0
-Mission Hill,2017,4,207,30
-Roslindale,2017,4,402,30
-Roxbury,2017,4,1141,65
-South Boston,2017,4,70,2
-South Boston / South Boston Waterfront,2017,4,586,39
-South End,2017,4,508,58
-West Roxbury,2017,4,438,24
-Allston,2017,5,24,0
-Allston / Brighton,2017,5,680,17
-Back Bay,2017,5,637,46
-Beacon Hill,2017,5,250,20
-Boston,2017,5,408,13
-Brighton,2017,5,50,2
-Charlestown,2017,5,419,32
-Dorchester,2017,5,1879,27
-Downtown / Financial District,2017,5,739,59
-East Boston,2017,5,558,18
-Fenway / Kenmore / Audubon Circle / Longwood,2017,5,296,43
-Greater Mattapan,2017,5,609,9
-Hyde Park,2017,5,550,9
-Jamaica Plain,2017,5,753,32
-Mattapan,2017,5,27,0
-Mission Hill,2017,5,194,11
-Roslindale,2017,5,510,15
-Roxbury,2017,5,1266,40
-South Boston,2017,5,98,1
-South Boston / South Boston Waterfront,2017,5,706,24
-South End,2017,5,556,54
-West Roxbury,2017,5,515,17
-Allston,2017,6,30,0
-Allston / Brighton,2017,6,704,14
-Back Bay,2017,6,569,49
-Beacon Hill,2017,6,290,22
-Boston,2017,6,363,13
-Brighton,2017,6,55,0
-Charlestown,2017,6,411,22
-Dorchester,2017,6,1995,38
-Downtown / Financial District,2017,6,733,86
-East Boston,2017,6,639,24
-Fenway / Kenmore / Audubon Circle / Longwood,2017,6,279,16
-Greater Mattapan,2017,6,655,8
-Hyde Park,2017,6,536,11
-Jamaica Plain,2017,6,792,37
-Mattapan,2017,6,28,0
-Mission Hill,2017,6,174,17
-Roslindale,2017,6,452,7
-Roxbury,2017,6,1184,15
-South Boston,2017,6,134,1
-South Boston / South Boston Waterfront,2017,6,756,27
-South End,2017,6,550,35
-West Roxbury,2017,6,595,23
-Allston,2017,7,11,0
-Allston / Brighton,2017,7,560,12
-Back Bay,2017,7,545,36
-Beacon Hill,2017,7,259,12
-Boston,2017,7,366,8
-Brighton,2017,7,44,1
-Charlestown,2017,7,351,13
-Dorchester,2017,7,1721,16
-Downtown / Financial District,2017,7,685,56
-East Boston,2017,7,558,20
-Fenway / Kenmore / Audubon Circle / Longwood,2017,7,259,9
-Greater Mattapan,2017,7,586,4
-Hyde Park,2017,7,607,8
-Jamaica Plain,2017,7,748,20
-Mattapan,2017,7,32,0
-Mission Hill,2017,7,196,2
-Roslindale,2017,7,463,13
-Roxbury,2017,7,1112,28
-South Boston,2017,7,94,1
-South Boston / South Boston Waterfront,2017,7,620,25
-South End,2017,7,598,31
-West Roxbury,2017,7,559,19
-Allston,2017,8,26,1
-Allston / Brighton,2017,8,771,13
-Back Bay,2017,8,550,37
-Beacon Hill,2017,8,259,16
-Boston,2017,8,390,12
-Brighton,2017,8,40,1
-Charlestown,2017,8,363,13
-Chestnut Hill,2017,8,1,0
-Dorchester,2017,8,2036,30
-Downtown / Financial District,2017,8,796,72
-East Boston,2017,8,688,8
-Fenway / Kenmore / Audubon Circle / Longwood,2017,8,295,11
-Greater Mattapan,2017,8,704,5
-Hyde Park,2017,8,600,9
-Jamaica Plain,2017,8,853,22
-Mattapan,2017,8,34,1
-Mission Hill,2017,8,239,13
-Roslindale,2017,8,501,3
-Roxbury,2017,8,1271,24
-South Boston,2017,8,87,0
-South Boston / South Boston Waterfront,2017,8,717,17
-South End,2017,8,514,23
-West Roxbury,2017,8,572,15
-Allston,2017,9,19,1
-Allston / Brighton,2017,9,742,13
-Back Bay,2017,9,525,17
-Beacon Hill,2017,9,345,10
-Boston,2017,9,346,12
-Brighton,2017,9,51,1
-Charlestown,2017,9,318,7
-Dorchester,2017,9,1823,12
-Downtown / Financial District,2017,9,683,30
-East Boston,2017,9,603,16
-Fenway / Kenmore / Audubon Circle / Longwood,2017,9,259,10
-Greater Mattapan,2017,9,499,4
-Hyde Park,2017,9,561,8
-Jamaica Plain,2017,9,810,30
-Mattapan,2017,9,29,0
-Mission Hill,2017,9,281,19
-Roslindale,2017,9,476,2
-Roxbury,2017,9,1168,23
-South Boston,2017,9,112,1
-South Boston / South Boston Waterfront,2017,9,738,14
-South End,2017,9,488,24
-West Roxbury,2017,9,461,19
-Allston,2017,10,24,0
-Allston / Brighton,2017,10,727,12
-Back Bay,2017,10,532,7
-Beacon Hill,2017,10,320,3
-Boston,2017,10,329,11
-Brighton,2017,10,38,1
-Charlestown,2017,10,281,10
-Dorchester,2017,10,1362,7
-Downtown / Financial District,2017,10,612,13
-East Boston,2017,10,513,23
-Fenway / Kenmore / Audubon Circle / Longwood,2017,10,221,7
-Greater Mattapan,2017,10,379,4
-Hyde Park,2017,10,329,11
-Jamaica Plain,2017,10,559,7
-Mattapan,2017,10,6,0
-Mission Hill,2017,10,199,5
-Roslindale,2017,10,294,4
-Roxbury,2017,10,918,19
-South Boston,2017,10,104,0
-South Boston / South Boston Waterfront,2017,10,859,15
-South End,2017,10,641,8
-West Roxbury,2017,10,316,6
-Allston,2017,11,19,2
-Allston / Brighton,2017,11,531,50
-Back Bay,2017,11,537,2
-Beacon Hill,2017,11,245,0
-Boston,2017,11,279,4
-Brighton,2017,11,20,2
-Charlestown,2017,11,204,1
-Dorchester,2017,11,987,15
-Downtown / Financial District,2017,11,573,10
-East Boston,2017,11,311,9
-Fenway / Kenmore / Audubon Circle / Longwood,2017,11,179,1
-Greater Mattapan,2017,11,220,3
-Hyde Park,2017,11,225,27
-Jamaica Plain,2017,11,414,7
-Mattapan,2017,11,3,0
-Mission Hill,2017,11,151,4
-Roslindale,2017,11,156,1
-Roxbury,2017,11,654,10
-South Boston,2017,11,74,0
-South Boston / South Boston Waterfront,2017,11,730,2
-South End,2017,11,625,9
-West Roxbury,2017,11,169,5
-Allston,2017,12,11,0
-Allston / Brighton,2017,12,764,2
-Back Bay,2017,12,504,2
-Beacon Hill,2017,12,377,2
-Boston,2017,12,311,3
-Brighton,2017,12,39,1
-Charlestown,2017,12,327,0
-Dorchester,2017,12,1109,52
-Downtown / Financial District,2017,12,530,1
-East Boston,2017,12,369,4
-Fenway / Kenmore / Audubon Circle / Longwood,2017,12,161,5
-Greater Mattapan,2017,12,165,12
-Hyde Park,2017,12,241,1
-Jamaica Plain,2017,12,503,3
-Mattapan,2017,12,6,0
-Mission Hill,2017,12,133,6
-Roslindale,2017,12,216,1
-Roxbury,2017,12,640,27
-South Boston,2017,12,74,3
-South Boston / South Boston Waterfront,2017,12,894,8
-South End,2017,12,574,3
-West Roxbury,2017,12,180,0
-Allston,2018,1,33,9
-Allston / Brighton,2018,1,1461,222
-Back Bay,2018,1,605,54
-Beacon Hill,2018,1,442,11
-Boston,2018,1,396,32
-Brighton,2018,1,80,10
-Charlestown,2018,1,500,25
-Dorchester,2018,1,1722,160
-Downtown / Financial District,2018,1,922,66
-East Boston,2018,1,848,111
-Fenway / Kenmore / Audubon Circle / Longwood,2018,1,267,43
-Greater Mattapan,2018,1,332,49
-Hyde Park,2018,1,629,218
-Jamaica Plain,2018,1,1058,116
-Mattapan,2018,1,17,1
-Mission Hill,2018,1,263,34
-Roslindale,2018,1,643,64
-Roxbury,2018,1,1134,205
-South Boston,2018,1,171,3
-South Boston / South Boston Waterfront,2018,1,1339,23
-South End,2018,1,821,23
-West Roxbury,2018,1,361,83
-Allston,2018,2,21,9
-Allston / Brighton,2018,2,724,156
-Back Bay,2018,2,473,79
-Beacon Hill,2018,2,330,21
-Boston,2018,2,332,55
-Brighton,2018,2,41,4
-Charlestown,2018,2,264,46
-Dorchester,2018,2,1268,376
-Downtown / Financial District,2018,2,641,70
-East Boston,2018,2,580,159
-Fenway / Kenmore / Audubon Circle / Longwood,2018,2,306,103
-Greater Mattapan,2018,2,330,163
-Hyde Park,2018,2,453,253
-Jamaica Plain,2018,2,495,110
-Mattapan,2018,2,10,4
-Mission Hill,2018,2,240,83
-Roslindale,2018,2,277,47
-Roxbury,2018,2,728,186
-South Boston,2018,2,71,2
-South Boston / South Boston Waterfront,2018,2,658,33
-South End,2018,2,575,26
-West Roxbury,2018,2,259,147
-Allston,2018,3,23,8
-Allston / Brighton,2018,3,911,120
-Back Bay,2018,3,600,63
-Beacon Hill,2018,3,308,13
-Boston,2018,3,313,38
-Brighton,2018,3,62,6
-Charlestown,2018,3,344,18
-Chestnut Hill,2018,3,1,1
-Dorchester,2018,3,1343,225
-Downtown / Financial District,2018,3,783,85
-East Boston,2018,3,701,136
-Fenway / Kenmore / Audubon Circle / Longwood,2018,3,320,109
-Greater Mattapan,2018,3,324,123
-Hyde Park,2018,3,500,172
-Jamaica Plain,2018,3,577,52
-Mattapan,2018,3,7,0
-Mission Hill,2018,3,211,45
-Roslindale,2018,3,413,38
-Roxbury,2018,3,923,165
-South Boston,2018,3,85,1
-South Boston / South Boston Waterfront,2018,3,988,23
-South End,2018,3,862,46
-West Roxbury,2018,3,293,64
-Allston,2018,4,15,3
-Allston / Brighton,2018,4,705,42
-Back Bay,2018,4,631,61
-Beacon Hill,2018,4,421,24
-Boston,2018,4,454,68
-Brighton,2018,4,58,3
-Charlestown,2018,4,278,33
-Dorchester,2018,4,1112,58
-Downtown / Financial District,2018,4,939,84
-East Boston,2018,4,517,85
-Fenway / Kenmore / Audubon Circle / Longwood,2018,4,492,125
-Greater Mattapan,2018,4,229,54
-Hyde Park,2018,4,377,175
-Jamaica Plain,2018,4,510,111
-Mattapan,2018,4,3,1
-Mission Hill,2018,4,231,84
-Roslindale,2018,4,234,39
-Roxbury,2018,4,906,203
-South Boston,2018,4,91,1
-South Boston / South Boston Waterfront,2018,4,748,15
-South End,2018,4,735,50
-West Roxbury,2018,4,228,54
-Allston,2018,5,23,0
-Allston / Brighton,2018,5,693,23
-Back Bay,2018,5,819,12
-Beacon Hill,2018,5,501,4
-Boston,2018,5,489,61
-Brighton,2018,5,54,0
-Charlestown,2018,5,296,14
-Dorchester,2018,5,1286,134
-Downtown / Financial District,2018,5,932,19
-East Boston,2018,5,578,51
-Fenway / Kenmore / Audubon Circle / Longwood,2018,5,427,67
-Greater Mattapan,2018,5,217,26
-Hyde Park,2018,5,544,205
-Jamaica Plain,2018,5,599,61
-Mattapan,2018,5,5,0
-Mission Hill,2018,5,197,64
-Roslindale,2018,5,318,21
-Roxbury,2018,5,1056,279
-South Boston,2018,5,80,1
-South Boston / South Boston Waterfront,2018,5,787,20
-South End,2018,5,766,13
-West Roxbury,2018,5,319,50
-Allston,2018,6,16,1
-Allston / Brighton,2018,6,735,13
-Back Bay,2018,6,576,8
-Beacon Hill,2018,6,432,0
-Boston,2018,6,401,16
-Brighton,2018,6,55,3
-Charlestown,2018,6,338,9
-Dorchester,2018,6,1314,149
-Downtown / Financial District,2018,6,827,13
-East Boston,2018,6,571,66
-Fenway / Kenmore / Audubon Circle / Longwood,2018,6,245,10
-Greater Mattapan,2018,6,272,98
-Hyde Park,2018,6,422,130
-Jamaica Plain,2018,6,626,32
-Mattapan,2018,6,9,2
-Mission Hill,2018,6,166,11
-Roslindale,2018,6,326,43
-Roxbury,2018,6,942,122
-South Boston,2018,6,72,2
-South Boston / South Boston Waterfront,2018,6,841,21
-South End,2018,6,659,2
-West Roxbury,2018,6,277,31
-Allston,2018,7,18,1
-Allston / Brighton,2018,7,837,49
-Back Bay,2018,7,822,13
-Beacon Hill,2018,7,485,1
-Boston,2018,7,464,10
-Brighton,2018,7,53,0
-Charlestown,2018,7,281,8
-Dorchester,2018,7,1214,38
-Downtown / Financial District,2018,7,902,5
-East Boston,2018,7,667,13
-Fenway / Kenmore / Audubon Circle / Longwood,2018,7,371,42
-Greater Mattapan,2018,7,192,18
-Hyde Park,2018,7,306,25
-Jamaica Plain,2018,7,607,37
-Mattapan,2018,7,11,0
-Mission Hill,2018,7,209,13
-Roslindale,2018,7,290,10
-Roxbury,2018,7,864,79
-South Boston,2018,7,78,1
-South Boston / South Boston Waterfront,2018,7,842,13
-South End,2018,7,726,2
-West Roxbury,2018,7,249,14
-Allston,2018,8,35,0
-Allston / Brighton,2018,8,1292,31
-Back Bay,2018,8,767,8
-Beacon Hill,2018,8,476,0
-Boston,2018,8,514,5
-Brighton,2018,8,71,0
-Charlestown,2018,8,315,10
-Chestnut Hill,2018,8,2,0
-Dorchester,2018,8,1132,25
-Downtown / Financial District,2018,8,1049,4
-East Boston,2018,8,649,37
-Fenway / Kenmore / Audubon Circle / Longwood,2018,8,346,4
-Greater Mattapan,2018,8,218,12
-Hyde Park,2018,8,307,68
-Jamaica Plain,2018,8,620,9
-Mattapan,2018,8,3,0
-Mission Hill,2018,8,358,6
-Roslindale,2018,8,299,12
-Roxbury,2018,8,963,36
-South Boston,2018,8,114,0
-South Boston / South Boston Waterfront,2018,8,1047,10
-South End,2018,8,628,4
-West Roxbury,2018,8,253,12
-Allston,2018,9,25,2
-Allston / Brighton,2018,9,984,20
-Back Bay,2018,9,685,23
-Beacon Hill,2018,9,583,3
-Boston,2018,9,428,5
-Brighton,2018,9,46,1
-Charlestown,2018,9,337,12
-Dorchester,2018,9,1283,15
-Downtown / Financial District,2018,9,812,12
-East Boston,2018,9,676,60
-Fenway / Kenmore / Audubon Circle / Longwood,2018,9,313,5
-Greater Mattapan,2018,9,250,6
-Hyde Park,2018,9,300,10
-Jamaica Plain,2018,9,719,11
-Mattapan,2018,9,8,0
-Mission Hill,2018,9,285,4
-Roslindale,2018,9,333,14
-Roxbury,2018,9,912,14
-South Boston,2018,9,88,0
-South Boston / South Boston Waterfront,2018,9,1212,12
-South End,2018,9,725,16
-West Roxbury,2018,9,323,14
-Allston,2018,10,11,1
-Allston / Brighton,2018,10,626,28
-Back Bay,2018,10,485,47
-Beacon Hill,2018,10,287,27
-Boston,2018,10,331,22
-Brighton,2018,10,41,2
-Charlestown,2018,10,418,27
-Dorchester,2018,10,1663,17
-Downtown / Financial District,2018,10,664,42
-East Boston,2018,10,542,18
-Fenway / Kenmore / Audubon Circle / Longwood,2018,10,253,17
-Greater Mattapan,2018,10,541,10
-Hyde Park,2018,10,516,10
-Jamaica Plain,2018,10,645,9
-Mattapan,2018,10,16,1
-Mission Hill,2018,10,160,18
-Roslindale,2018,10,435,9
-Roxbury,2018,10,974,13
-South Boston,2018,10,77,1
-South Boston / South Boston Waterfront,2018,10,656,15
-South End,2018,10,497,18
-West Roxbury,2018,10,460,35
-Allston,2018,11,17,0
-Allston / Brighton,2018,11,616,33
-Back Bay,2018,11,540,65
-Beacon Hill,2018,11,286,12
-Boston,2018,11,275,19
-Brighton,2018,11,25,0
-Charlestown,2018,11,354,29
-Dorchester,2018,11,1554,26
-Downtown / Financial District,2018,11,495,32
-East Boston,2018,11,445,11
-Fenway / Kenmore / Audubon Circle / Longwood,2018,11,225,32
-Greater Mattapan,2018,11,501,4
-Hyde Park,2018,11,498,9
-Jamaica Plain,2018,11,629,10
-Mattapan,2018,11,15,1
-Mission Hill,2018,11,162,15
-Roslindale,2018,11,400,6
-Roxbury,2018,11,939,25
-South Boston,2018,11,52,4
-South Boston / South Boston Waterfront,2018,11,521,21
-South End,2018,11,421,18
-West Roxbury,2018,11,450,18
-Allston,2018,12,17,2
-Allston / Brighton,2018,12,515,27
-Back Bay,2018,12,387,32
-Beacon Hill,2018,12,226,18
-Boston,2018,12,235,14
-Brighton,2018,12,31,3
-Charlestown,2018,12,399,12
-Dorchester,2018,12,1164,19
-Downtown / Financial District,2018,12,447,35
-East Boston,2018,12,377,9
-Fenway / Kenmore / Audubon Circle / Longwood,2018,12,145,11
-Greater Mattapan,2018,12,431,14
-Hyde Park,2018,12,497,13
-Jamaica Plain,2018,12,565,19
-Mattapan,2018,12,16,0
-Mission Hill,2018,12,156,9
-Roslindale,2018,12,348,7
-Roxbury,2018,12,763,23
-South Boston,2018,12,51,0
-South Boston / South Boston Waterfront,2018,12,470,19
-South End,2018,12,410,15
-West Roxbury,2018,12,337,24
-Allston,2019,1,14,0
-Allston / Brighton,2019,1,722,80
-Back Bay,2019,1,509,29
-Beacon Hill,2019,1,252,9
-Boston,2019,1,356,24
-Brighton,2019,1,46,7
-Charlestown,2019,1,336,25
-Dorchester,2019,1,1179,77
-Downtown / Financial District,2019,1,656,46
-East Boston,2019,1,605,36
-Fenway / Kenmore / Audubon Circle / Longwood,2019,1,200,29
-Greater Mattapan,2019,1,250,28
-Hyde Park,2019,1,269,33
-Jamaica Plain,2019,1,616,69
-Mattapan,2019,1,9,0
-Mission Hill,2019,1,142,23
-Roslindale,2019,1,321,24
-Roxbury,2019,1,589,75
-South Boston,2019,1,88,2
-South Boston / South Boston Waterfront,2019,1,810,28
-South End,2019,1,612,60
-West Roxbury,2019,1,215,40
-Allston,2019,2,16,6
-Allston / Brighton,2019,2,761,159
-Back Bay,2019,2,477,23
-Beacon Hill,2019,2,243,4
-Boston,2019,2,262,37
-Brighton,2019,2,44,6
-Charlestown,2019,2,248,11
-Dorchester,2019,2,1123,223
-Downtown / Financial District,2019,2,535,37
-East Boston,2019,2,662,106
-Fenway / Kenmore / Audubon Circle / Longwood,2019,2,308,67
-Greater Mattapan,2019,2,200,80
-Hyde Park,2019,2,252,39
-Jamaica Plain,2019,2,543,109
-Mattapan,2019,2,3,0
-Mission Hill,2019,2,176,70
-Roslindale,2019,2,285,42
-Roxbury,2019,2,771,277
-South Boston,2019,2,71,2
-South Boston / South Boston Waterfront,2019,2,757,39
-South End,2019,2,497,14
-West Roxbury,2019,2,250,81
-Allston,2019,3,15,7
-Allston / Brighton,2019,3,963,256
-Back Bay,2019,3,549,39
-Beacon Hill,2019,3,401,16
-Boston,2019,3,398,29
-Brighton,2019,3,67,13
-Charlestown,2019,3,369,19
-Dorchester,2019,3,1544,206
-Downtown / Financial District,2019,3,874,36
-East Boston,2019,3,1038,193
-Fenway / Kenmore / Audubon Circle / Longwood,2019,3,335,62
-Greater Mattapan,2019,3,269,59
-Hyde Park,2019,3,449,67
-Jamaica Plain,2019,3,720,127
-Mattapan,2019,3,14,0
-Mission Hill,2019,3,192,39
-Roslindale,2019,3,480,60
-Roxbury,2019,3,903,162
-South Boston,2019,3,104,1
-South Boston / South Boston Waterfront,2019,3,937,48
-South End,2019,3,807,23
-West Roxbury,2019,3,316,78
-Allston,2019,4,25,7
-Allston / Brighton,2019,4,755,109
-Back Bay,2019,4,492,47
-Beacon Hill,2019,4,432,4
-Boston,2019,4,379,18
-Brighton,2019,4,59,5
-Charlestown,2019,4,307,13
-Chestnut Hill,2019,4,1,1
-Dorchester,2019,4,1050,137
-Downtown / Financial District,2019,4,871,16
-East Boston,2019,4,752,191
-Fenway / Kenmore / Audubon Circle / Longwood,2019,4,279,56
-Greater Mattapan,2019,4,221,51
-Hyde Park,2019,4,330,66
-Jamaica Plain,2019,4,559,85
-Mattapan,2019,4,9,2
-Mission Hill,2019,4,195,54
-Roslindale,2019,4,355,41
-Roxbury,2019,4,843,150
-South Boston,2019,4,64,5
-South Boston / South Boston Waterfront,2019,4,736,33
-South End,2019,4,617,12
-West Roxbury,2019,4,334,123
-Allston,2019,5,26,3
-Allston / Brighton,2019,5,756,88
-Back Bay,2019,5,606,80
-Beacon Hill,2019,5,477,13
-Boston,2019,5,335,21
-Brighton,2019,5,53,3
-Charlestown,2019,5,491,37
-Dorchester,2019,5,1366,212
-Downtown / Financial District,2019,5,810,25
-East Boston,2019,5,934,318
-Fenway / Kenmore / Audubon Circle / Longwood,2019,5,230,44
-Greater Mattapan,2019,5,269,67
-Hyde Park,2019,5,360,69
-Jamaica Plain,2019,5,550,64
-Mattapan,2019,5,11,3
-Mission Hill,2019,5,151,22
-Roslindale,2019,5,346,32
-Roxbury,2019,5,768,146
-South Boston,2019,5,93,6
-South Boston / South Boston Waterfront,2019,5,897,19
-South End,2019,5,737,26
-West Roxbury,2019,5,296,88
-Allston,2019,6,15,0
-Allston / Brighton,2019,6,737,28
-Back Bay,2019,6,597,33
-Beacon Hill,2019,6,404,27
-Boston,2019,6,400,13
-Brighton,2019,6,45,2
-Charlestown,2019,6,442,44
-Chestnut Hill,2019,6,1,0
-Dorchester,2019,6,1352,61
-Downtown / Financial District,2019,6,840,18
-East Boston,2019,6,788,139
-Fenway / Kenmore / Audubon Circle / Longwood,2019,6,221,12
-Greater Mattapan,2019,6,327,57
-Hyde Park,2019,6,361,44
-Jamaica Plain,2019,6,620,38
-Mattapan,2019,6,5,0
-Mission Hill,2019,6,185,20
-Roslindale,2019,6,358,14
-Roxbury,2019,6,669,37
-South Boston,2019,6,79,3
-South Boston / South Boston Waterfront,2019,6,863,4
-South End,2019,6,854,9
-West Roxbury,2019,6,299,37
-Allston,2019,7,15,0
-Allston / Brighton,2019,7,735,21
-Back Bay,2019,7,643,20
-Beacon Hill,2019,7,359,5
-Boston,2019,7,385,12
-Brighton,2019,7,41,1
-Charlestown,2019,7,301,4
-Dorchester,2019,7,1188,15
-Downtown / Financial District,2019,7,948,11
-East Boston,2019,7,666,73
-Fenway / Kenmore / Audubon Circle / Longwood,2019,7,226,9
-Greater Mattapan,2019,7,268,10
-Hyde Park,2019,7,377,10
-Jamaica Plain,2019,7,592,32
-Mattapan,2019,7,9,1
-Mission Hill,2019,7,173,11
-Roslindale,2019,7,326,16
-Roxbury,2019,7,952,36
-South Boston,2019,7,81,1
-South Boston / South Boston Waterfront,2019,7,944,6
-South End,2019,7,888,12
-West Roxbury,2019,7,293,38
-Allston,2019,8,37,0
-Allston / Brighton,2019,8,1432,9
-Back Bay,2019,8,745,4
-Beacon Hill,2019,8,433,3
-Boston,2019,8,427,5
-Brighton,2019,8,76,1
-Charlestown,2019,8,329,4
-Chestnut Hill,2019,8,1,0
-Dorchester,2019,8,1204,19
-Downtown / Financial District,2019,8,1070,8
-East Boston,2019,8,701,81
-Fenway / Kenmore / Audubon Circle / Longwood,2019,8,383,0
-Greater Mattapan,2019,8,243,16
-Hyde Park,2019,8,322,45
-Jamaica Plain,2019,8,627,11
-Mattapan,2019,8,8,1
-Mission Hill,2019,8,253,3
-Roslindale,2019,8,316,7
-Roxbury,2019,8,1109,17
-South Boston,2019,8,59,1
-South Boston / South Boston Waterfront,2019,8,1078,9
-South End,2019,8,1147,4
-West Roxbury,2019,8,240,8
-Allston,2019,9,36,0
-Allston / Brighton,2019,9,1290,6
-Back Bay,2019,9,790,15
-Beacon Hill,2019,9,454,2
-Boston,2019,9,417,1
-Brighton,2019,9,68,1
-Charlestown,2019,9,357,5
-Dorchester,2019,9,1224,16
-Downtown / Financial District,2019,9,952,4
-East Boston,2019,9,809,64
-Fenway / Kenmore / Audubon Circle / Longwood,2019,9,343,9
-Greater Mattapan,2019,9,218,10
-Hyde Park,2019,9,294,32
-Jamaica Plain,2019,9,609,17
-Mattapan,2019,9,6,0
-Mission Hill,2019,9,378,5
-Roslindale,2019,9,292,7
-Roxbury,2019,9,931,20
-South Boston,2019,9,105,0
-South Boston / South Boston Waterfront,2019,9,1209,8
-South End,2019,9,1001,1
-West Roxbury,2019,9,237,4
-Allston,2019,10,24,0
-Allston / Brighton,2019,10,804,24
-Back Bay,2019,10,447,17
-Beacon Hill,2019,10,257,5
-Boston,2019,10,338,11
-Brighton,2019,10,49,3
-Charlestown,2019,10,397,5
-Dorchester,2019,10,1877,11
-Downtown / Financial District,2019,10,638,17
-East Boston,2019,10,655,18
-Fenway / Kenmore / Audubon Circle / Longwood,2019,10,198,3
-Greater Mattapan,2019,10,617,5
-Hyde Park,2019,10,613,11
-Jamaica Plain,2019,10,705,6
-Mattapan,2019,10,25,3
-Mission Hill,2019,10,201,3
-Roslindale,2019,10,458,9
-Roxbury,2019,10,1038,9
-South Boston,2019,10,95,2
-South Boston / South Boston Waterfront,2019,10,723,12
-South End,2019,10,571,10
-West Roxbury,2019,10,507,13
-Allston,2019,11,16,1
-Allston / Brighton,2019,11,570,22
-Back Bay,2019,11,450,25
-Beacon Hill,2019,11,203,15
-Boston,2019,11,317,18
-Brighton,2019,11,31,1
-Charlestown,2019,11,270,14
-Chestnut Hill,2019,11,1,0
-Dorchester,2019,11,1530,20
-Downtown / Financial District,2019,11,399,16
-East Boston,2019,11,426,15
-Fenway / Kenmore / Audubon Circle / Longwood,2019,11,162,16
-Greater Mattapan,2019,11,552,5
-Hyde Park,2019,11,453,7
-Jamaica Plain,2019,11,568,23
-Mattapan,2019,11,17,0
-Mission Hill,2019,11,142,9
-Roslindale,2019,11,330,12
-Roxbury,2019,11,873,18
-South Boston,2019,11,82,1
-South Boston / South Boston Waterfront,2019,11,561,18
-South End,2019,11,441,10
-West Roxbury,2019,11,368,6
-Allston,2019,12,18,1
-Allston / Brighton,2019,12,586,19
-Back Bay,2019,12,338,19
-Beacon Hill,2019,12,199,5
-Boston,2019,12,240,17
-Brighton,2019,12,48,2
-Charlestown,2019,12,290,31
-Dorchester,2019,12,1416,50
-Downtown / Financial District,2019,12,406,26
-East Boston,2019,12,483,48
-Fenway / Kenmore / Audubon Circle / Longwood,2019,12,153,19
-Greater Mattapan,2019,12,464,9
-Hyde Park,2019,12,439,11
-Jamaica Plain,2019,12,619,38
-Mattapan,2019,12,22,1
-Mission Hill,2019,12,142,24
-Roslindale,2019,12,366,15
-Roxbury,2019,12,886,25
-South Boston,2019,12,72,0
-South Boston / South Boston Waterfront,2019,12,554,27
-South End,2019,12,413,18
-West Roxbury,2019,12,355,21
-Allston,2020,1,23,0
-Allston / Brighton,2020,1,639,37
-Back Bay,2020,1,445,37
-Beacon Hill,2020,1,221,12
-Boston,2020,1,286,16
-Brighton,2020,1,45,3
-Charlestown,2020,1,387,22
-Chestnut Hill,2020,1,1,0
-Dorchester,2020,1,1515,47
-Downtown / Financial District,2020,1,497,37
-East Boston,2020,1,573,21
-Fenway / Kenmore / Audubon Circle / Longwood,2020,1,202,20
-Greater Mattapan,2020,1,495,14
-Hyde Park,2020,1,525,20
-Jamaica Plain,2020,1,652,35
-Mattapan,2020,1,16,0
-Mission Hill,2020,1,184,24
-Roslindale,2020,1,408,17
-Roxbury,2020,1,1065,49
-South Boston,2020,1,83,6
-South Boston / South Boston Waterfront,2020,1,590,29
-South End,2020,1,482,29
-West Roxbury,2020,1,364,23
-Allston,2020,2,14,0
-Allston / Brighton,2020,2,610,25
-Back Bay,2020,2,382,34
-Beacon Hill,2020,2,140,15
-Boston,2020,2,252,14
-Brighton,2020,2,44,0
-Charlestown,2020,2,293,29
-Chestnut Hill,2020,2,2,0
-Dorchester,2020,2,1228,47
-Downtown / Financial District,2020,2,390,38
-East Boston,2020,2,456,14
-Fenway / Kenmore / Audubon Circle / Longwood,2020,2,159,36
-Greater Mattapan,2020,2,435,27
-Hyde Park,2020,2,434,6
-Jamaica Plain,2020,2,541,40
-Mattapan,2020,2,17,3
-Mission Hill,2020,2,165,32
-Roslindale,2020,2,293,17
-Roxbury,2020,2,797,44
-South Boston,2020,2,75,4
-South Boston / South Boston Waterfront,2020,2,611,32
-South End,2020,2,440,14
-West Roxbury,2020,2,314,22
-Allston,2020,3,18,1
-Allston / Brighton,2020,3,483,7
-Back Bay,2020,3,282,15
-Beacon Hill,2020,3,132,0
-Boston,2020,3,193,8
-Brighton,2020,3,26,1
-Charlestown,2020,3,296,12
-Dorchester,2020,3,1312,27
-Downtown / Financial District,2020,3,306,15
-East Boston,2020,3,388,8
-Fenway / Kenmore / Audubon Circle / Longwood,2020,3,143,17
-Greater Mattapan,2020,3,427,14
-Hyde Park,2020,3,445,10
-Jamaica Plain,2020,3,528,19
-Mattapan,2020,3,12,0
-Mission Hill,2020,3,145,15
-Roslindale,2020,3,325,5
-Roxbury,2020,3,676,32
-South Boston,2020,3,59,2
-South Boston / South Boston Waterfront,2020,3,450,19
-South End,2020,3,345,16
-West Roxbury,2020,3,330,19
-Allston,2020,4,32,0
-Allston / Brighton,2020,4,532,9
-Back Bay,2020,4,234,9
-Beacon Hill,2020,4,118,8
-Boston,2020,4,148,7
-Brighton,2020,4,31,0
-Charlestown,2020,4,259,5
-Dorchester,2020,4,1293,21
-Downtown / Financial District,2020,4,296,14
-East Boston,2020,4,393,4
-Fenway / Kenmore / Audubon Circle / Longwood,2020,4,115,10
-Greater Mattapan,2020,4,461,5
-Hyde Park,2020,4,478,5
-Jamaica Plain,2020,4,495,11
-Mattapan,2020,4,22,0
-Mission Hill,2020,4,97,10
-Roslindale,2020,4,397,11
-Roxbury,2020,4,623,21
-South Boston,2020,4,65,1
-South Boston / South Boston Waterfront,2020,4,569,14
-South End,2020,4,347,8
-West Roxbury,2020,4,426,17
-Allston,2020,5,37,0
-Allston / Brighton,2020,5,579,9
-Back Bay,2020,5,296,29
-Beacon Hill,2020,5,142,6
-Boston,2020,5,223,10
-Brighton,2020,5,39,1
-Charlestown,2020,5,251,18
-Dorchester,2020,5,1740,21
-Downtown / Financial District,2020,5,322,19
-East Boston,2020,5,524,13
-Fenway / Kenmore / Audubon Circle / Longwood,2020,5,137,6
-Greater Mattapan,2020,5,558,9
-Hyde Park,2020,5,662,16
-Jamaica Plain,2020,5,538,14
-Mattapan,2020,5,33,1
-Mission Hill,2020,5,90,13
-Roslindale,2020,5,404,15
-Roxbury,2020,5,920,19
-South Boston,2020,5,102,6
-South Boston / South Boston Waterfront,2020,5,665,44
-South End,2020,5,471,22
-West Roxbury,2020,5,472,11
-Allston,2020,6,34,0
-Allston / Brighton,2020,6,719,20
-Back Bay,2020,6,321,31
-Beacon Hill,2020,6,177,7
-Boston,2020,6,250,2
-Brighton,2020,6,45,0
-Charlestown,2020,6,316,22
-Dorchester,2020,6,2200,34
-Downtown / Financial District,2020,6,429,23
-East Boston,2020,6,987,28
-Fenway / Kenmore / Audubon Circle / Longwood,2020,6,145,9
-Greater Mattapan,2020,6,755,6
-Hyde Park,2020,6,795,18
-Jamaica Plain,2020,6,760,28
-Mattapan,2020,6,14,0
-Mission Hill,2020,6,159,13
-Roslindale,2020,6,511,11
-Roxbury,2020,6,1282,39
-South Boston,2020,6,91,0
-South Boston / South Boston Waterfront,2020,6,730,22
-South End,2020,6,532,26
-West Roxbury,2020,6,481,25
-Allston,2020,7,42,1
-Allston / Brighton,2020,7,768,31
-Back Bay,2020,7,373,15
-Beacon Hill,2020,7,169,6
-Boston,2020,7,271,9
-Brighton,2020,7,51,0
-Charlestown,2020,7,294,11
-Chestnut Hill,2020,7,2,0
-Dorchester,2020,7,2265,37
-Downtown / Financial District,2020,7,451,19
-East Boston,2020,7,688,41
-Fenway / Kenmore / Audubon Circle / Longwood,2020,7,175,9
-Greater Mattapan,2020,7,859,13
-Hyde Park,2020,7,841,14
-Jamaica Plain,2020,7,735,14
-Mattapan,2020,7,42,0
-Mission Hill,2020,7,162,1
-Roslindale,2020,7,487,9
-Roxbury,2020,7,1375,18
-South Boston,2020,7,118,3
-South Boston / South Boston Waterfront,2020,7,884,23
-South End,2020,7,552,14
-West Roxbury,2020,7,538,12
-Allston,2020,8,47,0
-Allston / Brighton,2020,8,928,26
-Back Bay,2020,8,401,13
-Beacon Hill,2020,8,192,7
-Boston,2020,8,320,10
-Brighton,2020,8,53,1
-Charlestown,2020,8,341,18
-Chestnut Hill,2020,8,1,0
-Dorchester,2020,8,2098,23
-Downtown / Financial District,2020,8,543,21
-East Boston,2020,8,679,22
-Fenway / Kenmore / Audubon Circle / Longwood,2020,8,195,13
-Greater Mattapan,2020,8,897,4
-Hyde Park,2020,8,934,12
-Jamaica Plain,2020,8,729,33
-Mattapan,2020,8,53,0
-Mission Hill,2020,8,217,2
-Roslindale,2020,8,477,10
-Roxbury,2020,8,1265,14
-South Boston,2020,8,107,4
-South Boston / South Boston Waterfront,2020,8,903,21
-South End,2020,8,623,14
-West Roxbury,2020,8,556,18
-Allston,2020,9,36,0
-Allston / Brighton,2020,9,999,23
-Back Bay,2020,9,418,19
-Beacon Hill,2020,9,213,3
-Boston,2020,9,361,2
-Brighton,2020,9,52,0
-Charlestown,2020,9,403,25
-Chestnut Hill,2020,9,1,0
-Dorchester,2020,9,1961,21
-Downtown / Financial District,2020,9,487,14
-East Boston,2020,9,591,12
-Fenway / Kenmore / Audubon Circle / Longwood,2020,9,215,10
-Greater Mattapan,2020,9,690,3
-Hyde Park,2020,9,617,6
-Jamaica Plain,2020,9,700,10
-Mattapan,2020,9,20,1
-Mission Hill,2020,9,233,6
-Roslindale,2020,9,519,10
-Roxbury,2020,9,1303,23
-South Boston,2020,9,104,0
-South Boston / South Boston Waterfront,2020,9,943,9
-South End,2020,9,642,10
-West Roxbury,2020,9,507,7
-Allston,2020,10,32,6
-Allston / Brighton,2020,10,711,41
-Back Bay,2020,10,444,7
-Beacon Hill,2020,10,244,1
-Boston,2020,10,339,5
-Brighton,2020,10,34,2
-Charlestown,2020,10,541,16
-Chestnut Hill,2020,10,5,0
-Dorchester,2020,10,1658,13
-Downtown / Financial District,2020,10,593,13
-East Boston,2020,10,719,14
-Fenway / Kenmore / Audubon Circle / Longwood,2020,10,139,6
-Greater Mattapan,2020,10,587,2
-Hyde Park,2020,10,534,10
-Jamaica Plain,2020,10,598,7
-Mattapan,2020,10,26,0
-Mission Hill,2020,10,172,6
-Roslindale,2020,10,416,5
-Roxbury,2020,10,934,10
-South Boston,2020,10,122,2
-South Boston / South Boston Waterfront,2020,10,950,16
-South End,2020,10,564,10
-West Roxbury,2020,10,457,10
-Allston,2020,11,23,0
-Allston / Brighton,2020,11,532,6
-Back Bay,2020,11,594,23
-Beacon Hill,2020,11,318,6
-Boston,2020,11,322,16
-Brighton,2020,11,33,0
-Charlestown,2020,11,423,8
-Dorchester,2020,11,1174,6
-Downtown / Financial District,2020,11,498,9
-East Boston,2020,11,715,20
-Fenway / Kenmore / Audubon Circle / Longwood,2020,11,174,11
-Greater Mattapan,2020,11,222,3
-Hyde Park,2020,11,388,8
-Jamaica Plain,2020,11,373,40
-Mattapan,2020,11,18,0
-Mission Hill,2020,11,153,22
-Roslindale,2020,11,254,20
-Roxbury,2020,11,738,18
-South Boston,2020,11,99,1
-South Boston / South Boston Waterfront,2020,11,941,14
-South End,2020,11,841,2
-West Roxbury,2020,11,181,7
-Allston,2020,12,20,1
-Allston / Brighton,2020,12,641,11
-Back Bay,2020,12,521,10
-Beacon Hill,2020,12,250,15
-Boston,2020,12,317,6
-Brighton,2020,12,44,0
-Charlestown,2020,12,669,20
-Dorchester,2020,12,1211,11
-Downtown / Financial District,2020,12,572,9
-East Boston,2020,12,727,4
-Fenway / Kenmore / Audubon Circle / Longwood,2020,12,159,8
-Greater Mattapan,2020,12,227,13
-Hyde Park,2020,12,373,7
-Jamaica Plain,2020,12,515,6
-Mattapan,2020,12,21,1
-Mission Hill,2020,12,102,6
-Roslindale,2020,12,311,6
-Roxbury,2020,12,759,16
-South Boston,2020,12,127,2
-South Boston / South Boston Waterfront,2020,12,981,5
-South End,2020,12,812,9
-West Roxbury,2020,12,230,9
-Allston,2021,1,26,0
-Allston / Brighton,2021,1,559,27
-Back Bay,2021,1,348,21
-Beacon Hill,2021,1,140,8
-Boston,2021,1,237,17
-Brighton,2021,1,29,0
-Charlestown,2021,1,357,41
-Dorchester,2021,1,1534,35
-Downtown / Financial District,2021,1,326,20
-East Boston,2021,1,506,21
-Fenway / Kenmore / Audubon Circle / Longwood,2021,1,185,30
-Greater Mattapan,2021,1,530,20
-Hyde Park,2021,1,407,7
-Jamaica Plain,2021,1,476,27
-Mattapan,2021,1,10,0
-Mission Hill,2021,1,127,20
-Roslindale,2021,1,344,10
-Roxbury,2021,1,877,45
-South Boston,2021,1,88,7
-South Boston / South Boston Waterfront,2021,1,601,17
-South End,2021,1,363,19
-West Roxbury,2021,1,278,38
-Allston,2021,2,18,1
-Allston / Brighton,2021,2,550,48
-Back Bay,2021,2,325,38
-Beacon Hill,2021,2,158,8
-Boston,2021,2,244,23
-Brighton,2021,2,51,1
-Charlestown,2021,2,311,30
-Chestnut Hill,2021,2,2,1
-Dorchester,2021,2,1366,34
-Downtown / Financial District,2021,2,359,27
-East Boston,2021,2,470,21
-Fenway / Kenmore / Audubon Circle / Longwood,2021,2,138,14
-Greater Mattapan,2021,2,465,20
-Hyde Park,2021,2,463,21
-Jamaica Plain,2021,2,507,30
-Mattapan,2021,2,13,1
-Mission Hill,2021,2,158,15
-Roslindale,2021,2,376,25
-Roxbury,2021,2,878,54
-South Boston,2021,2,74,3
-South Boston / South Boston Waterfront,2021,2,591,35
-South End,2021,2,359,14
-West Roxbury,2021,2,494,87
-Allston,2021,3,24,1
-Allston / Brighton,2021,3,614,32
-Back Bay,2021,3,441,58
-Beacon Hill,2021,3,185,5
-Boston,2021,3,320,23
-Brighton,2021,3,63,7
-Charlestown,2021,3,341,34
-Dorchester,2021,3,1838,38
-Downtown / Financial District,2021,3,442,27
-East Boston,2021,3,612,34
-Fenway / Kenmore / Audubon Circle / Longwood,2021,3,218,41
-Greater Mattapan,2021,3,563,13
-Hyde Park,2021,3,520,28
-Jamaica Plain,2021,3,654,52
-Mattapan,2021,3,28,2
-Mission Hill,2021,3,203,41
-Roslindale,2021,3,436,57
-Roxbury,2021,3,1092,69
-South Boston,2021,3,129,7
-South Boston / South Boston Waterfront,2021,3,678,30
-South End,2021,3,465,30
-West Roxbury,2021,3,457,80
-Allston,2021,4,24,1
-Allston / Brighton,2021,4,596,38
-Back Bay,2021,4,457,45
-Beacon Hill,2021,4,213,26
-Boston,2021,4,274,11
-Brighton,2021,4,41,3
-Charlestown,2021,4,316,24
-Dorchester,2021,4,1784,39
-Downtown / Financial District,2021,4,470,34
-East Boston,2021,4,580,33
-Fenway / Kenmore / Audubon Circle / Longwood,2021,4,177,15
-Greater Mattapan,2021,4,547,10
-Hyde Park,2021,4,508,19
-Jamaica Plain,2021,4,631,31
-Mattapan,2021,4,19,0
-Mission Hill,2021,4,157,17
-Roslindale,2021,4,427,25
-Roxbury,2021,4,1115,59
-South Boston,2021,4,98,3
-South Boston / South Boston Waterfront,2021,4,672,44
-South End,2021,4,474,39
-West Roxbury,2021,4,403,34
-Allston,2021,5,33,2
-Allston / Brighton,2021,5,681,26
-Back Bay,2021,5,474,53
-Beacon Hill,2021,5,203,16
-Boston,2021,5,276,19
-Brighton,2021,5,58,1
-Charlestown,2021,5,448,30
-Dorchester,2021,5,1958,32
-Downtown / Financial District,2021,5,467,44
-East Boston,2021,5,703,35
-Fenway / Kenmore / Audubon Circle / Longwood,2021,5,169,12
-Greater Mattapan,2021,5,644,22
-Hyde Park,2021,5,568,21
-Jamaica Plain,2021,5,695,31
-Mattapan,2021,5,32,0
-Mission Hill,2021,5,187,26
-Roslindale,2021,5,528,48
-Roxbury,2021,5,1343,43
-South Boston,2021,5,130,2
-South Boston / South Boston Waterfront,2021,5,833,29
-South End,2021,5,501,35
-West Roxbury,2021,5,522,34
-Allston,2021,6,40,2
-Allston / Brighton,2021,6,666,20
-Back Bay,2021,6,420,44
-Beacon Hill,2021,6,192,15
-Boston,2021,6,332,18
-Brighton,2021,6,67,0
-Charlestown,2021,6,387,12
-Dorchester,2021,6,2209,52
-Downtown / Financial District,2021,6,570,32
-East Boston,2021,6,670,24
-Fenway / Kenmore / Audubon Circle / Longwood,2021,6,154,21
-Greater Mattapan,2021,6,796,17
-Hyde Park,2021,6,680,14
-Jamaica Plain,2021,6,756,23
-Mattapan,2021,6,31,0
-Mission Hill,2021,6,218,21
-Roslindale,2021,6,588,46
-Roxbury,2021,6,1421,52
-South Boston,2021,6,117,3
-South Boston / South Boston Waterfront,2021,6,775,27
-South End,2021,6,633,34
-West Roxbury,2021,6,615,57
-Allston,2021,7,36,0
-Allston / Brighton,2021,7,889,34
-Back Bay,2021,7,538,107
-Beacon Hill,2021,7,222,13
-Boston,2021,7,320,26
-Brighton,2021,7,52,3
-Charlestown,2021,7,343,10
-Chestnut Hill,2021,7,1,1
-Dorchester,2021,7,2695,45
-Downtown / Financial District,2021,7,610,37
-East Boston,2021,7,728,34
-Fenway / Kenmore / Audubon Circle / Longwood,2021,7,219,38
-Greater Mattapan,2021,7,1104,49
-Hyde Park,2021,7,927,20
-Jamaica Plain,2021,7,848,45
-Mattapan,2021,7,33,1
-Mission Hill,2021,7,160,14
-Roslindale,2021,7,610,40
-Roxbury,2021,7,1418,39
-South Boston,2021,7,154,4
-South Boston / South Boston Waterfront,2021,7,919,33
-South End,2021,7,505,30
-West Roxbury,2021,7,771,102
-Allston,2021,8,30,1
-Allston / Brighton,2021,8,762,29
-Back Bay,2021,8,446,36
-Beacon Hill,2021,8,289,17
-Boston,2021,8,335,11
-Brighton,2021,8,51,3
-Charlestown,2021,8,347,29
-Chestnut Hill,2021,8,3,0
-Dorchester,2021,8,2396,39
-Downtown / Financial District,2021,8,600,35
-East Boston,2021,8,724,22
-Fenway / Kenmore / Audubon Circle / Longwood,2021,8,244,7
-Greater Mattapan,2021,8,883,30
-Hyde Park,2021,8,702,13
-Jamaica Plain,2021,8,795,33
-Mattapan,2021,8,31,3
-Mission Hill,2021,8,212,2
-Roslindale,2021,8,557,33
-Roxbury,2021,8,1416,33
-South Boston,2021,8,145,2
-South Boston / South Boston Waterfront,2021,8,968,19
-South End,2021,8,595,29
-West Roxbury,2021,8,521,37
-Allston,2021,9,27,1
-Allston / Brighton,2021,9,941,18
-Back Bay,2021,9,535,34
-Beacon Hill,2021,9,320,10
-Boston,2021,9,396,21
-Brighton,2021,9,73,0
-Charlestown,2021,9,386,19
-Dorchester,2021,9,2231,28
-Downtown / Financial District,2021,9,605,43
-East Boston,2021,9,675,15
-Fenway / Kenmore / Audubon Circle / Longwood,2021,9,267,8
-Greater Mattapan,2021,9,703,17
-Hyde Park,2021,9,646,8
-Jamaica Plain,2021,9,785,21
-Mattapan,2021,9,36,0
-Mission Hill,2021,9,248,21
-Roslindale,2021,9,515,17
-Roxbury,2021,9,1358,27
-South Boston,2021,9,100,2
-South Boston / South Boston Waterfront,2021,9,1062,21
-South End,2021,9,570,16
-West Roxbury,2021,9,490,28
-Allston,2021,10,26,2
-Allston / Brighton,2021,10,740,14
-Back Bay,2021,10,565,34
-Beacon Hill,2021,10,264,15
-Boston,2021,10,347,14
-Brighton,2021,10,50,0
-Charlestown,2021,10,328,11
-Dorchester,2021,10,2009,27
-Downtown / Financial District,2021,10,576,44
-East Boston,2021,10,654,9
-Fenway / Kenmore / Audubon Circle / Longwood,2021,10,230,8
-Greater Mattapan,2021,10,753,15
-Hyde Park,2021,10,564,8
-Jamaica Plain,2021,10,698,21
-Mattapan,2021,10,26,0
-Mission Hill,2021,10,204,11
-Roslindale,2021,10,488,19
-Roxbury,2021,10,1234,34
-South Boston,2021,10,116,5
-South Boston / South Boston Waterfront,2021,10,873,12
-South End,2021,10,546,15
-West Roxbury,2021,10,546,13
-Allston,2021,11,22,0
-Allston / Brighton,2021,11,667,21
-Back Bay,2021,11,388,29
-Beacon Hill,2021,11,247,10
-Boston,2021,11,318,12
-Brighton,2021,11,47,1
-Charlestown,2021,11,312,17
-Dorchester,2021,11,2004,22
-Downtown / Financial District,2021,11,432,17
-East Boston,2021,11,503,9
-Fenway / Kenmore / Audubon Circle / Longwood,2021,11,201,7
-Greater Mattapan,2021,11,708,8
-Hyde Park,2021,11,596,5
-Jamaica Plain,2021,11,663,14
-Mattapan,2021,11,30,2
-Mission Hill,2021,11,169,10
-Roslindale,2021,11,383,4
-Roxbury,2021,11,1058,19
-South Boston,2021,11,63,0
-South Boston / South Boston Waterfront,2021,11,643,19
-South End,2021,11,440,17
-West Roxbury,2021,11,483,9
-Allston,2021,12,26,0
-Allston / Brighton,2021,12,554,14
-Back Bay,2021,12,314,10
-Beacon Hill,2021,12,200,8
-Boston,2021,12,249,13
-Brighton,2021,12,54,1
-Charlestown,2021,12,307,8
-Dorchester,2021,12,1536,16
-Downtown / Financial District,2021,12,388,13
-East Boston,2021,12,406,15
-Fenway / Kenmore / Audubon Circle / Longwood,2021,12,167,9
-Greater Mattapan,2021,12,506,7
-Hyde Park,2021,12,437,8
-Jamaica Plain,2021,12,520,19
-Mattapan,2021,12,24,0
-Mission Hill,2021,12,112,7
-Roslindale,2021,12,351,12
-Roxbury,2021,12,882,18
-South Boston,2021,12,57,1
-South Boston / South Boston Waterfront,2021,12,565,16
-South End,2021,12,385,13
-West Roxbury,2021,12,347,20
-Allston,2022,1,37,1
-Allston / Brighton,2022,1,611,15
-Back Bay,2022,1,423,22
-Beacon Hill,2022,1,219,13
-Boston,2022,1,294,8
-Brighton,2022,1,53,1
-Charlestown,2022,1,351,16
-Chestnut Hill,2022,1,2,0
-Dorchester,2022,1,1760,30
-Downtown / Financial District,2022,1,478,27
-East Boston,2022,1,484,7
-Fenway / Kenmore / Audubon Circle / Longwood,2022,1,188,13
-Greater Mattapan,2022,1,622,15
-Hyde Park,2022,1,534,12
-Jamaica Plain,2022,1,613,21
-Mattapan,2022,1,16,0
-Mission Hill,2022,1,153,10
-Roslindale,2022,1,414,11
-Roxbury,2022,1,1080,25
-South Boston,2022,1,78,0
-South Boston / South Boston Waterfront,2022,1,713,50
-South End,2022,1,448,16
-West Roxbury,2022,1,375,19
-Allston,2022,2,27,2
-Allston / Brighton,2022,2,650,92
-Back Bay,2022,2,413,39
-Beacon Hill,2022,2,225,24
-Boston,2022,2,305,26
-Brighton,2022,2,45,7
-Charlestown,2022,2,355,79
-Chestnut Hill,2022,2,1,0
-Dorchester,2022,2,1890,125
-Downtown / Financial District,2022,2,567,81
-East Boston,2022,2,665,40
-Fenway / Kenmore / Audubon Circle / Longwood,2022,2,250,49
-Greater Mattapan,2022,2,702,81
-Hyde Park,2022,2,567,90
-Jamaica Plain,2022,2,845,122
-Mattapan,2022,2,23,1
-Mission Hill,2022,2,186,48
-Roslindale,2022,2,450,67
-Roxbury,2022,2,1243,112
-South Boston,2022,2,92,9
-South Boston / South Boston Waterfront,2022,2,759,44
-South End,2022,2,528,51
-West Roxbury,2022,2,495,116
-Allston,2022,3,32,8
-Allston / Brighton,2022,3,758,128
-Back Bay,2022,3,567,152
-Beacon Hill,2022,3,256,32
-Boston,2022,3,366,51
-Brighton,2022,3,52,4
-Charlestown,2022,3,412,67
-Chestnut Hill,2022,3,1,0
-Dorchester,2022,3,1849,116
-Downtown / Financial District,2022,3,562,82
-East Boston,2022,3,577,35
-Fenway / Kenmore / Audubon Circle / Longwood,2022,3,264,79
-Greater Mattapan,2022,3,604,52
-Hyde Park,2022,3,607,41
-Jamaica Plain,2022,3,764,121
-Mattapan,2022,3,17,2
-Mission Hill,2022,3,306,63
-Roslindale,2022,3,405,49
-Roxbury,2022,3,1199,123
-South Boston,2022,3,92,6
-South Boston / South Boston Waterfront,2022,3,759,61
-South End,2022,3,570,76
-West Roxbury,2022,3,451,95
-Allston,2022,4,30,5
-Allston / Brighton,2022,4,721,82
-Back Bay,2022,4,512,86
-Beacon Hill,2022,4,268,35
-Boston,2022,4,374,32
-Brighton,2022,4,50,4
-Charlestown,2022,4,391,37
-Chestnut Hill,2022,4,1,0
-Dorchester,2022,4,1834,99
-Downtown / Financial District,2022,4,608,117
-East Boston,2022,4,654,16
-Fenway / Kenmore / Audubon Circle / Longwood,2022,4,264,46
-Greater Mattapan,2022,4,550,30
-Hyde Park,2022,4,481,22
-Jamaica Plain,2022,4,697,52
-Mattapan,2022,4,16,0
-Mission Hill,2022,4,201,26
-Roslindale,2022,4,442,44
-Roxbury,2022,4,1095,104
-South Boston,2022,4,65,2
-South Boston / South Boston Waterfront,2022,4,637,39
-South End,2022,4,725,69
-West Roxbury,2022,4,463,75
-Allston,2022,5,39,2
-Allston / Brighton,2022,5,877,53
-Back Bay,2022,5,731,27
-Beacon Hill,2022,5,432,17
-Boston,2022,5,459,26
-Brighton,2022,5,63,4
-Charlestown,2022,5,456,27
-Chestnut Hill,2022,5,2,0
-Dorchester,2022,5,1960,38
-Downtown / Financial District,2022,5,808,52
-East Boston,2022,5,895,75
-Fenway / Kenmore / Audubon Circle / Longwood,2022,5,275,34
-Greater Mattapan,2022,5,469,26
-Hyde Park,2022,5,470,21
-Jamaica Plain,2022,5,712,38
-Mattapan,2022,5,27,1
-Mission Hill,2022,5,285,11
-Roslindale,2022,5,542,42
-Roxbury,2022,5,1064,51
-South Boston,2022,5,110,1
-South Boston / South Boston Waterfront,2022,5,1039,30
-South End,2022,5,941,21
-West Roxbury,2022,5,387,41
-Allston,2022,6,35,2
-Allston / Brighton,2022,6,954,26
-Back Bay,2022,6,786,38
-Beacon Hill,2022,6,560,7
-Boston,2022,6,506,20
-Brighton,2022,6,91,3
-Charlestown,2022,6,471,11
-Chestnut Hill,2022,6,2,0
-Dorchester,2022,6,1930,38
-Downtown / Financial District,2022,6,929,20
-East Boston,2022,6,1332,151
-Fenway / Kenmore / Audubon Circle / Longwood,2022,6,189,5
-Greater Mattapan,2022,6,487,12
-Hyde Park,2022,6,520,17
-Jamaica Plain,2022,6,763,18
-Mattapan,2022,6,27,0
-Mission Hill,2022,6,323,4
-Roslindale,2022,6,499,9
-Roxbury,2022,6,1148,27
-South Boston,2022,6,120,3
-South Boston / South Boston Waterfront,2022,6,1289,21
-South End,2022,6,1108,18
-West Roxbury,2022,6,431,10
-Allston,2022,7,30,2
-Allston / Brighton,2022,7,891,18
-Back Bay,2022,7,696,18
-Beacon Hill,2022,7,446,7
-Boston,2022,7,451,11
-Brighton,2022,7,71,2
-Charlestown,2022,7,399,4
-Chestnut Hill,2022,7,2,0
-Dorchester,2022,7,1356,16
-Downtown / Financial District,2022,7,871,16
-East Boston,2022,7,726,62
-Fenway / Kenmore / Audubon Circle / Longwood,2022,7,173,10
-Greater Mattapan,2022,7,300,8
-Hyde Park,2022,7,318,47
-Jamaica Plain,2022,7,506,20
-Mattapan,2022,7,23,5
-Mission Hill,2022,7,295,5
-Roslindale,2022,7,368,13
-Roxbury,2022,7,857,16
-South Boston,2022,7,101,1
-South Boston / South Boston Waterfront,2022,7,1076,5
-South End,2022,7,1085,12
-West Roxbury,2022,7,281,6
-Allston,2022,8,68,0
-Allston / Brighton,2022,8,1346,12
-Back Bay,2022,8,831,15
-Beacon Hill,2022,8,624,1
-Boston,2022,8,637,7
-Brighton,2022,8,112,2
-Charlestown,2022,8,390,3
-Chestnut Hill,2022,8,3,0
-Dorchester,2022,8,1596,14
-Downtown / Financial District,2022,8,1241,18
-East Boston,2022,8,961,47
-Fenway / Kenmore / Audubon Circle / Longwood,2022,8,306,5
-Greater Mattapan,2022,8,299,6
-Hyde Park,2022,8,318,11
-Jamaica Plain,2022,8,609,8
-Mattapan,2022,8,29,0
-Mission Hill,2022,8,368,0
-Roslindale,2022,8,413,6
-Roxbury,2022,8,1029,5
-South Boston,2022,8,162,0
-South Boston / South Boston Waterfront,2022,8,1445,3
-South End,2022,8,1164,17
-West Roxbury,2022,8,334,1
-Allston,2022,9,46,0
-Allston / Brighton,2022,9,1153,15
-Back Bay,2022,9,771,8
-Beacon Hill,2022,9,754,7
-Boston,2022,9,581,6
-Brighton,2022,9,91,0
-Charlestown,2022,9,392,10
-Chestnut Hill,2022,9,2,0
-Dorchester,2022,9,1365,25
-Downtown / Financial District,2022,9,1052,18
-East Boston,2022,9,1008,50
-Fenway / Kenmore / Audubon Circle / Longwood,2022,9,332,3
-Greater Mattapan,2022,9,293,6
-Hyde Park,2022,9,233,19
-Jamaica Plain,2022,9,663,14
-Mattapan,2022,9,28,0
-Mission Hill,2022,9,423,6
-Roslindale,2022,9,373,12
-Roxbury,2022,9,837,18
-South Boston,2022,9,134,0
-South Boston / South Boston Waterfront,2022,9,1617,6
-South End,2022,9,1226,9
-West Roxbury,2022,9,284,5
-Allston,2022,10,35,0
-Allston / Brighton,2022,10,1018,8
-Back Bay,2022,10,725,10
-Beacon Hill,2022,10,547,6
-Boston,2022,10,570,9
-Brighton,2022,10,65,0
-Charlestown,2022,10,477,16
-Chestnut Hill,2022,10,1,0
-Dorchester,2022,10,1568,10
-Downtown / Financial District,2022,10,943,8
-East Boston,2022,10,937,25
-Fenway / Kenmore / Audubon Circle / Longwood,2022,10,234,3
-Greater Mattapan,2022,10,311,3
-Hyde Park,2022,10,335,12
-Jamaica Plain,2022,10,611,17
-Mattapan,2022,10,29,0
-Mission Hill,2022,10,198,3
-Roslindale,2022,10,380,8
-Roxbury,2022,10,933,10
-South Boston,2022,10,145,2
-South Boston / South Boston Waterfront,2022,10,1319,8
-South End,2022,10,1314,6
-West Roxbury,2022,10,296,3
-Allston,2022,11,41,0
-Allston / Brighton,2022,11,736,15
-Back Bay,2022,11,746,18
-Beacon Hill,2022,11,446,6
-Boston,2022,11,476,10
-Brighton,2022,11,67,1
-Charlestown,2022,11,381,13
-Chestnut Hill,2022,11,4,0
-Dorchester,2022,11,1303,30
-Downtown / Financial District,2022,11,670,9
-East Boston,2022,11,870,63
-Fenway / Kenmore / Audubon Circle / Longwood,2022,11,176,7
-Greater Mattapan,2022,11,330,16
-Hyde Park,2022,11,360,17
-Jamaica Plain,2022,11,590,14
-Mattapan,2022,11,25,1
-Mission Hill,2022,11,154,6
-Roslindale,2022,11,311,13
-Roxbury,2022,11,770,8
-South Boston,2022,11,102,0
-South Boston / South Boston Waterfront,2022,11,985,4
-South End,2022,11,935,14
-West Roxbury,2022,11,285,5
-Allston,2022,12,29,0
-Allston / Brighton,2022,12,595,19
-Back Bay,2022,12,558,14
-Beacon Hill,2022,12,438,8
-Boston,2022,12,307,7
-Brighton,2022,12,44,1
-Charlestown,2022,12,257,5
-Dorchester,2022,12,1025,33
-Downtown / Financial District,2022,12,551,7
-East Boston,2022,12,794,36
-Fenway / Kenmore / Audubon Circle / Longwood,2022,12,187,7
-Greater Mattapan,2022,12,176,12
-Hyde Park,2022,12,218,5
-Jamaica Plain,2022,12,478,35
-Mattapan,2022,12,11,0
-Mission Hill,2022,12,141,8
-Roslindale,2022,12,250,7
-Roxbury,2022,12,642,20
-South Boston,2022,12,73,1
-South Boston / South Boston Waterfront,2022,12,853,8
-South End,2022,12,914,9
-West Roxbury,2022,12,195,12
-Allston,2023,1,36,2
-Allston / Brighton,2023,1,827,41
-Back Bay,2023,1,545,27
-Beacon Hill,2023,1,423,12
-Boston,2023,1,427,16
-Brighton,2023,1,73,2
-Charlestown,2023,1,343,24
-Dorchester,2023,1,1368,107
-Downtown / Financial District,2023,1,657,41
-East Boston,2023,1,951,54
-Fenway / Kenmore / Audubon Circle / Longwood,2023,1,181,24
-Greater Mattapan,2023,1,401,81
-Hyde Park,2023,1,239,51
-Jamaica Plain,2023,1,582,46
-Mattapan,2023,1,20,2
-Mission Hill,2023,1,178,23
-Roslindale,2023,1,306,20
-Roxbury,2023,1,776,46
-South Boston,2023,1,128,2
-South Boston / South Boston Waterfront,2023,1,973,39
-South End,2023,1,900,29
-West Roxbury,2023,1,228,39
-Allston,2023,2,40,2
-Allston / Brighton,2023,2,814,20
-Back Bay,2023,2,556,37
-Beacon Hill,2023,2,412,5
-Boston,2023,2,436,19
-Brighton,2023,2,89,5
-Charlestown,2023,2,386,5
-Dorchester,2023,2,1483,68
-Downtown / Financial District,2023,2,677,15
-East Boston,2023,2,1069,77
-Fenway / Kenmore / Audubon Circle / Longwood,2023,2,180,7
-Greater Mattapan,2023,2,450,33
-Hyde Park,2023,2,357,53
-Jamaica Plain,2023,2,604,44
-Mattapan,2023,2,29,0
-Mission Hill,2023,2,192,6
-Roslindale,2023,2,343,27
-Roxbury,2023,2,891,30
-South Boston,2023,2,114,1
-South Boston / South Boston Waterfront,2023,2,1099,24
-South End,2023,2,912,21
-West Roxbury,2023,2,279,27
-Allston,2023,3,61,0
-Allston / Brighton,2023,3,885,54
-Back Bay,2023,3,633,18
-Beacon Hill,2023,3,408,17
-Boston,2023,3,450,19
-Brighton,2023,3,83,3
-Charlestown,2023,3,354,20
-Dorchester,2023,3,1536,89
-Downtown / Financial District,2023,3,635,30
-East Boston,2023,3,1184,64
-Fenway / Kenmore / Audubon Circle / Longwood,2023,3,192,15
-Greater Mattapan,2023,3,333,40
-Hyde Park,2023,3,348,69
-Jamaica Plain,2023,3,562,66
-Mattapan,2023,3,23,2
-Mission Hill,2023,3,209,25
-Roslindale,2023,3,351,33
-Roxbury,2023,3,820,55
-South Boston,2023,3,152,3
-South Boston / South Boston Waterfront,2023,3,1192,20
-South End,2023,3,1098,25
-West Roxbury,2023,3,238,31
-Allston,2023,4,50,1
-Allston / Brighton,2023,4,764,32
-Back Bay,2023,4,673,32
-Beacon Hill,2023,4,447,13
-Boston,2023,4,487,14
-Brighton,2023,4,84,4
-Charlestown,2023,4,397,9
-Dorchester,2023,4,1501,45
-Downtown / Financial District,2023,4,628,41
-East Boston,2023,4,1143,212
-Fenway / Kenmore / Audubon Circle / Longwood,2023,4,275,14
-Greater Mattapan,2023,4,401,46
-Hyde Park,2023,4,269,25
-Jamaica Plain,2023,4,529,30
-Mattapan,2023,4,33,2
-Mission Hill,2023,4,232,19
-Roslindale,2023,4,276,13
-Roxbury,2023,4,818,41
-South Boston,2023,4,109,2
-South Boston / South Boston Waterfront,2023,4,913,22
-South End,2023,4,988,33
-West Roxbury,2023,4,274,11
-Allston,2023,5,50,0
-Allston / Brighton,2023,5,1012,31
-Back Bay,2023,5,544,33
-Beacon Hill,2023,5,502,27
-Boston,2023,5,561,25
-Brighton,2023,5,94,6
-Charlestown,2023,5,494,39
-Dorchester,2023,5,2236,62
-Downtown / Financial District,2023,5,648,59
-East Boston,2023,5,962,27
-Fenway / Kenmore / Audubon Circle / Longwood,2023,5,253,19
-Greater Mattapan,2023,5,692,11
-Hyde Park,2023,5,675,14
-Jamaica Plain,2023,5,866,43
-Mattapan,2023,5,30,0
-Mission Hill,2023,5,247,13
-Roslindale,2023,5,510,31
-Roxbury,2023,5,1296,45
-South Boston,2023,5,101,8
-South Boston / South Boston Waterfront,2023,5,831,35
-South End,2023,5,821,36
-West Roxbury,2023,5,521,22
-Allston,2023,6,42,0
-Allston / Brighton,2023,6,1052,43
-Back Bay,2023,6,497,44
-Beacon Hill,2023,6,289,10
-Boston,2023,6,492,25
-Brighton,2023,6,72,3
-Charlestown,2023,6,518,49
-Dorchester,2023,6,2825,48
-Downtown / Financial District,2023,6,565,52
-East Boston,2023,6,1089,17
-Fenway / Kenmore / Audubon Circle / Longwood,2023,6,270,28
-Greater Mattapan,2023,6,885,9
-Hyde Park,2023,6,848,16
-Jamaica Plain,2023,6,1019,23
-Mattapan,2023,6,27,0
-Mission Hill,2023,6,265,21
-Roslindale,2023,6,767,45
-Roxbury,2023,6,1507,34
-South Boston,2023,6,106,5
-South Boston / South Boston Waterfront,2023,6,812,32
-South End,2023,6,641,23
-West Roxbury,2023,6,722,37
-Allston,2023,7,42,1
-Allston / Brighton,2023,7,1084,43
-Back Bay,2023,7,489,46
-Beacon Hill,2023,7,291,25
-Boston,2023,7,466,39
-Brighton,2023,7,103,4
-Charlestown,2023,7,429,27
-Chestnut Hill,2023,7,1,0
-Dorchester,2023,7,2708,51
-Downtown / Financial District,2023,7,535,39
-East Boston,2023,7,1011,20
-Fenway / Kenmore / Audubon Circle / Longwood,2023,7,252,22
-Greater Mattapan,2023,7,1059,14
-Hyde Park,2023,7,830,23
-Jamaica Plain,2023,7,1007,29
-Mattapan,2023,7,45,0
-Mission Hill,2023,7,277,14
-Roslindale,2023,7,705,47
-Roxbury,2023,7,1657,45
-South Boston,2023,7,106,6
-South Boston / South Boston Waterfront,2023,7,779,29
-South End,2023,7,631,28
-West Roxbury,2023,7,650,38
-Allston,2023,8,52,4
-Allston / Brighton,2023,8,1450,59
-Back Bay,2023,8,598,37
-Beacon Hill,2023,8,360,15
-Boston,2023,8,519,21
-Brighton,2023,8,97,2
-Charlestown,2023,8,466,21
-Chestnut Hill,2023,8,1,0
-Dorchester,2023,8,2988,60
-Downtown / Financial District,2023,8,637,55
-East Boston,2023,8,1157,16
-Fenway / Kenmore / Audubon Circle / Longwood,2023,8,314,34
-Greater Mattapan,2023,8,1022,25
-Hyde Park,2023,8,910,31
-Jamaica Plain,2023,8,1156,35
-Mattapan,2023,8,36,0
-Mission Hill,2023,8,427,36
-Roslindale,2023,8,728,48
-Roxbury,2023,8,1794,40
-South Boston,2023,8,114,3
-South Boston / South Boston Waterfront,2023,8,1158,26
-South End,2023,8,771,40
-West Roxbury,2023,8,783,45
-Allston,2023,9,46,3
-Allston / Brighton,2023,9,1163,39
-Back Bay,2023,9,553,66
-Beacon Hill,2023,9,308,10
-Boston,2023,9,419,25
-Brighton,2023,9,93,3
-Charlestown,2023,9,408,23
-Dorchester,2023,9,2399,41
-Downtown / Financial District,2023,9,489,35
-East Boston,2023,9,831,9
-Fenway / Kenmore / Audubon Circle / Longwood,2023,9,261,24
-Greater Mattapan,2023,9,801,16
-Hyde Park,2023,9,644,20
-Jamaica Plain,2023,9,868,36
-Mattapan,2023,9,33,1
-Mission Hill,2023,9,303,13
-Roslindale,2023,9,539,27
-Roxbury,2023,9,1439,36
-South Boston,2023,9,102,3
-South Boston / South Boston Waterfront,2023,9,1013,25
-South End,2023,9,591,32
-West Roxbury,2023,9,556,34
-Allston,2023,10,40,0
-Allston / Brighton,2023,10,948,32
-Back Bay,2023,10,420,44
-Beacon Hill,2023,10,273,15
-Boston,2023,10,380,21
-Brighton,2023,10,62,1
-Charlestown,2023,10,429,19
-Dorchester,2023,10,2378,19
-Downtown / Financial District,2023,10,484,28
-East Boston,2023,10,790,5
-Fenway / Kenmore / Audubon Circle / Longwood,2023,10,222,17
-Greater Mattapan,2023,10,792,9
-Hyde Park,2023,10,620,14
-Jamaica Plain,2023,10,832,20
-Mattapan,2023,10,21,0
-Mission Hill,2023,10,218,8
-Roslindale,2023,10,588,16
-Roxbury,2023,10,1380,25
-South Boston,2023,10,104,2
-South Boston / South Boston Waterfront,2023,10,755,26
-South End,2023,10,601,33
-West Roxbury,2023,10,602,26
-Allston,2023,11,27,1
-Allston / Brighton,2023,11,509,20
-Back Bay,2023,11,300,26
-Beacon Hill,2023,11,152,4
-Boston,2023,11,224,8
-Brighton,2023,11,35,0
-Charlestown,2023,11,286,10
-Chestnut Hill,2023,11,1,0
-Dorchester,2023,11,1328,15
-Downtown / Financial District,2023,11,270,22
-East Boston,2023,11,486,3
-Fenway / Kenmore / Audubon Circle / Longwood,2023,11,123,1
-Greater Mattapan,2023,11,493,9
-Hyde Park,2023,11,393,11
-Jamaica Plain,2023,11,465,7
-Mattapan,2023,11,18,1
-Mission Hill,2023,11,115,2
-Roslindale,2023,11,335,13
-Roxbury,2023,11,780,12
-South Boston,2023,11,50,2
-South Boston / South Boston Waterfront,2023,11,427,11
-South End,2023,11,288,13
-West Roxbury,2023,11,346,10
-Allston,2023,12,30,0
-Allston / Brighton,2023,12,782,10
-Back Bay,2023,12,447,17
-Beacon Hill,2023,12,328,9
-Boston,2023,12,313,19
-Brighton,2023,12,43,0
-Charlestown,2023,12,351,13
-Dorchester,2023,12,1733,17
-Downtown / Financial District,2023,12,515,34
-East Boston,2023,12,549,3
-Fenway / Kenmore / Audubon Circle / Longwood,2023,12,141,5
-Greater Mattapan,2023,12,572,7
-Hyde Park,2023,12,563,8
-Jamaica Plain,2023,12,681,17
-Mattapan,2023,12,21,2
-Mission Hill,2023,12,168,2
-Roslindale,2023,12,427,9
-Roxbury,2023,12,1064,24
-South Boston,2023,12,73,4
-South Boston / South Boston Waterfront,2023,12,746,28
-South End,2023,12,601,10
-West Roxbury,2023,12,499,13
-Allston,2024,1,55,1
-Allston / Brighton,2024,1,915,47
-Back Bay,2024,1,570,15
-Beacon Hill,2024,1,583,9
-Boston,2024,1,449,15
-Brighton,2024,1,91,7
-Charlestown,2024,1,437,18
-Dorchester,2024,1,1531,78
-Downtown / Financial District,2024,1,644,21
-East Boston,2024,1,817,20
-Fenway / Kenmore / Audubon Circle / Longwood,2024,1,205,11
-Greater Mattapan,2024,1,304,34
-Hyde Park,2024,1,321,50
-Jamaica Plain,2024,1,661,45
-Mattapan,2024,1,37,0
-Mission Hill,2024,1,186,14
-Roslindale,2024,1,348,20
-Roxbury,2024,1,928,47
-South Boston,2024,1,132,1
-South Boston / South Boston Waterfront,2024,1,1237,15
-South End,2024,1,1035,10
-West Roxbury,2024,1,343,24
-Allston,2024,2,37,1
-Allston / Brighton,2024,2,707,43
-Back Bay,2024,2,588,26
-Beacon Hill,2024,2,515,3
-Boston,2024,2,488,15
-Brighton,2024,2,75,7
-Charlestown,2024,2,333,12
-Chestnut Hill,2024,2,4,0
-Dorchester,2024,2,1380,56
-Downtown / Financial District,2024,2,638,26
-East Boston,2024,2,712,97
-Fenway / Kenmore / Audubon Circle / Longwood,2024,2,156,13
-Greater Mattapan,2024,2,334,38
-Hyde Park,2024,2,291,64
-Jamaica Plain,2024,2,538,25
-Mattapan,2024,2,25,1
-Mission Hill,2024,2,221,7
-Roslindale,2024,2,302,11
-Roxbury,2024,2,787,30
-South Boston,2024,2,136,4
-South Boston / South Boston Waterfront,2024,2,1101,25
-South End,2024,2,933,13
-West Roxbury,2024,2,219,15
-Allston,2024,3,50,3
-Allston / Brighton,2024,3,948,68
-Back Bay,2024,3,704,33
-Beacon Hill,2024,3,490,12
-Boston,2024,3,734,28
-Brighton,2024,3,101,10
-Charlestown,2024,3,464,25
-Dorchester,2024,3,1512,93
-Downtown / Financial District,2024,3,677,40
-East Boston,2024,3,968,64
-Fenway / Kenmore / Audubon Circle / Longwood,2024,3,221,21
-Greater Mattapan,2024,3,508,64
-Hyde Park,2024,3,340,48
-Jamaica Plain,2024,3,733,90
-Mattapan,2024,3,59,8
-Mission Hill,2024,3,178,24
-Roslindale,2024,3,378,19
-Roxbury,2024,3,864,72
-South Boston,2024,3,160,1
-South Boston / South Boston Waterfront,2024,3,1300,42
-South End,2024,3,1133,26
-West Roxbury,2024,3,268,15
-Allston,2024,4,69,4
-Allston / Brighton,2024,4,943,35
-Back Bay,2024,4,830,48
-Beacon Hill,2024,4,462,14
-Boston,2024,4,673,31
-Brighton,2024,4,86,2
-Charlestown,2024,4,458,12
-Dorchester,2024,4,1534,51
-Downtown / Financial District,2024,4,799,40
-East Boston,2024,4,918,129
-Fenway / Kenmore / Audubon Circle / Longwood,2024,4,290,20
-Greater Mattapan,2024,4,327,37
-Hyde Park,2024,4,388,106
-Jamaica Plain,2024,4,715,64
-Mattapan,2024,4,65,3
-Mission Hill,2024,4,220,27
-Roslindale,2024,4,365,26
-Roxbury,2024,4,906,62
-South Boston,2024,4,146,2
-South Boston / South Boston Waterfront,2024,4,1128,14
-South End,2024,4,1211,43
-West Roxbury,2024,4,313,34
-Allston,2024,5,59,5
-Allston / Brighton,2024,5,954,28
-Back Bay,2024,5,488,70
-Beacon Hill,2024,5,299,20
-Boston,2024,5,456,24
-Brighton,2024,5,77,5
-Charlestown,2024,5,384,24
-Chestnut Hill,2024,5,2,0
-Dorchester,2024,5,2000,73
-Downtown / Financial District,2024,5,596,56
-East Boston,2024,5,766,41
-Fenway / Kenmore / Audubon Circle / Longwood,2024,5,210,27
-Greater Mattapan,2024,5,642,29
-Hyde Park,2024,5,715,22
-Jamaica Plain,2024,5,889,36
-Mattapan,2024,5,41,1
-Mission Hill,2024,5,212,2
-Roslindale,2024,5,495,9
-Roxbury,2024,5,1252,59
-South Boston,2024,5,111,7
-South Boston / South Boston Waterfront,2024,5,762,48
-South End,2024,5,733,46
-West Roxbury,2024,5,637,18
-Allston,2024,6,37,1
-Allston / Brighton,2024,6,964,41
-Back Bay,2024,6,504,60
-Beacon Hill,2024,6,278,11
-Boston,2024,6,495,28
-Brighton,2024,6,82,3
-Charlestown,2024,6,436,14
-Chestnut Hill,2024,6,1,0
-Dorchester,2024,6,2156,51
-Downtown / Financial District,2024,6,514,53
-East Boston,2024,6,742,11
-Fenway / Kenmore / Audubon Circle / Longwood,2024,6,184,24
-Greater Mattapan,2024,6,772,14
-Hyde Park,2024,6,717,21
-Jamaica Plain,2024,6,813,24
-Mattapan,2024,6,38,0
-Mission Hill,2024,6,167,14
-Roslindale,2024,6,529,18
-Roxbury,2024,6,1254,34
-South Boston,2024,6,100,8
-South Boston / South Boston Waterfront,2024,6,755,48
-South End,2024,6,583,31
-West Roxbury,2024,6,613,26
-Allston,2024,7,44,2
-Allston / Brighton,2024,7,1013,50
-Back Bay,2024,7,442,35
-Beacon Hill,2024,7,259,9
-Boston,2024,7,444,10
-Brighton,2024,7,68,2
-Charlestown,2024,7,332,16
-Dorchester,2024,7,2105,39
-Downtown / Financial District,2024,7,528,52
-East Boston,2024,7,886,24
-Fenway / Kenmore / Audubon Circle / Longwood,2024,7,201,10
-Greater Mattapan,2024,7,818,20
-Hyde Park,2024,7,788,15
-Jamaica Plain,2024,7,810,41
-Mattapan,2024,7,43,1
-Mission Hill,2024,7,178,7
-Roslindale,2024,7,614,8
-Roxbury,2024,7,1393,44
-South Boston,2024,7,90,0
-South Boston / South Boston Waterfront,2024,7,728,36
-South End,2024,7,580,37
-West Roxbury,2024,7,596,19
-Allston,2024,8,40,0
-Allston / Brighton,2024,8,773,44
-Back Bay,2024,8,368,24
-Beacon Hill,2024,8,166,6
-Boston,2024,8,349,15
-Brighton,2024,8,66,5
-Charlestown,2024,8,291,16
-Dorchester,2024,8,1533,20
-Downtown / Financial District,2024,8,426,31
-East Boston,2024,8,625,7
-Fenway / Kenmore / Audubon Circle / Longwood,2024,8,238,8
-Greater Mattapan,2024,8,540,9
-Hyde Park,2024,8,458,9
-Jamaica Plain,2024,8,668,16
-Mattapan,2024,8,18,1
-Mission Hill,2024,8,179,2
-Roslindale,2024,8,393,4
-Roxbury,2024,8,900,18
-South Boston,2024,8,90,3
-South Boston / South Boston Waterfront,2024,8,590,28
-South End,2024,8,457,7
-West Roxbury,2024,8,388,15
-Allston,2024,9,44,0
-Allston / Brighton,2024,9,820,33
-Back Bay,2024,9,515,18
-Beacon Hill,2024,9,257,22
-Boston,2024,9,422,17
-Brighton,2024,9,75,7
-Charlestown,2024,9,419,9
-Dorchester,2024,9,1835,54
-Downtown / Financial District,2024,9,517,27
-East Boston,2024,9,634,6
-Fenway / Kenmore / Audubon Circle / Longwood,2024,9,268,9
-Greater Mattapan,2024,9,616,16
-Hyde Park,2024,9,601,8
-Jamaica Plain,2024,9,757,32
-Mattapan,2024,9,21,1
-Mission Hill,2024,9,225,2
-Roslindale,2024,9,506,7
-Roxbury,2024,9,1267,25
-South Boston,2024,9,98,4
-South Boston / South Boston Waterfront,2024,9,809,28
-South End,2024,9,503,18
-West Roxbury,2024,9,492,7
-Allston,2024,10,33,3
-Allston / Brighton,2024,10,770,34
-Back Bay,2024,10,475,23
-Beacon Hill,2024,10,233,6
-Boston,2024,10,392,14
-Brighton,2024,10,58,4
-Charlestown,2024,10,387,15
-Dorchester,2024,10,1574,32
-Downtown / Financial District,2024,10,466,24
-East Boston,2024,10,606,9
-Fenway / Kenmore / Audubon Circle / Longwood,2024,10,183,5
-Greater Mattapan,2024,10,579,7
-Hyde Park,2024,10,575,6
-Jamaica Plain,2024,10,712,23
-Mattapan,2024,10,26,0
-Mission Hill,2024,10,150,0
-Roslindale,2024,10,464,11
-Roxbury,2024,10,1144,22
-South Boston,2024,10,53,1
-South Boston / South Boston Waterfront,2024,10,628,22
-South End,2024,10,526,17
-West Roxbury,2024,10,542,10
-Allston,2024,11,35,2
-Allston / Brighton,2024,11,634,15
-Back Bay,2024,11,363,14
-Beacon Hill,2024,11,164,2
-Boston,2024,11,318,6
-Brighton,2024,11,47,5
-Charlestown,2024,11,256,7
-Dorchester,2024,11,1574,24
-Downtown / Financial District,2024,11,339,15
-East Boston,2024,11,522,7
-Fenway / Kenmore / Audubon Circle / Longwood,2024,11,124,2
-Greater Mattapan,2024,11,520,2
-Hyde Park,2024,11,511,1
-Jamaica Plain,2024,11,626,9
-Mattapan,2024,11,20,0
-Mission Hill,2024,11,108,1
-Roslindale,2024,11,463,9
-Roxbury,2024,11,980,13
-South Boston,2024,11,71,2
-South Boston / South Boston Waterfront,2024,11,519,12
-South End,2024,11,398,7
-West Roxbury,2024,11,474,6
-Allston,2024,12,46,1
-Allston / Brighton,2024,12,658,30
-Back Bay,2024,12,370,13
-Beacon Hill,2024,12,141,5
-Boston,2024,12,278,6
-Brighton,2024,12,52,4
-Charlestown,2024,12,221,12
-Dorchester,2024,12,1480,33
-Downtown / Financial District,2024,12,358,11
-East Boston,2024,12,452,12
-Fenway / Kenmore / Audubon Circle / Longwood,2024,12,168,6
-Greater Mattapan,2024,12,508,8
-Hyde Park,2024,12,514,9
-Jamaica Plain,2024,12,691,18
-Mattapan,2024,12,30,5
-Mission Hill,2024,12,130,2
-Roslindale,2024,12,421,3
-Roxbury,2024,12,904,27
-South Boston,2024,12,69,0
-South Boston / South Boston Waterfront,2024,12,461,21
-South End,2024,12,389,16
-West Roxbury,2024,12,425,10
+neighborhood,year,month,report_count,pothole_count,pothole_resident,pothole_employee,complete
+Allston / Brighton,2015,1,1124,124,12.0,112.0,1
+Back Bay,2015,1,726,28,10.0,18.0,1
+Beacon Hill,2015,1,437,8,1.0,7.0,1
+Charlestown,2015,1,692,22,8.0,14.0,1
+Dorchester,2015,1,2943,89,8.0,81.0,1
+Downtown / Financial District,2015,1,1042,45,16.0,29.0,1
+East Boston,2015,1,1027,56,0.0,56.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2015,1,314,20,16.0,4.0,1
+Greater Mattapan,2015,1,871,28,6.0,22.0,1
+Hyde Park,2015,1,911,8,1.0,7.0,1
+Jamaica Plain,2015,1,1072,55,3.0,52.0,1
+Mission Hill,2015,1,280,8,3.0,5.0,1
+Roslindale,2015,1,743,112,2.0,110.0,1
+Roxbury,2015,1,1681,42,7.0,35.0,1
+South Boston / South Boston Waterfront,2015,1,1009,39,14.0,25.0,1
+South End,2015,1,837,18,5.0,13.0,1
+West Roxbury,2015,1,875,56,4.0,52.0,1
+Allston / Brighton,2015,2,2512,110,23.0,87.0,1
+Back Bay,2015,2,1275,81,33.0,48.0,1
+Beacon Hill,2015,2,437,12,6.0,6.0,1
+Charlestown,2015,2,1205,57,15.0,42.0,1
+Dorchester,2015,2,6021,112,24.0,88.0,1
+Downtown / Financial District,2015,2,1802,126,45.0,81.0,1
+East Boston,2015,2,1586,101,4.0,97.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2015,2,627,33,8.0,25.0,1
+Greater Mattapan,2015,2,2564,118,8.0,110.0,1
+Hyde Park,2015,2,2427,114,7.0,107.0,1
+Jamaica Plain,2015,2,2871,120,8.0,112.0,1
+Mission Hill,2015,2,598,22,9.0,13.0,1
+Roslindale,2015,2,1449,95,4.0,91.0,1
+Roxbury,2015,2,4269,127,25.0,102.0,1
+South Boston / South Boston Waterfront,2015,2,2377,75,15.0,60.0,1
+South End,2015,2,1595,80,4.0,76.0,1
+West Roxbury,2015,2,1665,55,15.0,40.0,1
+Allston / Brighton,2015,3,1300,254,36.0,218.0,1
+Back Bay,2015,3,631,108,19.0,89.0,1
+Beacon Hill,2015,3,431,38,6.0,32.0,1
+Charlestown,2015,3,452,55,27.0,28.0,1
+Dorchester,2015,3,2261,283,35.0,248.0,1
+Downtown / Financial District,2015,3,1261,244,71.0,173.0,1
+East Boston,2015,3,1120,297,6.0,291.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2015,3,353,78,42.0,36.0,1
+Greater Mattapan,2015,3,828,117,15.0,102.0,1
+Hyde Park,2015,3,855,279,10.0,269.0,1
+Jamaica Plain,2015,3,1336,431,21.0,410.0,1
+Mission Hill,2015,3,286,57,40.0,17.0,1
+Roslindale,2015,3,819,322,17.0,305.0,1
+Roxbury,2015,3,1480,226,62.0,164.0,1
+South Boston / South Boston Waterfront,2015,3,1163,237,33.0,204.0,1
+South End,2015,3,689,50,11.0,39.0,1
+West Roxbury,2015,3,1346,836,35.0,801.0,1
+Allston / Brighton,2015,4,1147,99,17.0,82.0,1
+Back Bay,2015,4,588,74,31.0,43.0,1
+Beacon Hill,2015,4,395,27,5.0,22.0,1
+Charlestown,2015,4,403,51,19.0,32.0,1
+Dorchester,2015,4,1979,90,24.0,66.0,1
+Downtown / Financial District,2015,4,1304,183,74.0,109.0,1
+East Boston,2015,4,857,128,3.0,125.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2015,4,331,54,28.0,26.0,1
+Greater Mattapan,2015,4,688,66,15.0,51.0,1
+Hyde Park,2015,4,824,203,7.0,196.0,1
+Jamaica Plain,2015,4,971,161,19.0,142.0,1
+Mission Hill,2015,4,237,14,10.0,4.0,1
+Roslindale,2015,4,674,116,12.0,104.0,1
+Roxbury,2015,4,1105,76,35.0,41.0,1
+South Boston / South Boston Waterfront,2015,4,908,105,19.0,86.0,1
+South End,2015,4,725,48,23.0,25.0,1
+West Roxbury,2015,4,913,274,18.0,256.0,1
+Allston / Brighton,2015,5,966,16,13.0,3.0,1
+Back Bay,2015,5,653,28,14.0,14.0,1
+Beacon Hill,2015,5,480,16,8.0,8.0,1
+Charlestown,2015,5,437,68,24.0,44.0,1
+Dorchester,2015,5,2024,64,16.0,48.0,1
+Downtown / Financial District,2015,5,1270,63,28.0,35.0,1
+East Boston,2015,5,824,51,5.0,46.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2015,5,321,26,10.0,16.0,1
+Greater Mattapan,2015,5,679,20,4.0,16.0,1
+Hyde Park,2015,5,737,54,2.0,52.0,1
+Jamaica Plain,2015,5,965,194,9.0,185.0,1
+Mission Hill,2015,5,192,15,2.0,13.0,1
+Roslindale,2015,5,697,109,4.0,105.0,1
+Roxbury,2015,5,1151,45,18.0,27.0,1
+South Boston / South Boston Waterfront,2015,5,773,30,11.0,19.0,1
+South End,2015,5,696,37,14.0,23.0,1
+West Roxbury,2015,5,764,120,11.0,109.0,1
+Allston / Brighton,2015,6,1121,55,21.0,34.0,1
+Back Bay,2015,6,583,43,20.0,23.0,1
+Beacon Hill,2015,6,587,32,6.0,26.0,1
+Charlestown,2015,6,489,55,14.0,41.0,1
+Dorchester,2015,6,2035,100,13.0,87.0,1
+Downtown / Financial District,2015,6,1251,95,33.0,62.0,1
+East Boston,2015,6,802,83,2.0,81.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2015,6,276,19,14.0,5.0,1
+Greater Mattapan,2015,6,596,14,3.0,11.0,1
+Hyde Park,2015,6,698,67,12.0,55.0,1
+Jamaica Plain,2015,6,852,29,13.0,16.0,1
+Mission Hill,2015,6,185,18,5.0,13.0,1
+Roslindale,2015,6,571,34,5.0,29.0,1
+Roxbury,2015,6,1185,64,10.0,54.0,1
+South Boston / South Boston Waterfront,2015,6,782,54,16.0,38.0,1
+South End,2015,6,584,23,11.0,12.0,1
+West Roxbury,2015,6,660,64,7.0,57.0,1
+Allston / Brighton,2015,7,965,46,17.0,29.0,1
+Back Bay,2015,7,516,39,14.0,25.0,1
+Beacon Hill,2015,7,435,28,3.0,25.0,1
+Charlestown,2015,7,432,18,10.0,8.0,1
+Dorchester,2015,7,2223,123,13.0,110.0,1
+Downtown / Financial District,2015,7,1481,83,23.0,60.0,1
+East Boston,2015,7,727,55,5.0,50.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2015,7,299,19,12.0,7.0,1
+Greater Mattapan,2015,7,742,26,2.0,24.0,1
+Hyde Park,2015,7,717,75,6.0,69.0,1
+Jamaica Plain,2015,7,980,89,9.0,80.0,1
+Mission Hill,2015,7,197,17,7.0,10.0,1
+Roslindale,2015,7,537,29,10.0,19.0,1
+Roxbury,2015,7,1179,50,11.0,39.0,1
+South Boston / South Boston Waterfront,2015,7,777,40,8.0,32.0,1
+South End,2015,7,619,24,9.0,15.0,1
+West Roxbury,2015,7,692,78,11.0,67.0,1
+Allston / Brighton,2015,8,1464,89,12.0,77.0,1
+Back Bay,2015,8,818,34,15.0,19.0,1
+Beacon Hill,2015,8,543,52,5.0,47.0,1
+Charlestown,2015,8,515,32,11.0,21.0,1
+Dorchester,2015,8,2495,120,12.0,108.0,1
+Downtown / Financial District,2015,8,1725,104,21.0,83.0,1
+East Boston,2015,8,943,118,7.0,111.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2015,8,331,26,5.0,21.0,1
+Greater Mattapan,2015,8,885,31,3.0,28.0,1
+Hyde Park,2015,8,771,145,2.0,143.0,1
+Jamaica Plain,2015,8,1204,104,10.0,94.0,1
+Mission Hill,2015,8,396,20,6.0,14.0,1
+Roslindale,2015,8,728,90,13.0,77.0,1
+Roxbury,2015,8,1464,56,12.0,44.0,1
+South Boston / South Boston Waterfront,2015,8,1172,51,6.0,45.0,1
+South End,2015,8,747,42,13.0,29.0,1
+West Roxbury,2015,8,885,111,7.0,104.0,1
+Allston / Brighton,2015,9,1631,28,7.0,21.0,1
+Back Bay,2015,9,808,9,3.0,6.0,1
+Beacon Hill,2015,9,836,7,0.0,7.0,1
+Charlestown,2015,9,593,19,5.0,14.0,1
+Dorchester,2015,9,2301,33,5.0,28.0,1
+Downtown / Financial District,2015,9,1795,49,13.0,36.0,1
+East Boston,2015,9,894,25,6.0,19.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2015,9,430,7,2.0,5.0,1
+Greater Mattapan,2015,9,737,17,1.0,16.0,1
+Hyde Park,2015,9,678,64,2.0,62.0,1
+Jamaica Plain,2015,9,1140,13,8.0,5.0,1
+Mission Hill,2015,9,432,9,6.0,3.0,1
+Roslindale,2015,9,639,47,4.0,43.0,1
+Roxbury,2015,9,1446,25,9.0,16.0,1
+South Boston / South Boston Waterfront,2015,9,1377,15,5.0,10.0,1
+South End,2015,9,848,27,6.0,21.0,1
+West Roxbury,2015,9,753,125,5.0,120.0,1
+Allston / Brighton,2015,10,1127,11,4.0,7.0,1
+Back Bay,2015,10,678,16,5.0,11.0,1
+Beacon Hill,2015,10,560,5,1.0,4.0,1
+Charlestown,2015,10,469,17,5.0,12.0,1
+Dorchester,2015,10,2034,65,5.0,60.0,1
+Downtown / Financial District,2015,10,1488,110,16.0,94.0,1
+East Boston,2015,10,689,27,1.0,26.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2015,10,248,19,10.0,9.0,1
+Greater Mattapan,2015,10,661,31,0.0,31.0,1
+Hyde Park,2015,10,697,37,2.0,35.0,1
+Jamaica Plain,2015,10,1017,127,8.0,119.0,1
+Mission Hill,2015,10,276,11,4.0,7.0,1
+Roslindale,2015,10,561,16,2.0,14.0,1
+Roxbury,2015,10,1254,47,3.0,44.0,1
+South Boston / South Boston Waterfront,2015,10,1236,14,4.0,10.0,1
+South End,2015,10,735,17,5.0,12.0,1
+West Roxbury,2015,10,630,40,4.0,36.0,1
+Allston / Brighton,2015,11,1079,15,4.0,11.0,1
+Back Bay,2015,11,714,17,4.0,13.0,1
+Beacon Hill,2015,11,458,5,3.0,2.0,1
+Charlestown,2015,11,434,10,3.0,7.0,1
+Dorchester,2015,11,2096,47,2.0,45.0,1
+Downtown / Financial District,2015,11,1254,40,9.0,31.0,1
+East Boston,2015,11,692,111,1.0,110.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2015,11,271,11,5.0,6.0,1
+Greater Mattapan,2015,11,659,23,4.0,19.0,1
+Hyde Park,2015,11,550,41,2.0,39.0,1
+Jamaica Plain,2015,11,805,7,5.0,2.0,1
+Mission Hill,2015,11,236,6,1.0,5.0,1
+Roslindale,2015,11,444,9,1.0,8.0,1
+Roxbury,2015,11,1190,28,2.0,26.0,1
+South Boston / South Boston Waterfront,2015,11,1116,11,3.0,8.0,1
+South End,2015,11,606,26,2.0,24.0,1
+West Roxbury,2015,11,532,45,1.0,44.0,1
+Allston / Brighton,2015,12,923,63,9.0,54.0,1
+Back Bay,2015,12,600,20,9.0,11.0,1
+Beacon Hill,2015,12,438,6,0.0,6.0,1
+Charlestown,2015,12,391,13,5.0,8.0,1
+Dorchester,2015,12,1731,47,12.0,35.0,1
+Downtown / Financial District,2015,12,1332,58,10.0,48.0,1
+East Boston,2015,12,751,85,2.0,83.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2015,12,213,8,6.0,2.0,1
+Greater Mattapan,2015,12,584,17,1.0,16.0,1
+Hyde Park,2015,12,522,35,3.0,32.0,1
+Jamaica Plain,2015,12,754,21,8.0,13.0,1
+Mission Hill,2015,12,226,6,3.0,3.0,1
+Roslindale,2015,12,478,6,1.0,5.0,1
+Roxbury,2015,12,1221,14,5.0,9.0,1
+South Boston / South Boston Waterfront,2015,12,991,13,3.0,10.0,1
+South End,2015,12,622,13,2.0,11.0,1
+West Roxbury,2015,12,511,26,2.0,24.0,1
+Allston / Brighton,2016,1,1173,43,4.0,39.0,1
+Back Bay,2016,1,651,17,10.0,7.0,1
+Beacon Hill,2016,1,503,8,2.0,6.0,1
+Charlestown,2016,1,488,29,3.0,26.0,1
+Dorchester,2016,1,2113,80,12.0,68.0,1
+Downtown / Financial District,2016,1,1360,50,11.0,39.0,1
+East Boston,2016,1,765,7,1.0,6.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2016,1,294,21,9.0,12.0,1
+Greater Mattapan,2016,1,598,13,4.0,9.0,1
+Hyde Park,2016,1,595,72,5.0,67.0,1
+Jamaica Plain,2016,1,977,40,5.0,35.0,1
+Mission Hill,2016,1,257,11,5.0,6.0,1
+Roslindale,2016,1,698,209,6.0,203.0,1
+Roxbury,2016,1,1251,24,8.0,16.0,1
+South Boston / South Boston Waterfront,2016,1,1453,12,3.0,9.0,1
+South End,2016,1,722,24,9.0,15.0,1
+West Roxbury,2016,1,656,108,4.0,104.0,1
+Allston / Brighton,2016,2,1428,127,16.0,111.0,1
+Back Bay,2016,2,717,57,19.0,38.0,1
+Beacon Hill,2016,2,459,16,0.0,16.0,1
+Charlestown,2016,2,535,39,8.0,31.0,1
+Dorchester,2016,2,2443,193,20.0,173.0,1
+Downtown / Financial District,2016,2,1521,88,19.0,69.0,1
+East Boston,2016,2,879,67,0.0,67.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2016,2,384,53,16.0,37.0,1
+Greater Mattapan,2016,2,728,85,12.0,73.0,1
+Hyde Park,2016,2,799,72,5.0,67.0,1
+Jamaica Plain,2016,2,1218,123,10.0,113.0,1
+Mission Hill,2016,2,324,25,7.0,18.0,1
+Roslindale,2016,2,789,111,5.0,106.0,1
+Roxbury,2016,2,1498,91,7.0,84.0,1
+South Boston / South Boston Waterfront,2016,2,1447,34,9.0,25.0,1
+South End,2016,2,770,47,6.0,41.0,1
+West Roxbury,2016,2,787,160,7.0,153.0,1
+Allston / Brighton,2016,3,1351,103,13.0,90.0,1
+Back Bay,2016,3,857,40,19.0,21.0,1
+Beacon Hill,2016,3,556,31,6.0,25.0,1
+Charlestown,2016,3,553,32,8.0,24.0,1
+Dorchester,2016,3,2507,87,23.0,64.0,1
+Downtown / Financial District,2016,3,1600,84,26.0,58.0,1
+East Boston,2016,3,990,136,4.0,132.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2016,3,345,49,16.0,33.0,1
+Greater Mattapan,2016,3,831,80,11.0,69.0,1
+Hyde Park,2016,3,792,72,6.0,66.0,1
+Jamaica Plain,2016,3,993,62,9.0,53.0,1
+Mission Hill,2016,3,266,38,7.0,31.0,1
+Roslindale,2016,3,588,54,5.0,49.0,1
+Roxbury,2016,3,1360,66,15.0,51.0,1
+South Boston / South Boston Waterfront,2016,3,1411,26,11.0,15.0,1
+South End,2016,3,822,25,9.0,16.0,1
+West Roxbury,2016,3,687,111,4.0,107.0,1
+Allston / Brighton,2016,4,1219,79,26.0,53.0,1
+Back Bay,2016,4,1080,68,25.0,43.0,1
+Beacon Hill,2016,4,548,14,7.0,7.0,1
+Charlestown,2016,4,528,28,8.0,20.0,1
+Dorchester,2016,4,2449,76,19.0,57.0,1
+Downtown / Financial District,2016,4,1670,101,20.0,81.0,1
+East Boston,2016,4,832,27,2.0,25.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2016,4,393,59,14.0,45.0,1
+Greater Mattapan,2016,4,839,43,3.0,40.0,1
+Hyde Park,2016,4,711,88,9.0,79.0,1
+Jamaica Plain,2016,4,1069,46,12.0,34.0,1
+Mission Hill,2016,4,365,49,9.0,40.0,1
+Roslindale,2016,4,667,33,6.0,27.0,1
+Roxbury,2016,4,1426,108,15.0,93.0,1
+South Boston / South Boston Waterfront,2016,4,1529,40,11.0,29.0,1
+South End,2016,4,973,52,15.0,37.0,1
+West Roxbury,2016,4,673,38,10.0,28.0,1
+Allston / Brighton,2016,5,1321,79,11.0,68.0,1
+Back Bay,2016,5,978,26,12.0,14.0,1
+Beacon Hill,2016,5,562,13,3.0,10.0,1
+Charlestown,2016,5,626,20,3.0,17.0,1
+Dorchester,2016,5,3257,55,15.0,40.0,1
+Downtown / Financial District,2016,5,1744,76,26.0,50.0,1
+East Boston,2016,5,1030,45,2.0,43.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2016,5,404,17,7.0,10.0,1
+Greater Mattapan,2016,5,845,37,4.0,33.0,1
+Hyde Park,2016,5,773,51,4.0,47.0,1
+Jamaica Plain,2016,5,1128,20,5.0,15.0,1
+Mission Hill,2016,5,376,25,0.0,25.0,1
+Roslindale,2016,5,656,22,4.0,18.0,1
+Roxbury,2016,5,1612,67,10.0,57.0,1
+South Boston / South Boston Waterfront,2016,5,1519,37,14.0,23.0,1
+South End,2016,5,934,36,12.0,24.0,1
+West Roxbury,2016,5,768,57,8.0,49.0,1
+Allston / Brighton,2016,6,1325,31,9.0,22.0,1
+Back Bay,2016,6,1032,18,7.0,11.0,1
+Beacon Hill,2016,6,624,8,3.0,5.0,1
+Charlestown,2016,6,717,28,11.0,17.0,1
+Dorchester,2016,6,3003,50,16.0,34.0,1
+Downtown / Financial District,2016,6,2063,67,28.0,39.0,1
+East Boston,2016,6,1012,43,7.0,36.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2016,6,429,18,3.0,15.0,1
+Greater Mattapan,2016,6,912,9,1.0,8.0,1
+Hyde Park,2016,6,900,32,4.0,28.0,1
+Jamaica Plain,2016,6,1364,42,14.0,28.0,1
+Mission Hill,2016,6,337,19,4.0,15.0,1
+Roslindale,2016,6,737,19,9.0,10.0,1
+Roxbury,2016,6,1882,51,14.0,37.0,1
+South Boston / South Boston Waterfront,2016,6,1629,24,8.0,16.0,1
+South End,2016,6,1063,22,6.0,16.0,1
+West Roxbury,2016,6,792,41,6.0,35.0,1
+Allston / Brighton,2016,7,1283,58,10.0,48.0,1
+Back Bay,2016,7,1004,42,15.0,27.0,1
+Beacon Hill,2016,7,622,15,9.0,6.0,1
+Charlestown,2016,7,502,20,8.0,12.0,1
+Dorchester,2016,7,2644,27,7.0,20.0,1
+Downtown / Financial District,2016,7,1919,47,21.0,26.0,1
+East Boston,2016,7,894,33,10.0,23.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2016,7,366,9,4.0,5.0,1
+Greater Mattapan,2016,7,873,9,5.0,4.0,1
+Hyde Park,2016,7,712,18,10.0,8.0,1
+Jamaica Plain,2016,7,1128,30,15.0,15.0,1
+Mission Hill,2016,7,291,12,9.0,3.0,1
+Roslindale,2016,7,738,11,8.0,3.0,1
+Roxbury,2016,7,1754,27,11.0,16.0,1
+South Boston / South Boston Waterfront,2016,7,1375,12,4.0,8.0,1
+South End,2016,7,969,28,12.0,16.0,1
+West Roxbury,2016,7,839,16,6.0,10.0,1
+Allston / Brighton,2016,8,1696,28,11.0,17.0,1
+Back Bay,2016,8,979,23,7.0,16.0,1
+Beacon Hill,2016,8,700,2,0.0,2.0,1
+Charlestown,2016,8,613,9,3.0,6.0,1
+Dorchester,2016,8,2785,27,16.0,11.0,1
+Downtown / Financial District,2016,8,2254,47,18.0,29.0,1
+East Boston,2016,8,863,24,9.0,15.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2016,8,338,9,4.0,5.0,1
+Greater Mattapan,2016,8,920,4,1.0,3.0,1
+Hyde Park,2016,8,752,35,4.0,31.0,1
+Jamaica Plain,2016,8,1261,38,14.0,24.0,1
+Mission Hill,2016,8,389,18,9.0,9.0,1
+Roslindale,2016,8,716,5,4.0,1.0,1
+Roxbury,2016,8,1817,50,12.0,38.0,1
+South Boston / South Boston Waterfront,2016,8,1619,8,5.0,3.0,1
+South End,2016,8,968,29,14.0,15.0,1
+West Roxbury,2016,8,663,21,12.0,9.0,1
+Allston / Brighton,2016,9,1659,52,10.0,42.0,1
+Back Bay,2016,9,1125,29,9.0,20.0,1
+Beacon Hill,2016,9,720,6,0.0,6.0,1
+Charlestown,2016,9,602,6,5.0,1.0,1
+Dorchester,2016,9,2793,21,8.0,13.0,1
+Downtown / Financial District,2016,9,2317,47,21.0,26.0,1
+East Boston,2016,9,824,44,8.0,36.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2016,9,536,19,5.0,14.0,1
+Greater Mattapan,2016,9,743,2,1.0,1.0,1
+Hyde Park,2016,9,669,9,4.0,5.0,1
+Jamaica Plain,2016,9,1308,14,5.0,9.0,1
+Mission Hill,2016,9,420,16,2.0,14.0,1
+Roslindale,2016,9,630,9,5.0,4.0,1
+Roxbury,2016,9,1816,18,3.0,15.0,1
+South Boston / South Boston Waterfront,2016,9,1891,12,5.0,7.0,1
+South End,2016,9,1064,12,7.0,5.0,1
+West Roxbury,2016,9,685,21,5.0,16.0,1
+Allston / Brighton,2016,10,1115,49,2.0,47.0,1
+Back Bay,2016,10,1009,31,6.0,25.0,1
+Beacon Hill,2016,10,681,9,1.0,8.0,1
+Charlestown,2016,10,433,4,3.0,1.0,1
+Dorchester,2016,10,2264,23,10.0,13.0,1
+Downtown / Financial District,2016,10,2292,43,17.0,26.0,1
+East Boston,2016,10,640,7,3.0,4.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2016,10,332,15,2.0,13.0,1
+Greater Mattapan,2016,10,727,9,2.0,7.0,1
+Hyde Park,2016,10,677,4,1.0,3.0,1
+Jamaica Plain,2016,10,1061,19,5.0,14.0,1
+Mission Hill,2016,10,309,12,2.0,10.0,1
+Roslindale,2016,10,520,7,2.0,5.0,1
+Roxbury,2016,10,1518,42,10.0,32.0,1
+South Boston / South Boston Waterfront,2016,10,1575,11,3.0,8.0,1
+South End,2016,10,913,28,12.0,16.0,1
+West Roxbury,2016,10,669,18,3.0,15.0,1
+Allston / Brighton,2016,11,898,21,3.0,18.0,1
+Back Bay,2016,11,877,18,5.0,13.0,1
+Beacon Hill,2016,11,434,5,0.0,5.0,1
+Charlestown,2016,11,404,5,2.0,3.0,1
+Dorchester,2016,11,2240,14,5.0,9.0,1
+Downtown / Financial District,2016,11,1947,43,14.0,29.0,1
+East Boston,2016,11,587,6,1.0,5.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2016,11,415,20,1.0,19.0,1
+Greater Mattapan,2016,11,701,12,2.0,10.0,1
+Hyde Park,2016,11,560,2,2.0,0.0,1
+Jamaica Plain,2016,11,872,15,4.0,11.0,1
+Mission Hill,2016,11,343,35,1.0,34.0,1
+Roslindale,2016,11,522,9,6.0,3.0,1
+Roxbury,2016,11,1435,50,2.0,48.0,1
+South Boston / South Boston Waterfront,2016,11,1334,9,6.0,3.0,1
+South End,2016,11,851,26,9.0,17.0,1
+West Roxbury,2016,11,601,32,3.0,29.0,1
+Allston / Brighton,2016,12,984,25,12.0,13.0,1
+Back Bay,2016,12,876,10,3.0,7.0,1
+Beacon Hill,2016,12,453,10,3.0,7.0,1
+Charlestown,2016,12,435,11,5.0,6.0,1
+Dorchester,2016,12,2069,56,11.0,45.0,1
+Downtown / Financial District,2016,12,1565,65,22.0,43.0,1
+East Boston,2016,12,599,32,1.0,31.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2016,12,452,50,16.0,34.0,1
+Greater Mattapan,2016,12,637,14,3.0,11.0,1
+Hyde Park,2016,12,512,7,2.0,5.0,1
+Jamaica Plain,2016,12,1010,24,8.0,16.0,1
+Mission Hill,2016,12,252,17,2.0,15.0,1
+Roslindale,2016,12,559,11,6.0,5.0,1
+Roxbury,2016,12,1353,43,6.0,37.0,1
+South Boston / South Boston Waterfront,2016,12,1208,10,7.0,3.0,1
+South End,2016,12,713,21,4.0,17.0,1
+West Roxbury,2016,12,456,9,5.0,4.0,1
+Allston / Brighton,2017,1,1211,180,22.0,158.0,1
+Back Bay,2017,1,980,61,16.0,45.0,1
+Beacon Hill,2017,1,444,19,5.0,14.0,1
+Charlestown,2017,1,516,49,13.0,36.0,1
+Dorchester,2017,1,2430,164,14.0,150.0,1
+Downtown / Financial District,2017,1,1969,123,39.0,84.0,1
+East Boston,2017,1,963,103,7.0,96.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2017,1,506,88,42.0,46.0,1
+Greater Mattapan,2017,1,679,60,9.0,51.0,1
+Hyde Park,2017,1,587,23,7.0,16.0,1
+Jamaica Plain,2017,1,1258,160,19.0,141.0,1
+Mission Hill,2017,1,372,82,29.0,53.0,1
+Roslindale,2017,1,716,48,8.0,40.0,1
+Roxbury,2017,1,1659,197,65.0,132.0,1
+South Boston / South Boston Waterfront,2017,1,1552,59,21.0,38.0,1
+South End,2017,1,835,40,13.0,27.0,1
+West Roxbury,2017,1,618,90,9.0,81.0,1
+Allston / Brighton,2017,2,2048,229,22.0,207.0,1
+Back Bay,2017,2,1177,92,36.0,56.0,1
+Beacon Hill,2017,2,446,47,11.0,36.0,1
+Charlestown,2017,2,787,90,30.0,60.0,1
+Dorchester,2017,2,3155,178,13.0,165.0,1
+Downtown / Financial District,2017,2,2360,253,67.0,186.0,1
+East Boston,2017,2,1357,123,14.0,109.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2017,2,683,164,36.0,128.0,1
+Greater Mattapan,2017,2,947,81,8.0,73.0,1
+Hyde Park,2017,2,899,75,17.0,58.0,1
+Jamaica Plain,2017,2,1953,223,32.0,191.0,1
+Mission Hill,2017,2,435,78,23.0,55.0,1
+Roslindale,2017,2,1005,66,11.0,55.0,1
+Roxbury,2017,2,2043,145,34.0,111.0,1
+South Boston / South Boston Waterfront,2017,2,2155,54,12.0,42.0,1
+South End,2017,2,1070,44,13.0,31.0,1
+West Roxbury,2017,2,754,42,15.0,27.0,1
+Allston / Brighton,2017,3,1888,283,12.0,271.0,1
+Back Bay,2017,3,1030,67,30.0,37.0,1
+Beacon Hill,2017,3,511,13,2.0,11.0,1
+Charlestown,2017,3,740,39,16.0,23.0,1
+Dorchester,2017,3,3070,113,16.0,97.0,1
+Downtown / Financial District,2017,3,2074,87,36.0,51.0,1
+East Boston,2017,3,1178,84,5.0,79.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2017,3,597,95,28.0,67.0,1
+Greater Mattapan,2017,3,972,65,4.0,61.0,1
+Hyde Park,2017,3,926,120,11.0,109.0,1
+Jamaica Plain,2017,3,1618,59,26.0,33.0,1
+Mission Hill,2017,3,403,44,20.0,24.0,1
+Roslindale,2017,3,879,44,7.0,37.0,1
+Roxbury,2017,3,2031,156,27.0,129.0,1
+South Boston / South Boston Waterfront,2017,3,1921,34,18.0,16.0,1
+South End,2017,3,1134,44,17.0,27.0,1
+West Roxbury,2017,3,659,81,11.0,70.0,1
+Allston / Brighton,2017,4,1366,185,24.0,161.0,1
+Back Bay,2017,4,1176,136,58.0,78.0,1
+Beacon Hill,2017,4,431,39,14.0,25.0,1
+Charlestown,2017,4,660,59,25.0,34.0,1
+Dorchester,2017,4,2723,125,30.0,95.0,1
+Downtown / Financial District,2017,4,2056,228,87.0,141.0,1
+East Boston,2017,4,943,87,5.0,82.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2017,4,579,107,34.0,73.0,1
+Greater Mattapan,2017,4,772,37,6.0,31.0,1
+Hyde Park,2017,4,755,165,13.0,152.0,1
+Jamaica Plain,2017,4,1392,122,72.0,50.0,1
+Mission Hill,2017,4,345,69,28.0,41.0,1
+Roslindale,2017,4,633,57,17.0,40.0,1
+Roxbury,2017,4,1805,154,52.0,102.0,1
+South Boston / South Boston Waterfront,2017,4,1461,81,37.0,44.0,1
+South End,2017,4,1080,78,32.0,46.0,1
+West Roxbury,2017,4,614,54,19.0,35.0,1
+Allston / Brighton,2017,5,1427,92,18.0,74.0,1
+Back Bay,2017,5,1246,54,30.0,24.0,1
+Beacon Hill,2017,5,564,24,8.0,16.0,1
+Charlestown,2017,5,684,36,18.0,18.0,1
+Dorchester,2017,5,3012,59,18.0,41.0,1
+Downtown / Financial District,2017,5,2351,90,34.0,56.0,1
+East Boston,2017,5,996,85,6.0,79.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2017,5,552,72,27.0,45.0,1
+Greater Mattapan,2017,5,900,39,8.0,31.0,1
+Hyde Park,2017,5,817,34,11.0,23.0,1
+Jamaica Plain,2017,5,1278,47,21.0,26.0,1
+Mission Hill,2017,5,378,61,12.0,49.0,1
+Roslindale,2017,5,856,22,8.0,14.0,1
+Roxbury,2017,5,2146,161,29.0,132.0,1
+South Boston / South Boston Waterfront,2017,5,1781,39,14.0,25.0,1
+South End,2017,5,1189,66,32.0,34.0,1
+West Roxbury,2017,5,750,40,20.0,20.0,1
+Allston / Brighton,2017,6,1666,94,7.0,87.0,1
+Back Bay,2017,6,1182,57,21.0,36.0,1
+Beacon Hill,2017,6,586,29,8.0,21.0,1
+Charlestown,2017,6,681,29,15.0,14.0,1
+Dorchester,2017,6,3245,66,25.0,41.0,1
+Downtown / Financial District,2017,6,2429,127,42.0,85.0,1
+East Boston,2017,6,1090,81,12.0,69.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2017,6,567,41,8.0,33.0,1
+Greater Mattapan,2017,6,957,19,4.0,15.0,1
+Hyde Park,2017,6,936,126,10.0,116.0,1
+Jamaica Plain,2017,6,1372,71,27.0,44.0,1
+Mission Hill,2017,6,362,51,20.0,31.0,1
+Roslindale,2017,6,714,14,3.0,11.0,1
+Roxbury,2017,6,2096,114,12.0,102.0,1
+South Boston / South Boston Waterfront,2017,6,1922,52,18.0,34.0,1
+South End,2017,6,1322,51,22.0,29.0,1
+West Roxbury,2017,6,881,69,25.0,44.0,1
+Allston / Brighton,2017,7,1504,91,11.0,80.0,1
+Back Bay,2017,7,1102,42,21.0,21.0,1
+Beacon Hill,2017,7,593,15,4.0,11.0,1
+Charlestown,2017,7,586,17,8.0,9.0,1
+Dorchester,2017,7,2961,30,9.0,21.0,1
+Downtown / Financial District,2017,7,2287,107,23.0,84.0,1
+East Boston,2017,7,1072,50,8.0,42.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2017,7,602,50,5.0,45.0,1
+Greater Mattapan,2017,7,945,12,2.0,10.0,1
+Hyde Park,2017,7,930,57,6.0,51.0,1
+Jamaica Plain,2017,7,1272,47,12.0,35.0,1
+Mission Hill,2017,7,384,37,1.0,36.0,1
+Roslindale,2017,7,762,28,9.0,19.0,1
+Roxbury,2017,7,1918,131,14.0,117.0,1
+South Boston / South Boston Waterfront,2017,7,1555,38,25.0,13.0,1
+South End,2017,7,1393,33,18.0,15.0,1
+West Roxbury,2017,7,764,31,15.0,16.0,1
+Allston / Brighton,2017,8,2028,28,15.0,13.0,1
+Back Bay,2017,8,1181,41,12.0,29.0,1
+Beacon Hill,2017,8,680,18,5.0,13.0,1
+Charlestown,2017,8,619,15,8.0,7.0,1
+Dorchester,2017,8,3314,42,15.0,27.0,1
+Downtown / Financial District,2017,8,2444,96,44.0,52.0,1
+East Boston,2017,8,1358,46,4.0,42.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2017,8,608,15,5.0,10.0,1
+Greater Mattapan,2017,8,1061,22,3.0,19.0,1
+Hyde Park,2017,8,954,94,3.0,91.0,1
+Jamaica Plain,2017,8,1345,45,17.0,28.0,1
+Mission Hill,2017,8,524,33,7.0,26.0,1
+Roslindale,2017,8,783,17,4.0,13.0,1
+Roxbury,2017,8,2253,128,13.0,115.0,1
+South Boston / South Boston Waterfront,2017,8,1822,23,14.0,9.0,1
+South End,2017,8,1210,30,15.0,15.0,1
+West Roxbury,2017,8,793,24,10.0,14.0,1
+Allston / Brighton,2017,9,2002,86,16.0,70.0,1
+Back Bay,2017,9,1227,21,14.0,7.0,1
+Beacon Hill,2017,9,834,14,12.0,2.0,1
+Charlestown,2017,9,572,9,5.0,4.0,1
+Dorchester,2017,9,2889,24,10.0,14.0,1
+Downtown / Financial District,2017,9,2392,56,37.0,19.0,1
+East Boston,2017,9,1083,32,8.0,24.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2017,9,546,11,5.0,6.0,1
+Greater Mattapan,2017,9,749,6,4.0,2.0,1
+Hyde Park,2017,9,921,57,8.0,49.0,1
+Jamaica Plain,2017,9,1309,32,19.0,13.0,1
+Mission Hill,2017,9,513,25,11.0,14.0,1
+Roslindale,2017,9,732,26,3.0,23.0,1
+Roxbury,2017,9,2000,36,21.0,15.0,1
+South Boston / South Boston Waterfront,2017,9,1974,28,12.0,16.0,1
+South End,2017,9,1221,32,26.0,6.0,1
+West Roxbury,2017,9,669,33,11.0,22.0,1
+Allston / Brighton,2017,10,1529,36,4.0,32.0,1
+Back Bay,2017,10,1089,26,23.0,3.0,1
+Beacon Hill,2017,10,716,8,7.0,1.0,1
+Charlestown,2017,10,535,17,6.0,11.0,1
+Dorchester,2017,10,2812,17,10.0,7.0,1
+Downtown / Financial District,2017,10,2183,51,36.0,15.0,1
+East Boston,2017,10,979,31,4.0,27.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2017,10,476,18,6.0,12.0,1
+Greater Mattapan,2017,10,856,9,3.0,6.0,1
+Hyde Park,2017,10,748,20,10.0,10.0,1
+Jamaica Plain,2017,10,1242,18,13.0,5.0,1
+Mission Hill,2017,10,371,8,5.0,3.0,1
+Roslindale,2017,10,688,11,5.0,6.0,1
+Roxbury,2017,10,1863,28,14.0,14.0,1
+South Boston / South Boston Waterfront,2017,10,1828,23,10.0,13.0,1
+South End,2017,10,1276,20,20.0,0.0,1
+West Roxbury,2017,10,750,19,5.0,14.0,1
+Allston / Brighton,2017,11,1158,58,5.0,53.0,1
+Back Bay,2017,11,1019,17,11.0,6.0,1
+Beacon Hill,2017,11,492,14,7.0,7.0,1
+Charlestown,2017,11,518,17,8.0,9.0,1
+Dorchester,2017,11,2413,29,11.0,18.0,1
+Downtown / Financial District,2017,11,1693,55,39.0,16.0,1
+East Boston,2017,11,778,15,4.0,11.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2017,11,416,4,2.0,2.0,1
+Greater Mattapan,2017,11,677,6,0.0,6.0,1
+Hyde Park,2017,11,635,30,0.0,30.0,1
+Jamaica Plain,2017,11,1100,14,10.0,4.0,1
+Mission Hill,2017,11,306,10,6.0,4.0,1
+Roslindale,2017,11,500,2,1.0,1.0,1
+Roxbury,2017,11,1622,21,11.0,10.0,1
+South Boston / South Boston Waterfront,2017,11,1521,20,14.0,6.0,1
+South End,2017,11,1079,19,12.0,7.0,1
+West Roxbury,2017,11,648,14,9.0,5.0,1
+Allston / Brighton,2017,12,1408,12,3.0,9.0,1
+Back Bay,2017,12,935,17,5.0,12.0,1
+Beacon Hill,2017,12,656,15,6.0,9.0,1
+Charlestown,2017,12,687,7,1.0,6.0,1
+Dorchester,2017,12,2463,61,9.0,52.0,1
+Downtown / Financial District,2017,12,1701,20,8.0,12.0,1
+East Boston,2017,12,759,8,2.0,6.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2017,12,363,11,4.0,7.0,1
+Greater Mattapan,2017,12,593,15,2.0,13.0,1
+Hyde Park,2017,12,663,2,1.0,1.0,1
+Jamaica Plain,2017,12,1144,9,3.0,6.0,1
+Mission Hill,2017,12,312,11,6.0,5.0,1
+Roslindale,2017,12,565,5,3.0,2.0,1
+Roxbury,2017,12,1618,33,6.0,27.0,1
+South Boston / South Boston Waterfront,2017,12,1531,26,15.0,11.0,1
+South End,2017,12,958,15,5.0,10.0,1
+West Roxbury,2017,12,604,6,3.0,3.0,1
+Allston / Brighton,2018,1,2629,275,44.0,231.0,1
+Back Bay,2018,1,1225,85,45.0,40.0,1
+Beacon Hill,2018,1,755,17,2.0,15.0,1
+Charlestown,2018,1,976,61,29.0,32.0,1
+Dorchester,2018,1,4063,261,69.0,192.0,1
+Downtown / Financial District,2018,1,2559,167,89.0,78.0,1
+East Boston,2018,1,1601,141,16.0,125.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2018,1,536,101,57.0,44.0,1
+Greater Mattapan,2018,1,1188,87,21.0,66.0,1
+Hyde Park,2018,1,1302,228,9.0,219.0,1
+Jamaica Plain,2018,1,2073,147,36.0,111.0,1
+Mission Hill,2018,1,562,58,23.0,35.0,1
+Roslindale,2018,1,1241,80,26.0,54.0,1
+Roxbury,2018,1,3025,302,73.0,229.0,1
+South Boston / South Boston Waterfront,2018,1,2576,60,23.0,37.0,1
+South End,2018,1,1426,34,18.0,16.0,1
+West Roxbury,2018,1,876,115,28.0,87.0,1
+Allston / Brighton,2018,2,1275,194,24.0,170.0,1
+Back Bay,2018,2,893,108,50.0,58.0,1
+Beacon Hill,2018,2,532,40,9.0,31.0,1
+Charlestown,2018,2,542,73,38.0,35.0,1
+Dorchester,2018,2,2396,422,29.0,393.0,1
+Downtown / Financial District,2018,2,1697,161,67.0,94.0,1
+East Boston,2018,2,906,177,14.0,163.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2018,2,564,183,87.0,96.0,1
+Greater Mattapan,2018,2,719,192,17.0,175.0,1
+Hyde Park,2018,2,841,270,13.0,257.0,1
+Jamaica Plain,2018,2,1057,154,76.0,78.0,1
+Mission Hill,2018,2,476,181,120.0,61.0,1
+Roslindale,2018,2,612,64,18.0,46.0,1
+Roxbury,2018,2,1626,279,70.0,209.0,1
+South Boston / South Boston Waterfront,2018,2,1290,74,28.0,46.0,1
+South End,2018,2,961,60,25.0,35.0,1
+West Roxbury,2018,2,555,168,22.0,146.0,1
+Allston / Brighton,2018,3,1934,192,104.0,88.0,1
+Back Bay,2018,3,1194,102,56.0,46.0,1
+Beacon Hill,2018,3,543,22,8.0,14.0,1
+Charlestown,2018,3,771,57,22.0,35.0,1
+Dorchester,2018,3,3063,298,33.0,265.0,1
+Downtown / Financial District,2018,3,1949,193,87.0,106.0,1
+East Boston,2018,3,1315,151,8.0,143.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2018,3,667,177,88.0,89.0,1
+Greater Mattapan,2018,3,962,144,20.0,124.0,1
+Hyde Park,2018,3,1109,177,10.0,167.0,1
+Jamaica Plain,2018,3,1458,101,58.0,43.0,1
+Mission Hill,2018,3,485,100,54.0,46.0,1
+Roslindale,2018,3,1009,63,25.0,38.0,1
+Roxbury,2018,3,2157,249,78.0,171.0,1
+South Boston / South Boston Waterfront,2018,3,1895,53,28.0,25.0,1
+South End,2018,3,1303,67,41.0,26.0,1
+West Roxbury,2018,3,963,84,16.0,68.0,1
+Allston / Brighton,2018,4,1541,140,40.0,100.0,1
+Back Bay,2018,4,1111,88,41.0,47.0,1
+Beacon Hill,2018,4,688,47,21.0,26.0,1
+Charlestown,2018,4,594,63,22.0,41.0,1
+Dorchester,2018,4,2717,121,40.0,81.0,1
+Downtown / Financial District,2018,4,2237,204,87.0,117.0,1
+East Boston,2018,4,1007,111,13.0,98.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2018,4,743,159,45.0,114.0,1
+Greater Mattapan,2018,4,794,88,18.0,70.0,1
+Hyde Park,2018,4,894,183,16.0,167.0,1
+Jamaica Plain,2018,4,1310,149,28.0,121.0,1
+Mission Hill,2018,4,454,105,23.0,82.0,1
+Roslindale,2018,4,703,61,17.0,44.0,1
+Roxbury,2018,4,1956,261,64.0,197.0,1
+South Boston / South Boston Waterfront,2018,4,1515,59,32.0,27.0,1
+South End,2018,4,1181,78,52.0,26.0,1
+West Roxbury,2018,4,673,90,29.0,61.0,1
+Allston / Brighton,2018,5,1645,87,33.0,54.0,1
+Back Bay,2018,5,1360,65,41.0,24.0,1
+Beacon Hill,2018,5,837,22,14.0,8.0,1
+Charlestown,2018,5,819,52,20.0,32.0,1
+Dorchester,2018,5,3283,188,37.0,151.0,1
+Downtown / Financial District,2018,5,2401,177,63.0,114.0,1
+East Boston,2018,5,1235,73,6.0,67.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2018,5,721,106,29.0,77.0,1
+Greater Mattapan,2018,5,912,45,8.0,37.0,1
+Hyde Park,2018,5,1202,223,16.0,207.0,1
+Jamaica Plain,2018,5,1467,93,20.0,73.0,1
+Mission Hill,2018,5,391,88,21.0,67.0,1
+Roslindale,2018,5,886,43,13.0,30.0,1
+Roxbury,2018,5,2331,333,38.0,295.0,1
+South Boston / South Boston Waterfront,2018,5,1689,70,34.0,36.0,1
+South End,2018,5,1370,70,52.0,18.0,1
+West Roxbury,2018,5,906,101,26.0,75.0,1
+Allston / Brighton,2018,6,1582,59,28.0,31.0,1
+Back Bay,2018,6,1106,46,23.0,23.0,1
+Beacon Hill,2018,6,757,8,5.0,3.0,1
+Charlestown,2018,6,726,47,13.0,34.0,1
+Dorchester,2018,6,3113,178,16.0,162.0,1
+Downtown / Financial District,2018,6,2162,94,35.0,59.0,1
+East Boston,2018,6,1145,82,6.0,76.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2018,6,498,37,19.0,18.0,1
+Greater Mattapan,2018,6,903,123,18.0,105.0,1
+Hyde Park,2018,6,973,138,8.0,130.0,1
+Jamaica Plain,2018,6,1434,50,12.0,38.0,1
+Mission Hill,2018,6,357,27,9.0,18.0,1
+Roslindale,2018,6,759,52,8.0,44.0,1
+Roxbury,2018,6,2280,166,30.0,136.0,1
+South Boston / South Boston Waterfront,2018,6,1695,65,29.0,36.0,1
+South End,2018,6,1237,32,16.0,16.0,1
+West Roxbury,2018,6,834,56,19.0,37.0,1
+Allston / Brighton,2018,7,1749,92,31.0,61.0,1
+Back Bay,2018,7,1323,74,33.0,41.0,1
+Beacon Hill,2018,7,758,20,6.0,14.0,1
+Charlestown,2018,7,759,62,16.0,46.0,1
+Dorchester,2018,7,3232,71,25.0,46.0,1
+Downtown / Financial District,2018,7,2338,98,40.0,58.0,1
+East Boston,2018,7,1342,26,3.0,23.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2018,7,653,61,13.0,48.0,1
+Greater Mattapan,2018,7,908,27,8.0,19.0,1
+Hyde Park,2018,7,1013,32,10.0,22.0,1
+Jamaica Plain,2018,7,1388,55,16.0,39.0,1
+Mission Hill,2018,7,414,23,9.0,14.0,1
+Roslindale,2018,7,752,29,13.0,16.0,1
+Roxbury,2018,7,2283,123,30.0,93.0,1
+South Boston / South Boston Waterfront,2018,7,1690,57,30.0,27.0,1
+South End,2018,7,1334,50,26.0,24.0,1
+West Roxbury,2018,7,761,32,14.0,18.0,1
+Allston / Brighton,2018,8,2401,80,29.0,51.0,1
+Back Bay,2018,8,1228,37,21.0,16.0,1
+Beacon Hill,2018,8,740,11,6.0,5.0,1
+Charlestown,2018,8,718,42,12.0,30.0,1
+Dorchester,2018,8,3101,62,28.0,34.0,1
+Downtown / Financial District,2018,8,2670,88,48.0,40.0,1
+East Boston,2018,8,1250,54,5.0,49.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2018,8,621,13,10.0,3.0,1
+Greater Mattapan,2018,8,830,15,2.0,13.0,1
+Hyde Park,2018,8,933,79,8.0,71.0,1
+Jamaica Plain,2018,8,1640,27,15.0,12.0,1
+Mission Hill,2018,8,588,17,7.0,10.0,1
+Roslindale,2018,8,841,19,10.0,9.0,1
+Roxbury,2018,8,2240,71,21.0,50.0,1
+South Boston / South Boston Waterfront,2018,8,2019,39,14.0,25.0,1
+South End,2018,8,1186,25,13.0,12.0,1
+West Roxbury,2018,8,776,36,16.0,20.0,1
+Allston / Brighton,2018,9,1922,40,13.0,27.0,1
+Back Bay,2018,9,1318,47,34.0,13.0,1
+Beacon Hill,2018,9,1006,14,6.0,8.0,1
+Charlestown,2018,9,669,26,6.0,20.0,1
+Dorchester,2018,9,2869,31,16.0,15.0,1
+Downtown / Financial District,2018,9,2184,64,44.0,20.0,1
+East Boston,2018,9,1270,109,6.0,103.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2018,9,602,15,10.0,5.0,1
+Greater Mattapan,2018,9,748,8,6.0,2.0,1
+Hyde Park,2018,9,729,17,5.0,12.0,1
+Jamaica Plain,2018,9,1354,20,9.0,11.0,1
+Mission Hill,2018,9,480,15,5.0,10.0,1
+Roslindale,2018,9,780,37,15.0,22.0,1
+Roxbury,2018,9,1921,32,14.0,18.0,1
+South Boston / South Boston Waterfront,2018,9,2293,37,24.0,13.0,1
+South End,2018,9,1339,44,37.0,7.0,1
+West Roxbury,2018,9,819,30,15.0,15.0,1
+Allston / Brighton,2018,10,1343,61,29.0,32.0,1
+Back Bay,2018,10,1149,57,27.0,30.0,1
+Beacon Hill,2018,10,732,32,7.0,25.0,1
+Charlestown,2018,10,759,41,5.0,36.0,1
+Dorchester,2018,10,2669,28,18.0,10.0,1
+Downtown / Financial District,2018,10,2138,80,37.0,43.0,1
+East Boston,2018,10,1005,78,8.0,70.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2018,10,459,39,15.0,24.0,1
+Greater Mattapan,2018,10,703,23,8.0,15.0,1
+Hyde Park,2018,10,893,82,14.0,68.0,1
+Jamaica Plain,2018,10,1162,21,6.0,15.0,1
+Mission Hill,2018,10,333,37,10.0,27.0,1
+Roslindale,2018,10,728,23,5.0,18.0,1
+Roxbury,2018,10,1634,48,14.0,34.0,1
+South Boston / South Boston Waterfront,2018,10,1644,28,15.0,13.0,1
+South End,2018,10,1155,20,16.0,4.0,1
+West Roxbury,2018,10,675,49,21.0,28.0,1
+Allston / Brighton,2018,11,1198,69,26.0,43.0,1
+Back Bay,2018,11,1128,95,32.0,63.0,1
+Beacon Hill,2018,11,588,13,10.0,3.0,1
+Charlestown,2018,11,628,31,12.0,19.0,1
+Dorchester,2018,11,2450,73,13.0,60.0,1
+Downtown / Financial District,2018,11,1701,90,31.0,59.0,1
+East Boston,2018,11,879,31,2.0,29.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2018,11,397,62,23.0,39.0,1
+Greater Mattapan,2018,11,718,17,3.0,14.0,1
+Hyde Park,2018,11,743,40,8.0,32.0,1
+Jamaica Plain,2018,11,1052,22,13.0,9.0,1
+Mission Hill,2018,11,315,29,10.0,19.0,1
+Roslindale,2018,11,639,19,9.0,10.0,1
+Roxbury,2018,11,1609,117,16.0,101.0,1
+South Boston / South Boston Waterfront,2018,11,1425,36,20.0,16.0,1
+South End,2018,11,944,25,16.0,9.0,1
+West Roxbury,2018,11,645,23,14.0,9.0,1
+Allston / Brighton,2018,12,1216,110,34.0,76.0,1
+Back Bay,2018,12,917,50,24.0,26.0,1
+Beacon Hill,2018,12,571,27,14.0,13.0,1
+Charlestown,2018,12,710,21,4.0,17.0,1
+Dorchester,2018,12,2083,62,15.0,47.0,1
+Downtown / Financial District,2018,12,1674,80,28.0,52.0,1
+East Boston,2018,12,881,59,11.0,48.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2018,12,298,30,12.0,18.0,1
+Greater Mattapan,2018,12,644,38,13.0,25.0,1
+Hyde Park,2018,12,795,61,12.0,49.0,1
+Jamaica Plain,2018,12,915,44,20.0,24.0,1
+Mission Hill,2018,12,303,25,4.0,21.0,1
+Roslindale,2018,12,596,9,4.0,5.0,1
+Roxbury,2018,12,1390,77,23.0,54.0,1
+South Boston / South Boston Waterfront,2018,12,1309,30,16.0,14.0,1
+South End,2018,12,1133,22,8.0,14.0,1
+West Roxbury,2018,12,543,59,11.0,48.0,1
+Allston / Brighton,2019,1,1512,138,27.0,111.0,1
+Back Bay,2019,1,920,95,51.0,44.0,1
+Beacon Hill,2019,1,519,32,13.0,19.0,1
+Charlestown,2019,1,702,67,30.0,37.0,1
+Dorchester,2019,1,2737,130,40.0,90.0,1
+Downtown / Financial District,2019,1,1904,157,66.0,91.0,1
+East Boston,2019,1,1132,52,10.0,42.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2019,1,425,63,32.0,31.0,1
+Greater Mattapan,2019,1,843,50,15.0,35.0,1
+Hyde Park,2019,1,801,47,12.0,35.0,1
+Jamaica Plain,2019,1,1250,111,38.0,73.0,1
+Mission Hill,2019,1,337,56,26.0,30.0,1
+Roslindale,2019,1,750,36,5.0,31.0,1
+Roxbury,2019,1,1634,122,36.0,86.0,1
+South Boston / South Boston Waterfront,2019,1,1580,59,24.0,35.0,1
+South End,2019,1,1066,77,18.0,59.0,1
+West Roxbury,2019,1,630,58,15.0,43.0,1
+Allston / Brighton,2019,2,1412,238,93.0,145.0,1
+Back Bay,2019,2,863,120,62.0,58.0,1
+Beacon Hill,2019,2,439,25,11.0,14.0,1
+Charlestown,2019,2,546,61,28.0,33.0,1
+Dorchester,2019,2,2308,269,42.0,227.0,1
+Downtown / Financial District,2019,2,1562,218,120.0,98.0,1
+East Boston,2019,2,1047,131,16.0,115.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2019,2,528,111,51.0,60.0,1
+Greater Mattapan,2019,2,617,91,7.0,84.0,1
+Hyde Park,2019,2,609,56,6.0,50.0,1
+Jamaica Plain,2019,2,1060,146,33.0,113.0,1
+Mission Hill,2019,2,369,123,46.0,77.0,1
+Roslindale,2019,2,607,61,11.0,50.0,1
+Roxbury,2019,2,1610,345,57.0,288.0,1
+South Boston / South Boston Waterfront,2019,2,1318,84,37.0,47.0,1
+South End,2019,2,893,60,41.0,19.0,1
+West Roxbury,2019,2,586,115,10.0,105.0,1
+Allston / Brighton,2019,3,1872,339,79.0,260.0,1
+Back Bay,2019,3,1090,176,104.0,72.0,1
+Beacon Hill,2019,3,707,58,34.0,24.0,1
+Charlestown,2019,3,852,88,46.0,42.0,1
+Dorchester,2019,3,3536,276,56.0,220.0,1
+Downtown / Financial District,2019,3,2383,260,155.0,105.0,1
+East Boston,2019,3,1671,216,9.0,207.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2019,3,616,118,73.0,45.0,1
+Greater Mattapan,2019,3,922,88,16.0,72.0,1
+Hyde Park,2019,3,1087,93,17.0,76.0,1
+Jamaica Plain,2019,3,1495,196,73.0,123.0,1
+Mission Hill,2019,3,438,109,71.0,38.0,1
+Roslindale,2019,3,942,88,21.0,67.0,1
+Roxbury,2019,3,2085,244,93.0,151.0,1
+South Boston / South Boston Waterfront,2019,3,1916,101,56.0,45.0,1
+South End,2019,3,1446,100,51.0,49.0,1
+West Roxbury,2019,3,812,140,34.0,106.0,1
+Allston / Brighton,2019,4,1591,201,46.0,155.0,1
+Back Bay,2019,4,1034,136,102.0,34.0,1
+Beacon Hill,2019,4,688,34,17.0,17.0,1
+Charlestown,2019,4,719,66,30.0,36.0,1
+Dorchester,2019,4,2545,207,56.0,151.0,1
+Downtown / Financial District,2019,4,2232,159,104.0,55.0,1
+East Boston,2019,4,1254,213,10.0,203.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2019,4,507,91,45.0,46.0,1
+Greater Mattapan,2019,4,780,76,23.0,53.0,1
+Hyde Park,2019,4,871,84,19.0,65.0,1
+Jamaica Plain,2019,4,1171,127,64.0,63.0,1
+Mission Hill,2019,4,409,102,39.0,63.0,1
+Roslindale,2019,4,716,72,29.0,43.0,1
+Roxbury,2019,4,1917,210,80.0,130.0,1
+South Boston / South Boston Waterfront,2019,4,1412,102,51.0,51.0,1
+South End,2019,4,1164,79,53.0,26.0,1
+West Roxbury,2019,4,722,161,24.0,137.0,1
+Allston / Brighton,2019,5,1619,145,39.0,106.0,1
+Back Bay,2019,5,1174,170,104.0,66.0,1
+Beacon Hill,2019,5,834,48,30.0,18.0,1
+Charlestown,2019,5,887,65,33.0,32.0,1
+Dorchester,2019,5,3191,266,45.0,221.0,1
+Downtown / Financial District,2019,5,2156,174,94.0,80.0,1
+East Boston,2019,5,1525,342,16.0,326.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2019,5,456,72,37.0,35.0,1
+Greater Mattapan,2019,5,941,84,32.0,52.0,1
+Hyde Park,2019,5,925,85,18.0,67.0,1
+Jamaica Plain,2019,5,1284,110,63.0,47.0,1
+Mission Hill,2019,5,398,66,23.0,43.0,1
+Roslindale,2019,5,760,61,26.0,35.0,1
+Roxbury,2019,5,1768,184,46.0,138.0,1
+South Boston / South Boston Waterfront,2019,5,1728,89,44.0,45.0,1
+South End,2019,5,1312,72,42.0,30.0,1
+West Roxbury,2019,5,747,135,27.0,108.0,1
+Allston / Brighton,2019,6,1618,70,42.0,28.0,1
+Back Bay,2019,6,1187,110,58.0,52.0,1
+Beacon Hill,2019,6,741,73,44.0,29.0,1
+Charlestown,2019,6,922,90,32.0,58.0,1
+Dorchester,2019,6,3300,104,34.0,70.0,1
+Downtown / Financial District,2019,6,2284,120,52.0,68.0,1
+East Boston,2019,6,1469,159,9.0,150.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2019,6,454,40,25.0,15.0,1
+Greater Mattapan,2019,6,1093,68,11.0,57.0,1
+Hyde Park,2019,6,966,54,12.0,42.0,1
+Jamaica Plain,2019,6,1424,84,39.0,45.0,1
+Mission Hill,2019,6,426,60,30.0,30.0,1
+Roslindale,2019,6,808,28,12.0,16.0,1
+Roxbury,2019,6,1841,70,42.0,28.0,1
+South Boston / South Boston Waterfront,2019,6,1783,40,18.0,22.0,1
+South End,2019,6,1515,45,25.0,20.0,1
+West Roxbury,2019,6,854,67,20.0,47.0,1
+Allston / Brighton,2019,7,1667,56,32.0,24.0,1
+Back Bay,2019,7,1153,93,50.0,43.0,1
+Beacon Hill,2019,7,636,21,11.0,10.0,1
+Charlestown,2019,7,745,46,24.0,22.0,1
+Dorchester,2019,7,3440,56,27.0,29.0,1
+Downtown / Financial District,2019,7,2412,111,75.0,36.0,1
+East Boston,2019,7,1388,109,24.0,85.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2019,7,455,23,12.0,11.0,1
+Greater Mattapan,2019,7,1099,25,13.0,12.0,1
+Hyde Park,2019,7,1129,21,14.0,7.0,1
+Jamaica Plain,2019,7,1459,76,36.0,40.0,1
+Mission Hill,2019,7,407,29,25.0,4.0,1
+Roslindale,2019,7,854,36,19.0,17.0,1
+Roxbury,2019,7,2314,65,30.0,35.0,1
+South Boston / South Boston Waterfront,2019,7,1867,46,18.0,28.0,1
+South End,2019,7,1593,56,40.0,16.0,1
+West Roxbury,2019,7,889,64,21.0,43.0,1
+Allston / Brighton,2019,8,2588,41,15.0,26.0,1
+Back Bay,2019,8,1335,31,15.0,16.0,1
+Beacon Hill,2019,8,731,20,9.0,11.0,1
+Charlestown,2019,8,773,43,23.0,20.0,1
+Dorchester,2019,8,3266,44,16.0,28.0,1
+Downtown / Financial District,2019,8,2645,66,45.0,21.0,1
+East Boston,2019,8,1383,99,15.0,84.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2019,8,705,18,10.0,8.0,1
+Greater Mattapan,2019,8,1050,24,3.0,21.0,1
+Hyde Park,2019,8,1013,60,14.0,46.0,1
+Jamaica Plain,2019,8,1533,28,20.0,8.0,1
+Mission Hill,2019,8,505,12,8.0,4.0,1
+Roslindale,2019,8,883,16,5.0,11.0,1
+Roxbury,2019,8,2482,37,12.0,25.0,1
+South Boston / South Boston Waterfront,2019,8,2081,32,26.0,6.0,1
+South End,2019,8,1888,26,18.0,8.0,1
+West Roxbury,2019,8,850,29,14.0,15.0,1
+Allston / Brighton,2019,9,2363,39,13.0,26.0,1
+Back Bay,2019,9,1410,64,44.0,20.0,1
+Beacon Hill,2019,9,743,20,8.0,12.0,1
+Charlestown,2019,9,729,24,9.0,15.0,1
+Dorchester,2019,9,3061,45,21.0,24.0,1
+Downtown / Financial District,2019,9,2410,56,35.0,21.0,1
+East Boston,2019,9,1476,80,5.0,75.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2019,9,575,26,18.0,8.0,1
+Greater Mattapan,2019,9,871,15,12.0,3.0,1
+Hyde Park,2019,9,965,39,8.0,31.0,1
+Jamaica Plain,2019,9,1385,27,14.0,13.0,1
+Mission Hill,2019,9,625,10,4.0,6.0,1
+Roslindale,2019,9,774,16,6.0,10.0,1
+Roxbury,2019,9,2244,43,26.0,17.0,1
+South Boston / South Boston Waterfront,2019,9,2219,24,15.0,9.0,1
+South End,2019,9,1755,31,23.0,8.0,1
+West Roxbury,2019,9,710,15,9.0,6.0,1
+Allston / Brighton,2019,10,1645,39,17.0,22.0,1
+Back Bay,2019,10,1012,34,22.0,12.0,1
+Beacon Hill,2019,10,611,7,5.0,2.0,1
+Charlestown,2019,10,781,13,9.0,4.0,1
+Dorchester,2019,10,3045,25,16.0,9.0,1
+Downtown / Financial District,2019,10,2049,44,29.0,15.0,1
+East Boston,2019,10,1284,24,12.0,12.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2019,10,375,13,5.0,8.0,1
+Greater Mattapan,2019,10,846,16,12.0,4.0,1
+Hyde Park,2019,10,923,18,9.0,9.0,1
+Jamaica Plain,2019,10,1212,30,24.0,6.0,1
+Mission Hill,2019,10,341,8,1.0,7.0,1
+Roslindale,2019,10,733,17,5.0,12.0,1
+Roxbury,2019,10,1904,23,13.0,10.0,1
+South Boston / South Boston Waterfront,2019,10,1726,23,15.0,8.0,1
+South End,2019,10,1403,18,10.0,8.0,1
+West Roxbury,2019,10,717,19,8.0,11.0,1
+Allston / Brighton,2019,11,1165,38,21.0,17.0,1
+Back Bay,2019,11,941,52,40.0,12.0,1
+Beacon Hill,2019,11,494,27,16.0,11.0,1
+Charlestown,2019,11,528,19,14.0,5.0,1
+Dorchester,2019,11,2445,34,26.0,8.0,1
+Downtown / Financial District,2019,11,1533,59,39.0,20.0,1
+East Boston,2019,11,1023,89,5.0,84.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2019,11,344,30,21.0,9.0,1
+Greater Mattapan,2019,11,760,9,2.0,7.0,1
+Hyde Park,2019,11,716,34,10.0,24.0,1
+Jamaica Plain,2019,11,972,48,26.0,22.0,1
+Mission Hill,2019,11,274,11,6.0,5.0,1
+Roslindale,2019,11,552,24,15.0,9.0,1
+Roxbury,2019,11,1414,36,21.0,15.0,1
+South Boston / South Boston Waterfront,2019,11,1440,26,17.0,9.0,1
+South End,2019,11,1115,14,8.0,6.0,1
+West Roxbury,2019,11,546,11,7.0,4.0,1
+Allston / Brighton,2019,12,1571,88,27.0,61.0,1
+Back Bay,2019,12,847,38,19.0,19.0,1
+Beacon Hill,2019,12,479,24,12.0,12.0,1
+Charlestown,2019,12,612,58,24.0,34.0,1
+Dorchester,2019,12,2546,98,25.0,73.0,1
+Downtown / Financial District,2019,12,1600,94,57.0,37.0,1
+East Boston,2019,12,1183,175,28.0,147.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2019,12,336,34,19.0,15.0,1
+Greater Mattapan,2019,12,663,27,5.0,22.0,1
+Hyde Park,2019,12,724,46,14.0,32.0,1
+Jamaica Plain,2019,12,1192,69,28.0,41.0,1
+Mission Hill,2019,12,263,40,16.0,24.0,1
+Roslindale,2019,12,715,38,17.0,21.0,1
+Roxbury,2019,12,1456,60,22.0,38.0,1
+South Boston / South Boston Waterfront,2019,12,1578,64,24.0,40.0,1
+South End,2019,12,1200,42,32.0,10.0,1
+West Roxbury,2019,12,583,40,24.0,16.0,1
+Allston / Brighton,2020,1,1736,243,40.0,203.0,1
+Back Bay,2020,1,949,93,58.0,35.0,1
+Beacon Hill,2020,1,513,35,8.0,27.0,1
+Charlestown,2020,1,794,73,23.0,50.0,1
+Dorchester,2020,1,3682,277,32.0,245.0,1
+Downtown / Financial District,2020,1,1838,153,77.0,76.0,1
+East Boston,2020,1,1644,236,8.0,228.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2020,1,405,35,22.0,13.0,1
+Greater Mattapan,2020,1,823,89,18.0,71.0,1
+Hyde Park,2020,1,1172,120,17.0,103.0,1
+Jamaica Plain,2020,1,1339,87,46.0,41.0,1
+Mission Hill,2020,1,330,47,25.0,22.0,1
+Roslindale,2020,1,761,75,18.0,57.0,1
+Roxbury,2020,1,2084,195,68.0,127.0,1
+South Boston / South Boston Waterfront,2020,1,1658,76,37.0,39.0,1
+South End,2020,1,1286,85,56.0,29.0,1
+West Roxbury,2020,1,778,184,20.0,164.0,1
+Allston / Brighton,2020,2,1422,120,18.0,102.0,1
+Back Bay,2020,2,949,98,68.0,30.0,1
+Beacon Hill,2020,2,434,49,18.0,31.0,1
+Charlestown,2020,2,700,66,24.0,42.0,1
+Dorchester,2020,2,2817,268,35.0,233.0,1
+Downtown / Financial District,2020,2,1603,165,71.0,94.0,1
+East Boston,2020,2,1282,212,5.0,207.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2020,2,347,66,46.0,20.0,1
+Greater Mattapan,2020,2,751,98,16.0,82.0,1
+Hyde Park,2020,2,835,110,8.0,102.0,1
+Jamaica Plain,2020,2,973,85,48.0,37.0,1
+Mission Hill,2020,2,325,68,34.0,34.0,1
+Roslindale,2020,2,510,47,22.0,25.0,1
+Roxbury,2020,2,1559,144,48.0,96.0,1
+South Boston / South Boston Waterfront,2020,2,1486,75,34.0,41.0,1
+South End,2020,2,1125,37,29.0,8.0,1
+West Roxbury,2020,2,550,87,15.0,72.0,1
+Allston / Brighton,2020,3,1269,85,11.0,74.0,1
+Back Bay,2020,3,767,42,23.0,19.0,1
+Beacon Hill,2020,3,330,6,1.0,5.0,1
+Charlestown,2020,3,628,36,16.0,20.0,1
+Dorchester,2020,3,2430,100,13.0,87.0,1
+Downtown / Financial District,2020,3,1208,65,22.0,43.0,1
+East Boston,2020,3,1166,187,2.0,185.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2020,3,268,23,10.0,13.0,1
+Greater Mattapan,2020,3,677,62,10.0,52.0,1
+Hyde Park,2020,3,828,68,9.0,59.0,1
+Jamaica Plain,2020,3,935,87,42.0,45.0,1
+Mission Hill,2020,3,253,21,12.0,9.0,1
+Roslindale,2020,3,584,30,3.0,27.0,1
+Roxbury,2020,3,1349,153,21.0,132.0,1
+South Boston / South Boston Waterfront,2020,3,1180,53,17.0,36.0,1
+South End,2020,3,1057,37,20.0,17.0,1
+West Roxbury,2020,3,565,62,12.0,50.0,1
+Allston / Brighton,2020,4,1136,21,6.0,15.0,1
+Back Bay,2020,4,582,21,10.0,11.0,1
+Beacon Hill,2020,4,226,10,8.0,2.0,1
+Charlestown,2020,4,509,12,3.0,9.0,1
+Dorchester,2020,4,2259,36,12.0,24.0,1
+Downtown / Financial District,2020,4,936,35,15.0,20.0,1
+East Boston,2020,4,824,4,1.0,3.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2020,4,239,20,7.0,13.0,1
+Greater Mattapan,2020,4,669,7,3.0,4.0,1
+Hyde Park,2020,4,786,18,5.0,13.0,1
+Jamaica Plain,2020,4,854,22,5.0,17.0,1
+Mission Hill,2020,4,147,14,4.0,10.0,1
+Roslindale,2020,4,617,13,4.0,9.0,1
+Roxbury,2020,4,1132,38,14.0,24.0,1
+South Boston / South Boston Waterfront,2020,4,1190,25,14.0,11.0,1
+South End,2020,4,1002,24,17.0,7.0,1
+West Roxbury,2020,4,633,24,9.0,15.0,1
+Allston / Brighton,2020,5,1515,17,7.0,10.0,1
+Back Bay,2020,5,855,51,26.0,25.0,1
+Beacon Hill,2020,5,354,9,3.0,6.0,1
+Charlestown,2020,5,656,25,12.0,13.0,1
+Dorchester,2020,5,3124,32,17.0,15.0,1
+Downtown / Financial District,2020,5,1261,38,24.0,14.0,1
+East Boston,2020,5,1151,16,3.0,13.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2020,5,273,13,5.0,8.0,1
+Greater Mattapan,2020,5,838,14,9.0,5.0,1
+Hyde Park,2020,5,1299,28,14.0,14.0,1
+Jamaica Plain,2020,5,969,26,13.0,13.0,1
+Mission Hill,2020,5,188,21,6.0,15.0,1
+Roslindale,2020,5,676,23,12.0,11.0,1
+Roxbury,2020,5,1844,87,15.0,72.0,1
+South Boston / South Boston Waterfront,2020,5,1680,59,41.0,18.0,1
+South End,2020,5,1355,39,27.0,12.0,1
+West Roxbury,2020,5,725,20,2.0,18.0,1
+Allston / Brighton,2020,6,1509,68,18.0,50.0,1
+Back Bay,2020,6,902,67,40.0,27.0,1
+Beacon Hill,2020,6,423,9,5.0,4.0,1
+Charlestown,2020,6,752,35,10.0,25.0,1
+Dorchester,2020,6,3577,43,19.0,24.0,1
+Downtown / Financial District,2020,6,1577,40,21.0,19.0,1
+East Boston,2020,6,1836,83,7.0,76.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2020,6,287,14,7.0,7.0,1
+Greater Mattapan,2020,6,1125,12,5.0,7.0,1
+Hyde Park,2020,6,1450,34,10.0,24.0,1
+Jamaica Plain,2020,6,1160,41,22.0,19.0,1
+Mission Hill,2020,6,315,26,8.0,18.0,1
+Roslindale,2020,6,811,27,6.0,21.0,1
+Roxbury,2020,6,2415,77,23.0,54.0,1
+South Boston / South Boston Waterfront,2020,6,1795,28,17.0,11.0,1
+South End,2020,6,1454,49,38.0,11.0,1
+West Roxbury,2020,6,752,37,11.0,26.0,1
+Allston / Brighton,2020,7,1594,53,23.0,30.0,1
+Back Bay,2020,7,953,40,9.0,31.0,1
+Beacon Hill,2020,7,452,13,7.0,6.0,1
+Charlestown,2020,7,631,17,8.0,9.0,1
+Dorchester,2020,7,3703,52,14.0,38.0,1
+Downtown / Financial District,2020,7,1742,50,16.0,34.0,1
+East Boston,2020,7,1406,71,8.0,63.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2020,7,353,19,7.0,12.0,1
+Greater Mattapan,2020,7,1242,20,7.0,13.0,1
+Hyde Park,2020,7,1297,26,7.0,19.0,1
+Jamaica Plain,2020,7,1227,39,16.0,23.0,1
+Mission Hill,2020,7,325,23,4.0,19.0,1
+Roslindale,2020,7,833,26,13.0,13.0,1
+Roxbury,2020,7,2482,78,12.0,66.0,1
+South Boston / South Boston Waterfront,2020,7,2071,38,23.0,15.0,1
+South End,2020,7,1626,37,22.0,15.0,1
+West Roxbury,2020,7,812,25,8.0,17.0,1
+Allston / Brighton,2020,8,2335,41,22.0,19.0,1
+Back Bay,2020,8,1103,20,13.0,7.0,1
+Beacon Hill,2020,8,562,8,7.0,1.0,1
+Charlestown,2020,8,714,21,13.0,8.0,1
+Dorchester,2020,8,3624,31,16.0,15.0,1
+Downtown / Financial District,2020,8,2282,49,28.0,21.0,1
+East Boston,2020,8,1520,38,6.0,32.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2020,8,526,19,13.0,6.0,1
+Greater Mattapan,2020,8,1317,9,4.0,5.0,1
+Hyde Park,2020,8,1271,26,10.0,16.0,1
+Jamaica Plain,2020,8,1306,47,16.0,31.0,1
+Mission Hill,2020,8,671,21,1.0,20.0,1
+Roslindale,2020,8,774,14,3.0,11.0,1
+Roxbury,2020,8,2523,42,5.0,37.0,1
+South Boston / South Boston Waterfront,2020,8,2431,36,23.0,13.0,1
+South End,2020,8,1769,18,12.0,6.0,1
+West Roxbury,2020,8,827,31,13.0,18.0,1
+Allston / Brighton,2020,9,2446,30,16.0,14.0,1
+Back Bay,2020,9,1198,29,17.0,12.0,1
+Beacon Hill,2020,9,660,3,1.0,2.0,1
+Charlestown,2020,9,1004,29,9.0,20.0,1
+Dorchester,2020,9,3629,31,17.0,14.0,1
+Downtown / Financial District,2020,9,2307,29,13.0,16.0,1
+East Boston,2020,9,1567,28,3.0,25.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2020,9,484,21,9.0,12.0,1
+Greater Mattapan,2020,9,1043,5,5.0,0.0,1
+Hyde Park,2020,9,922,11,4.0,7.0,1
+Jamaica Plain,2020,9,1299,16,4.0,12.0,1
+Mission Hill,2020,9,660,13,2.0,11.0,1
+Roslindale,2020,9,821,25,7.0,18.0,1
+Roxbury,2020,9,2565,49,18.0,31.0,1
+South Boston / South Boston Waterfront,2020,9,2702,14,6.0,8.0,1
+South End,2020,9,1907,19,6.0,13.0,1
+West Roxbury,2020,9,802,24,10.0,14.0,1
+Allston / Brighton,2020,10,1522,79,8.0,71.0,1
+Back Bay,2020,10,974,15,11.0,4.0,1
+Beacon Hill,2020,10,548,3,2.0,1.0,1
+Charlestown,2020,10,1040,24,7.0,17.0,1
+Dorchester,2020,10,3212,21,9.0,12.0,1
+Downtown / Financial District,2020,10,1890,35,24.0,11.0,1
+East Boston,2020,10,1441,25,5.0,20.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2020,10,369,13,10.0,3.0,1
+Greater Mattapan,2020,10,1058,6,4.0,2.0,1
+Hyde Park,2020,10,943,15,6.0,9.0,1
+Jamaica Plain,2020,10,1172,25,5.0,20.0,1
+Mission Hill,2020,10,326,8,6.0,2.0,1
+Roslindale,2020,10,779,8,4.0,4.0,1
+Roxbury,2020,10,1928,29,8.0,21.0,1
+South Boston / South Boston Waterfront,2020,10,2269,25,12.0,13.0,1
+South End,2020,10,1442,16,10.0,6.0,1
+West Roxbury,2020,10,891,25,5.0,20.0,1
+Allston / Brighton,2020,11,1232,18,13.0,5.0,1
+Back Bay,2020,11,937,40,29.0,11.0,1
+Beacon Hill,2020,11,506,13,5.0,8.0,1
+Charlestown,2020,11,730,22,7.0,15.0,1
+Dorchester,2020,11,2762,26,11.0,15.0,1
+Downtown / Financial District,2020,11,1399,54,34.0,20.0,1
+East Boston,2020,11,1198,30,0.0,30.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2020,11,408,34,28.0,6.0,1
+Greater Mattapan,2020,11,859,9,2.0,7.0,1
+Hyde Park,2020,11,848,12,4.0,8.0,1
+Jamaica Plain,2020,11,941,60,25.0,35.0,1
+Mission Hill,2020,11,299,29,12.0,17.0,1
+Roslindale,2020,11,695,27,17.0,10.0,1
+Roxbury,2020,11,1696,42,26.0,16.0,1
+South Boston / South Boston Waterfront,2020,11,1767,37,19.0,18.0,1
+South End,2020,11,1270,15,12.0,3.0,1
+West Roxbury,2020,11,599,13,10.0,3.0,1
+Allston / Brighton,2020,12,1418,50,13.0,37.0,1
+Back Bay,2020,12,865,30,17.0,13.0,1
+Beacon Hill,2020,12,483,25,24.0,1.0,1
+Charlestown,2020,12,1082,53,15.0,38.0,1
+Dorchester,2020,12,3075,44,17.0,27.0,1
+Downtown / Financial District,2020,12,1507,40,31.0,9.0,1
+East Boston,2020,12,1327,19,3.0,16.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2020,12,367,33,17.0,16.0,1
+Greater Mattapan,2020,12,888,32,15.0,17.0,1
+Hyde Park,2020,12,1070,15,8.0,7.0,1
+Jamaica Plain,2020,12,1121,21,11.0,10.0,1
+Mission Hill,2020,12,251,17,5.0,12.0,1
+Roslindale,2020,12,763,14,4.0,10.0,1
+Roxbury,2020,12,1922,37,12.0,25.0,1
+South Boston / South Boston Waterfront,2020,12,1859,19,7.0,12.0,1
+South End,2020,12,1236,32,21.0,11.0,1
+West Roxbury,2020,12,717,31,11.0,20.0,1
+Allston / Brighton,2021,1,1298,117,32.0,85.0,1
+Back Bay,2021,1,833,52,35.0,17.0,1
+Beacon Hill,2021,1,376,19,8.0,11.0,1
+Charlestown,2021,1,937,72,31.0,41.0,1
+Dorchester,2021,1,2725,58,26.0,32.0,1
+Downtown / Financial District,2021,1,1329,85,57.0,28.0,1
+East Boston,2021,1,1432,44,8.0,36.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2021,1,335,47,31.0,16.0,1
+Greater Mattapan,2021,1,794,49,23.0,26.0,1
+Hyde Park,2021,1,687,48,5.0,43.0,1
+Jamaica Plain,2021,1,916,75,26.0,49.0,1
+Mission Hill,2021,1,312,34,22.0,12.0,1
+Roslindale,2021,1,584,34,8.0,26.0,1
+Roxbury,2021,1,1551,85,41.0,44.0,1
+South Boston / South Boston Waterfront,2021,1,1845,39,19.0,20.0,1
+South End,2021,1,1077,24,13.0,11.0,1
+West Roxbury,2021,1,499,77,14.0,63.0,1
+Allston / Brighton,2021,2,1506,101,37.0,64.0,1
+Back Bay,2021,2,715,71,49.0,22.0,1
+Beacon Hill,2021,2,312,18,11.0,7.0,1
+Charlestown,2021,2,737,56,32.0,24.0,1
+Dorchester,2021,2,2572,60,23.0,37.0,1
+Downtown / Financial District,2021,2,1210,68,36.0,32.0,1
+East Boston,2021,2,1419,150,14.0,136.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2021,2,242,23,12.0,11.0,1
+Greater Mattapan,2021,2,665,40,11.0,29.0,1
+Hyde Park,2021,2,838,73,9.0,64.0,1
+Jamaica Plain,2021,2,1201,110,43.0,67.0,1
+Mission Hill,2021,2,274,31,16.0,15.0,1
+Roslindale,2021,2,648,49,21.0,28.0,1
+Roxbury,2021,2,1460,93,34.0,59.0,1
+South Boston / South Boston Waterfront,2021,2,1868,59,33.0,26.0,1
+South End,2021,2,1072,28,17.0,11.0,1
+West Roxbury,2021,2,764,129,35.0,94.0,1
+Allston / Brighton,2021,3,1440,74,34.0,40.0,1
+Back Bay,2021,3,1074,127,93.0,34.0,1
+Beacon Hill,2021,3,428,21,12.0,9.0,1
+Charlestown,2021,3,910,46,23.0,23.0,1
+Dorchester,2021,3,3352,81,21.0,60.0,1
+Downtown / Financial District,2021,3,1622,115,46.0,69.0,1
+East Boston,2021,3,1542,126,7.0,119.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2021,3,407,66,31.0,35.0,1
+Greater Mattapan,2021,3,852,28,12.0,16.0,1
+Hyde Park,2021,3,863,57,13.0,44.0,1
+Jamaica Plain,2021,3,1307,131,38.0,93.0,1
+Mission Hill,2021,3,360,58,18.0,40.0,1
+Roslindale,2021,3,736,89,13.0,76.0,1
+Roxbury,2021,3,1971,139,46.0,93.0,1
+South Boston / South Boston Waterfront,2021,3,2229,59,32.0,27.0,1
+South End,2021,3,1423,59,45.0,14.0,1
+West Roxbury,2021,3,709,129,36.0,93.0,1
+Allston / Brighton,2021,4,1426,82,35.0,47.0,1
+Back Bay,2021,4,1139,114,76.0,38.0,1
+Beacon Hill,2021,4,562,45,23.0,22.0,1
+Charlestown,2021,4,865,44,12.0,32.0,1
+Dorchester,2021,4,3223,63,28.0,35.0,1
+Downtown / Financial District,2021,4,1742,103,46.0,57.0,1
+East Boston,2021,4,2018,350,18.0,332.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2021,4,370,29,11.0,18.0,1
+Greater Mattapan,2021,4,867,24,13.0,11.0,1
+Hyde Park,2021,4,886,53,14.0,39.0,1
+Jamaica Plain,2021,4,1241,49,21.0,28.0,1
+Mission Hill,2021,4,340,21,8.0,13.0,1
+Roslindale,2021,4,770,40,16.0,24.0,1
+Roxbury,2021,4,2014,104,39.0,65.0,1
+South Boston / South Boston Waterfront,2021,4,2335,64,39.0,25.0,1
+South End,2021,4,1478,67,53.0,14.0,1
+West Roxbury,2021,4,615,56,16.0,40.0,1
+Allston / Brighton,2021,5,1511,50,22.0,28.0,1
+Back Bay,2021,5,1262,91,64.0,27.0,1
+Beacon Hill,2021,5,590,27,20.0,7.0,1
+Charlestown,2021,5,951,40,24.0,16.0,1
+Dorchester,2021,5,3255,52,28.0,24.0,1
+Downtown / Financial District,2021,5,1714,98,58.0,40.0,1
+East Boston,2021,5,1852,126,8.0,118.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2021,5,342,26,16.0,10.0,1
+Greater Mattapan,2021,5,894,31,16.0,15.0,1
+Hyde Park,2021,5,880,57,11.0,46.0,1
+Jamaica Plain,2021,5,1241,46,28.0,18.0,1
+Mission Hill,2021,5,322,34,17.0,17.0,1
+Roslindale,2021,5,824,65,23.0,42.0,1
+Roxbury,2021,5,2154,77,41.0,36.0,1
+South Boston / South Boston Waterfront,2021,5,2579,46,22.0,24.0,1
+South End,2021,5,1346,48,27.0,21.0,1
+West Roxbury,2021,5,731,39,16.0,23.0,1
+Allston / Brighton,2021,6,1609,42,21.0,21.0,1
+Back Bay,2021,6,1044,52,33.0,19.0,1
+Beacon Hill,2021,6,596,18,10.0,8.0,1
+Charlestown,2021,6,827,13,5.0,8.0,1
+Dorchester,2021,6,3660,67,23.0,44.0,1
+Downtown / Financial District,2021,6,2120,74,42.0,32.0,1
+East Boston,2021,6,1596,29,8.0,21.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2021,6,378,32,15.0,17.0,1
+Greater Mattapan,2021,6,1093,23,8.0,15.0,1
+Hyde Park,2021,6,1017,30,6.0,24.0,1
+Jamaica Plain,2021,6,1350,44,22.0,22.0,1
+Mission Hill,2021,6,368,30,14.0,16.0,1
+Roslindale,2021,6,928,56,22.0,34.0,1
+Roxbury,2021,6,2248,70,35.0,35.0,1
+South Boston / South Boston Waterfront,2021,6,2475,38,25.0,13.0,1
+South End,2021,6,1616,39,32.0,7.0,1
+West Roxbury,2021,6,911,69,21.0,48.0,1
+Allston / Brighton,2021,7,1695,55,24.0,31.0,1
+Back Bay,2021,7,1250,119,83.0,36.0,1
+Beacon Hill,2021,7,526,16,6.0,10.0,1
+Charlestown,2021,7,713,17,6.0,11.0,1
+Dorchester,2021,7,4281,66,32.0,34.0,1
+Downtown / Financial District,2021,7,2109,83,56.0,27.0,1
+East Boston,2021,7,1547,56,19.0,37.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2021,7,486,55,32.0,23.0,1
+Greater Mattapan,2021,7,1428,59,28.0,31.0,1
+Hyde Park,2021,7,1398,38,13.0,25.0,1
+Jamaica Plain,2021,7,1451,66,41.0,25.0,1
+Mission Hill,2021,7,310,24,4.0,20.0,1
+Roslindale,2021,7,987,56,18.0,38.0,1
+Roxbury,2021,7,2327,56,22.0,34.0,1
+South Boston / South Boston Waterfront,2021,7,2431,46,32.0,14.0,1
+South End,2021,7,1742,44,32.0,12.0,1
+West Roxbury,2021,7,1047,120,26.0,94.0,1
+Allston / Brighton,2021,8,2291,47,23.0,24.0,1
+Back Bay,2021,8,1134,44,35.0,9.0,1
+Beacon Hill,2021,8,790,23,14.0,9.0,1
+Charlestown,2021,8,742,30,15.0,15.0,1
+Dorchester,2021,8,4122,52,27.0,25.0,1
+Downtown / Financial District,2021,8,2636,54,38.0,16.0,1
+East Boston,2021,8,1721,44,10.0,34.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2021,8,543,16,13.0,3.0,1
+Greater Mattapan,2021,8,1240,40,19.0,21.0,1
+Hyde Park,2021,8,1067,36,9.0,27.0,1
+Jamaica Plain,2021,8,1471,51,27.0,24.0,1
+Mission Hill,2021,8,691,8,6.0,2.0,1
+Roslindale,2021,8,909,39,14.0,25.0,1
+Roxbury,2021,8,2382,43,21.0,22.0,1
+South Boston / South Boston Waterfront,2021,8,2918,28,19.0,9.0,1
+South End,2021,8,1920,33,21.0,12.0,1
+West Roxbury,2021,8,771,49,10.0,39.0,1
+Allston / Brighton,2021,9,2344,30,18.0,12.0,1
+Back Bay,2021,9,1642,51,29.0,22.0,1
+Beacon Hill,2021,9,1002,12,6.0,6.0,1
+Charlestown,2021,9,890,22,11.0,11.0,1
+Dorchester,2021,9,3993,36,21.0,15.0,1
+Downtown / Financial District,2021,9,2670,85,52.0,33.0,1
+East Boston,2021,9,1780,40,6.0,34.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2021,9,505,9,7.0,2.0,1
+Greater Mattapan,2021,9,1045,25,15.0,10.0,1
+Hyde Park,2021,9,914,11,8.0,3.0,1
+Jamaica Plain,2021,9,1521,29,15.0,14.0,1
+Mission Hill,2021,9,606,31,14.0,17.0,1
+Roslindale,2021,9,901,25,20.0,5.0,1
+Roxbury,2021,9,2396,38,29.0,9.0,1
+South Boston / South Boston Waterfront,2021,9,3406,33,18.0,15.0,1
+South End,2021,9,1772,22,12.0,10.0,1
+West Roxbury,2021,9,741,35,11.0,24.0,1
+Allston / Brighton,2021,10,1663,24,15.0,9.0,1
+Back Bay,2021,10,1435,51,37.0,14.0,1
+Beacon Hill,2021,10,712,23,17.0,6.0,1
+Charlestown,2021,10,812,14,7.0,7.0,1
+Dorchester,2021,10,3440,40,27.0,13.0,1
+Downtown / Financial District,2021,10,2205,68,44.0,24.0,1
+East Boston,2021,10,1648,44,10.0,34.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2021,10,439,9,8.0,1.0,1
+Greater Mattapan,2021,10,1059,21,12.0,9.0,1
+Hyde Park,2021,10,791,19,9.0,10.0,1
+Jamaica Plain,2021,10,1280,28,18.0,10.0,1
+Mission Hill,2021,10,369,17,11.0,6.0,1
+Roslindale,2021,10,837,21,9.0,12.0,1
+Roxbury,2021,10,2012,44,29.0,15.0,1
+South Boston / South Boston Waterfront,2021,10,2839,22,12.0,10.0,1
+South End,2021,10,1604,22,13.0,9.0,1
+West Roxbury,2021,10,775,16,4.0,12.0,1
+Allston / Brighton,2021,11,1412,25,10.0,15.0,1
+Back Bay,2021,11,1185,40,24.0,16.0,1
+Beacon Hill,2021,11,574,16,8.0,8.0,1
+Charlestown,2021,11,675,21,10.0,11.0,1
+Dorchester,2021,11,3190,32,17.0,15.0,1
+Downtown / Financial District,2021,11,1846,40,27.0,13.0,1
+East Boston,2021,11,1475,27,3.0,24.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2021,11,359,13,11.0,2.0,1
+Greater Mattapan,2021,11,953,15,9.0,6.0,1
+Hyde Park,2021,11,901,21,5.0,16.0,1
+Jamaica Plain,2021,11,1152,22,16.0,6.0,1
+Mission Hill,2021,11,310,13,7.0,6.0,1
+Roslindale,2021,11,679,5,2.0,3.0,1
+Roxbury,2021,11,1697,24,16.0,8.0,1
+South Boston / South Boston Waterfront,2021,11,2032,27,22.0,5.0,1
+South End,2021,11,1288,17,12.0,5.0,1
+West Roxbury,2021,11,696,16,4.0,12.0,1
+Allston / Brighton,2021,12,1261,26,13.0,13.0,1
+Back Bay,2021,12,944,13,10.0,3.0,1
+Beacon Hill,2021,12,522,9,6.0,3.0,1
+Charlestown,2021,12,669,11,6.0,5.0,1
+Dorchester,2021,12,2622,22,8.0,14.0,1
+Downtown / Financial District,2021,12,1667,32,18.0,14.0,1
+East Boston,2021,12,1078,17,4.0,13.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2021,12,335,13,8.0,5.0,1
+Greater Mattapan,2021,12,724,12,4.0,8.0,1
+Hyde Park,2021,12,667,15,4.0,11.0,1
+Jamaica Plain,2021,12,962,26,17.0,9.0,1
+Mission Hill,2021,12,263,7,3.0,4.0,1
+Roslindale,2021,12,660,15,4.0,11.0,1
+Roxbury,2021,12,1467,24,9.0,15.0,1
+South Boston / South Boston Waterfront,2021,12,1852,21,15.0,6.0,1
+South End,2021,12,1209,18,10.0,8.0,1
+West Roxbury,2021,12,519,26,10.0,16.0,1
+Allston / Brighton,2022,1,1495,42,25.0,17.0,1
+Back Bay,2022,1,1004,25,18.0,7.0,1
+Beacon Hill,2022,1,584,14,11.0,3.0,1
+Charlestown,2022,1,707,16,10.0,6.0,1
+Dorchester,2022,1,3063,55,27.0,28.0,1
+Downtown / Financial District,2022,1,1780,41,25.0,16.0,1
+East Boston,2022,1,1303,8,4.0,4.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2022,1,350,15,3.0,12.0,1
+Greater Mattapan,2022,1,840,18,5.0,13.0,1
+Hyde Park,2022,1,769,13,4.0,9.0,1
+Jamaica Plain,2022,1,1154,35,27.0,8.0,1
+Mission Hill,2022,1,261,13,6.0,7.0,1
+Roslindale,2022,1,689,17,8.0,9.0,1
+Roxbury,2022,1,1698,37,16.0,21.0,1
+South Boston / South Boston Waterfront,2022,1,2145,62,40.0,22.0,1
+South End,2022,1,1183,19,12.0,7.0,1
+West Roxbury,2022,1,619,21,9.0,12.0,1
+Allston / Brighton,2022,2,1687,184,97.0,87.0,1
+Back Bay,2022,2,941,64,37.0,27.0,1
+Beacon Hill,2022,2,592,59,37.0,22.0,1
+Charlestown,2022,2,829,101,33.0,68.0,1
+Dorchester,2022,2,3593,259,139.0,120.0,1
+Downtown / Financial District,2022,2,1946,164,80.0,84.0,1
+East Boston,2022,2,1833,228,27.0,201.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2022,2,425,68,40.0,28.0,1
+Greater Mattapan,2022,2,1018,150,50.0,100.0,1
+Hyde Park,2022,2,896,163,31.0,132.0,1
+Jamaica Plain,2022,2,1707,222,107.0,115.0,1
+Mission Hill,2022,2,365,77,27.0,50.0,1
+Roslindale,2022,2,882,104,47.0,57.0,1
+Roxbury,2022,2,2030,172,74.0,98.0,1
+South Boston / South Boston Waterfront,2022,2,2274,96,46.0,50.0,1
+South End,2022,2,1351,76,44.0,32.0,1
+West Roxbury,2022,2,769,142,46.0,96.0,1
+Allston / Brighton,2022,3,1721,216,89.0,127.0,1
+Back Bay,2022,3,1226,224,153.0,71.0,1
+Beacon Hill,2022,3,615,54,23.0,31.0,1
+Charlestown,2022,3,897,93,39.0,54.0,1
+Dorchester,2022,3,3353,218,110.0,108.0,1
+Downtown / Financial District,2022,3,2245,197,118.0,79.0,1
+East Boston,2022,3,1638,250,19.0,231.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2022,3,464,118,81.0,37.0,1
+Greater Mattapan,2022,3,907,94,47.0,47.0,1
+Hyde Park,2022,3,906,114,18.0,96.0,1
+Jamaica Plain,2022,3,1396,225,91.0,134.0,1
+Mission Hill,2022,3,530,110,46.0,64.0,1
+Roslindale,2022,3,750,93,52.0,41.0,1
+Roxbury,2022,3,2011,188,84.0,104.0,1
+South Boston / South Boston Waterfront,2022,3,2431,98,64.0,34.0,1
+South End,2022,3,1553,119,83.0,36.0,1
+West Roxbury,2022,3,652,117,31.0,86.0,1
+Allston / Brighton,2022,4,1757,137,46.0,91.0,1
+Back Bay,2022,4,1189,161,117.0,44.0,1
+Beacon Hill,2022,4,680,49,28.0,21.0,1
+Charlestown,2022,4,855,52,25.0,27.0,1
+Dorchester,2022,4,3248,169,100.0,69.0,1
+Downtown / Financial District,2022,4,2228,191,115.0,76.0,1
+East Boston,2022,4,1813,106,18.0,88.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2022,4,488,74,36.0,38.0,1
+Greater Mattapan,2022,4,775,58,25.0,33.0,1
+Hyde Park,2022,4,788,81,12.0,69.0,1
+Jamaica Plain,2022,4,1257,101,63.0,38.0,1
+Mission Hill,2022,4,444,49,21.0,28.0,1
+Roslindale,2022,4,778,82,47.0,35.0,1
+Roxbury,2022,4,1898,189,79.0,110.0,1
+South Boston / South Boston Waterfront,2022,4,2079,65,39.0,26.0,1
+South End,2022,4,1821,98,67.0,31.0,1
+West Roxbury,2022,4,667,88,25.0,63.0,1
+Allston / Brighton,2022,5,1683,120,72.0,48.0,1
+Back Bay,2022,5,1320,71,42.0,29.0,1
+Beacon Hill,2022,5,730,30,18.0,12.0,1
+Charlestown,2022,5,903,55,18.0,37.0,1
+Dorchester,2022,5,3627,82,49.0,33.0,1
+Downtown / Financial District,2022,5,2263,117,56.0,61.0,1
+East Boston,2022,5,1773,173,11.0,162.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2022,5,506,59,41.0,18.0,1
+Greater Mattapan,2022,5,938,37,17.0,20.0,1
+Hyde Park,2022,5,897,38,15.0,23.0,1
+Jamaica Plain,2022,5,1355,85,59.0,26.0,1
+Mission Hill,2022,5,489,31,19.0,12.0,1
+Roslindale,2022,5,934,64,37.0,27.0,1
+Roxbury,2022,5,2009,91,33.0,58.0,1
+South Boston / South Boston Waterfront,2022,5,2078,59,30.0,29.0,1
+South End,2022,5,1760,46,27.0,19.0,1
+West Roxbury,2022,5,779,59,19.0,40.0,1
+Allston / Brighton,2022,6,1756,88,40.0,48.0,1
+Back Bay,2022,6,1227,77,51.0,26.0,1
+Beacon Hill,2022,6,755,24,17.0,7.0,1
+Charlestown,2022,6,807,38,10.0,28.0,1
+Dorchester,2022,6,3619,78,40.0,38.0,1
+Downtown / Financial District,2022,6,2191,108,55.0,53.0,1
+East Boston,2022,6,1809,176,11.0,165.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2022,6,380,15,7.0,8.0,1
+Greater Mattapan,2022,6,1059,20,7.0,13.0,1
+Hyde Park,2022,6,1074,38,12.0,26.0,1
+Jamaica Plain,2022,6,1396,57,36.0,21.0,1
+Mission Hill,2022,6,462,14,10.0,4.0,1
+Roslindale,2022,6,912,34,16.0,18.0,1
+Roxbury,2022,6,2102,74,27.0,47.0,1
+South Boston / South Boston Waterfront,2022,6,2005,63,17.0,46.0,1
+South End,2022,6,1515,50,26.0,24.0,1
+West Roxbury,2022,6,888,62,18.0,44.0,1
+Allston / Brighton,2022,7,1792,63,27.0,36.0,1
+Back Bay,2022,7,1161,47,34.0,13.0,1
+Beacon Hill,2022,7,711,27,19.0,8.0,1
+Charlestown,2022,7,780,23,9.0,14.0,1
+Dorchester,2022,7,3267,54,22.0,32.0,1
+Downtown / Financial District,2022,7,2222,86,47.0,39.0,1
+East Boston,2022,7,1321,73,8.0,65.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2022,7,392,22,11.0,11.0,1
+Greater Mattapan,2022,7,1084,32,4.0,28.0,1
+Hyde Park,2022,7,915,65,12.0,53.0,1
+Jamaica Plain,2022,7,1255,44,30.0,14.0,1
+Mission Hill,2022,7,552,20,11.0,9.0,1
+Roslindale,2022,7,860,49,16.0,33.0,1
+Roxbury,2022,7,2130,66,20.0,46.0,1
+South Boston / South Boston Waterfront,2022,7,1970,33,14.0,19.0,1
+South End,2022,7,1661,45,32.0,13.0,1
+West Roxbury,2022,7,834,65,7.0,58.0,1
+Allston / Brighton,2022,8,2412,52,25.0,27.0,1
+Back Bay,2022,8,1343,47,28.0,19.0,1
+Beacon Hill,2022,8,936,5,4.0,1.0,1
+Charlestown,2022,8,747,11,8.0,3.0,1
+Dorchester,2022,8,3559,54,18.0,36.0,1
+Downtown / Financial District,2022,8,2965,75,40.0,35.0,1
+East Boston,2022,8,1681,65,4.0,61.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2022,8,595,18,10.0,8.0,1
+Greater Mattapan,2022,8,1091,20,11.0,9.0,1
+Hyde Park,2022,8,898,24,11.0,13.0,1
+Jamaica Plain,2022,8,1419,26,13.0,13.0,1
+Mission Hill,2022,8,600,13,7.0,6.0,1
+Roslindale,2022,8,945,54,18.0,36.0,1
+Roxbury,2022,8,2369,27,11.0,16.0,1
+South Boston / South Boston Waterfront,2022,8,2550,34,20.0,14.0,1
+South End,2022,8,1799,41,27.0,14.0,1
+West Roxbury,2022,8,907,37,17.0,20.0,1
+Allston / Brighton,2022,9,2226,50,33.0,17.0,1
+Back Bay,2022,9,1294,37,19.0,18.0,1
+Beacon Hill,2022,9,1124,17,8.0,9.0,1
+Charlestown,2022,9,752,26,5.0,21.0,1
+Dorchester,2022,9,3245,61,33.0,28.0,1
+Downtown / Financial District,2022,9,2627,59,36.0,23.0,1
+East Boston,2022,9,1706,71,14.0,57.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2022,9,675,15,7.0,8.0,1
+Greater Mattapan,2022,9,1073,35,20.0,15.0,1
+Hyde Park,2022,9,713,31,11.0,20.0,1
+Jamaica Plain,2022,9,1441,40,22.0,18.0,1
+Mission Hill,2022,9,714,16,4.0,12.0,1
+Roslindale,2022,9,858,37,15.0,22.0,1
+Roxbury,2022,9,2048,35,8.0,27.0,1
+South Boston / South Boston Waterfront,2022,9,2778,51,33.0,18.0,1
+South End,2022,9,1841,23,9.0,14.0,1
+West Roxbury,2022,9,757,49,19.0,30.0,1
+Allston / Brighton,2022,10,1788,33,18.0,15.0,1
+Back Bay,2022,10,1080,28,19.0,9.0,1
+Beacon Hill,2022,10,761,25,13.0,12.0,1
+Charlestown,2022,10,866,38,10.0,28.0,1
+Dorchester,2022,10,2908,40,18.0,22.0,1
+Downtown / Financial District,2022,10,2214,50,36.0,14.0,1
+East Boston,2022,10,1373,43,11.0,32.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2022,10,426,12,10.0,2.0,1
+Greater Mattapan,2022,10,827,15,7.0,8.0,1
+Hyde Park,2022,10,773,29,16.0,13.0,1
+Jamaica Plain,2022,10,1161,59,37.0,22.0,1
+Mission Hill,2022,10,353,9,5.0,4.0,1
+Roslindale,2022,10,736,23,10.0,13.0,1
+Roxbury,2022,10,1757,37,16.0,21.0,1
+South Boston / South Boston Waterfront,2022,10,2137,45,30.0,15.0,1
+South End,2022,10,1664,23,16.0,7.0,1
+West Roxbury,2022,10,619,19,11.0,8.0,1
+Allston / Brighton,2022,11,1492,41,23.0,18.0,1
+Back Bay,2022,11,1074,28,9.0,19.0,1
+Beacon Hill,2022,11,659,11,9.0,2.0,1
+Charlestown,2022,11,658,28,7.0,21.0,1
+Dorchester,2022,11,2762,56,21.0,35.0,1
+Downtown / Financial District,2022,11,1823,49,24.0,25.0,1
+East Boston,2022,11,1382,83,12.0,71.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2022,11,359,28,11.0,17.0,1
+Greater Mattapan,2022,11,861,26,11.0,15.0,1
+Hyde Park,2022,11,894,31,15.0,16.0,1
+Jamaica Plain,2022,11,1231,28,11.0,17.0,1
+Mission Hill,2022,11,300,9,1.0,8.0,1
+Roslindale,2022,11,702,27,13.0,14.0,1
+Roxbury,2022,11,1697,28,14.0,14.0,1
+South Boston / South Boston Waterfront,2022,11,1630,30,18.0,12.0,1
+South End,2022,11,1325,30,20.0,10.0,1
+West Roxbury,2022,11,666,21,16.0,5.0,1
+Allston / Brighton,2022,12,1323,54,31.0,23.0,1
+Back Bay,2022,12,920,38,21.0,17.0,1
+Beacon Hill,2022,12,665,27,15.0,12.0,1
+Charlestown,2022,12,541,26,5.0,21.0,1
+Dorchester,2022,12,2431,69,27.0,42.0,1
+Downtown / Financial District,2022,12,1483,56,32.0,24.0,1
+East Boston,2022,12,1298,47,5.0,42.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2022,12,361,18,10.0,8.0,1
+Greater Mattapan,2022,12,688,21,11.0,10.0,1
+Hyde Park,2022,12,815,18,3.0,15.0,1
+Jamaica Plain,2022,12,1098,54,31.0,23.0,1
+Mission Hill,2022,12,303,13,10.0,3.0,1
+Roslindale,2022,12,688,24,10.0,14.0,1
+Roxbury,2022,12,1571,47,26.0,21.0,1
+South Boston / South Boston Waterfront,2022,12,1507,41,21.0,20.0,1
+South End,2022,12,1303,28,20.0,8.0,1
+West Roxbury,2022,12,594,50,20.0,30.0,1
+Allston / Brighton,2023,1,1933,142,58.0,84.0,1
+Back Bay,2023,1,979,82,58.0,24.0,1
+Beacon Hill,2023,1,678,35,18.0,17.0,1
+Charlestown,2023,1,738,73,38.0,35.0,1
+Dorchester,2023,1,3373,238,100.0,138.0,1
+Downtown / Financial District,2023,1,1877,139,89.0,50.0,1
+East Boston,2023,1,1711,62,8.0,54.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2023,1,392,74,48.0,26.0,1
+Greater Mattapan,2023,1,1224,161,85.0,76.0,1
+Hyde Park,2023,1,880,101,18.0,83.0,1
+Jamaica Plain,2023,1,1335,93,64.0,29.0,1
+Mission Hill,2023,1,403,39,13.0,26.0,1
+Roslindale,2023,1,787,61,35.0,26.0,1
+Roxbury,2023,1,2035,105,45.0,60.0,1
+South Boston / South Boston Waterfront,2023,1,1870,99,55.0,44.0,1
+South End,2023,1,1420,87,43.0,44.0,1
+West Roxbury,2023,1,750,130,53.0,77.0,1
+Allston / Brighton,2023,2,1464,64,26.0,38.0,1
+Back Bay,2023,2,851,76,57.0,19.0,1
+Beacon Hill,2023,2,547,14,7.0,7.0,1
+Charlestown,2023,2,640,29,11.0,18.0,1
+Dorchester,2023,2,2906,114,29.0,85.0,1
+Downtown / Financial District,2023,2,1648,87,51.0,36.0,1
+East Boston,2023,2,1596,80,4.0,76.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2023,2,336,31,23.0,8.0,1
+Greater Mattapan,2023,2,1029,50,25.0,25.0,1
+Hyde Park,2023,2,812,66,5.0,61.0,1
+Jamaica Plain,2023,2,1101,81,47.0,34.0,1
+Mission Hill,2023,2,357,15,8.0,7.0,1
+Roslindale,2023,2,656,43,16.0,27.0,1
+Roxbury,2023,2,1699,72,35.0,37.0,1
+South Boston / South Boston Waterfront,2023,2,1734,58,25.0,33.0,1
+South End,2023,2,1206,43,28.0,15.0,1
+West Roxbury,2023,2,555,78,28.0,50.0,1
+Allston / Brighton,2023,3,1862,167,90.0,77.0,1
+Back Bay,2023,3,1085,85,63.0,22.0,1
+Beacon Hill,2023,3,680,47,33.0,14.0,1
+Charlestown,2023,3,681,84,38.0,46.0,1
+Dorchester,2023,3,3626,144,64.0,80.0,1
+Downtown / Financial District,2023,3,1887,174,119.0,55.0,1
+East Boston,2023,3,1866,86,14.0,72.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2023,3,357,44,30.0,14.0,1
+Greater Mattapan,2023,3,1163,67,40.0,27.0,1
+Hyde Park,2023,3,1011,108,27.0,81.0,1
+Jamaica Plain,2023,3,1310,122,58.0,64.0,1
+Mission Hill,2023,3,374,36,25.0,11.0,1
+Roslindale,2023,3,871,77,36.0,41.0,1
+Roxbury,2023,3,2002,106,44.0,62.0,1
+South Boston / South Boston Waterfront,2023,3,2188,91,60.0,31.0,1
+South End,2023,3,1542,81,61.0,20.0,1
+West Roxbury,2023,3,719,95,27.0,68.0,1
+Allston / Brighton,2023,4,1706,86,58.0,28.0,1
+Back Bay,2023,4,1125,113,87.0,26.0,1
+Beacon Hill,2023,4,750,37,25.0,12.0,1
+Charlestown,2023,4,819,50,35.0,15.0,1
+Dorchester,2023,4,3690,105,45.0,60.0,1
+Downtown / Financial District,2023,4,1925,155,106.0,49.0,1
+East Boston,2023,4,1836,236,15.0,221.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2023,4,518,31,17.0,14.0,1
+Greater Mattapan,2023,4,1292,70,37.0,33.0,1
+Hyde Park,2023,4,966,49,19.0,30.0,1
+Jamaica Plain,2023,4,1310,73,46.0,27.0,1
+Mission Hill,2023,4,427,32,18.0,14.0,1
+Roslindale,2023,4,812,67,20.0,47.0,1
+Roxbury,2023,4,2109,74,30.0,44.0,1
+South Boston / South Boston Waterfront,2023,4,1727,70,49.0,21.0,1
+South End,2023,4,1487,80,47.0,33.0,1
+West Roxbury,2023,4,882,96,28.0,68.0,1
+Allston / Brighton,2023,5,2182,73,42.0,31.0,1
+Back Bay,2023,5,1249,70,41.0,29.0,1
+Beacon Hill,2023,5,1065,51,34.0,17.0,1
+Charlestown,2023,5,912,72,45.0,27.0,1
+Dorchester,2023,5,4313,97,55.0,42.0,1
+Downtown / Financial District,2023,5,2432,140,84.0,56.0,1
+East Boston,2023,5,1989,58,12.0,46.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2023,5,478,36,23.0,13.0,1
+Greater Mattapan,2023,5,1388,26,13.0,13.0,1
+Hyde Park,2023,5,1270,66,22.0,44.0,1
+Jamaica Plain,2023,5,1604,85,54.0,31.0,1
+Mission Hill,2023,5,484,34,22.0,12.0,1
+Roslindale,2023,5,1050,88,36.0,52.0,1
+Roxbury,2023,5,2390,69,44.0,25.0,1
+South Boston / South Boston Waterfront,2023,5,1999,71,57.0,14.0,1
+South End,2023,5,1819,61,39.0,22.0,1
+West Roxbury,2023,5,981,62,20.0,42.0,1
+Allston / Brighton,2023,6,2252,67,36.0,31.0,1
+Back Bay,2023,6,1263,63,44.0,19.0,1
+Beacon Hill,2023,6,798,23,19.0,4.0,1
+Charlestown,2023,6,958,55,27.0,28.0,1
+Dorchester,2023,6,4362,68,25.0,43.0,1
+Downtown / Financial District,2023,6,2366,93,60.0,33.0,1
+East Boston,2023,6,2225,116,6.0,110.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2023,6,508,36,26.0,10.0,1
+Greater Mattapan,2023,6,1224,22,5.0,17.0,1
+Hyde Park,2023,6,1186,47,7.0,40.0,1
+Jamaica Plain,2023,6,1714,49,32.0,17.0,1
+Mission Hill,2023,6,493,29,17.0,12.0,1
+Roslindale,2023,6,1230,56,19.0,37.0,1
+Roxbury,2023,6,2393,55,25.0,30.0,1
+South Boston / South Boston Waterfront,2023,6,2159,44,30.0,14.0,1
+South End,2023,6,1685,33,17.0,16.0,1
+West Roxbury,2023,6,1023,44,14.0,30.0,1
+Allston / Brighton,2023,7,2361,63,37.0,26.0,1
+Back Bay,2023,7,1150,55,40.0,15.0,1
+Beacon Hill,2023,7,861,30,27.0,3.0,1
+Charlestown,2023,7,799,32,20.0,12.0,1
+Dorchester,2023,7,4193,62,28.0,34.0,1
+Downtown / Financial District,2023,7,2415,97,67.0,30.0,1
+East Boston,2023,7,2107,157,10.0,147.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2023,7,488,27,18.0,9.0,1
+Greater Mattapan,2023,7,1486,21,11.0,10.0,1
+Hyde Park,2023,7,1149,29,13.0,16.0,1
+Jamaica Plain,2023,7,1626,49,36.0,13.0,1
+Mission Hill,2023,7,475,24,16.0,8.0,1
+Roslindale,2023,7,1119,56,15.0,41.0,1
+Roxbury,2023,7,2616,51,28.0,23.0,1
+South Boston / South Boston Waterfront,2023,7,2274,50,32.0,18.0,1
+South End,2023,7,1763,34,29.0,5.0,1
+West Roxbury,2023,7,1002,49,14.0,35.0,1
+Allston / Brighton,2023,8,3607,86,52.0,34.0,1
+Back Bay,2023,8,1360,47,41.0,6.0,1
+Beacon Hill,2023,8,1029,18,15.0,3.0,1
+Charlestown,2023,8,860,22,18.0,4.0,1
+Dorchester,2023,8,4732,75,42.0,33.0,1
+Downtown / Financial District,2023,8,2645,94,66.0,28.0,1
+East Boston,2023,8,2358,94,10.0,84.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2023,8,701,43,26.0,17.0,1
+Greater Mattapan,2023,8,1423,34,12.0,22.0,1
+Hyde Park,2023,8,1243,69,20.0,49.0,1
+Jamaica Plain,2023,8,1901,55,31.0,24.0,1
+Mission Hill,2023,8,938,49,30.0,19.0,1
+Roslindale,2023,8,1122,62,29.0,33.0,1
+Roxbury,2023,8,3043,70,40.0,30.0,1
+South Boston / South Boston Waterfront,2023,8,3122,40,26.0,14.0,1
+South End,2023,8,2186,52,34.0,18.0,1
+West Roxbury,2023,8,1090,54,21.0,33.0,1
+Allston / Brighton,2023,9,3166,61,28.0,33.0,1
+Back Bay,2023,9,1379,94,80.0,14.0,1
+Beacon Hill,2023,9,1120,18,9.0,9.0,1
+Charlestown,2023,9,837,27,16.0,11.0,1
+Dorchester,2023,9,4579,71,34.0,37.0,1
+Downtown / Financial District,2023,9,2557,80,53.0,27.0,1
+East Boston,2023,9,1977,14,9.0,5.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2023,9,609,43,33.0,10.0,1
+Greater Mattapan,2023,9,1285,22,14.0,8.0,1
+Hyde Park,2023,9,1026,51,26.0,25.0,1
+Jamaica Plain,2023,9,1572,56,31.0,25.0,1
+Mission Hill,2023,9,796,29,27.0,2.0,1
+Roslindale,2023,9,1032,35,16.0,19.0,1
+Roxbury,2023,9,2851,55,33.0,22.0,1
+South Boston / South Boston Waterfront,2023,9,3609,38,30.0,8.0,1
+South End,2023,9,1981,44,31.0,13.0,1
+West Roxbury,2023,9,955,47,17.0,30.0,1
+Allston / Brighton,2023,10,2180,40,22.0,18.0,1
+Back Bay,2023,10,1115,54,45.0,9.0,1
+Beacon Hill,2023,10,810,24,7.0,17.0,1
+Charlestown,2023,10,961,22,14.0,8.0,1
+Dorchester,2023,10,4090,33,14.0,19.0,1
+Downtown / Financial District,2023,10,2136,74,39.0,35.0,1
+East Boston,2023,10,1680,15,1.0,14.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2023,10,459,20,17.0,3.0,1
+Greater Mattapan,2023,10,1109,13,8.0,5.0,1
+Hyde Park,2023,10,930,21,13.0,8.0,1
+Jamaica Plain,2023,10,1418,28,23.0,5.0,1
+Mission Hill,2023,10,510,12,11.0,1.0,1
+Roslindale,2023,10,942,21,9.0,12.0,1
+Roxbury,2023,10,2425,35,21.0,14.0,1
+South Boston / South Boston Waterfront,2023,10,2559,33,18.0,15.0,1
+South End,2023,10,1829,39,28.0,11.0,1
+West Roxbury,2023,10,896,33,20.0,13.0,1
+Allston / Brighton,2023,11,1755,36,14.0,22.0,1
+Back Bay,2023,11,1019,39,30.0,9.0,1
+Beacon Hill,2023,11,605,6,2.0,4.0,1
+Charlestown,2023,11,793,16,6.0,10.0,1
+Dorchester,2023,11,3369,26,10.0,16.0,1
+Downtown / Financial District,2023,11,1656,50,26.0,24.0,1
+East Boston,2023,11,1446,20,2.0,18.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2023,11,319,9,8.0,1.0,1
+Greater Mattapan,2023,11,1045,17,7.0,10.0,1
+Hyde Park,2023,11,895,35,6.0,29.0,1
+Jamaica Plain,2023,11,1276,14,10.0,4.0,1
+Mission Hill,2023,11,361,6,4.0,2.0,1
+Roslindale,2023,11,898,18,12.0,6.0,1
+Roxbury,2023,11,1900,31,14.0,17.0,1
+South Boston / South Boston Waterfront,2023,11,2027,23,16.0,7.0,1
+South End,2023,11,1394,21,13.0,8.0,1
+West Roxbury,2023,11,794,18,10.0,8.0,1
+Allston / Brighton,2023,12,1783,28,17.0,11.0,1
+Back Bay,2023,12,954,27,22.0,5.0,1
+Beacon Hill,2023,12,692,12,4.0,8.0,1
+Charlestown,2023,12,719,30,8.0,22.0,1
+Dorchester,2023,12,3342,55,35.0,20.0,1
+Downtown / Financial District,2023,12,1844,95,47.0,48.0,1
+East Boston,2023,12,1216,9,6.0,3.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2023,12,274,16,14.0,2.0,1
+Greater Mattapan,2023,12,1071,13,9.0,4.0,1
+Hyde Park,2023,12,1061,25,9.0,16.0,1
+Jamaica Plain,2023,12,1275,34,26.0,8.0,1
+Mission Hill,2023,12,316,5,3.0,2.0,1
+Roslindale,2023,12,901,21,12.0,9.0,1
+Roxbury,2023,12,1977,45,24.0,21.0,1
+South Boston / South Boston Waterfront,2023,12,1943,49,26.0,23.0,1
+South End,2023,12,1434,21,13.0,8.0,1
+West Roxbury,2023,12,972,22,11.0,11.0,1
+Allston / Brighton,2024,1,2086,164,99.0,65.0,1
+Back Bay,2024,1,891,53,34.0,19.0,1
+Beacon Hill,2024,1,833,18,10.0,8.0,1
+Charlestown,2024,1,869,63,27.0,36.0,1
+Dorchester,2024,1,3518,140,61.0,79.0,1
+Downtown / Financial District,2024,1,1878,105,61.0,44.0,1
+East Boston,2024,1,1473,33,21.0,12.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2024,1,369,18,12.0,6.0,1
+Greater Mattapan,2024,1,1096,60,33.0,27.0,1
+Hyde Park,2024,1,898,71,8.0,63.0,1
+Jamaica Plain,2024,1,1496,82,46.0,36.0,1
+Mission Hill,2024,1,371,22,13.0,9.0,1
+Roslindale,2024,1,815,55,30.0,25.0,1
+Roxbury,2024,1,2106,88,36.0,52.0,1
+South Boston / South Boston Waterfront,2024,1,2171,71,35.0,36.0,1
+South End,2024,1,1465,30,15.0,15.0,1
+West Roxbury,2024,1,891,93,55.0,38.0,1
+Allston / Brighton,2024,2,1815,157,101.0,56.0,1
+Back Bay,2024,2,967,77,52.0,25.0,1
+Beacon Hill,2024,2,754,13,5.0,8.0,1
+Charlestown,2024,2,639,37,14.0,23.0,1
+Dorchester,2024,2,3305,110,38.0,72.0,1
+Downtown / Financial District,2024,2,1800,109,67.0,42.0,1
+East Boston,2024,2,1357,107,14.0,93.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2024,2,300,20,16.0,4.0,1
+Greater Mattapan,2024,2,1074,70,21.0,49.0,1
+Hyde Park,2024,2,841,89,17.0,72.0,1
+Jamaica Plain,2024,2,1244,54,28.0,26.0,1
+Mission Hill,2024,2,371,12,8.0,4.0,1
+Roslindale,2024,2,831,46,18.0,28.0,1
+Roxbury,2024,2,1895,65,34.0,31.0,1
+South Boston / South Boston Waterfront,2024,2,1908,77,35.0,42.0,1
+South End,2024,2,1348,43,18.0,25.0,1
+West Roxbury,2024,2,655,46,20.0,26.0,1
+Allston / Brighton,2024,3,2187,202,143.0,59.0,1
+Back Bay,2024,3,1169,133,87.0,46.0,1
+Beacon Hill,2024,3,745,42,24.0,18.0,1
+Charlestown,2024,3,838,66,34.0,32.0,1
+Dorchester,2024,3,3572,175,63.0,112.0,1
+Downtown / Financial District,2024,3,2244,194,114.0,80.0,1
+East Boston,2024,3,1794,73,17.0,56.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2024,3,401,34,19.0,15.0,1
+Greater Mattapan,2024,3,1394,107,26.0,81.0,1
+Hyde Park,2024,3,1024,78,17.0,61.0,1
+Jamaica Plain,2024,3,1469,145,72.0,73.0,1
+Mission Hill,2024,3,373,42,19.0,23.0,1
+Roslindale,2024,3,913,52,24.0,28.0,1
+Roxbury,2024,3,2093,155,63.0,92.0,1
+South Boston / South Boston Waterfront,2024,3,2291,101,39.0,62.0,1
+South End,2024,3,1652,74,46.0,28.0,1
+West Roxbury,2024,3,827,53,18.0,35.0,1
+Allston / Brighton,2024,4,2178,111,71.0,40.0,1
+Back Bay,2024,4,1365,153,108.0,45.0,1
+Beacon Hill,2024,4,705,54,31.0,23.0,1
+Charlestown,2024,4,938,63,39.0,24.0,1
+Dorchester,2024,4,3958,171,76.0,95.0,1
+Downtown / Financial District,2024,4,2436,238,141.0,97.0,1
+East Boston,2024,4,1818,167,18.0,149.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2024,4,502,33,18.0,15.0,1
+Greater Mattapan,2024,4,1356,80,33.0,47.0,1
+Hyde Park,2024,4,1109,121,24.0,97.0,1
+Jamaica Plain,2024,4,1541,108,50.0,58.0,1
+Mission Hill,2024,4,439,42,29.0,13.0,1
+Roslindale,2024,4,1009,68,31.0,37.0,1
+Roxbury,2024,4,2224,110,59.0,51.0,1
+South Boston / South Boston Waterfront,2024,4,2050,90,59.0,31.0,1
+South End,2024,4,1773,122,91.0,31.0,1
+West Roxbury,2024,4,918,73,46.0,27.0,1
+Allston / Brighton,2024,5,2363,57,42.0,15.0,1
+Back Bay,2024,5,1277,120,102.0,18.0,1
+Beacon Hill,2024,5,964,32,17.0,15.0,1
+Charlestown,2024,5,912,43,20.0,23.0,1
+Dorchester,2024,5,3702,130,57.0,73.0,1
+Downtown / Financial District,2024,5,2639,137,71.0,66.0,1
+East Boston,2024,5,1622,131,22.0,109.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2024,5,488,54,48.0,6.0,1
+Greater Mattapan,2024,5,1064,37,11.0,26.0,1
+Hyde Park,2024,5,1188,44,21.0,23.0,1
+Jamaica Plain,2024,5,1735,60,35.0,25.0,1
+Mission Hill,2024,5,432,11,5.0,6.0,1
+Roslindale,2024,5,920,27,9.0,18.0,1
+Roxbury,2024,5,2297,95,43.0,52.0,1
+South Boston / South Boston Waterfront,2024,5,2328,88,55.0,33.0,1
+South End,2024,5,2036,85,44.0,41.0,1
+West Roxbury,2024,5,1027,30,16.0,14.0,1
+Allston / Brighton,2024,6,2467,68,21.0,47.0,1
+Back Bay,2024,6,1326,79,67.0,12.0,1
+Beacon Hill,2024,6,945,14,6.0,8.0,1
+Charlestown,2024,6,944,18,8.0,10.0,1
+Dorchester,2024,6,3841,86,32.0,54.0,1
+Downtown / Financial District,2024,6,2749,124,94.0,30.0,1
+East Boston,2024,6,1652,14,8.0,6.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2024,6,585,45,38.0,7.0,1
+Greater Mattapan,2024,6,1225,25,13.0,12.0,1
+Hyde Park,2024,6,1087,37,21.0,16.0,1
+Jamaica Plain,2024,6,1651,54,25.0,29.0,1
+Mission Hill,2024,6,408,22,9.0,13.0,1
+Roslindale,2024,6,942,26,15.0,11.0,1
+Roxbury,2024,6,2390,71,27.0,44.0,1
+South Boston / South Boston Waterfront,2024,6,2437,58,42.0,16.0,1
+South End,2024,6,1945,47,33.0,14.0,1
+West Roxbury,2024,6,965,34,19.0,15.0,1
+Allston / Brighton,2024,7,2439,62,25.0,37.0,1
+Back Bay,2024,7,1283,47,39.0,8.0,1
+Beacon Hill,2024,7,950,16,10.0,6.0,1
+Charlestown,2024,7,678,23,13.0,10.0,1
+Dorchester,2024,7,3744,64,22.0,42.0,1
+Downtown / Financial District,2024,7,2846,82,33.0,49.0,1
+East Boston,2024,7,2023,53,15.0,38.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2024,7,474,16,13.0,3.0,1
+Greater Mattapan,2024,7,1297,27,10.0,17.0,1
+Hyde Park,2024,7,1240,45,16.0,29.0,1
+Jamaica Plain,2024,7,1752,56,29.0,27.0,1
+Mission Hill,2024,7,378,22,4.0,18.0,1
+Roslindale,2024,7,1123,26,8.0,18.0,1
+Roxbury,2024,7,2775,75,26.0,49.0,1
+South Boston / South Boston Waterfront,2024,7,2204,45,17.0,28.0,1
+South End,2024,7,1917,42,24.0,18.0,1
+West Roxbury,2024,7,1048,51,15.0,36.0,1
+Allston / Brighton,2024,8,3489,66,36.0,30.0,1
+Back Bay,2024,8,1552,49,29.0,20.0,1
+Beacon Hill,2024,8,971,9,5.0,4.0,1
+Charlestown,2024,8,805,23,11.0,12.0,1
+Dorchester,2024,8,3978,41,19.0,22.0,1
+Downtown / Financial District,2024,8,3110,72,46.0,26.0,1
+East Boston,2024,8,1970,28,6.0,22.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2024,8,703,11,8.0,3.0,1
+Greater Mattapan,2024,8,1220,21,11.0,10.0,1
+Hyde Park,2024,8,1014,27,10.0,17.0,1
+Jamaica Plain,2024,8,1934,29,13.0,16.0,1
+Mission Hill,2024,8,838,3,1.0,2.0,1
+Roslindale,2024,8,950,13,9.0,4.0,1
+Roxbury,2024,8,2517,36,16.0,20.0,1
+South Boston / South Boston Waterfront,2024,8,2707,40,24.0,16.0,1
+South End,2024,8,1949,17,6.0,11.0,1
+West Roxbury,2024,8,846,28,11.0,17.0,1
+Allston / Brighton,2024,9,2745,50,25.0,25.0,1
+Back Bay,2024,9,1668,22,11.0,11.0,1
+Beacon Hill,2024,9,1067,26,8.0,18.0,1
+Charlestown,2024,9,872,12,6.0,6.0,1
+Dorchester,2024,9,3864,73,24.0,49.0,1
+Downtown / Financial District,2024,9,2955,56,27.0,29.0,1
+East Boston,2024,9,1728,7,0.0,7.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2024,9,643,14,12.0,2.0,1
+Greater Mattapan,2024,9,1055,25,12.0,13.0,1
+Hyde Park,2024,9,985,23,2.0,21.0,1
+Jamaica Plain,2024,9,1733,58,41.0,17.0,1
+Mission Hill,2024,9,668,12,3.0,9.0,1
+Roslindale,2024,9,918,18,8.0,10.0,1
+Roxbury,2024,9,2782,35,17.0,18.0,1
+South Boston / South Boston Waterfront,2024,9,3346,42,21.0,21.0,1
+South End,2024,9,1834,23,14.0,9.0,1
+West Roxbury,2024,9,834,20,3.0,17.0,1
+Allston / Brighton,2024,10,2046,62,22.0,40.0,1
+Back Bay,2024,10,1353,28,15.0,13.0,1
+Beacon Hill,2024,10,883,8,3.0,5.0,1
+Charlestown,2024,10,783,15,5.0,10.0,1
+Dorchester,2024,10,3073,49,20.0,29.0,1
+Downtown / Financial District,2024,10,2470,57,20.0,37.0,1
+East Boston,2024,10,1509,18,13.0,5.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2024,10,436,11,7.0,4.0,1
+Greater Mattapan,2024,10,975,14,4.0,10.0,1
+Hyde Park,2024,10,879,11,5.0,6.0,1
+Jamaica Plain,2024,10,1441,33,18.0,15.0,1
+Mission Hill,2024,10,401,1,0.0,1.0,1
+Roslindale,2024,10,806,17,6.0,11.0,1
+Roxbury,2024,10,2307,37,12.0,25.0,1
+South Boston / South Boston Waterfront,2024,10,2501,31,14.0,17.0,1
+South End,2024,10,1915,19,15.0,4.0,1
+West Roxbury,2024,10,857,25,11.0,14.0,1
+Allston / Brighton,2024,11,1809,31,13.0,18.0,1
+Back Bay,2024,11,1072,17,14.0,3.0,1
+Beacon Hill,2024,11,756,4,3.0,1.0,1
+Charlestown,2024,11,569,12,5.0,7.0,1
+Dorchester,2024,11,2874,35,14.0,21.0,1
+Downtown / Financial District,2024,11,2006,28,16.0,12.0,1
+East Boston,2024,11,1356,23,6.0,17.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2024,11,319,6,6.0,0.0,1
+Greater Mattapan,2024,11,845,6,5.0,1.0,1
+Hyde Park,2024,11,828,6,4.0,2.0,1
+Jamaica Plain,2024,11,1379,15,8.0,7.0,1
+Mission Hill,2024,11,296,1,0.0,1.0,1
+Roslindale,2024,11,814,15,10.0,5.0,1
+Roxbury,2024,11,1850,16,7.0,9.0,1
+South Boston / South Boston Waterfront,2024,11,1976,15,10.0,5.0,1
+South End,2024,11,1506,9,8.0,1.0,1
+West Roxbury,2024,11,741,8,5.0,3.0,1
+Allston / Brighton,2024,12,1846,43,15.0,28.0,1
+Back Bay,2024,12,922,21,14.0,7.0,1
+Beacon Hill,2024,12,550,10,7.0,3.0,1
+Charlestown,2024,12,579,14,2.0,12.0,1
+Dorchester,2024,12,2787,58,20.0,38.0,1
+Downtown / Financial District,2024,12,1830,23,10.0,13.0,1
+East Boston,2024,12,1358,20,6.0,14.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2024,12,353,11,3.0,8.0,1
+Greater Mattapan,2024,12,825,20,8.0,12.0,1
+Hyde Park,2024,12,787,23,11.0,12.0,1
+Jamaica Plain,2024,12,1335,25,11.0,14.0,1
+Mission Hill,2024,12,342,4,1.0,3.0,1
+Roslindale,2024,12,767,5,2.0,3.0,1
+Roxbury,2024,12,1835,41,15.0,26.0,1
+South Boston / South Boston Waterfront,2024,12,2077,26,10.0,16.0,1
+South End,2024,12,1584,30,21.0,9.0,1
+West Roxbury,2024,12,715,11,8.0,3.0,1
+Allston / Brighton,2025,1,2045,49,28.0,21.0,1
+Back Bay,2025,1,809,39,29.0,10.0,1
+Beacon Hill,2025,1,467,19,17.0,2.0,1
+Charlestown,2025,1,635,22,14.0,8.0,1
+Dorchester,2025,1,2553,94,36.0,58.0,1
+Downtown / Financial District,2025,1,1733,67,33.0,34.0,1
+East Boston,2025,1,1438,53,22.0,31.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2025,1,302,15,6.0,9.0,1
+Greater Mattapan,2025,1,781,32,11.0,21.0,1
+Hyde Park,2025,1,721,33,8.0,25.0,1
+Jamaica Plain,2025,1,1220,44,28.0,16.0,1
+Mission Hill,2025,1,282,10,4.0,6.0,1
+Roslindale,2025,1,664,25,15.0,10.0,1
+Roxbury,2025,1,1660,42,18.0,24.0,1
+South Boston / South Boston Waterfront,2025,1,2031,45,11.0,34.0,1
+South End,2025,1,1275,31,13.0,18.0,1
+West Roxbury,2025,1,542,25,10.0,15.0,1
+Allston / Brighton,2025,2,2504,127,78.0,49.0,1
+Back Bay,2025,2,919,108,63.0,45.0,1
+Beacon Hill,2025,2,538,36,23.0,13.0,1
+Charlestown,2025,2,696,54,30.0,24.0,1
+Dorchester,2025,2,2820,189,90.0,99.0,1
+Downtown / Financial District,2025,2,1963,131,69.0,62.0,1
+East Boston,2025,2,1430,122,16.0,106.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2025,2,365,31,12.0,19.0,1
+Greater Mattapan,2025,2,667,78,30.0,48.0,1
+Hyde Park,2025,2,810,121,17.0,104.0,1
+Jamaica Plain,2025,2,1416,72,40.0,32.0,1
+Mission Hill,2025,2,393,34,20.0,14.0,1
+Roslindale,2025,2,764,39,19.0,20.0,1
+Roxbury,2025,2,1712,123,51.0,72.0,1
+South Boston / South Boston Waterfront,2025,2,2117,83,29.0,54.0,1
+South End,2025,2,1488,75,40.0,35.0,1
+West Roxbury,2025,2,784,69,39.0,30.0,1
+Allston / Brighton,2025,3,2146,125,87.0,38.0,1
+Back Bay,2025,3,1252,98,76.0,22.0,1
+Beacon Hill,2025,3,555,21,11.0,10.0,1
+Charlestown,2025,3,626,51,23.0,28.0,1
+Dorchester,2025,3,3150,231,98.0,133.0,1
+Downtown / Financial District,2025,3,2242,199,101.0,98.0,1
+East Boston,2025,3,1594,170,14.0,156.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2025,3,409,26,20.0,6.0,1
+Greater Mattapan,2025,3,886,75,41.0,34.0,1
+Hyde Park,2025,3,860,118,28.0,90.0,1
+Jamaica Plain,2025,3,1194,91,51.0,40.0,1
+Mission Hill,2025,3,406,36,16.0,20.0,1
+Roslindale,2025,3,876,68,36.0,32.0,1
+Roxbury,2025,3,1905,106,52.0,54.0,1
+South Boston / South Boston Waterfront,2025,3,2134,76,19.0,57.0,1
+South End,2025,3,1721,113,73.0,40.0,1
+West Roxbury,2025,3,696,74,34.0,40.0,1
+Allston / Brighton,2025,4,1951,108,62.0,46.0,1
+Back Bay,2025,4,1396,212,167.0,45.0,1
+Beacon Hill,2025,4,660,36,21.0,15.0,1
+Charlestown,2025,4,715,44,21.0,23.0,1
+Dorchester,2025,4,2776,169,88.0,81.0,1
+Downtown / Financial District,2025,4,2493,283,167.0,116.0,1
+East Boston,2025,4,1430,157,15.0,142.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2025,4,506,81,54.0,27.0,1
+Greater Mattapan,2025,4,945,103,51.0,52.0,1
+Hyde Park,2025,4,738,100,32.0,68.0,1
+Jamaica Plain,2025,4,1224,70,38.0,32.0,1
+Mission Hill,2025,4,416,41,16.0,25.0,1
+Roslindale,2025,4,767,54,27.0,27.0,1
+Roxbury,2025,4,1888,118,45.0,73.0,1
+South Boston / South Boston Waterfront,2025,4,1983,85,30.0,55.0,1
+South End,2025,4,1708,136,75.0,61.0,1
+West Roxbury,2025,4,685,57,40.0,17.0,1
+Allston / Brighton,2025,5,1991,109,69.0,40.0,1
+Back Bay,2025,5,1478,120,92.0,28.0,1
+Beacon Hill,2025,5,872,20,6.0,14.0,1
+Charlestown,2025,5,689,76,59.0,17.0,1
+Dorchester,2025,5,3057,186,113.0,73.0,1
+Downtown / Financial District,2025,5,2661,148,85.0,63.0,1
+East Boston,2025,5,1497,103,14.0,89.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2025,5,479,36,22.0,14.0,1
+Greater Mattapan,2025,5,863,39,18.0,21.0,1
+Hyde Park,2025,5,862,63,28.0,35.0,1
+Jamaica Plain,2025,5,1384,85,55.0,30.0,1
+Mission Hill,2025,5,359,34,22.0,12.0,1
+Roslindale,2025,5,891,55,34.0,21.0,1
+Roxbury,2025,5,2135,101,40.0,61.0,1
+South Boston / South Boston Waterfront,2025,5,1872,55,18.0,37.0,1
+South End,2025,5,2191,122,82.0,40.0,1
+West Roxbury,2025,5,633,43,31.0,12.0,1
+Allston / Brighton,2025,6,1928,74,31.0,43.0,1
+Back Bay,2025,6,1519,116,99.0,17.0,1
+Beacon Hill,2025,6,885,43,37.0,6.0,1
+Charlestown,2025,6,703,25,11.0,14.0,1
+Dorchester,2025,6,3245,123,54.0,69.0,1
+Downtown / Financial District,2025,6,2487,94,48.0,46.0,1
+East Boston,2025,6,1533,39,15.0,24.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2025,6,477,46,21.0,25.0,1
+Greater Mattapan,2025,6,1004,37,20.0,17.0,1
+Hyde Park,2025,6,916,38,16.0,22.0,1
+Jamaica Plain,2025,6,1421,57,31.0,26.0,1
+Mission Hill,2025,6,435,16,9.0,7.0,1
+Roslindale,2025,6,869,29,14.0,15.0,1
+Roxbury,2025,6,2403,58,31.0,27.0,1
+South Boston / South Boston Waterfront,2025,6,1872,35,19.0,16.0,1
+South End,2025,6,2341,77,60.0,17.0,1
+West Roxbury,2025,6,848,42,15.0,27.0,1
+Allston / Brighton,2025,7,2263,74,30.0,44.0,1
+Back Bay,2025,7,1263,56,26.0,30.0,1
+Beacon Hill,2025,7,686,17,8.0,9.0,1
+Charlestown,2025,7,639,29,17.0,12.0,1
+Dorchester,2025,7,3156,73,36.0,37.0,1
+Downtown / Financial District,2025,7,2704,92,42.0,50.0,1
+East Boston,2025,7,1623,49,17.0,32.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2025,7,452,18,10.0,8.0,1
+Greater Mattapan,2025,7,1106,23,11.0,12.0,1
+Hyde Park,2025,7,902,35,16.0,19.0,1
+Jamaica Plain,2025,7,1470,59,45.0,14.0,1
+Mission Hill,2025,7,397,11,6.0,5.0,1
+Roslindale,2025,7,998,37,17.0,20.0,1
+Roxbury,2025,7,2642,63,32.0,31.0,1
+South Boston / South Boston Waterfront,2025,7,2165,54,24.0,30.0,1
+South End,2025,7,1866,37,25.0,12.0,1
+West Roxbury,2025,7,925,34,14.0,20.0,1
+Allston / Brighton,2025,8,2838,58,26.0,32.0,1
+Back Bay,2025,8,1538,43,30.0,13.0,1
+Beacon Hill,2025,8,981,11,6.0,5.0,1
+Charlestown,2025,8,701,18,7.0,11.0,1
+Dorchester,2025,8,3407,81,30.0,51.0,1
+Downtown / Financial District,2025,8,3164,63,30.0,33.0,1
+East Boston,2025,8,1728,18,8.0,10.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2025,8,716,18,13.0,5.0,1
+Greater Mattapan,2025,8,1093,27,8.0,19.0,1
+Hyde Park,2025,8,911,50,16.0,34.0,1
+Jamaica Plain,2025,8,1761,28,17.0,11.0,1
+Mission Hill,2025,8,731,17,12.0,5.0,1
+Roslindale,2025,8,1003,36,17.0,19.0,1
+Roxbury,2025,8,2790,44,22.0,22.0,1
+South Boston / South Boston Waterfront,2025,8,2677,52,24.0,28.0,1
+South End,2025,8,2425,24,16.0,8.0,1
+West Roxbury,2025,8,805,30,22.0,8.0,1
+Allston / Brighton,2025,9,2857,44,16.0,28.0,1
+Back Bay,2025,9,1854,54,37.0,17.0,1
+Beacon Hill,2025,9,999,9,4.0,5.0,1
+Charlestown,2025,9,850,24,10.0,14.0,1
+Dorchester,2025,9,3504,51,23.0,28.0,1
+Downtown / Financial District,2025,9,2830,75,38.0,37.0,1
+East Boston,2025,9,1539,34,20.0,14.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2025,9,691,22,13.0,9.0,1
+Greater Mattapan,2025,9,992,27,10.0,17.0,1
+Hyde Park,2025,9,847,30,18.0,12.0,1
+Jamaica Plain,2025,9,1724,34,13.0,21.0,1
+Mission Hill,2025,9,614,7,3.0,4.0,1
+Roslindale,2025,9,945,22,15.0,7.0,1
+Roxbury,2025,9,2750,32,12.0,20.0,1
+South Boston / South Boston Waterfront,2025,9,2869,24,11.0,13.0,1
+South End,2025,9,2529,18,14.0,4.0,1
+West Roxbury,2025,9,675,28,13.0,15.0,1
+Allston / Brighton,2025,10,1921,47,29.0,18.0,1
+Back Bay,2025,10,1440,38,27.0,11.0,1
+Beacon Hill,2025,10,784,16,10.0,6.0,1
+Charlestown,2025,10,625,22,13.0,9.0,1
+Dorchester,2025,10,3017,53,31.0,22.0,1
+Downtown / Financial District,2025,10,2618,53,31.0,22.0,1
+East Boston,2025,10,1487,51,12.0,39.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2025,10,460,15,12.0,3.0,1
+Greater Mattapan,2025,10,896,10,8.0,2.0,1
+Hyde Park,2025,10,734,24,10.0,14.0,1
+Jamaica Plain,2025,10,1468,35,16.0,19.0,1
+Mission Hill,2025,10,338,6,3.0,3.0,1
+Roslindale,2025,10,835,12,6.0,6.0,1
+Roxbury,2025,10,2208,30,14.0,16.0,1
+South Boston / South Boston Waterfront,2025,10,1928,25,9.0,16.0,1
+South End,2025,10,1896,28,17.0,11.0,1
+West Roxbury,2025,10,603,19,9.0,10.0,1
+Allston / Brighton,2025,11,1629,24,12.0,12.0,1
+Back Bay,2025,11,1177,22,14.0,8.0,1
+Beacon Hill,2025,11,726,9,9.0,0.0,1
+Charlestown,2025,11,527,17,11.0,6.0,1
+Dorchester,2025,11,2549,40,22.0,18.0,1
+Downtown / Financial District,2025,11,2204,54,30.0,24.0,1
+East Boston,2025,11,1282,70,10.0,60.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2025,11,330,12,11.0,1.0,1
+Greater Mattapan,2025,11,741,6,0.0,6.0,1
+Hyde Park,2025,11,738,15,3.0,12.0,1
+Jamaica Plain,2025,11,1095,29,15.0,14.0,1
+Mission Hill,2025,11,265,8,7.0,1.0,1
+Roslindale,2025,11,601,9,3.0,6.0,1
+Roxbury,2025,11,1754,21,7.0,14.0,1
+South Boston / South Boston Waterfront,2025,11,1674,24,12.0,12.0,1
+South End,2025,11,1719,31,17.0,14.0,1
+West Roxbury,2025,11,606,19,12.0,7.0,1
+Allston / Brighton,2025,12,1520,38,21.0,17.0,1
+Back Bay,2025,12,918,33,20.0,13.0,1
+Beacon Hill,2025,12,715,7,2.0,5.0,1
+Charlestown,2025,12,508,11,6.0,5.0,1
+Dorchester,2025,12,2331,30,14.0,16.0,1
+Downtown / Financial District,2025,12,1849,30,20.0,10.0,1
+East Boston,2025,12,1078,22,6.0,16.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2025,12,285,7,5.0,2.0,1
+Greater Mattapan,2025,12,619,9,7.0,2.0,1
+Hyde Park,2025,12,671,12,4.0,8.0,1
+Jamaica Plain,2025,12,913,16,9.0,7.0,1
+Mission Hill,2025,12,278,13,5.0,8.0,1
+Roslindale,2025,12,565,11,8.0,3.0,1
+Roxbury,2025,12,1614,23,11.0,12.0,1
+South Boston / South Boston Waterfront,2025,12,1593,21,12.0,9.0,1
+South End,2025,12,1592,29,17.0,12.0,1
+West Roxbury,2025,12,505,24,9.0,15.0,1
+Allston / Brighton,2026,1,3164,60,39.0,21.0,1
+Back Bay,2026,1,1142,55,44.0,11.0,1
+Beacon Hill,2026,1,589,10,5.0,5.0,1
+Charlestown,2026,1,1239,38,21.0,17.0,1
+Dorchester,2026,1,4635,64,28.0,36.0,1
+Downtown / Financial District,2026,1,2365,76,36.0,40.0,1
+East Boston,2026,1,1808,62,16.0,46.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2026,1,449,28,15.0,13.0,1
+Greater Mattapan,2026,1,1280,48,19.0,29.0,1
+Hyde Park,2026,1,1016,24,10.0,14.0,1
+Jamaica Plain,2026,1,2006,51,29.0,22.0,1
+Mission Hill,2026,1,436,46,20.0,26.0,1
+Roslindale,2026,1,1118,27,13.0,14.0,1
+Roxbury,2026,1,2880,84,27.0,57.0,1
+South Boston / South Boston Waterfront,2026,1,2858,41,14.0,27.0,1
+South End,2026,1,1982,39,28.0,11.0,1
+West Roxbury,2026,1,878,50,22.0,28.0,1
+Allston / Brighton,2026,2,3461,110,55.0,55.0,1
+Back Bay,2026,2,1076,73,50.0,23.0,1
+Beacon Hill,2026,2,719,25,15.0,10.0,1
+Charlestown,2026,2,1013,28,10.0,18.0,1
+Dorchester,2026,2,5285,115,56.0,59.0,1
+Downtown / Financial District,2026,2,2442,132,72.0,60.0,1
+East Boston,2026,2,2058,126,58.0,68.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2026,2,376,23,13.0,10.0,1
+Greater Mattapan,2026,2,1366,81,25.0,56.0,1
+Hyde Park,2026,2,1112,26,9.0,17.0,1
+Jamaica Plain,2026,2,2346,129,66.0,63.0,1
+Mission Hill,2026,2,485,24,8.0,16.0,1
+Roslindale,2026,2,1380,77,36.0,41.0,1
+Roxbury,2026,2,2719,79,33.0,46.0,1
+South Boston / South Boston Waterfront,2026,2,2854,55,23.0,32.0,1
+South End,2026,2,1771,32,23.0,9.0,1
+West Roxbury,2026,2,842,38,19.0,19.0,1
+Allston / Brighton,2026,3,2584,301,182.0,119.0,1
+Back Bay,2026,3,1546,232,146.0,86.0,1
+Beacon Hill,2026,3,830,56,19.0,37.0,1
+Charlestown,2026,3,835,106,48.0,58.0,1
+Dorchester,2026,3,4126,250,115.0,135.0,1
+Downtown / Financial District,2026,3,2762,342,176.0,166.0,1
+East Boston,2026,3,2266,415,120.0,295.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2026,3,629,132,71.0,61.0,1
+Greater Mattapan,2026,3,1150,126,62.0,64.0,1
+Hyde Park,2026,3,862,93,46.0,47.0,1
+Jamaica Plain,2026,3,1554,198,114.0,84.0,1
+Mission Hill,2026,3,570,147,78.0,69.0,1
+Roslindale,2026,3,1012,119,59.0,60.0,1
+Roxbury,2026,3,2774,234,111.0,123.0,1
+South Boston / South Boston Waterfront,2026,3,2274,136,56.0,80.0,1
+South End,2026,3,2048,125,89.0,36.0,1
+West Roxbury,2026,3,753,111,59.0,52.0,1
+Allston / Brighton,2026,4,2221,144,83.0,61.0,1
+Back Bay,2026,4,1279,134,98.0,36.0,1
+Beacon Hill,2026,4,625,34,17.0,17.0,1
+Charlestown,2026,4,801,58,27.0,31.0,1
+Dorchester,2026,4,3138,146,79.0,67.0,1
+Downtown / Financial District,2026,4,2470,180,108.0,72.0,1
+East Boston,2026,4,1662,204,24.0,180.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2026,4,447,29,20.0,9.0,1
+Greater Mattapan,2026,4,903,37,22.0,15.0,1
+Hyde Park,2026,4,762,50,19.0,31.0,1
+Jamaica Plain,2026,4,1262,91,55.0,36.0,1
+Mission Hill,2026,4,342,25,13.0,12.0,1
+Roslindale,2026,4,840,68,37.0,31.0,1
+Roxbury,2026,4,1949,118,52.0,66.0,1
+South Boston / South Boston Waterfront,2026,4,1835,79,21.0,58.0,1
+South End,2026,4,1828,82,60.0,22.0,1
+West Roxbury,2026,4,745,95,67.0,28.0,1
+Allston / Brighton,2026,5,2418,76,42.0,34.0,1
+Back Bay,2026,5,1544,97,69.0,28.0,1
+Beacon Hill,2026,5,1035,25,15.0,10.0,1
+Charlestown,2026,5,802,44,25.0,19.0,1
+Dorchester,2026,5,3159,108,53.0,55.0,1
+Downtown / Financial District,2026,5,2918,145,80.0,65.0,1
+East Boston,2026,5,1774,64,17.0,47.0,1
+Fenway / Kenmore / Audubon Circle / Longwood,2026,5,518,27,17.0,10.0,1
+Greater Mattapan,2026,5,918,28,12.0,16.0,1
+Hyde Park,2026,5,795,55,22.0,33.0,1
+Jamaica Plain,2026,5,1393,79,32.0,47.0,1
+Mission Hill,2026,5,383,19,13.0,6.0,1
+Roslindale,2026,5,910,36,20.0,16.0,1
+Roxbury,2026,5,2330,90,41.0,49.0,1
+South Boston / South Boston Waterfront,2026,5,2102,63,36.0,27.0,1
+South End,2026,5,2166,55,33.0,22.0,1
+West Roxbury,2026,5,799,61,44.0,17.0,1
+Allston / Brighton,2026,6,2153,80,,,1
+Back Bay,2026,6,1441,67,,,1
+Beacon Hill,2026,6,908,22,,,1
+Charlestown,2026,6,880,51,,,1
+Dorchester,2026,6,3620,65,,,1
+Downtown / Financial District,2026,6,2817,133,,,1
+East Boston,2026,6,1708,42,,,1
+Fenway / Kenmore / Audubon Circle / Longwood,2026,6,514,24,,,1
+Greater Mattapan,2026,6,918,30,,,1
+Hyde Park,2026,6,795,25,,,1
+Jamaica Plain,2026,6,1495,80,,,1
+Mission Hill,2026,6,427,17,,,1
+Roslindale,2026,6,963,30,,,1
+Roxbury,2026,6,2320,62,,,1
+South Boston / South Boston Waterfront,2026,6,2154,60,,,1
+South End,2026,6,2343,54,,,1
+West Roxbury,2026,6,835,34,,,1
+Allston / Brighton,2026,7,2149,63,,,1
+Back Bay,2026,7,1204,32,,,1
+Beacon Hill,2026,7,700,30,,,1
+Charlestown,2026,7,719,67,,,1
+Dorchester,2026,7,3379,75,,,1
+Downtown / Financial District,2026,7,2866,102,,,1
+East Boston,2026,7,1668,32,,,1
+Fenway / Kenmore / Audubon Circle / Longwood,2026,7,570,23,,,1
+Greater Mattapan,2026,7,761,13,,,1
+Hyde Park,2026,7,692,19,,,1
+Jamaica Plain,2026,7,1369,48,,,1
+Mission Hill,2026,7,334,4,,,1
+Roslindale,2026,7,900,33,,,1
+Roxbury,2026,7,1996,45,,,1
+South Boston / South Boston Waterfront,2026,7,1958,49,,,1
+South End,2026,7,1989,38,,,1
+West Roxbury,2026,7,697,21,,,1
+Allston / Brighton,2026,8,2795,54,,,1
+Back Bay,2026,8,1627,52,,,1
+Beacon Hill,2026,8,805,19,,,1
+Charlestown,2026,8,712,16,,,1
+Dorchester,2026,8,3674,58,,,1
+Downtown / Financial District,2026,8,3202,106,,,1
+East Boston,2026,8,1626,30,,,1
+Fenway / Kenmore / Audubon Circle / Longwood,2026,8,1044,49,,,1
+Greater Mattapan,2026,8,677,11,,,1
+Hyde Park,2026,8,621,27,,,1
+Jamaica Plain,2026,8,1692,43,,,1
+Mission Hill,2026,8,484,5,,,1
+Roslindale,2026,8,891,30,,,1
+Roxbury,2026,8,2196,47,,,1
+South Boston / South Boston Waterfront,2026,8,2535,47,,,1
+South End,2026,8,2083,52,,,1
+West Roxbury,2026,8,726,28,,,1
+Allston / Brighton,2026,9,2721,62,,,1
+Back Bay,2026,9,1595,32,,,1
+Beacon Hill,2026,9,1014,13,,,1
+Charlestown,2026,9,766,30,,,1
+Dorchester,2026,9,3411,42,,,1
+Downtown / Financial District,2026,9,2674,67,,,1
+East Boston,2026,9,1543,14,,,1
+Fenway / Kenmore / Audubon Circle / Longwood,2026,9,1096,16,,,1
+Greater Mattapan,2026,9,610,4,,,1
+Hyde Park,2026,9,609,14,,,1
+Jamaica Plain,2026,9,1469,50,,,1
+Mission Hill,2026,9,614,16,,,1
+Roslindale,2026,9,855,18,,,1
+Roxbury,2026,9,2081,46,,,1
+South Boston / South Boston Waterfront,2026,9,3237,24,,,1
+South End,2026,9,2197,30,,,1
+West Roxbury,2026,9,863,21,,,1
+Allston / Brighton,2026,10,1581,30,,,0
+Back Bay,2026,10,869,16,,,0
+Beacon Hill,2026,10,646,13,,,0
+Charlestown,2026,10,617,18,,,0
+Dorchester,2026,10,2380,38,,,0
+Downtown / Financial District,2026,10,1895,30,,,0
+East Boston,2026,10,913,22,,,0
+Fenway / Kenmore / Audubon Circle / Longwood,2026,10,612,18,,,0
+Greater Mattapan,2026,10,425,10,,,0
+Hyde Park,2026,10,462,8,,,0
+Jamaica Plain,2026,10,1176,22,,,0
+Mission Hill,2026,10,273,7,,,0
+Roslindale,2026,10,633,13,,,0
+Roxbury,2026,10,1342,35,,,0
+South Boston / South Boston Waterfront,2026,10,1594,17,,,0
+South End,2026,10,1547,33,,,0
+West Roxbury,2026,10,587,8,,,0

@@ -18,6 +18,7 @@ Step 6 merges this with report_counts.csv by year + month.
 import requests
 import pandas as pd
 import os
+from datetime import date, timedelta
 
 # Boston city-center coordinates (one weather point for the whole city —
 # neighborhoods are too close together for weather to differ meaningfully).
@@ -32,7 +33,8 @@ PARAMS = {
     "latitude": LAT,
     "longitude": LON,
     "start_date": "2015-01-01",
-    "end_date": "2024-12-31",
+    # archive lags real time by a few days -> stop a week back
+    "end_date": (date.today() - timedelta(days=7)).isoformat(),
     "daily": ",".join([
         "temperature_2m_mean",
         "temperature_2m_min",
@@ -46,7 +48,7 @@ PARAMS = {
 
 
 def main():
-    print("Fetching 2024 Boston weather from Open-Meteo ...")
+    print(f"Fetching Boston weather {PARAMS['start_date']} -> {PARAMS['end_date']} from Open-Meteo ...")
     resp = requests.get(URL, params=PARAMS, timeout=60)
     resp.raise_for_status()
     data = resp.json()["daily"]
