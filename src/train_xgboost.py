@@ -109,7 +109,7 @@ def evaluate(train_df, feature_cols, target, objective="reg:squarederror"):
     cutoff = months[-TEST_MONTHS]
     tr, te = done[done["ym"] < cutoff], done[done["ym"] >= cutoff]
 
-    model = make_model().fit(tr[feature_cols], tr[target])
+    model = make_model(objective=objective).fit(tr[feature_cols], tr[target])
     pred = np.clip(model.predict(te[feature_cols]), 0, None)
     mae = mean_absolute_error(te[target], pred)
     mean_true = te[target].mean()
