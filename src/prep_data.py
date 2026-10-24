@@ -175,7 +175,7 @@ def counts_for_legacy(path: str) -> pd.DataFrame:
                            .str.contains("|".join(EMPLOYEE_SOURCES)).astype(int),
         })
         parts.append(_aggregate(c))
-    return _sum_parts(parts)
+    return _sum_parts([m for m, _ in parts]), _sum_daily([d for _, d in parts])
 
 
 def counts_for_new_system(path: str) -> pd.DataFrame:
