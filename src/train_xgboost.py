@@ -35,11 +35,13 @@ test on those 12 months (no future data leaks into training), and compare
 with two simple guesses. Then retrain on all complete months to predict.
 """
 
+import calendar
 import os
 from datetime import date
 
 import numpy as np
 import pandas as pd
+import xgboost as xgb
 from sklearn.metrics import mean_absolute_error
 from sklearn.preprocessing import LabelEncoder
 from xgboost import XGBRegressor
