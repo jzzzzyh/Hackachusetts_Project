@@ -28,6 +28,7 @@ Outputs: data/processed/street_predictions.csv      one row per street
 """
 
 import os
+import re
 from datetime import date
 
 import geopandas as gpd
