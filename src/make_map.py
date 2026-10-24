@@ -58,9 +58,9 @@ boston_center = [42.3601, -71.0589]
 CARTO_KEY = os.environ.get("CARTO_KEY", "cb1_4tul_1_b72914a49091b720352c5251")
 m = folium.Map(location=boston_center, zoom_start=12, tiles=None)
 folium.TileLayer(
-    tiles=f"https://basemaps.cartocdn.com/rastertiles/voyager/{{z}}/{{x}}/{{y}}.png?key={CARTO_KEY}",
+    tiles=f"https://basemaps.cartocdn.com/rastertiles/light_all/{{z}}/{{x}}/{{y}}.png?key={CARTO_KEY}",
     attr='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-    name="Voyager",
+    name="Light",
     max_zoom=20,
 ).add_to(m)
 
@@ -112,11 +112,13 @@ for _, row in df.iterrows():
     color = RISK_COLOR.get(row[RISK_COL], "gray")
     folium.CircleMarker(
         location=[row["lat"], row["lon"]],
-        radius=6 + 14 * row[VALUE_COL] / max_val,     # scale to the busiest area
+        radius=4 + 9 * row[VALUE_COL] / max_val,      # slightly smaller orbs
         color=color,
         fill=True,
         fill_color=color,
-        fill_opacity=0.75,
+        fill_opacity=0.55,
+        weight=1,
+        opacity=0.6,
         popup=folium.Popup(
             f"<b>{row['neighborhood']}</b><br>"
             f"Predicted {WHAT}: {int(row[VALUE_COL])}<br>"
