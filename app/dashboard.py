@@ -194,10 +194,18 @@ if os.path.exists(imp_path):
     imp = pd.read_csv(imp_path)
     imp["Input"] = imp["feature"].map(FEATURE_NAMES).fillna(imp["feature"])
     past_share = imp[imp["feature"].isin(["lag1", "lag12", "roll3"])]["importance"].sum()
-    st.write(
-        f"Recent history carries **{past_share:.0%}** of the model's attention: an area that had "
-        f"many {what_word} recently tends to keep having them. Bigger bars = more influence."
-    )
+    now_share = imp[imp["feature"].isin(["so_far", "pace"])]["importance"].sum()
+    if now_share > 0:
+        st.write(
+            f"Reports already filed this month carry **{now_share:.0%}** of the model's attention, "
+            f"and past months another **{past_share:.0%}**. Knowing how the month is going is what "
+            "lets it catch the spring pothole spike on time. Bigger bars = more influence."
+        )
+    else:
+        st.write(
+            f"Recent history carries **{past_share:.0%}** of the model's attention: an area that had "
+            f"many {what_word} recently tends to keep having them. Bigger bars = more influence."
+        )
     st.bar_chart(imp.set_index("Input")["importance"])
 else:
     st.info("Run `python src/train_xgboost.py` to generate the feature chart.")
