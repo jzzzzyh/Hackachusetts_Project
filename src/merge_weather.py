@@ -39,6 +39,15 @@ def main():
     # Left join: keep every 311 row, attach its month's weather
     merged = counts.merge(weather, on=["year", "month"], how="left")
 
+    # --- past pothole history per neighborhood ---
+    # "an area that had potholes tends to have them again" — each area's
+    # long-run average monthly pothole count, used as a standing tendency.
+    if "pothole_count" in merged.columns:
+        past = (merged.groupby("neighborhood")["pothole_count"].mean()
+                .round(1).rename("past_pothole_rate"))
+        merged = merged.merge(past, on="neighborhood", how="left")
+        merged["past_pothole_rate"] = merged["past_pothole_rate"].fillna(0)
+
     # --- add LIVE MBTA transit features (bus stops, rail stops, route count) ---
     # MBTA/ polygon names use the census labels; map them to the 311 labels.
     MBTA_TO_311 = {

@@ -136,6 +136,9 @@ it to guess **this month** — it reads today's date, so the map always shows
 the current month and season (e.g. fall now), not a fixed month.
 
 **What drives the guess (the % splits above):**
+- **Past pothole history — {share('past_pothole_rate'):.0%}.** An area that
+  logged many potholes before tends to log them again. One of the strongest
+  signals.
 - **Street trees — {share('tree_count'):.0%}.** The biggest signal, now
   pulled **live** from the city's tree map (201k+ trees, counted per area).
   Tree roots push up and crack sidewalks, so leafy areas report more damage.

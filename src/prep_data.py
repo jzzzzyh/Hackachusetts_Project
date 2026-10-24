@@ -58,7 +58,7 @@ def download_year(year: int, url: str) -> str:
 def counts_for_file(path: str) -> pd.DataFrame:
     """Read one yearly CSV in chunks, return monthly counts per neighborhood."""
     parts = []
-    date_col = nbhd_col = None
+    date_col = nbhd_col = type_col = None
 
     for chunk in pd.read_csv(path, low_memory=False, chunksize=CHUNK):
         chunk.columns = [c.strip().lower().replace(" ", "_") for c in chunk.columns]
@@ -68,20 +68,34 @@ def counts_for_file(path: str) -> pd.DataFrame:
                        or next((c for c in chunk.columns if "date" in c), None)
             nbhd_col = next((c for c in chunk.columns if "neighborhood" in c or "ward" in c), None) \
                        or next((c for c in chunk.columns if "district" in c), None)
+            type_col = "type" if "type" in chunk.columns else None
 
-        c = chunk[[date_col, nbhd_col]].copy()
+        cols = [date_col, nbhd_col] + ([type_col] if type_col else [])
+        c = chunk[cols].copy()
         c[date_col] = pd.to_datetime(c[date_col], errors="coerce")
         c = c.dropna(subset=[date_col, nbhd_col])
         c["year"] = c[date_col].dt.year
         c["month"] = c[date_col].dt.month
         c["neighborhood"] = c[nbhd_col].astype(str).str.strip().str.title()
 
-        g = c.groupby(["neighborhood", "year", "month"]).size().reset_index(name="report_count")
+        # flag pothole-type reports so we can count them separately
+        if type_col:
+            t = c[type_col].astype(str).str.lower()
+            c["is_pothole"] = t.str.contains("pothole").astype(int)
+        else:
+            c["is_pothole"] = 0
+
+        g = c.groupby(["neighborhood", "year", "month"]).agg(
+            report_count=("is_pothole", "size"),
+            pothole_count=("is_pothole", "sum"),
+        ).reset_index()
         parts.append(g)
 
     # combine the per-chunk counts
     allc = pd.concat(parts, ignore_index=True)
-    return allc.groupby(["neighborhood", "year", "month"], as_index=False)["report_count"].sum()
+    return allc.groupby(["neighborhood", "year", "month"], as_index=False)[
+        ["report_count", "pothole_count"]
+    ].sum()
 
 
 def main():
