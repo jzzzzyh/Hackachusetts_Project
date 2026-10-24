@@ -175,7 +175,7 @@ def main():
         accuracy.append({"mode": mode, "label": label, **scores})
 
         # Retrain on every complete month, then predict the current month
-        model = make_model().fit(train[feature_cols], train[target])
+        model = make_model(objective=objective).fit(train[feature_cols], train[target])
         imp = (pd.DataFrame({"feature": feature_cols, "importance": model.feature_importances_.round(3)})
                .sort_values("importance", ascending=False))
         imp_path = ("data/processed/feature_importance.csv" if mode == "pothole"
