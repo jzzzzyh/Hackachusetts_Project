@@ -58,9 +58,9 @@ boston_center = [42.3601, -71.0589]
 CARTO_KEY = os.environ.get("CARTO_KEY", "cb1_4tul_1_b72914a49091b720352c5251")
 m = folium.Map(location=boston_center, zoom_start=12, tiles=None)
 folium.TileLayer(
-    tiles=f"https://basemaps.cartocdn.com/rastertiles/voyager/{{z}}/{{x}}/{{y}}.png?key={CARTO_KEY}",
+    tiles=f"https://basemaps.cartocdn.com/rastertiles/light_all/{{z}}/{{x}}/{{y}}.png?key={CARTO_KEY}",
     attr='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-    name="Voyager",
+    name="Light",
     max_zoom=20,
 ).add_to(m)
 
