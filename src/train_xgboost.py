@@ -3,8 +3,8 @@ STEPS 7 + 8 — Feature Matrix + XGBoost
 ======================================
 Trains two XGBoost models on features.csv and predicts the CURRENT month
 (read from today's date) for every area:
-  * Everything   — all 311 reports          (target: report_count)
-  * Potholes only — pothole reports         (target: pothole_count)
+  * Potholes only — pothole reports  (target: pothole_count)  <- MAIN model
+  * Everything    — all 311 reports  (target: report_count)   secondary toggle
 
 Run: python src/train_xgboost.py
 
