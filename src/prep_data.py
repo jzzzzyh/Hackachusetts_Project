@@ -13,6 +13,9 @@ Output: data/processed/report_counts.csv
            pothole_resident   - pothole reports filed by residents (legacy system only)
            pothole_employee   - pothole reports logged by city staff (legacy system only)
            complete           - 1 if the month is fully in the past, 0 for the current month
+        data/processed/pothole_daily.csv
+  columns: neighborhood, year, month, day, potholes
+           (lets train_xgboost.py use "potholes reported so far this month")
 
 Two sources:
   * Legacy yearly files (2015-2026). Boston moved potholes to a NEW 311 system
