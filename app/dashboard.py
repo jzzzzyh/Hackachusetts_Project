@@ -115,47 +115,57 @@ if os.path.exists(IMP_PATH):
     warm = feats[feats["avg_temp_c"] >= 18]["report_count"].mean()
     temp_corr = feats["avg_temp_c"].corr(feats["report_count"])
 
+    tf = feats[feats["tree_count"] > 0]
+    tree_corr = tf["tree_count"].corr(tf["report_count"])
+    med = tf["tree_count"].median()
+    many = tf[tf["tree_count"] >= med]["report_count"].mean()
+    few = tf[tf["tree_count"] < med]["report_count"].mean()
+
+    # pull live importances so the text never goes stale
+    def share(name):
+        row = imp[imp["feature"] == name]
+        return float(row["importance"].iloc[0]) if len(row) else 0.0
+
     st.markdown(
         f"""
 **How it works:** the model looked at 2024 — for every neighborhood, every
-month, it compared the number of 311 problem reports against that month's
-weather. It found the pattern, then uses it to guess next month.
+month, it compared the number of 311 problem reports against that area's
+weather, its number of street trees, and its nearby MBTA bus/train stops.
+It found the pattern, then uses it to guess next month.
 
 **What drives the guess (the % splits above):**
-- **Neighborhood — 59%.** The single biggest factor. Past problem areas
-  stay problem areas. Dorchester reports far more than Chestnut Hill, every month.
-- **Temperature — 22%.** The strongest weather signal.
-- **Month — 10%.** Captures the time of year.
-- **Rain, snow, wind — ~9% together.** Smaller nudges.
+- **Street trees — {share('tree_count'):.0%}.** The biggest signal. Tree
+  roots push up and crack sidewalks, so leafy areas report more damage.
+- **MBTA stops nearby — {share('bus_stops_near'):.0%}.** Heavy bus/train
+  traffic wears roads faster.
+- **Neighborhood — {share('nbhd_enc'):.0%}.** Past problem areas stay
+  problem areas.
+- **Temperature — {share('avg_temp_c'):.0%}.** The strongest weather signal.
+- **Month, rain, snow, wind — the rest.** Smaller nudges.
+
+**The tree correlation we found:**
+- Areas with MORE trees average **{many:.0f}** reports.
+- Areas with FEWER trees average **{few:.0f}** reports.
+- Correlation of trees with reports: **{tree_corr:+.2f}** (positive).
+- So leafier areas log about **{many/few:.1f}× more** reports.
 
 **The weather correlation we found:**
-- Warm months average **{warm:.0f}** reports per area.
-- Cold months average **{cold:.0f}** reports per area.
+- Warm months average **{warm:.0f}** reports; cold months **{cold:.0f}**.
 - Correlation of temperature with reports: **{temp_corr:+.2f}** (positive).
-
-So in this 2024 data, **warmer months bring MORE reports, not fewer.**
-That likely reflects reporting behavior — people are out walking and
-driving more in warm weather, so they spot and report problems more often.
-The damage from winter freeze may show up as reports later, once it is warm.
-
-**Example in plain numbers:** a typical area logs about **{warm:.0f}**
-reports in a hot month and about **{cold:.0f}** in a cold one — roughly
-**{warm/cold:.1f}× more** when it is warm.
+- Warmer months bring MORE reports — likely because people are out more and
+  spot problems more.
 """
     )
     st.caption(
-        "Assumption to test further: the model shows CORRELATION, not cause. "
-        "Weather, season, and reporting habits move together here."
+        "Honest note: these are CORRELATIONS, not proven causes — trees, "
+        "weather, population and reporting habits all move together. Adding "
+        "the tree feature did not yet lower the error on our small 2024 "
+        "dataset; more rows (multi-year data) are needed to confirm it helps."
     )
 else:
     st.info("Run `python src/train_xgboost.py` to generate the proof chart.")
 
 st.caption(
-    "Early model — more live data feeds (weather is live now) will sharpen "
-    "predictions before the hackathon ends."
-)
-
-st.caption(
-    "Early model — more live data feeds (weather is live now) will sharpen "
-    "predictions before the hackathon ends."
+    "Early model — more live data feeds (weather + trees are in now) will "
+    "sharpen predictions before the hackathon ends."
 )

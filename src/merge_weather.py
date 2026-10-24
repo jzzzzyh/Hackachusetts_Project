@@ -44,6 +44,41 @@ def main():
     merged = merged.merge(mbta, on="neighborhood", how="left")
     merged["bus_stops_near"] = merged["bus_stops_near"].fillna(0)
 
+    # --- add street-tree count feature ---
+    # Tree names use slightly different neighborhood labels; map them to the
+    # 311 labels so the join lands.
+    TREE_NAME_MAP = {
+        "Allston-Brighton": "Allston / Brighton",
+        "Back Bay/Beacon Hill": "Back Bay",
+        "South Boston": "South Boston / South Boston Waterfront",
+        "Fenway/Kenmore": "Fenway / Kenmore / Audubon Circle / Longwood",
+        "Fenway": "Fenway / Kenmore / Audubon Circle / Longwood",
+        "Mattapan": "Greater Mattapan",
+        "Downtown": "Downtown / Financial District",
+    }
+    # 311 labels that share a tree source with another label (fill from it)
+    TREE_FALLBACK = {
+        "Allston": "Allston / Brighton",
+        "Brighton": "Allston / Brighton",
+        "Beacon Hill": "Back Bay",
+        "South Boston / South Boston Waterfront": "South Boston / South Boston Waterfront",
+    }
+    trees = pd.read_csv("data/processed/trees.csv")
+    trees["neighborhood"] = trees["neighborhood"].replace(TREE_NAME_MAP)
+    # collapse any duplicates created by the remap
+    trees = trees.groupby("neighborhood", as_index=False)["tree_count"].sum()
+
+    merged = merged.merge(trees, on="neighborhood", how="left")
+    # fill shared-area labels from their tree-data twin
+    tree_map = trees.set_index("neighborhood")["tree_count"].to_dict()
+    for label, src in TREE_FALLBACK.items():
+        mask = merged["neighborhood"].eq(label) & merged["tree_count"].isna()
+        merged.loc[mask, "tree_count"] = tree_map.get(src, 0)
+    no_trees = merged["tree_count"].isna().sum()
+    merged["tree_count"] = merged["tree_count"].fillna(0)
+    if no_trees:
+        print(f"NOTE: {no_trees} rows had no tree match (filled 0).")
+
     # Report any rows that failed to get weather (missing month)
     missing = merged["avg_temp_c"].isna().sum()
     if missing:
