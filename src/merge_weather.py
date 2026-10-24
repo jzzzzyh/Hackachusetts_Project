@@ -49,9 +49,8 @@ def main():
     neighborhoods_meta = neighborhoods[["neighborhood", "lat", "lon", "area_sqm"]]
     merged = merged.merge(neighborhoods_meta, on="neighborhood", how="left")
 
-    # --- add street-tree count feature ---
+    # --- add street-tree count feature (if available) ---
     # Map each 311 neighborhood label to the tree-data label it draws from.
-    # Keyed by the 311 name, so no rename can steal a name from another row.
     TREE_SOURCE = {
         "Dorchester":                                   "Dorchester",
         "Roxbury":                                      "Roxbury",
@@ -77,17 +76,22 @@ def main():
         "Fenway / Kenmore / Audubon Circle / Longwood": "Fenway/Longwood",
         # "Chestnut Hill" has no tree data -> stays 0
     }
-    trees = pd.read_csv("data/processed/trees.csv")
-    tree_by_name = trees.set_index("neighborhood")["tree_count"].to_dict()
+    
+    trees_file = "data/processed/trees.csv"
+    if os.path.exists(trees_file):
+        trees = pd.read_csv(trees_file)
+        tree_by_name = trees.set_index("neighborhood")["tree_count"].to_dict()
 
-    def tree_count_for(nbhd):
-        src = TREE_SOURCE.get(nbhd)
-        return tree_by_name.get(src, 0) if src else 0
+        def tree_count_for(nbhd):
+            src = TREE_SOURCE.get(nbhd)
+            return tree_by_name.get(src, 0) if src else 0
 
-    merged["tree_count"] = merged["neighborhood"].map(tree_count_for).fillna(0)
-    no_trees = (merged["tree_count"] == 0).sum()
-    if no_trees:
-        print(f"NOTE: {no_trees} rows still have 0 trees (no tree-data match).")
+        merged["tree_count"] = merged["neighborhood"].map(tree_count_for).fillna(0)
+        no_trees = (merged["tree_count"] == 0).sum()
+        if no_trees:
+            print(f"NOTE: {no_trees} rows have 0 trees (no tree-data match).")
+    else:
+        print(f"NOTE: {trees_file} not found, skipping tree_count feature")
 
     # Report any rows that failed to get weather (missing month)
     missing = merged["avg_temp_c"].isna().sum()
