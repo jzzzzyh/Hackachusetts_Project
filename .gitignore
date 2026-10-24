@@ -10,6 +10,8 @@ env/
 # Raw data files (too large for GitHub — download locally with fetch_data.py)
 data/raw/
 data/processed/
+# ...but keep the finished map so judges see it without running anything
+!data/processed/risk_map.html
 
 # Notebooks checkpoints
 .ipynb_checkpoints/
