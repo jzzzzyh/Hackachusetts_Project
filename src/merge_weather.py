@@ -49,9 +49,11 @@ def per_area(path, value_cols, how="sum"):
         return None
     df = pd.read_csv(path)
     df["neighborhood"] = df["neighborhood"].map(canon_neighborhood)
-    dropped = df["neighborhood"].isna().sum()
+    df["neighborhood"] = df["neighborhood"].astype(object)
+    labels = pd.read_csv(path)["neighborhood"]
+    dropped = labels[df["neighborhood"].isna()].tolist()
     if dropped:
-        print(f"  {path}: {dropped} label(s) outside the 311 areas dropped (e.g. Harbor Islands)")
+        print(f"  {path}: dropped labels outside the 311 areas: {dropped}")
     df = df.dropna(subset=["neighborhood"])
     return df.groupby("neighborhood", as_index=False)[value_cols].agg(how)
 
