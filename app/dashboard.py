@@ -77,10 +77,10 @@ has_pothole = "predicted_potholes" in df.columns
 st.sidebar.header("What to predict")
 mode = st.sidebar.radio(
     "Prediction mode",
-    options=["Everything (all 311)", "Potholes only"],
-    index=0,
-    help="Everything = every kind of 311 problem report. "
-         "Potholes only = just pothole reports.",
+    options=["Potholes only", "Everything (all 311)"],
+    index=0 if has_pothole else 1,     # potholes is the main prediction
+    help="Potholes only = just pothole reports (main model). "
+         "Everything = every kind of 311 problem report.",
     disabled=not has_pothole,
 )
 pothole_mode = has_pothole and mode == "Potholes only"
