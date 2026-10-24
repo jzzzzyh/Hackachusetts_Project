@@ -140,8 +140,14 @@ with left:
 
 with right:
     st.subheader("Priority list — send crews here first")
-    show = view[["neighborhood", value_col, risk_col]].copy()
-    show.columns = ["Neighborhood", f"Predicted {what_word}", "Risk"]
+    cols = ["neighborhood", value_col, risk_col]
+    names = ["Neighborhood", f"Predicted {what_word} (month total)", "Risk"]
+    if pothole_mode and "potholes_so_far" in view.columns:
+        day = int(view["data_through_day"].iloc[0]) if "data_through_day" in view.columns else 0
+        cols.insert(2, "potholes_so_far")
+        names.insert(2, f"Reported so far (days 1-{day})")
+    show = view[cols].copy()
+    show.columns = names
     st.dataframe(show, hide_index=True, width="stretch", height=520)
 
 # ---- Accuracy: model vs simple guesses ----
