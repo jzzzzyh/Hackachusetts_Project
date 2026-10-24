@@ -109,6 +109,33 @@ def add_lag_features(df, target):
     return df
 
 
+def add_so_far_features(df, daily, frac):
+    """Potholes reported in the first `frac` of each month, per area.
+
+    so_far = reports in days 1..cutoff, where cutoff = floor(frac * days in that month)
+    pace   = so_far projected to a full month in a straight line
+    """
+    df = df.copy()
+    days = pd.to_datetime(dict(year=df["year"], month=df["month"], day=1)).dt.days_in_month
+    df["cutoff_day"] = np.floor(frac * days).astype(int)
+    keys = ["neighborhood", "year", "month"]
+    upto = daily.merge(df[keys + ["cutoff_day"]], on=keys)
+    upto = upto[upto["day"] <= upto["cutoff_day"]].groupby(keys)["potholes"].sum().rename("so_far")
+    df = df.merge(upto.reset_index(), on=keys, how="left")
+    df["so_far"] = df["so_far"].fillna(0)
+    df["pace"] = np.where(df["cutoff_day"] > 0, df["so_far"] * days.values / df["cutoff_day"].clip(lower=1), 0)
+    return df.drop(columns="cutoff_day")
+
+
+def so_far_cutoff(daily, year, month):
+    """Last FULL day of reports we have for the month being predicted (0 = none).
+
+    The newest day in the download is usually partial (e.g. up to 5 am), so it is dropped.
+    """
+    cur = daily[(daily["year"] == year) & (daily["month"] == month)]
+    return max(int(cur["day"].max()) - 1, 0) if len(cur) else 0
+
+
 def make_model(seed=42, objective="reg:squarederror"):
     return XGBRegressor(n_estimators=300, max_depth=4, learning_rate=0.05,
                         subsample=0.9, random_state=seed, objective=objective)
