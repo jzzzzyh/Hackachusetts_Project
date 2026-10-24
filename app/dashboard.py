@@ -81,6 +81,34 @@ with right:
     show.columns = ["Neighborhood", "Predicted reports", "Risk"]
     st.dataframe(show, hide_index=True, use_container_width=True, height=520)
 
+# ---- Proof: weather is training the model ----
+import os
+st.subheader("Does weather actually drive the model?")
+
+IMP_PATH = "data/processed/feature_importance.csv"
+if os.path.exists(IMP_PATH):
+    imp = pd.read_csv(IMP_PATH)
+
+    weather_names = ["avg_temp_c", "total_precip_mm", "total_snow_cm", "max_wind_kmh"]
+    weather_share = imp[imp["feature"].isin(weather_names)]["importance"].sum()
+
+    st.write(
+        f"Weather inputs account for **{weather_share:.0%}** of what the "
+        "model uses to predict. Bigger bars = more influence on the forecast."
+    )
+
+    # bar chart of every input's importance
+    chart = imp.set_index("feature")["importance"]
+    st.bar_chart(chart)
+
+    # plain table too
+    nice = imp.copy()
+    nice["importance"] = (nice["importance"] * 100).round(1).astype(str) + "%"
+    nice.columns = ["Input", "How much it matters"]
+    st.dataframe(nice, hide_index=True, use_container_width=True)
+else:
+    st.info("Run `python src/train_xgboost.py` to generate the proof chart.")
+
 st.caption(
     "Early model — more live data feeds (weather is live now) will sharpen "
     "predictions before the hackathon ends."

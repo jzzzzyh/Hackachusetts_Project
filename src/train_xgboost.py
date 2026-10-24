@@ -93,6 +93,13 @@ def main():
     imp = dict(zip(feature_cols, model.feature_importances_.round(3)))
     print("Feature importance:", imp)
 
+    # --- save proof that weather trained the model ---
+    imp_df = pd.DataFrame(
+        {"feature": list(imp.keys()), "importance": list(imp.values())}
+    ).sort_values("importance", ascending=False)
+    imp_df.to_csv("data/processed/feature_importance.csv", index=False)
+    print("Saved proof to data/processed/feature_importance.csv")
+
     # --- Predict next month (November) using Nov weather from the data ---
     next_month = 11
     nov_weather = df[df["month"] == next_month][WEATHER_COLS].iloc[0].to_dict()
