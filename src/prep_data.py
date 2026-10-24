@@ -220,8 +220,6 @@ def main():
     # Fill every area x month with 0 so "last month" always means last month.
     today = date.today()
     months = pd.period_range(f"{min(YEAR_URLS)}-01", f"{today.year}-{today.month:02d}", freq="M")
-    grid = pd.MultiIndex.from_product(
-        [sorted(counts["neighborhood"].unique()), [p.year for p in months]], names=["neighborhood", "year"])
     grid = pd.DataFrame(
         [(n, p.year, p.month) for n in sorted(counts["neighborhood"].unique()) for p in months],
         columns=["neighborhood", "year", "month"])
