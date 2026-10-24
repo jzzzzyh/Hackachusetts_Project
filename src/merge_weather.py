@@ -72,6 +72,14 @@ def main():
         merged = merged.merge(mbta, on="neighborhood", how="left")
         merged[mbta.columns[1:]] = merged[mbta.columns[1:]].fillna(0)
 
+    # --- Exposure (road miles, lane miles, traffic, population): summed per area ---
+    expo = per_area(EXPOSURE_PATH, EXPOSURE_COLS)
+    if expo is not None:
+        merged = merged.merge(expo, on="neighborhood", how="left")
+        merged[EXPOSURE_COLS] = merged[EXPOSURE_COLS].fillna(0)
+    else:
+        print("      -> run `python src/get_exposure.py` to add road-length / population features")
+
     # --- Tree-equity score: averaged per area, city median for gaps ---
     eq = per_area(EQUITY_PATH, ["equity_score"], how="mean")
     if eq is not None:
