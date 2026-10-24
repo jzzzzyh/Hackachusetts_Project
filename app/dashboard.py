@@ -124,7 +124,8 @@ c1.metric("Neighborhoods", len(df))
 c2.metric("High-risk areas", int((df[risk_col] == "high").sum()))
 c3.metric("Top hotspot", df.iloc[0]["neighborhood"])
 
-st.info(f"Showing **{mode}** — predicted {what_word} per neighborhood for **{period}**.")
+st.info(f"Showing **{mode}** — predicted {what_word} "
+        f"{'per street (map) and neighborhood' if pothole_mode else 'per neighborhood'} for **{period}**.")
 
 # ---- Map + table side by side ----
 STREET_GEO = "data/processed/street_predictions.geojson"
