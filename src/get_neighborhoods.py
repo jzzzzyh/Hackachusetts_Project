@@ -61,17 +61,32 @@ def download_and_extract_shapefile(url, extract_dir="data/raw"):
 def main():
     """Download neighborhoods shapefile and convert to usable formats."""
     
-    # Download and extract shapefile
-    shp_file = download_and_extract_shapefile(SHAPEFILE_URL)
-    if not shp_file:
-        return
-    
-    print("\nReading shapefile with GeoPandas...")
+    # Try downloading GeoJSON directly first
+    print(f"Downloading neighborhoods data from data.boston.gov...")
     try:
-        gdf = gpd.read_file(shp_file)
+        response = requests.get(GEOJSON_URL, timeout=120)
+        response.raise_for_status()
+        
+        print("✓ Downloaded GeoJSON successfully")
+        
+        # Save and read as GeoDataFrame
+        geojson_data = response.json()
+        gdf = gpd.GeoDataFrame.from_features(geojson_data["features"])
+        
     except Exception as e:
-        print(f"Error reading shapefile: {e}")
-        return
+        print(f"Error with GeoJSON endpoint: {e}")
+        print("Trying alternative shapefile download...")
+        
+        # Try shapefile download as fallback
+        shp_file = download_and_extract_shapefile(SHAPEFILE_URL)
+        if not shp_file:
+            return
+        
+        try:
+            gdf = gpd.read_file(shp_file)
+        except Exception as e:
+            print(f"Error reading shapefile: {e}")
+            return
     
     # Display basic info
     print(f"✓ Loaded {len(gdf)} neighborhoods")
