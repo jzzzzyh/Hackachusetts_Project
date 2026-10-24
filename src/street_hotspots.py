@@ -7,8 +7,9 @@ per-STREET forecast, so the map can point at actual streets.
 Run (after train_xgboost.py): python src/street_hotspots.py
 
 How it works
-  1. Every pothole report since 2022 (lat/lon) is snapped to the nearest
-     street segment of Boston's managed-streets map (within 60 m).
+  1. Every pothole report since 2022 (lat/lon) is snapped to a street segment
+     of Boston's managed-streets map within 60 m, preferring the street named
+     on the report (corner reports otherwise land on the wrong street).
      A "street" = one street name inside one neighborhood
      (Washington St in Roxbury and in Dorchester are separate rows).
   2. Each street's share of its neighborhood = its recent reports,
