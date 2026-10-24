@@ -146,14 +146,30 @@ Hackachusetts_Project/
 
 ## Hackathon Milestones
 
-1. [ ] Pull Boston 311 CSV from OpenContext repo
-2. [ ] Pull weather data for Boston (2018–2024) via Open-Meteo
-3. [ ] Merge datasets by date + neighborhood
-4. [ ] Build feature matrix
-5. [ ] Train baseline model, check accuracy
-6. [ ] Generate risk heat map for next 30 days
-7. [ ] Build simple dashboard to display map + recommendations
-8. [ ] (Stretch) Add resident alert / equity lens
+### 🔴 Phase 1 — Halfway Demo MVP (target: 2 hours) ✅ / 🔲
+
+Goal: something running and showable. No full model needed.
+
+1. [x] Pull Boston 311 CSV from OpenContext repo ✅
+2. [ ] Add month + neighborhood columns to 311 data (pandas, ~15 min)
+3. [ ] Count reports per neighborhood per month → `report_counts.csv` (~15 min)
+4. [ ] Train a simple Random Forest on month + neighborhood → predict next month's count (~30 min)
+5. [ ] Generate a static Folium heat map HTML from predictions (~20 min)
+6. [ ] Open the HTML file and screenshot it for the demo slides (~5 min)
+
+**Demo output:** one `risk_map.html` file showing predicted hotspots by neighborhood. No server, no UI, just the map.
+
+---
+
+### 🟡 Phase 2 — Full Build (after halfway demo)
+
+7. [ ] Pull weather data for Boston (2018–2024) via Open-Meteo
+8. [ ] Merge 311 + weather by date + neighborhood
+9. [ ] Build full feature matrix (freeze/thaw, road age, MBTA, permits, etc.)
+10. [ ] Swap Random Forest for XGBoost, tune and validate
+11. [ ] Generate dynamic risk heat map for next 30 days
+12. [ ] Build Streamlit dashboard (map + top issue types + crew recommendations)
+13. [ ] (Stretch) Add resident alert / equity lens
 
 ---
 
