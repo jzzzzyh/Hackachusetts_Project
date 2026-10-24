@@ -44,8 +44,8 @@ try {
                 if ($status) {
                     $msg = "auto-sync: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
                     git commit -m $msg
-                    git pull --rebase origin main 2>&1 | Write-Host
-                    git push origin main 2>&1 | Write-Host
+                    git pull --rebase origin dev 2>&1 | Write-Host
+                    git push origin dev 2>&1 | Write-Host
                     Write-Host "Synced at $(Get-Date -Format 'HH:mm:ss')"
                 }
             }
