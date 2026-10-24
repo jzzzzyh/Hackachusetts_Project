@@ -149,12 +149,17 @@ def _aggregate(c: pd.DataFrame) -> pd.DataFrame:
     c["pothole_resident"] = (pot & (c["is_employee"] == 0)).astype(float)
     unknown = c["is_employee"].isna()
     c.loc[unknown, ["pothole_employee", "pothole_resident"]] = float("nan")
-    return c.groupby(["neighborhood", "year", "month"]).agg(
+    monthly = c.groupby(["neighborhood", "year", "month"]).agg(
         report_count=("is_pothole", "size"),
         pothole_count=("is_pothole", "sum"),
         pothole_resident=("pothole_resident", lambda s: s.sum(min_count=1)),
         pothole_employee=("pothole_employee", lambda s: s.sum(min_count=1)),
     ).reset_index()
+    # pothole reports per DAY, so the model can see how a month is going so far
+    p = c[pot]
+    daily = (p.groupby(["neighborhood", "year", "month", p["dt"].dt.day.rename("day")])
+             .size().rename("potholes").reset_index())
+    return monthly, daily
 
 
 def counts_for_legacy(path: str) -> pd.DataFrame:
