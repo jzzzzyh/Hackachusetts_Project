@@ -1,24 +1,18 @@
-neighborhood,predicted_reports,predicted_potholes,lat,lon,risk_level,risk_level_pothole
-Dorchester,1736,31,42.3021,-71.0707,high,high
-Roxbury,1066,28,42.3142,-71.092,high,high
-South Boston / South Boston Waterfront,874,14,42.3388,-71.0468,high,medium
-Allston / Brighton,829,18,42.35,-71.143,high,high
-East Boston,720,28,42.3784,-71.0282,high,high
-Jamaica Plain,706,18,42.31,-71.1148,high,high
-South End,696,14,42.3398,-71.0786,high,medium
-Downtown / Financial District,668,22,42.356,-71.055,medium,high
-Back Bay,563,21,42.3503,-71.081,medium,high
-Greater Mattapan,539,12,42.2736,-71.0921,medium,medium
-Hyde Park,504,14,42.2551,-71.1243,medium,medium
-Roslindale,452,12,42.284,-71.1284,medium,medium
-West Roxbury,451,16,42.2793,-71.1607,medium,medium
-Charlestown,396,14,42.3782,-71.0602,medium,medium
-Boston,395,13,42.3601,-71.0589,medium,medium
-Beacon Hill,350,9,42.3588,-71.0707,medium,low
-Fenway / Kenmore / Audubon Circle / Longwood,257,11,42.3467,-71.1003,medium,medium
-Mission Hill,234,9,42.3278,-71.1003,low,low
-South Boston,117,2,42.3388,-71.0468,low,low
-Brighton,78,2,42.3467,-71.1564,low,low
-Allston,51,2,42.3534,-71.1312,low,low
-Mattapan,47,0,42.2736,-71.0921,low,low
-Chestnut Hill,28,1,42.3258,-71.1662,low,low
+neighborhood,predicted_reports,predicted_potholes,lat,lon,risk_level,risk_level_pothole,predict_year,predict_month
+Dorchester,3035,45,42.3021,-71.0707,high,high,2026,10
+Downtown / Financial District,2438,63,42.356,-71.055,high,high,2026,10
+South Boston / South Boston Waterfront,2320,27,42.3388,-71.0468,high,medium,2026,10
+Allston / Brighton,1985,48,42.35,-71.143,high,high,2026,10
+Roxbury,1882,36,42.3142,-71.092,high,high,2026,10
+South End,1805,26,42.3398,-71.0786,high,medium,2026,10
+East Boston,1453,20,42.3784,-71.0282,medium,medium,2026,10
+Back Bay,1411,29,42.3503,-71.081,medium,high,2026,10
+Jamaica Plain,1285,38,42.31,-71.1148,medium,high,2026,10
+Beacon Hill,825,13,42.3588,-71.0707,medium,low,2026,10
+Roslindale,783,17,42.284,-71.1284,medium,low,2026,10
+Fenway / Kenmore / Audubon Circle / Longwood,778,18,42.3467,-71.1003,medium,low,2026,10
+West Roxbury,699,22,42.2793,-71.1607,low,medium,2026,10
+Greater Mattapan,683,10,42.2736,-71.0921,low,low,2026,10
+Charlestown,645,23,42.3782,-71.0602,low,medium,2026,10
+Hyde Park,636,19,42.2551,-71.1243,low,medium,2026,10
+Mission Hill,406,12,42.3278,-71.1003,low,low,2026,10
