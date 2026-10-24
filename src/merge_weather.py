@@ -39,6 +39,11 @@ def main():
     # Left join: keep every 311 row, attach its month's weather
     merged = counts.merge(weather, on=["year", "month"], how="left")
 
+    # --- add MBTA bus-stop feature ---
+    mbta = pd.read_csv("data/processed/mbta.csv")
+    merged = merged.merge(mbta, on="neighborhood", how="left")
+    merged["bus_stops_near"] = merged["bus_stops_near"].fillna(0)
+
     # Report any rows that failed to get weather (missing month)
     missing = merged["avg_temp_c"].isna().sum()
     if missing:
