@@ -191,7 +191,12 @@ def counts_for_new_system(path: str) -> pd.DataFrame:
             "is_employee": float("nan"),   # not recorded in the new system
         })
         parts.append(_aggregate(c))
-    return _sum_parts(parts)
+    return _sum_parts([m for m, _ in parts]), _sum_daily([d for _, d in parts])
+
+
+def _sum_daily(parts) -> pd.DataFrame:
+    return (pd.concat(parts, ignore_index=True)
+            .groupby(["neighborhood", "year", "month", "day"], as_index=False)["potholes"].sum())
 
 
 def _sum_parts(parts) -> pd.DataFrame:
