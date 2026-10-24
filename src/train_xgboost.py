@@ -63,6 +63,17 @@ OBJECTIVE = {"pothole": "count:poisson", "everything": "reg:squarederror"}
 EXPOSURE_COLS = ["road_miles", "lane_miles", "daily_vehicle_miles", "population"]
 USE_EXPOSURE = {"pothole": True, "everything": False}
 
+# "So far this month" (pothole model only). The month being predicted is in
+# progress, so the reports already filed tell the model whether the spring
+# spike has started. Back-test (7 held-out years): knowing the first 14 days
+# cut spring error from 32.9 to 18.2 per area-month and city-wide spring misses
+# from 23% to 11.5%. Weather / momentum features were tried and did not help.
+# Training rows get the SAME share of their month (e.g. 23/31 of the month),
+# so the model always learns from the situation it will predict in.
+DAILY_PATH = "data/processed/pothole_daily.csv"
+USE_SO_FAR = {"pothole": True, "everything": False}
+SO_FAR_COLS = ["so_far", "pace"]
+
 USE_WEATHER  = False
 WEATHER_COLS = ["avg_temp_c", "total_precip_mm", "total_snow_cm", "max_wind_kmh"]
 LAG_COLS     = ["lag1", "lag12", "roll3"]
