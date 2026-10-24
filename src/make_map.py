@@ -77,8 +77,9 @@ for _, row in df.iterrows():
         popup=folium.Popup(
             f"<b>{row['neighborhood']}</b><br>"
             f"Predicted {WHAT}: {int(row[VALUE_COL])}<br>"
-            f"Risk: <b>{row[RISK_COL].upper()}</b>",
-            max_width=200,
+            f"Risk: <b>{row[RISK_COL].upper()}</b>"
+            + why_html(row.get(WHY_COL)),
+            max_width=320,
         ),
         tooltip=f"{row['neighborhood']} — {row[RISK_COL].upper()}",
     ).add_to(m)
