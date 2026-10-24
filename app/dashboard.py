@@ -159,17 +159,28 @@ if os.path.exists(ACC_PATH):
         a1, a2, a3 = st.columns(3)
         a1.metric("Model — avg error", f"{a['mae']:.0f} {what_word}",
                   help="Average miss per neighborhood per month (lower is better).")
-        if "mae_last_month" in a:
+        day = int(a.get("data_through_day", 0) or 0)
+        straight = a.get("mae_straight_line", float("nan"))
+        if day and pd.notna(straight):
+            # part of the month is known -> compare with the fair simple guess
+            a2.metric(f"Straight-line from days 1-{day}", f"{straight:.0f}",
+                      delta=f"{straight - a['mae']:+.0f} better", delta_color="normal",
+                      help="Reports so far, scaled up to a full month.")
+            a3.metric("Guess 'same month last year'", f"{a['mae_last_year']:.0f}",
+                      delta=f"{a['mae_last_year'] - a['mae']:+.0f} better", delta_color="normal")
+        elif "mae_last_month" in a:
             a2.metric("Guess 'same as last month'", f"{a['mae_last_month']:.0f}",
                       delta=f"{a['mae_last_month'] - a['mae']:+.0f} better", delta_color="normal")
             a3.metric("Guess 'same month last year'", f"{a['mae_last_year']:.0f}",
                       delta=f"{a['mae_last_year'] - a['mae']:+.0f} better", delta_color="normal")
+        known = (f" Each test month was scored as if only its first {day} days were known, "
+                 "same as today." if day else "")
         st.write(
             f"Tested on **{a.get('test_period', 'the last 12 months')}**, months the model never saw "
             f"while training. A neighborhood averages **{a.get('mean_actual', float('nan')):.0f}** "
             f"{what_word} a month; the model is off by **{a['mae']:.0f}** on average "
-            f"(**{a['success_pct']:.0f}%** success). The green numbers show how much better it is "
-            "than the simple guesses."
+            f"(**{a['success_pct']:.0f}%** success).{known} The green numbers show how much better "
+            "it is than the simple guesses."
         )
     st.bar_chart(acc.set_index("label")["success_pct"])
     st.caption("Success % = 1 − average error ÷ average true value (100% = perfect).")
