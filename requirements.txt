@@ -1,0 +1,12 @@
+pandas
+numpy
+xgboost
+scikit-learn
+folium
+geopandas
+requests
+matplotlib
+seaborn
+jupyter
+tqdm
+shapely
