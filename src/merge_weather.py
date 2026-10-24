@@ -45,39 +45,44 @@ def main():
     merged["bus_stops_near"] = merged["bus_stops_near"].fillna(0)
 
     # --- add street-tree count feature ---
-    # Tree names use slightly different neighborhood labels; map them to the
-    # 311 labels so the join lands.
-    TREE_NAME_MAP = {
-        "Allston-Brighton": "Allston / Brighton",
-        "Back Bay/Beacon Hill": "Back Bay",
-        "South Boston": "South Boston / South Boston Waterfront",
-        "Fenway/Kenmore": "Fenway / Kenmore / Audubon Circle / Longwood",
-        "Fenway": "Fenway / Kenmore / Audubon Circle / Longwood",
-        "Mattapan": "Greater Mattapan",
-        "Downtown": "Downtown / Financial District",
-    }
-    # 311 labels that share a tree source with another label (fill from it)
-    TREE_FALLBACK = {
-        "Allston": "Allston / Brighton",
-        "Brighton": "Allston / Brighton",
-        "Beacon Hill": "Back Bay",
-        "South Boston / South Boston Waterfront": "South Boston / South Boston Waterfront",
+    # Map each 311 neighborhood label to the tree-data label it draws from.
+    # Keyed by the 311 name, so no rename can steal a name from another row.
+    TREE_SOURCE = {
+        "Dorchester":                                   "Dorchester",
+        "Roxbury":                                      "Roxbury",
+        "South End":                                    "South End",
+        "East Boston":                                  "East Boston",
+        "Jamaica Plain":                                "Jamaica Plain",
+        "Charlestown":                                  "Charlestown",
+        "Roslindale":                                   "Roslindale",
+        "West Roxbury":                                 "West Roxbury",
+        "Hyde Park":                                    "Hyde Park",
+        "Mission Hill":                                 "Mission Hill",
+        "South Boston":                                 "South Boston",
+        "Mattapan":                                     "Mattapan",
+        "Greater Mattapan":                             "Mattapan",
+        "South Boston / South Boston Waterfront":       "South Boston",
+        "Allston / Brighton":                           "Allston-Brighton",
+        "Allston":                                      "Allston-Brighton",
+        "Brighton":                                     "Allston-Brighton",
+        "Back Bay":                                     "Back Bay/Beacon Hill",
+        "Beacon Hill":                                  "Back Bay/Beacon Hill",
+        "Downtown / Financial District":                "Central Boston",
+        "Boston":                                       "Central Boston",
+        "Fenway / Kenmore / Audubon Circle / Longwood": "Fenway/Longwood",
+        # "Chestnut Hill" has no tree data -> stays 0
     }
     trees = pd.read_csv("data/processed/trees.csv")
-    trees["neighborhood"] = trees["neighborhood"].replace(TREE_NAME_MAP)
-    # collapse any duplicates created by the remap
-    trees = trees.groupby("neighborhood", as_index=False)["tree_count"].sum()
+    tree_by_name = trees.set_index("neighborhood")["tree_count"].to_dict()
 
-    merged = merged.merge(trees, on="neighborhood", how="left")
-    # fill shared-area labels from their tree-data twin
-    tree_map = trees.set_index("neighborhood")["tree_count"].to_dict()
-    for label, src in TREE_FALLBACK.items():
-        mask = merged["neighborhood"].eq(label) & merged["tree_count"].isna()
-        merged.loc[mask, "tree_count"] = tree_map.get(src, 0)
-    no_trees = merged["tree_count"].isna().sum()
-    merged["tree_count"] = merged["tree_count"].fillna(0)
+    def tree_count_for(nbhd):
+        src = TREE_SOURCE.get(nbhd)
+        return tree_by_name.get(src, 0) if src else 0
+
+    merged["tree_count"] = merged["neighborhood"].map(tree_count_for).fillna(0)
+    no_trees = (merged["tree_count"] == 0).sum()
     if no_trees:
-        print(f"NOTE: {no_trees} rows had no tree match (filled 0).")
+        print(f"NOTE: {no_trees} rows still have 0 trees (no tree-data match).")
 
     # Report any rows that failed to get weather (missing month)
     missing = merged["avg_temp_c"].isna().sum()
