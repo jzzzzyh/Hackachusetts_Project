@@ -256,7 +256,8 @@ def main():
         f"({r.share:.1%} of {r.neighborhood}'s recent reports, newer ones weighted more)"
         + (f"; {int(r.so_far)} already this month (days 1-{cutoff})" if cutoff else "")
         + f"; {r.neighborhood} is predicted {int(ap)} this month"
-        + (f"; worst block {r.block} ({int(r.n)} in 12 months)" if isinstance(r.block, str) else "")
+        + (f"; most-reported spot {r.block} ({int(r.n)} reports in the last 13 months)"
+           if isinstance(r.block, str) and r.n > 1 else "")
         for r, ap in zip(s.itertuples(), area_pred)
     ]
     s["predicted"] = s["predicted"].round(1)
