@@ -237,9 +237,14 @@ def main():
         imp.to_csv(imp_path, index=False)
 
         cur = data[(data["year"] == pred_year) & (data["month"] == pred_month)].copy()
-        cur[pred_col] = np.clip(model.predict(cur[feature_cols]), 0, None).round().astype(int)
+        pred = np.clip(model.predict(cur[feature_cols]), 0, None)
+        if use_so_far:
+            # a month can't end with fewer reports than were already filed
+            pred = np.maximum(pred, cur["so_far"].values)
+            cur["potholes_so_far"] = cur["so_far"].astype(int)
+        cur[pred_col] = pred.round().astype(int)
         cur[risk_col] = risk_from(cur[pred_col])
-        keep = cur[["neighborhood", pred_col, risk_col]]
+        keep = cur[["neighborhood", pred_col, risk_col] + (["potholes_so_far"] if use_so_far else [])]
         predictions = keep if predictions is None else predictions.merge(keep, on="neighborhood")
 
     pd.DataFrame(accuracy).to_csv("data/processed/model_accuracy.csv", index=False)
