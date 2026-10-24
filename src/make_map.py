@@ -34,9 +34,17 @@ df = pd.read_csv(IN_PATH)
 
 # Potholes are the main prediction; fall back to all-311 for old prediction files.
 if "predicted_potholes" in df.columns:
-    VALUE_COL, RISK_COL, WHAT = "predicted_potholes", "risk_level_pothole", "potholes"
+    VALUE_COL, RISK_COL, WHAT, WHY_COL = "predicted_potholes", "risk_level_pothole", "potholes", "why_potholes"
 else:
-    VALUE_COL, RISK_COL, WHAT = "predicted_reports", "risk_level", "reports"
+    VALUE_COL, RISK_COL, WHAT, WHY_COL = "predicted_reports", "risk_level", "reports", "why_reports"
+
+
+def why_html(text):
+    """One reason per line for the popup."""
+    if not isinstance(text, str):
+        return ""
+    head, _, rest = text.partition(": ")
+    return "<br><br><b>Why:</b> " + head + ":<br>" + "<br>".join(rest.split("; "))
 df[VALUE_COL] = pd.to_numeric(df[VALUE_COL], errors="coerce").fillna(0)
 df[RISK_COL] = df[RISK_COL].astype(str).str.lower()
 max_val = max(float(df[VALUE_COL].max()), 1.0)
