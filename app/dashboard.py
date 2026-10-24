@@ -127,43 +127,113 @@ c3.metric("Top hotspot", df.iloc[0]["neighborhood"])
 st.info(f"Showing **{mode}** — predicted {what_word} per neighborhood for **{period}**.")
 
 # ---- Map + table side by side ----
+STREET_GEO = "data/processed/street_predictions.geojson"
+STREET_ACC = "data/processed/street_accuracy.csv"
+has_streets = pothole_mode and os.path.exists(STREET_GEO)
+detail = st.sidebar.radio(
+    "Map detail", ["Streets", "Neighborhoods"], index=0 if has_streets else 1,
+    disabled=not has_streets,
+    help="Streets = predicted potholes per street (pothole mode only).",
+)
+street_view = has_streets and detail == "Streets"
+@st.cache_data
+def load_streets():
+    import geopandas as gpd
+    return gpd.read_file(STREET_GEO)
+
+
+if street_view:
+    n_streets = len(load_streets())
+    top_n = st.sidebar.slider("Streets to show", 10, max(n_streets, 10), min(100, n_streets), step=5)
+
+
 left, right = st.columns([3, 2])
 max_val = max(float(df[value_col].max()), 1.0)
 
 with left:
     st.subheader("Risk map")
-    m = folium.Map(location=[42.3601, -71.0589], zoom_start=12, tiles="OpenStreetMap")
-    for _, row in view.iterrows():
-        folium.CircleMarker(
-            location=[row["lat"], row["lon"]],
-            radius=6 + 20 * row[value_col] / max_val,   # same scale for both modes
-            color=RISK_COLORS.get(row[risk_col], "#888"),
-            fill=True,
-            fill_opacity=0.7,
-            popup=folium.Popup(
-                f"<b>{row['neighborhood']}</b><br>"
-                f"Predicted {what_word}: {int(row[value_col])}<br>"
-                f"Risk: {str(row[risk_col]).title()}"
-                + (f"<br><br><b>Why:</b> {why_html(row[why_col])}" if why_col in row else ""),
-                max_width=320,
-            ),
-        ).add_to(m)
+    m = folium.Map(location=[42.3301, -71.0789], zoom_start=12, tiles="OpenStreetMap")
+    if street_view:
+        streets = load_streets()
+        sv = streets[streets["risk"].isin(levels)].nsmallest(top_n, "rank")
+        smax = max(float(sv["predicted_potholes"].max()), 1.0) if len(sv) else 1.0
+        for _, r in sv.iterrows():
+            color = RISK_COLORS.get(r["risk"], "#888")
+            folium.GeoJson(
+                r["geometry"].__geo_interface__,
+                style_function=lambda _, c=color, w=3 + 7 * r["predicted_potholes"] / smax:
+                    {"color": c, "weight": w, "opacity": 0.85},
+                tooltip=f"#{int(r['rank'])} {r['street']} ({r['neighborhood']}) — "
+                        f"{r['predicted_potholes']:.1f} predicted",
+                popup=folium.Popup(
+                    f"<b>#{int(r['rank'])} {r['street']}</b><br>{r['neighborhood']}<br>"
+                    f"Predicted potholes this month: <b>{r['predicted_potholes']:.1f}</b><br>"
+                    f"Already reported: {int(r['potholes_so_far'])}<br>"
+                    f"Risk: {r['risk'].title()}<br><br><b>Why:</b> "
+                    + str(r["why"]).replace("; ", "<br>"),
+                    max_width=340,
+                ),
+            ).add_to(m)
+    else:
+        for _, row in view.iterrows():
+            folium.CircleMarker(
+                location=[row["lat"], row["lon"]],
+                radius=6 + 20 * row[value_col] / max_val,   # same scale for both modes
+                color=RISK_COLORS.get(row[risk_col], "#888"),
+                fill=True,
+                fill_opacity=0.7,
+                popup=folium.Popup(
+                    f"<b>{row['neighborhood']}</b><br>"
+                    f"Predicted {what_word}: {int(row[value_col])}<br>"
+                    f"Risk: {str(row[risk_col]).title()}"
+                    + (f"<br><br><b>Why:</b> {why_html(row[why_col])}" if why_col in row else ""),
+                    max_width=320,
+                ),
+            ).add_to(m)
     st_folium(m, height=520, use_container_width=True)
 
 with right:
-    st.subheader("Priority list — send crews here first")
-    cols = ["neighborhood", value_col, risk_col]
-    names = ["Neighborhood", f"Predicted {what_word} (month total)", "Risk"]
-    if pothole_mode and "potholes_so_far" in view.columns:
-        day = int(view["data_through_day"].iloc[0]) if "data_through_day" in view.columns else 0
-        cols.insert(2, "potholes_so_far")
-        names.insert(2, f"Reported so far (days 1-{day})")
-    if why_col in view.columns:
-        cols.append(why_col)
-        names.append("Why")
-    show = view[cols].copy()
-    show.columns = names
-    st.dataframe(show, hide_index=True, width="stretch", height=520)
+    if street_view:
+        st.subheader("Priority list — streets to check first")
+        t = sv[["rank", "street", "neighborhood", "predicted_potholes", "potholes_so_far",
+                "past_12_months", "risk", "worst_block", "why"]].copy()
+        t.columns = ["#", "Street", "Neighborhood", "Predicted this month", "Reported so far",
+                     "Last 12 months", "Risk", "Worst block", "Why"]
+        st.dataframe(t, hide_index=True, width="stretch", height=520)
+    else:
+        st.subheader("Priority list — send crews here first")
+        cols = ["neighborhood", value_col, risk_col]
+        names = ["Neighborhood", f"Predicted {what_word} (month total)", "Risk"]
+        if pothole_mode and "potholes_so_far" in view.columns:
+            day = int(view["data_through_day"].iloc[0]) if "data_through_day" in view.columns else 0
+            cols.insert(2, "potholes_so_far")
+            names.insert(2, f"Reported so far (days 1-{day})")
+        if why_col in view.columns:
+            cols.append(why_col)
+            names.append("Why")
+        show = view[cols].copy()
+        show.columns = names
+        st.dataframe(show, hide_index=True, width="stretch", height=520)
+
+if street_view:
+    st.caption(
+        "How streets are predicted: each neighborhood's predicted total is split across its "
+        "streets by where potholes were reported recently (newer reports count more), plus "
+        "the reports already filed this month. Reports are matched to the nearest street "
+        "within 60 m. Rank 1-50 = high, 51-200 = medium."
+    )
+    if os.path.exists(STREET_ACC):
+        sa = pd.read_csv(STREET_ACC)
+        s0 = sa[(sa["known"] == "start of month") & (sa["method"] == "history split")]
+        s1 = sa[(sa["known"] == "start of month") & (sa["method"] == "road-length split")]
+        if len(s0) and len(s1):
+            st.caption(
+                f"Back-test (last 12 months, before any reports that month): the top 200 streets "
+                f"caught **{s0['share_in_top200'].iloc[0]:.0%}** of the next month's potholes "
+                f"(splitting by road length instead: {s1['share_in_top200'].iloc[0]:.0%}); "
+                f"**{s0['top50_hit'].iloc[0]:.0%}** of the real top-50 streets were in the "
+                f"predicted top 50 ({s1['top50_hit'].iloc[0]:.0%} by road length)."
+            )
 
 # ---- Why: per-area explanation ----
 REASONS_PATH = "data/processed/prediction_reasons.csv"
