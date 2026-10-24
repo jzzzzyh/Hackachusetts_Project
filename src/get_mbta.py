@@ -5,11 +5,15 @@ Source: https://cdn.mbta.com/MBTA_GTFS.zip (no login or key required)
 """
 
 import urllib.request
+import ssl
 import zipfile
 import io
 import os
 import pandas as pd
 from math import radians, cos, sin, asin, sqrt
+
+# Handle SSL certificate verification issues
+ssl._create_default_https_context = ssl._create_unverified_context
 
 
 # Neighborhood centroids (from src/train_xgboost.py)
