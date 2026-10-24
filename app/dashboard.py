@@ -48,6 +48,8 @@ FEATURE_NAMES = {
     "lane_miles": "Lane miles",
     "daily_vehicle_miles": "Daily traffic (vehicle-miles)",
     "population": "Population",
+    "so_far": "Reported so far this month",
+    "pace": "This month's pace (projected)",
 }
 
 st.set_page_config(page_title="Boston Civic Risk", page_icon="🛠️", layout="wide")
