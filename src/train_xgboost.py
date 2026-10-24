@@ -278,7 +278,7 @@ def main():
     else:
         print(f"NOTE: {DAILY_PATH} not found (re-run prep_data.py) — 'so far this month' skipped.")
 
-    accuracy, predictions = [], None
+    accuracy, predictions, all_reasons = [], None, []
     for mode, (target, pred_col, risk_col, label) in TARGETS.items():
         objective = OBJECTIVE[mode]
         feature_cols = base_cols + (exposure if USE_EXPOSURE[mode] else [])
