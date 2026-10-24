@@ -36,7 +36,7 @@ print(f"{len(df)} neighborhoods loaded.")
 
 # --- Build map ---
 boston_center = [42.3601, -71.0589]
-m = folium.Map(location=boston_center, zoom_start=12, tiles="CartoDB positron")
+m = folium.Map(location=boston_center, zoom_start=12, tiles="OpenStreetMap")
 
 # Heat map layer (weight = predicted report count)
 heat_data = df[["lat", "lon", "predicted_reports"]].values.tolist()

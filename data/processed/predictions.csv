@@ -1,11 +1,24 @@
-neighborhood,predicted_reports,risk_level,lat,lon
-Dorchester,142,high,42.3021,-71.0707
-Roxbury,118,high,42.3142,-71.0920
-South Boston,87,medium,42.3388,-71.0468
-Jamaica Plain,76,medium,42.3100,-71.1148
-East Boston,65,medium,42.3784,-71.0282
-Allston,54,medium,42.3534,-71.1312
-Brighton,48,low,42.3467,-71.1564
-Back Bay,31,low,42.3503,-71.0810
-Beacon Hill,22,low,42.3588,-71.0707
-Charlestown,19,low,42.3782,-71.0602
+neighborhood,predicted_reports,lat,lon,risk_level
+Dorchester,1370,42.3021,-71.0707,high
+South Boston / South Boston Waterfront,1341,42.3388,-71.0468,high
+South End,1191,42.3398,-71.0786,high
+Allston / Brighton,997,42.35,-71.143,high
+Roxbury,923,42.3142,-71.092,high
+East Boston,830,42.3784,-71.0282,high
+Back Bay,744,42.3503,-71.081,high
+Jamaica Plain,741,42.31,-71.1148,medium
+Downtown / Financial District,707,42.356,-71.055,medium
+Boston,693,42.3601,-71.0589,medium
+Beacon Hill,625,42.3588,-71.0707,medium
+Roslindale,346,42.284,-71.1284,medium
+Charlestown,345,42.3782,-71.0602,medium
+Hyde Park,306,42.2551,-71.1243,medium
+Greater Mattapan,298,42.2736,-71.0921,medium
+West Roxbury,280,42.2793,-71.1607,medium
+Fenway / Kenmore / Audubon Circle / Longwood,218,42.3467,-71.1003,low
+Mission Hill,218,42.3278,-71.1003,low
+South Boston,150,42.3388,-71.0468,low
+Brighton,89,42.3467,-71.1564,low
+Allston,61,42.3534,-71.1312,low
+Mattapan,28,42.2736,-71.0921,low
+Chestnut Hill,13,42.3258,-71.1662,low
