@@ -204,7 +204,7 @@ def main():
     area_pred = s["neighborhood"].map(totals)
     s["why"] = [
         f"{int(r.past_12_months)} potholes reported here in the last 12 months "
-        f"({r.share:.0%} of {r.neighborhood}'s recent reports, newer ones weighted more)"
+        f"({r.share:.1%} of {r.neighborhood}'s recent reports, newer ones weighted more)"
         + (f"; {int(r.so_far)} already this month (days 1-{cutoff})" if cutoff else "")
         + f"; {r.neighborhood} is predicted {int(ap)} this month"
         + (f"; worst block {r.block} ({int(r.n)} in 12 months)" if isinstance(r.block, str) else "")
