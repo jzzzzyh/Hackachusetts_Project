@@ -51,6 +51,16 @@ TARGETS = {
 # pothole_resident exists too, but Boston's new 311 system (potholes since
 # 2026-06-23) no longer records who filed a report, so it stops in May 2026.
 
+# Per-model settings, chosen by back-testing 6 held-out years (2019, 2021-2025):
+#  * pothole: Poisson loss (made for counts, so a miss of 10 on a small area
+#    counts more than on a big one) + exposure features (road miles, lane
+#    miles, traffic, population). Best or tied in 5 of 6 years; cut the worst
+#    per-area overshoot from 32% to 25%.
+#  * everything: no consistent gain from either change -> unchanged.
+OBJECTIVE = {"pothole": "count:poisson", "everything": "reg:squarederror"}
+EXPOSURE_COLS = ["road_miles", "lane_miles", "daily_vehicle_miles", "population"]
+USE_EXPOSURE = {"pothole": True, "everything": False}
+
 USE_WEATHER  = False
 WEATHER_COLS = ["avg_temp_c", "total_precip_mm", "total_snow_cm", "max_wind_kmh"]
 LAG_COLS     = ["lag1", "lag12", "roll3"]
