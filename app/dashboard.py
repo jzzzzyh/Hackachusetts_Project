@@ -153,7 +153,14 @@ max_val = max(float(df[value_col].max()), 1.0)
 
 with left:
     st.subheader("Risk map")
-    m = folium.Map(location=[42.3301, -71.0789], zoom_start=12, tiles="OpenStreetMap")
+    # CARTO public tiles (same as make_map.py): no key, embedding allowed
+    m = folium.Map(location=[42.3301, -71.0789], zoom_start=12, tiles=None)
+    folium.TileLayer(
+        tiles="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+        attr='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> '
+             'contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains="abcd", max_zoom=20,
+    ).add_to(m)
     if street_view:
         streets = load_streets()
         sv = streets[streets["risk"].isin(levels)].nsmallest(top_n, "rank")
