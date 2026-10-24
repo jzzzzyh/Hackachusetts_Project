@@ -135,8 +135,9 @@ with left:
             popup=folium.Popup(
                 f"<b>{row['neighborhood']}</b><br>"
                 f"Predicted {what_word}: {int(row[value_col])}<br>"
-                f"Risk: {str(row[risk_col]).title()}",
-                max_width=250,
+                f"Risk: {str(row[risk_col]).title()}"
+                + (f"<br><br><b>Why:</b> {why_html(row[why_col])}" if why_col in row else ""),
+                max_width=320,
             ),
         ).add_to(m)
     st_folium(m, height=520, use_container_width=True)
