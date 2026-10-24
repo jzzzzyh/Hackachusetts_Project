@@ -44,6 +44,10 @@ FEATURE_NAMES = {
     "bus_stops_near": "MBTA bus stops",
     "tree_count": "Street trees",
     "equity_score": "Tree-equity score",
+    "road_miles": "Road miles",
+    "lane_miles": "Lane miles",
+    "daily_vehicle_miles": "Daily traffic (vehicle-miles)",
+    "population": "Population",
 }
 
 st.set_page_config(page_title="Boston Civic Risk", page_icon="🛠️", layout="wide")
